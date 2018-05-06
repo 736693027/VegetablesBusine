@@ -1,0 +1,20 @@
+//
+//  VegetableHeaderFile.pch
+//  VegetableManagement
+//
+//  Created by Apple on 2018/3/29.
+//  Copyright © 2018年 Apple. All rights reserved.
+//
+
+#ifndef VegetableHeaderFile_pch
+#define VegetableHeaderFile_pch
+
+#define SCREEN_WIDTH [[UIScreen mainScreen] bounds].size.width
+#define SCREEN_HEIGHT [[UIScreen mainScreen] bounds].size.height
+#define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+#define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
+#define TabBarHeight 68
+
+#import "CommonTools.h"
+
+#endif /* VegetableHeaderFile_pch */

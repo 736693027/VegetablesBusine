@@ -8,24 +8,49 @@
 
 /* Begin PBXBuildFile section */
 		185B5D72209ED5BD001E47EC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D71209ED5BD001E47EC /* AppDelegate.m */; };
-		185B5D75209ED5BD001E47EC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D74209ED5BD001E47EC /* ViewController.m */; };
-		185B5D78209ED5BD001E47EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185B5D76209ED5BD001E47EC /* Main.storyboard */; };
 		185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 185B5D79209ED5C0001E47EC /* Assets.xcassets */; };
-		185B5D7D209ED5C0001E47EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 185B5D7B209ED5C0001E47EC /* LaunchScreen.storyboard */; };
 		185B5D80209ED5C0001E47EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D7F209ED5C0001E47EC /* main.m */; };
+		185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D8A209EDFF6001E47EC /* VMTabBarController.m */; };
+		185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D8B209EDFF6001E47EC /* CustomerTabBarView.m */; };
+		185B5D92209EDFF7001E47EC /* VMTabBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D8C209EDFF6001E47EC /* VMTabBarView.m */; };
+		185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B5D8D209EDFF6001E47EC /* CustomerTabBarView.xib */; };
+		185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D8E209EDFF6001E47EC /* VMCustomTabBar.m */; };
+		185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D97209F02A2001E47EC /* CommonTools.m */; };
+		185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D9C209F02B0001E47EC /* BaseTableViewController.m */; };
+		185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D9D209F02B0001E47EC /* BaseViewController.m */; };
+		185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5D9E209F02B0001E47EC /* VMNavigationController.m */; };
+		2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E60496E89ADB590171D47AC /* Pods-VegetablesBusine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetablesBusine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine.debug.xcconfig"; sourceTree = "<group>"; };
 		185B5D6D209ED5BD001E47EC /* VegetablesBusine.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VegetablesBusine.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		185B5D70209ED5BD001E47EC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		185B5D71209ED5BD001E47EC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		185B5D73209ED5BD001E47EC /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		185B5D74209ED5BD001E47EC /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		185B5D77209ED5BD001E47EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		185B5D79209ED5C0001E47EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		185B5D7C209ED5C0001E47EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		185B5D7E209ED5C0001E47EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		185B5D7F209ED5C0001E47EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		185B5D87209EDFF6001E47EC /* VMTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMTabBarView.h; sourceTree = "<group>"; };
+		185B5D88209EDFF6001E47EC /* CustomerTabBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomerTabBarView.h; sourceTree = "<group>"; };
+		185B5D89209EDFF6001E47EC /* VMCustomTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMCustomTabBar.h; sourceTree = "<group>"; };
+		185B5D8A209EDFF6001E47EC /* VMTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMTabBarController.m; sourceTree = "<group>"; };
+		185B5D8B209EDFF6001E47EC /* CustomerTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomerTabBarView.m; sourceTree = "<group>"; };
+		185B5D8C209EDFF6001E47EC /* VMTabBarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMTabBarView.m; sourceTree = "<group>"; };
+		185B5D8D209EDFF6001E47EC /* CustomerTabBarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomerTabBarView.xib; sourceTree = "<group>"; };
+		185B5D8E209EDFF6001E47EC /* VMCustomTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMCustomTabBar.m; sourceTree = "<group>"; };
+		185B5D8F209EDFF6001E47EC /* VMTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMTabBarController.h; sourceTree = "<group>"; };
+		185B5D96209F02A2001E47EC /* VegetableHeaderFile.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VegetableHeaderFile.pch; sourceTree = "<group>"; };
+		185B5D97209F02A2001E47EC /* CommonTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonTools.m; sourceTree = "<group>"; };
+		185B5D98209F02A2001E47EC /* DefineFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefineFile.h; sourceTree = "<group>"; };
+		185B5D99209F02A2001E47EC /* CommonTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonTools.h; sourceTree = "<group>"; };
+		185B5D9C209F02B0001E47EC /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		185B5D9D209F02B0001E47EC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		185B5D9E209F02B0001E47EC /* VMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMNavigationController.m; sourceTree = "<group>"; };
+		185B5D9F209F02B0001E47EC /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		185B5DA0209F02B0001E47EC /* VMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMNavigationController.h; sourceTree = "<group>"; };
+		185B5DA1209F02B0001E47EC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		56DB9AF13505799CEE008E80 /* Pods-VegetablesBusine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetablesBusine.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine.release.xcconfig"; sourceTree = "<group>"; };
+		CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetablesBusine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +70,8 @@
 			children = (
 				185B5D6F209ED5BD001E47EC /* VegetablesBusine */,
 				185B5D6E209ED5BD001E47EC /* Products */,
+				57CEFC01067CBA9658D25C92 /* Pods */,
+				515A8B9EF1250BAC931239E1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,17 +86,73 @@
 		185B5D6F209ED5BD001E47EC /* VegetablesBusine */ = {
 			isa = PBXGroup;
 			children = (
+				185B5D9B209F02B0001E47EC /* BaseViewController */,
+				185B5D95209F02A2001E47EC /* Tools */,
+				185B5D86209EDFF6001E47EC /* TabBarViewController */,
 				185B5D70209ED5BD001E47EC /* AppDelegate.h */,
 				185B5D71209ED5BD001E47EC /* AppDelegate.m */,
-				185B5D73209ED5BD001E47EC /* ViewController.h */,
-				185B5D74209ED5BD001E47EC /* ViewController.m */,
-				185B5D76209ED5BD001E47EC /* Main.storyboard */,
 				185B5D79209ED5C0001E47EC /* Assets.xcassets */,
-				185B5D7B209ED5C0001E47EC /* LaunchScreen.storyboard */,
 				185B5D7E209ED5C0001E47EC /* Info.plist */,
 				185B5D7F209ED5C0001E47EC /* main.m */,
 			);
 			path = VegetablesBusine;
+			sourceTree = "<group>";
+		};
+		185B5D86209EDFF6001E47EC /* TabBarViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185B5D8B209EDFF6001E47EC /* CustomerTabBarView.m */,
+				185B5D88209EDFF6001E47EC /* CustomerTabBarView.h */,
+				185B5D8D209EDFF6001E47EC /* CustomerTabBarView.xib */,
+				185B5D8F209EDFF6001E47EC /* VMTabBarController.h */,
+				185B5D8A209EDFF6001E47EC /* VMTabBarController.m */,
+				185B5D89209EDFF6001E47EC /* VMCustomTabBar.h */,
+				185B5D8E209EDFF6001E47EC /* VMCustomTabBar.m */,
+				185B5D87209EDFF6001E47EC /* VMTabBarView.h */,
+				185B5D8C209EDFF6001E47EC /* VMTabBarView.m */,
+			);
+			path = TabBarViewController;
+			sourceTree = "<group>";
+		};
+		185B5D95209F02A2001E47EC /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				185B5D96209F02A2001E47EC /* VegetableHeaderFile.pch */,
+				185B5D97209F02A2001E47EC /* CommonTools.m */,
+				185B5D98209F02A2001E47EC /* DefineFile.h */,
+				185B5D99209F02A2001E47EC /* CommonTools.h */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		185B5D9B209F02B0001E47EC /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				185B5DA1209F02B0001E47EC /* BaseViewController.h */,
+				185B5D9D209F02B0001E47EC /* BaseViewController.m */,
+				185B5D9F209F02B0001E47EC /* BaseTableViewController.h */,
+				185B5D9C209F02B0001E47EC /* BaseTableViewController.m */,
+				185B5DA0209F02B0001E47EC /* VMNavigationController.h */,
+				185B5D9E209F02B0001E47EC /* VMNavigationController.m */,
+			);
+			path = BaseViewController;
+			sourceTree = "<group>";
+		};
+		515A8B9EF1250BAC931239E1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		57CEFC01067CBA9658D25C92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0E60496E89ADB590171D47AC /* Pods-VegetablesBusine.debug.xcconfig */,
+				56DB9AF13505799CEE008E80 /* Pods-VegetablesBusine.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -78,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 185B5D83209ED5C0001E47EC /* Build configuration list for PBXNativeTarget "VegetablesBusine" */;
 			buildPhases = (
+				ACA7594CB472AD083459E532 /* [CP] Check Pods Manifest.lock */,
 				185B5D69209ED5BD001E47EC /* Sources */,
 				185B5D6A209ED5BD001E47EC /* Frameworks */,
 				185B5D6B209ED5BD001E47EC /* Resources */,
+				A9400A578829AF976A0FF07D /* [CP] Embed Pods Frameworks */,
+				21BD561A36A2BA7A1E7D5344 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -128,45 +215,115 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185B5D7D209ED5C0001E47EC /* LaunchScreen.storyboard in Resources */,
+				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
-				185B5D78209ED5BD001E47EC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		21BD561A36A2BA7A1E7D5344 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-resources.sh",
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/AMapNavi/AMapNaviKit.framework/AMapNavi.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMap.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/AMapNavi.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9400A578829AF976A0FF07D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFDownloadRequestOperation/AFDownloadRequestOperation.framework",
+				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
+				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
+				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
+				"${BUILT_PRODUCTS_DIR}/MJRefresh/MJRefresh.framework",
+				"${BUILT_PRODUCTS_DIR}/MMDrawerController/MMDrawerController.framework",
+				"${BUILT_PRODUCTS_DIR}/Masonry/Masonry.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactiveObjC/ReactiveObjC.framework",
+				"${BUILT_PRODUCTS_DIR}/Realm/Realm.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
+				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDownloadRequestOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MJRefresh.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MMDrawerController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Masonry.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactiveObjC.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ACA7594CB472AD083459E532 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-VegetablesBusine-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		185B5D69209ED5BD001E47EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				185B5D75209ED5BD001E47EC /* ViewController.m in Sources */,
+				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
+				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
+				185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */,
+				185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */,
 				185B5D80209ED5C0001E47EC /* main.m in Sources */,
 				185B5D72209ED5BD001E47EC /* AppDelegate.m in Sources */,
+				185B5D92209EDFF7001E47EC /* VMTabBarView.m in Sources */,
+				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
+				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
+				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXVariantGroup section */
-		185B5D76209ED5BD001E47EC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				185B5D77209ED5BD001E47EC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		185B5D7B209ED5C0001E47EC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				185B5D7C209ED5C0001E47EC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		185B5D81209ED5C0001E47EC /* Debug */ = {
@@ -281,37 +438,43 @@
 		};
 		185B5D84209ED5C0001E47EC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E60496E89ADB590171D47AC /* Pods-VegetablesBusine.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3VBM36K4M;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		185B5D85209ED5C0001E47EC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56DB9AF13505799CEE008E80 /* Pods-VegetablesBusine.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H3VBM36K4M;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
