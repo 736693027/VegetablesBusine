@@ -9,26 +9,37 @@
 #import "VMTabBarView.h"
 #import <Masonry/Masonry.h>
 
+IB_DESIGNABLE
 @implementation VMTabBarView
+
 - (instancetype)initWithCoder:(NSCoder *)aDecoder{
     self = [super initWithCoder:aDecoder];
     if(self){
-        self.iconImageView = [[UIImageView alloc] init];
-        [self addSubview:self.iconImageView];
-        [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.offset(10);
-            make.centerX.mas_equalTo(self);
-        }];
         
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.font = [UIFont systemFontOfSize:13];
         [self addSubview:self.titleLabel];
+        __weak typeof(self) weakSelf = self;
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-            make.top.equalTo(self.iconImageView.mas_bottom).offset(5);
-            make.centerX.mas_equalTo(self);
+            make.centerX.mas_equalTo(weakSelf);
+            make.bottom.offset(-10);
+        }];
+        
+        self.iconImageView = [[UIImageView alloc] init];
+        [self addSubview:self.iconImageView];
+        
+        [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.centerX.mas_equalTo(weakSelf);
+            make.bottom.equalTo(weakSelf.titleLabel.mas_top).offset(-7.5);
         }];
     }
     return self;
+}
+- (void)setTitleLabel:(UILabel *)titleLabel{
+    _titleLabel = titleLabel;
+}
+- (void)setIconImageView:(UIImageView *)iconImageView{
+    _iconImageView = iconImageView;
 }
 - (void)awakeFromNib{
     [super awakeFromNib];    

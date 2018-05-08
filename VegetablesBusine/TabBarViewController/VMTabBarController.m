@@ -10,6 +10,7 @@
 #import "VMCustomTabBar.h"
 #import "CustomerTabBarView.h"
 #import "BaseViewController.h"
+#import "VBWaitDealViewController.h"
 #import "VMNavigationController.h"
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
@@ -31,19 +32,22 @@
 }
 
 - (void)addAllChildViewController{
-    BaseViewController *newTaskVC = [[BaseViewController alloc] init];
-    [self addChildViewController:newTaskVC navTitle:@"抢单大厅"];
+    VBWaitDealViewController *newTaskVC = [[VBWaitDealViewController alloc] init];
+    [self addChildViewController:newTaskVC navTitle:@"待处理"];
    
     BaseViewController *waitPickUpVC = [[BaseViewController alloc] init];
-    [self addChildViewController:waitPickUpVC navTitle:@"抢单大厅"];
+    [self addChildViewController:waitPickUpVC navTitle:@"订单管理"];
     
     BaseViewController *deliverOrderVC = [[BaseViewController alloc] init];
-    [self addChildViewController:deliverOrderVC navTitle:@"抢单大厅"];
+    [self addChildViewController:deliverOrderVC navTitle:@"门店管理"];
+    
+    BaseViewController *setupVC = [[BaseViewController alloc] init];
+    [self addChildViewController:setupVC navTitle:@"设置"];
 }
 
 - (void)addChildViewController:(UIViewController *)childController navTitle:(NSString *)title {
     VMNavigationController *nav = [[VMNavigationController alloc] initWithRootViewController:childController];
-    childController.navigationItem.title = @"抢单大厅";
+    childController.navigationItem.title = title;
     [self addChildViewController:nav];
 }
 

@@ -10,8 +10,8 @@
 
 @interface VMTabBarView : UIView
 
-@property (strong, nonatomic) UIImageView *iconImageView;
+@property (strong, nonatomic) IBInspectable UIImageView *iconImageView;
 
-@property (strong, nonatomic) UILabel *titleLabel;
+@property (strong, nonatomic) IBInspectable UILabel *titleLabel;
 
 @end

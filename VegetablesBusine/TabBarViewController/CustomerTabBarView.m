@@ -14,9 +14,9 @@
 - (void)awakeFromNib{
     [super awakeFromNib];
     _selectIndex = 0;
-    NSArray *titleArray = @[@"新任务",@"待取货",@"配送中"];
-    NSArray *imageArray = @[@"icon_newOrderOn",@"icon_pickupGoodsOff",@"icon_deliveringOff"];
-    for(NSInteger i=0;i<3;i++){
+    NSArray *titleArray = @[@"待处理",@"订单管理",@"门店管理",@"设置"];
+    NSArray *imageArray = @[@"pendingIconOnx",@"orderManagementOffIconx",@"shopManagementOffIconx",@"shopSettingOffIconx"];
+    for(NSInteger i=0;i<titleArray.count;i++){
         VMTabBarView *tabBarView = [self viewWithTag:i+10000];
         tabBarView.titleLabel.text = [titleArray objectAtIndex:i];
         tabBarView.titleLabel.textColor = [CommonTools changeColor:@"0x666666"];
@@ -38,8 +38,8 @@
 
 - (void)setupTabBarItemfrom:(NSInteger)beforIndex next:(NSInteger)nextIndex{
     
-    NSArray *imageArray = @[@"icon_newOrderOff",@"icon_pickupGoodsOff",@"icon_deliveringOff"];
-    NSArray *selectImageArray = @[@"icon_newOrderOn",@"icon_pickupGoodsOn",@"icon_deliveringOn"];
+    NSArray *imageArray = @[@"icon_newOrderOff",@"orderManagementOffIconx",@"shopManagementOffIconx",@"shopSettingOffIconx"];
+    NSArray *selectImageArray = @[@"pendingIconOnx",@"icon_pickupGoodsOn",@"icon_deliveringOn"];
     // 先把上次选择的item设置为可用
     UIButton *beforItem = [self viewWithTag:beforIndex + 9990];
     beforItem.enabled = YES;
