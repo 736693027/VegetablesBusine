@@ -49,9 +49,11 @@
 }
 
 - (void)tableHeadViewRefreshAction{
+    [self.dataTableView.mj_header endRefreshing];
 };
 
 - (void)tableFootViewRefreshAction{
+    [self.dataTableView.mj_footer endRefreshing];
 };
 
 - (void)setIsClickEmptyImageLoading:(BOOL)isClickEmptyImageLoading

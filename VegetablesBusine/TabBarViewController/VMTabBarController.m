@@ -12,6 +12,7 @@
 #import "BaseViewController.h"
 #import "VBWaitDealViewController.h"
 #import "VMNavigationController.h"
+#import "VBOrderManagerViewController.h"
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;
@@ -32,11 +33,11 @@
 }
 
 - (void)addAllChildViewController{
-    VBWaitDealViewController *newTaskVC = [[VBWaitDealViewController alloc] init];
-    [self addChildViewController:newTaskVC navTitle:@"待处理"];
+    VBWaitDealViewController *waitDealVC = [[VBWaitDealViewController alloc] init];
+    [self addChildViewController:waitDealVC navTitle:@"待处理"];
    
-    BaseViewController *waitPickUpVC = [[BaseViewController alloc] init];
-    [self addChildViewController:waitPickUpVC navTitle:@"订单管理"];
+    VBOrderManagerViewController *orderManagerVC = [[VBOrderManagerViewController alloc] init];
+    [self addChildViewController:orderManagerVC navTitle:@"订单管理"];
     
     BaseViewController *deliverOrderVC = [[BaseViewController alloc] init];
     [self addChildViewController:deliverOrderVC navTitle:@"门店管理"];

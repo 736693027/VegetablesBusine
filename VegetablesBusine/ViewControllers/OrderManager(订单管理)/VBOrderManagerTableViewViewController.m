@@ -1,20 +1,20 @@
 //
-//  VBWaitDealTableViewController.m
+//  VBOrderManagerTableViewViewController.m
 //  VegetablesBusine
 //
-//  Created by Apple on 2018/5/8.
+//  Created by Apple on 2018/5/9.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBWaitDealTableViewController.h"
+#import "VBOrderManagerTableViewViewController.h"
 #import <Masonry/Masonry.h>
-#import "VBWaitDealTableViewCell.h"
+#import "VBOrderManagerTableViewCell.h"
 
-@interface VBWaitDealTableViewController ()
+@interface VBOrderManagerTableViewViewController ()
 
 @end
 
-@implementation VBWaitDealTableViewController
+@implementation VBOrderManagerTableViewViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -26,20 +26,19 @@
     }];
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataTableView.backgroundColor = [CommonTools changeColor:@"0xECECEC"];
-    NSString *cellClassName = NSStringFromClass([VBWaitDealTableViewCell class]);
+    NSString *cellClassName = NSStringFromClass([VBOrderManagerTableViewCell class]);
     [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:503];
     
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }
-
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 10;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VBWaitDealTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBWaitDealTableViewCell"];
+    VBOrderManagerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderManagerTableViewCell"];
     return cell;
 }
 
@@ -49,17 +48,7 @@
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    
+    // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

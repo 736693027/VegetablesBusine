@@ -1,15 +1,15 @@
 //
-//  VBWaitDealTableViewCell.m
+//  VBOrderManagerTableViewCell.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBWaitDealTableViewCell.h"
+#import "VBOrderManagerTableViewCell.h"
 #import "VBCommodityListItemView.h"
 
-@implementation VBWaitDealTableViewCell
+@implementation VBOrderManagerTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

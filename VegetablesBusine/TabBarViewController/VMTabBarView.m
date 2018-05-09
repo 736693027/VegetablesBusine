@@ -18,6 +18,7 @@ IB_DESIGNABLE
         
         self.titleLabel = [[UILabel alloc] init];
         self.titleLabel.font = [UIFont systemFontOfSize:13];
+        self.titleLabel.userInteractionEnabled = YES;
         [self addSubview:self.titleLabel];
         __weak typeof(self) weakSelf = self;
         [self.titleLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -26,6 +27,7 @@ IB_DESIGNABLE
         }];
         
         self.iconImageView = [[UIImageView alloc] init];
+        self.iconImageView.userInteractionEnabled = YES;
         [self addSubview:self.iconImageView];
         
         [self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {

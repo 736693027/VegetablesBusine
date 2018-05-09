@@ -19,18 +19,22 @@
                 <view tag="10000" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8TZ-RF-Uiy" customClass="VMTabBarView">
                     <rect key="frame" x="0.0" y="0.0" width="94" height="68"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
                 </view>
                 <view tag="10001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RfJ-d3-Qad" customClass="VMTabBarView">
                     <rect key="frame" x="94" y="0.0" width="93.5" height="68"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
                 </view>
                 <view tag="10002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eJS-nt-0GH" customClass="VMTabBarView">
                     <rect key="frame" x="187.5" y="0.0" width="94" height="68"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
                 </view>
                 <view tag="10003" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qyX-hM-hs7" customClass="VMTabBarView">
                     <rect key="frame" x="281.5" y="0.0" width="93.5" height="68"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <gestureRecognizers/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5U6-GD-zoL">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="1"/>
@@ -64,7 +68,7 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="GEe-Io-rPy"/>
-            <point key="canvasLocation" x="212" y="-90"/>
+            <point key="canvasLocation" x="108" y="-114"/>
         </view>
     </objects>
 </document>

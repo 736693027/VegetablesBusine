@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Jhs-rH-Lvn" customClass="VBCommodityListItemView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="75"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="新疆阿克苏冰糖心苹果/份" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="45G-vJ-LNG">
+                    <rect key="frame" x="12.5" y="12.5" width="350" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="¥3.5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CDk-1g-Ihx">
+                    <rect key="frame" x="12.5" y="51" width="27.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="x3" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PG8-Qs-a9V">
+                    <rect key="frame" x="40" y="51" width="15" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="¥17.5" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rbv-U0-rx0">
+                    <rect key="frame" x="328.5" y="51" width="31.5" height="16"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vwy-dC-g3P">
+                    <rect key="frame" x="0.0" y="74.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Wkm-vh-7Sw"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="rbv-U0-rx0" firstAttribute="centerY" secondItem="CDk-1g-Ihx" secondAttribute="centerY" id="Ld5-d3-43s"/>
+                <constraint firstItem="Vwy-dC-g3P" firstAttribute="trailing" secondItem="pLS-DP-VNp" secondAttribute="trailing" id="MVQ-sm-MG6"/>
+                <constraint firstItem="pLS-DP-VNp" firstAttribute="trailing" secondItem="rbv-U0-rx0" secondAttribute="trailing" constant="15" id="P9d-MU-1Uj"/>
+                <constraint firstItem="PG8-Qs-a9V" firstAttribute="leading" secondItem="CDk-1g-Ihx" secondAttribute="trailing" id="Rng-Fj-OWX"/>
+                <constraint firstItem="45G-vJ-LNG" firstAttribute="top" secondItem="pLS-DP-VNp" secondAttribute="top" constant="12.5" id="WbT-fk-M75"/>
+                <constraint firstAttribute="bottom" secondItem="Vwy-dC-g3P" secondAttribute="bottom" id="YBh-So-aSx"/>
+                <constraint firstItem="Vwy-dC-g3P" firstAttribute="leading" secondItem="pLS-DP-VNp" secondAttribute="leading" id="Yda-Ro-Yxv"/>
+                <constraint firstItem="45G-vJ-LNG" firstAttribute="leading" secondItem="Jhs-rH-Lvn" secondAttribute="leading" constant="12.5" id="byA-4q-y8C"/>
+                <constraint firstItem="pLS-DP-VNp" firstAttribute="trailing" secondItem="45G-vJ-LNG" secondAttribute="trailing" constant="12.5" id="ceX-Mg-nXx"/>
+                <constraint firstItem="PG8-Qs-a9V" firstAttribute="centerY" secondItem="CDk-1g-Ihx" secondAttribute="centerY" id="odj-8b-agp"/>
+                <constraint firstItem="CDk-1g-Ihx" firstAttribute="leading" secondItem="45G-vJ-LNG" secondAttribute="leading" id="sj5-TK-Fi5"/>
+                <constraint firstItem="CDk-1g-Ihx" firstAttribute="top" secondItem="45G-vJ-LNG" secondAttribute="bottom" constant="22.5" id="zrK-9b-kji"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="pLS-DP-VNp"/>
+            <point key="canvasLocation" x="197.5" y="-316.5"/>
+        </view>
+    </objects>
+</document>

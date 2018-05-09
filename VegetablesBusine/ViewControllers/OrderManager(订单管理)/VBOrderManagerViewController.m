@@ -1,15 +1,15 @@
 //
-//  VBWaitDealViewController.m
+//  VBOrderManagerViewController.m
 //  VegetablesBusine
 //
-//  Created by Apple on 2018/5/8.
+//  Created by Apple on 2018/5/9.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBWaitDealViewController.h"
-#import "VBWaitDealTableViewController.h"
+#import "VBOrderManagerViewController.h"
+#import "VBOrderManagerTableViewViewController.h"
 
-@interface VBWaitDealViewController ()<UIScrollViewDelegate>{
+@interface VBOrderManagerViewController ()<UIScrollViewDelegate>{
     NSInteger currentIndex;
 }
 @property (weak, nonatomic) IBOutlet UIScrollView *mainScrollview;
@@ -18,19 +18,20 @@
 
 @end
 
-@implementation VBWaitDealViewController
+@implementation VBOrderManagerViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.title = @"已完成";
+    self.title = @"订单管理";
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-68);
     for(NSInteger i=0;i<2;i++){
-        VBWaitDealTableViewController *waitDealTable = [[VBWaitDealTableViewController alloc] init];
-        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height-20);
-        [self addChildViewController:waitDealTable];
-        [_mainScrollview addSubview:waitDealTable.view];
+        VBOrderManagerTableViewViewController *orderManagerTable = [[VBOrderManagerTableViewViewController alloc] init];
+        orderManagerTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height-20);
+        [self addChildViewController:orderManagerTable];
+        [_mainScrollview addSubview:orderManagerTable.view];
     }
 }
+
 - (IBAction)buttonClick:(UIButton *)sender {
     NSInteger index = sender.tag - 100;
     if(index!=currentIndex){

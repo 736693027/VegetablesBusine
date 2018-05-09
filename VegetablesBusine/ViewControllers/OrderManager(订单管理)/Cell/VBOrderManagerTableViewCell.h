@@ -1,5 +1,5 @@
 //
-//  VBWaitDealTableViewCell.h
+//  VBOrderManagerTableViewCell.h
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VBWaitDealTableViewCell : UITableViewCell
+@interface VBOrderManagerTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *commodityListView;
 @property (weak, nonatomic) IBOutlet UIButton *refusedButton;

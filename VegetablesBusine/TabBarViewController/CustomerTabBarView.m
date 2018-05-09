@@ -21,14 +21,16 @@
         tabBarView.titleLabel.text = [titleArray objectAtIndex:i];
         tabBarView.titleLabel.textColor = [CommonTools changeColor:@"0x666666"];
         [tabBarView.iconImageView setImage:[UIImage imageNamed:imageArray[i]]];
+        UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(selectItemGesture:)];
+        [tabBarView addGestureRecognizer:tap];
     }
 }
 - (void)setSelectIndex:(NSInteger)selectIndex
 {
     if(selectIndex<0)
         selectIndex = 0;
-    else if (selectIndex>2)
-        selectIndex = 2;
+    else if (selectIndex>3)
+        selectIndex = 3;
     
     if(_selectIndex != selectIndex){
         [self setupTabBarItemfrom:_selectIndex next:selectIndex];
@@ -38,11 +40,9 @@
 
 - (void)setupTabBarItemfrom:(NSInteger)beforIndex next:(NSInteger)nextIndex{
     
-    NSArray *imageArray = @[@"icon_newOrderOff",@"orderManagementOffIconx",@"shopManagementOffIconx",@"shopSettingOffIconx"];
-    NSArray *selectImageArray = @[@"pendingIconOnx",@"icon_pickupGoodsOn",@"icon_deliveringOn"];
+    NSArray *imageArray = @[@"pendingIconOffx",@"orderManagementOffIconx",@"shopManagementOffIconx",@"shopSettingOffIconx"];
+    NSArray *selectImageArray = @[@"pendingIconOnx",@"orderManagementOnIconx",@"shopManagementOnIconx",@"shopSettingOnIconx"];
     // 先把上次选择的item设置为可用
-    UIButton *beforItem = [self viewWithTag:beforIndex + 9990];
-    beforItem.enabled = YES;
     VMTabBarView *beforTabBarView = [self viewWithTag:beforIndex+10000];
     [beforTabBarView.iconImageView setImage:[UIImage imageNamed:imageArray[beforIndex]]];
     NSString *beforTitleLabelString = beforTabBarView.titleLabel.text;
@@ -50,20 +50,14 @@
     [beforTabBarView.titleLabel setAttributedText:beforAttributedString];
     
     // 再把这次选择的item设置为不可用
-    UIButton *item = [self viewWithTag:nextIndex + 9990];
-    item.enabled = NO;
     VMTabBarView *nextTabBarView = [self viewWithTag:nextIndex+10000];
     [nextTabBarView.iconImageView setImage:[UIImage imageNamed:selectImageArray[nextIndex]]];
     NSString *nextTitleLabelString = nextTabBarView.titleLabel.text;
     NSMutableAttributedString *nextAttributedString = [self setupTabBarItemTitle:nextTitleLabelString state:YES];
     [nextTabBarView.titleLabel setAttributedText:nextAttributedString];
 }
-
-- (IBAction)selectItem:(UIButton *)sender
-{
-    // button的tag对应tabBarController的selectedIndex
-    // 设置button的样式
-    self.selectIndex = sender.tag - 9990;
+- (IBAction)selectItemGesture:(UITapGestureRecognizer *)sender {
+    self.selectIndex = sender.view.tag - 10000;
     // 让代理来处理切换viewController的操作
     if ([self.viewDelegate respondsToSelector:@selector(msTabBarView:didSelectItemAtIndex:)]) {
         [self.viewDelegate msTabBarView:self didSelectItemAtIndex:self.selectIndex];
