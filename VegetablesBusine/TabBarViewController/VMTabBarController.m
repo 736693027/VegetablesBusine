@@ -13,6 +13,7 @@
 #import "VBWaitDealViewController.h"
 #import "VMNavigationController.h"
 #import "VBOrderManagerViewController.h"
+#import "VBShoppingManagerViewController.h"
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;
@@ -39,7 +40,7 @@
     VBOrderManagerViewController *orderManagerVC = [[VBOrderManagerViewController alloc] init];
     [self addChildViewController:orderManagerVC navTitle:@"订单管理"];
     
-    BaseViewController *deliverOrderVC = [[BaseViewController alloc] init];
+    VBShoppingManagerViewController *deliverOrderVC = [[VBShoppingManagerViewController alloc] init];
     [self addChildViewController:deliverOrderVC navTitle:@"门店管理"];
     
     BaseViewController *setupVC = [[BaseViewController alloc] init];

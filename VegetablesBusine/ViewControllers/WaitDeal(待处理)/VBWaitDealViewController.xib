@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -23,7 +22,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VTb-vl-DfX">
-                    <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                     <subviews>
                         <button opaque="NO" tag="100" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7aN-P9-v7S">
                             <rect key="frame" x="0.0" y="0.0" width="187.5" height="50"/>
@@ -86,20 +85,19 @@
                     </constraints>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Gn-JJ-vhS">
-                    <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                    <rect key="frame" x="0.0" y="50" width="375" height="617"/>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="9Cw-WC-vEz"/>
-                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Cuc-0A-1uM"/>
-                <constraint firstItem="VTb-vl-DfX" firstAttribute="trailing" secondItem="Q5M-cg-NOt" secondAttribute="trailing" id="Wso-wd-B5w"/>
+                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9Cw-WC-vEz"/>
+                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Cuc-0A-1uM"/>
+                <constraint firstItem="VTb-vl-DfX" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="Wso-wd-B5w"/>
                 <constraint firstItem="1Gn-JJ-vhS" firstAttribute="top" secondItem="VTb-vl-DfX" secondAttribute="bottom" id="bn2-J7-KQ6"/>
-                <constraint firstItem="VTb-vl-DfX" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" id="h8A-Vt-12M"/>
-                <constraint firstItem="VTb-vl-DfX" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" id="icA-ZQ-PcA"/>
-                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="bottom" secondItem="Q5M-cg-NOt" secondAttribute="bottom" id="ny7-XN-lWG"/>
+                <constraint firstItem="VTb-vl-DfX" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="h8A-Vt-12M"/>
+                <constraint firstItem="VTb-vl-DfX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="icA-ZQ-PcA"/>
+                <constraint firstItem="1Gn-JJ-vhS" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="ny7-XN-lWG"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
             <point key="canvasLocation" x="22" y="-21"/>
         </view>
     </objects>

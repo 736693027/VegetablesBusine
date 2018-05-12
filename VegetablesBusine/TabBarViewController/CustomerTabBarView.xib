@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14109"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -46,28 +45,27 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="5U6-GD-zoL" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="C0k-Zx-5MD"/>
-                <constraint firstItem="qyX-hM-hs7" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="JhQ-kg-nEA"/>
-                <constraint firstItem="RfJ-d3-Qad" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="Mhi-mB-3gu"/>
-                <constraint firstItem="eJS-nt-0GH" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="Tns-uQ-OmR"/>
-                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="leading" secondItem="GEe-Io-rPy" secondAttribute="leading" id="Wt1-7K-2ux"/>
+                <constraint firstItem="5U6-GD-zoL" firstAttribute="top" secondItem="AiH-sQ-Poq" secondAttribute="top" id="C0k-Zx-5MD"/>
+                <constraint firstItem="qyX-hM-hs7" firstAttribute="top" secondItem="AiH-sQ-Poq" secondAttribute="top" id="JhQ-kg-nEA"/>
+                <constraint firstItem="RfJ-d3-Qad" firstAttribute="bottom" secondItem="AiH-sQ-Poq" secondAttribute="bottom" id="Mhi-mB-3gu"/>
+                <constraint firstItem="eJS-nt-0GH" firstAttribute="bottom" secondItem="AiH-sQ-Poq" secondAttribute="bottom" id="Tns-uQ-OmR"/>
+                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="leading" secondItem="AiH-sQ-Poq" secondAttribute="leading" id="Wt1-7K-2ux"/>
                 <constraint firstItem="RfJ-d3-Qad" firstAttribute="leading" secondItem="8TZ-RF-Uiy" secondAttribute="trailing" id="YtW-I1-NXK"/>
-                <constraint firstItem="RfJ-d3-Qad" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="atu-v9-0bY"/>
+                <constraint firstItem="RfJ-d3-Qad" firstAttribute="top" secondItem="AiH-sQ-Poq" secondAttribute="top" id="atu-v9-0bY"/>
                 <constraint firstAttribute="trailing" secondItem="5U6-GD-zoL" secondAttribute="trailing" id="cOm-tz-kq6"/>
                 <constraint firstItem="qyX-hM-hs7" firstAttribute="leading" secondItem="eJS-nt-0GH" secondAttribute="trailing" id="cjP-rp-Kku"/>
-                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="dk6-b4-9Um"/>
-                <constraint firstItem="qyX-hM-hs7" firstAttribute="trailing" secondItem="GEe-Io-rPy" secondAttribute="trailing" id="e5Q-qO-xU7"/>
-                <constraint firstItem="eJS-nt-0GH" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="fNP-qj-7ve"/>
-                <constraint firstItem="qyX-hM-hs7" firstAttribute="bottom" secondItem="GEe-Io-rPy" secondAttribute="bottom" id="hvA-nB-uCl"/>
+                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="bottom" secondItem="AiH-sQ-Poq" secondAttribute="bottom" id="dk6-b4-9Um"/>
+                <constraint firstItem="qyX-hM-hs7" firstAttribute="trailing" secondItem="AiH-sQ-Poq" secondAttribute="trailing" id="e5Q-qO-xU7"/>
+                <constraint firstItem="eJS-nt-0GH" firstAttribute="top" secondItem="AiH-sQ-Poq" secondAttribute="top" id="fNP-qj-7ve"/>
+                <constraint firstItem="qyX-hM-hs7" firstAttribute="bottom" secondItem="AiH-sQ-Poq" secondAttribute="bottom" id="hvA-nB-uCl"/>
                 <constraint firstItem="qyX-hM-hs7" firstAttribute="width" secondItem="8TZ-RF-Uiy" secondAttribute="width" id="nBb-MM-tDd"/>
-                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="top" secondItem="GEe-Io-rPy" secondAttribute="top" id="nVI-Em-V55"/>
+                <constraint firstItem="8TZ-RF-Uiy" firstAttribute="top" secondItem="AiH-sQ-Poq" secondAttribute="top" id="nVI-Em-V55"/>
                 <constraint firstItem="eJS-nt-0GH" firstAttribute="width" secondItem="8TZ-RF-Uiy" secondAttribute="width" id="o8j-tC-8bP"/>
                 <constraint firstItem="RfJ-d3-Qad" firstAttribute="width" secondItem="8TZ-RF-Uiy" secondAttribute="width" id="oqV-r1-27d"/>
                 <constraint firstItem="5U6-GD-zoL" firstAttribute="leading" secondItem="AiH-sQ-Poq" secondAttribute="leading" id="tDh-tj-b7P"/>
                 <constraint firstItem="eJS-nt-0GH" firstAttribute="leading" secondItem="RfJ-d3-Qad" secondAttribute="trailing" id="zer-Yd-RZx"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="GEe-Io-rPy"/>
             <point key="canvasLocation" x="108" y="-114"/>
         </view>
     </objects>

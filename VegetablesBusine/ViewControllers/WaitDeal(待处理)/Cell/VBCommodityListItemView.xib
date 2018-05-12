@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -51,20 +50,19 @@
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="rbv-U0-rx0" firstAttribute="centerY" secondItem="CDk-1g-Ihx" secondAttribute="centerY" id="Ld5-d3-43s"/>
-                <constraint firstItem="Vwy-dC-g3P" firstAttribute="trailing" secondItem="pLS-DP-VNp" secondAttribute="trailing" id="MVQ-sm-MG6"/>
-                <constraint firstItem="pLS-DP-VNp" firstAttribute="trailing" secondItem="rbv-U0-rx0" secondAttribute="trailing" constant="15" id="P9d-MU-1Uj"/>
+                <constraint firstItem="Vwy-dC-g3P" firstAttribute="trailing" secondItem="Jhs-rH-Lvn" secondAttribute="trailing" id="MVQ-sm-MG6"/>
+                <constraint firstAttribute="trailing" secondItem="rbv-U0-rx0" secondAttribute="trailing" constant="15" id="P9d-MU-1Uj"/>
                 <constraint firstItem="PG8-Qs-a9V" firstAttribute="leading" secondItem="CDk-1g-Ihx" secondAttribute="trailing" id="Rng-Fj-OWX"/>
-                <constraint firstItem="45G-vJ-LNG" firstAttribute="top" secondItem="pLS-DP-VNp" secondAttribute="top" constant="12.5" id="WbT-fk-M75"/>
+                <constraint firstItem="45G-vJ-LNG" firstAttribute="top" secondItem="Jhs-rH-Lvn" secondAttribute="top" constant="12.5" id="WbT-fk-M75"/>
                 <constraint firstAttribute="bottom" secondItem="Vwy-dC-g3P" secondAttribute="bottom" id="YBh-So-aSx"/>
-                <constraint firstItem="Vwy-dC-g3P" firstAttribute="leading" secondItem="pLS-DP-VNp" secondAttribute="leading" id="Yda-Ro-Yxv"/>
+                <constraint firstItem="Vwy-dC-g3P" firstAttribute="leading" secondItem="Jhs-rH-Lvn" secondAttribute="leading" id="Yda-Ro-Yxv"/>
                 <constraint firstItem="45G-vJ-LNG" firstAttribute="leading" secondItem="Jhs-rH-Lvn" secondAttribute="leading" constant="12.5" id="byA-4q-y8C"/>
-                <constraint firstItem="pLS-DP-VNp" firstAttribute="trailing" secondItem="45G-vJ-LNG" secondAttribute="trailing" constant="12.5" id="ceX-Mg-nXx"/>
+                <constraint firstAttribute="trailing" secondItem="45G-vJ-LNG" secondAttribute="trailing" constant="12.5" id="ceX-Mg-nXx"/>
                 <constraint firstItem="PG8-Qs-a9V" firstAttribute="centerY" secondItem="CDk-1g-Ihx" secondAttribute="centerY" id="odj-8b-agp"/>
                 <constraint firstItem="CDk-1g-Ihx" firstAttribute="leading" secondItem="45G-vJ-LNG" secondAttribute="leading" id="sj5-TK-Fi5"/>
                 <constraint firstItem="CDk-1g-Ihx" firstAttribute="top" secondItem="45G-vJ-LNG" secondAttribute="bottom" constant="22.5" id="zrK-9b-kji"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <viewLayoutGuide key="safeArea" id="pLS-DP-VNp"/>
             <point key="canvasLocation" x="197.5" y="-316.5"/>
         </view>
     </objects>

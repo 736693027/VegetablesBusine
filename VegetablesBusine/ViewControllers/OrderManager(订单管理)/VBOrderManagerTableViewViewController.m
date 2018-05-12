@@ -29,7 +29,7 @@
     NSString *cellClassName = NSStringFromClass([VBOrderManagerTableViewCell class]);
     [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:503];
     
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }

@@ -23,10 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单管理";
-    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-68);
+    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
     for(NSInteger i=0;i<2;i++){
         VBOrderManagerTableViewViewController *orderManagerTable = [[VBOrderManagerTableViewViewController alloc] init];
-        orderManagerTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height-20);
+        orderManagerTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
         [self addChildViewController:orderManagerTable];
         [_mainScrollview addSubview:orderManagerTable.view];
     }

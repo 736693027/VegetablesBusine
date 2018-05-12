@@ -21,7 +21,8 @@
     [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(0);
         make.left.offset(0);
-        make.bottom.mas_equalTo(self.view.mas_bottom);
+        make.bottom.offset(0);
+//        make.bottom.mas_equalTo(self.view.mas_bottom);
         make.width.offset(SCREEN_WIDTH);
     }];
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -29,7 +30,7 @@
     NSString *cellClassName = NSStringFromClass([VBWaitDealTableViewCell class]);
     [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:503];
     
-    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 10)];
+    UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }
@@ -51,15 +52,4 @@
     [super didReceiveMemoryWarning];
     
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 @end
