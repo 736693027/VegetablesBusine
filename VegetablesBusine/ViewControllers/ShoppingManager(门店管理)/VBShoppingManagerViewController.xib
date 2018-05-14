@@ -23,6 +23,9 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sdj-Ba-LFQ">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
                     <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shop_bg" translatesAutoresizingMaskIntoConstraints="NO" id="3VD-NG-6Iv">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="165"/>
+                        </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="今日营业" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zF4-Tp-tH7">
                             <rect key="frame" x="20" y="28" width="69.5" height="21"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -84,13 +87,17 @@
                         <constraint firstItem="wF3-My-WpC" firstAttribute="centerY" secondItem="bJk-9k-HUO" secondAttribute="centerY" id="0ok-LV-yli"/>
                         <constraint firstItem="OJH-aX-ja8" firstAttribute="centerX" secondItem="Sdj-Ba-LFQ" secondAttribute="centerX" id="6b8-UR-sM3"/>
                         <constraint firstAttribute="height" constant="165" id="Ckf-Ms-gfE"/>
+                        <constraint firstAttribute="trailing" secondItem="3VD-NG-6Iv" secondAttribute="trailing" id="EcA-Y3-eZG"/>
                         <constraint firstItem="tMj-Sq-ifW" firstAttribute="top" secondItem="Yve-TF-ZcP" secondAttribute="bottom" constant="15" id="FWM-od-250"/>
+                        <constraint firstAttribute="bottom" secondItem="3VD-NG-6Iv" secondAttribute="bottom" id="JZD-e8-K3I"/>
                         <constraint firstItem="Yve-TF-ZcP" firstAttribute="top" secondItem="zF4-Tp-tH7" secondAttribute="bottom" constant="30" id="Nap-aD-mhT"/>
                         <constraint firstItem="C1J-Um-qah" firstAttribute="top" secondItem="wF3-My-WpC" secondAttribute="bottom" constant="15" id="Wg8-ZA-4Wh"/>
                         <constraint firstItem="bJk-9k-HUO" firstAttribute="centerY" secondItem="Yve-TF-ZcP" secondAttribute="centerY" id="Wma-ug-4eD"/>
                         <constraint firstItem="zF4-Tp-tH7" firstAttribute="top" secondItem="Sdj-Ba-LFQ" secondAttribute="top" constant="28" id="anb-Gs-LQs"/>
                         <constraint firstItem="6h2-Yf-LeJ" firstAttribute="bottom" secondItem="zF4-Tp-tH7" secondAttribute="bottom" id="dk9-Xf-v7O"/>
                         <constraint firstItem="OJH-aX-ja8" firstAttribute="top" secondItem="bJk-9k-HUO" secondAttribute="bottom" constant="15" id="dp5-LR-49K"/>
+                        <constraint firstItem="3VD-NG-6Iv" firstAttribute="leading" secondItem="Sdj-Ba-LFQ" secondAttribute="leading" id="e7B-sm-Mnm"/>
+                        <constraint firstItem="3VD-NG-6Iv" firstAttribute="top" secondItem="Sdj-Ba-LFQ" secondAttribute="top" id="mCK-6a-I2f"/>
                         <constraint firstItem="Yve-TF-ZcP" firstAttribute="leading" secondItem="Sdj-Ba-LFQ" secondAttribute="leading" constant="20" id="mbc-Wj-rh7"/>
                         <constraint firstAttribute="trailing" secondItem="6h2-Yf-LeJ" secondAttribute="trailing" constant="18" id="nRY-jz-ui9"/>
                         <constraint firstItem="zF4-Tp-tH7" firstAttribute="leading" secondItem="Sdj-Ba-LFQ" secondAttribute="leading" constant="20" id="r6c-kA-d23"/>
@@ -119,6 +126,7 @@
         </view>
     </objects>
     <resources>
+        <image name="shop_bg" width="375" height="165"/>
         <image name="smallCalculatorx" width="9" height="10"/>
     </resources>
 </document>
