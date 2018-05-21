@@ -9,6 +9,8 @@
 #import "VBOrderManagerTableViewViewController.h"
 #import <Masonry/Masonry.h>
 #import "VBOrderManagerTableViewCell.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "VBAlterView.h"
 
 @interface VBOrderManagerTableViewViewController ()
 
@@ -39,12 +41,23 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBOrderManagerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderManagerTableViewCell"];
+    [[cell.refusedButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        VBAlterView *alterView =[VBAlterView alterView];
+        [alterView show];
+    }];
+    [[cell.orderButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        VBAlterView *alterView =[VBAlterView alterView];
+        [alterView show];
+    }];
     return cell;
 }
 
 #pragma mark tableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 503;
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

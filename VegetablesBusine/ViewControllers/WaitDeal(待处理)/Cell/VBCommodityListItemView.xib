@@ -63,7 +63,7 @@
                 <constraint firstItem="CDk-1g-Ihx" firstAttribute="top" secondItem="45G-vJ-LNG" secondAttribute="bottom" constant="22.5" id="zrK-9b-kji"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="197.5" y="-316.5"/>
+            <point key="canvasLocation" x="4" y="-294"/>
         </view>
     </objects>
 </document>

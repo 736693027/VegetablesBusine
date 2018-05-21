@@ -36,6 +36,12 @@
 		18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */; };
 		18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */; };
 		2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */; };
+		380FFAD920B2FA4300A926FD /* VBAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAD820B2FA4300A926FD /* VBAlterView.m */; };
+		380FFADB20B2FA5500A926FD /* VBAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADA20B2FA5500A926FD /* VBAlterView.xib */; };
+		380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFADD20B3051400A926FD /* VMLoginViewController.m */; };
+		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
+		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
+		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +97,15 @@
 		18C519E520A6F47F000905FF /* VBShoppingManagerMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShoppingManagerMenuItemView.h; sourceTree = "<group>"; };
 		18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShoppingManagerMenuItemView.m; sourceTree = "<group>"; };
 		18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBShoppingManagerMenuItemView.xib; sourceTree = "<group>"; };
+		380FFAD720B2FA4300A926FD /* VBAlterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAlterView.h; sourceTree = "<group>"; };
+		380FFAD820B2FA4300A926FD /* VBAlterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAlterView.m; sourceTree = "<group>"; };
+		380FFADA20B2FA5500A926FD /* VBAlterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBAlterView.xib; sourceTree = "<group>"; };
+		380FFADD20B3051400A926FD /* VMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
+		380FFADE20B3051400A926FD /* VMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
+		380FFADF20B3051400A926FD /* VMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
+		380FFAE320B306E300A926FD /* VBOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderDetailViewController.h; sourceTree = "<group>"; };
+		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
+		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
 		56DB9AF13505799CEE008E80 /* Pods-VegetablesBusine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetablesBusine.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine.release.xcconfig"; sourceTree = "<group>"; };
 		CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetablesBusine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +143,7 @@
 		185B5D6F209ED5BD001E47EC /* VegetablesBusine */ = {
 			isa = PBXGroup;
 			children = (
+				380FFAD620B2FA2500A926FD /* Views */,
 				185B5DC520A1CC90001E47EC /* ViewControllers */,
 				185B5D9B209F02B0001E47EC /* BaseViewController */,
 				185B5D95209F02A2001E47EC /* Tools */,
@@ -161,8 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				185B5D96209F02A2001E47EC /* VegetableHeaderFile.pch */,
-				185B5D97209F02A2001E47EC /* CommonTools.m */,
 				185B5D98209F02A2001E47EC /* DefineFile.h */,
+				185B5D97209F02A2001E47EC /* CommonTools.m */,
 				185B5D99209F02A2001E47EC /* CommonTools.h */,
 			);
 			path = Tools;
@@ -184,9 +200,11 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				380FFAE220B306A900A926FD /* OrderDetail(订单详情) */,
+				380FFADC20B3051400A926FD /* Login(登录) */,
+				380FFAD520B2F89800A926FD /* Setup(设置) */,
 				185B5DC620A1CC90001E47EC /* ShoppingManager(门店管理) */,
 				185B5DC720A1CC90001E47EC /* WaitDeal(待处理) */,
-				185B5DC820A1CC90001E47EC /* Setup(设置) */,
 				185B5DC920A1CC90001E47EC /* OrderManager(订单管理) */,
 			);
 			path = ViewControllers;
@@ -216,13 +234,6 @@
 				185B5DD320A1CE74001E47EC /* VBWaitDealTableViewController.m */,
 			);
 			path = "WaitDeal(待处理)";
-			sourceTree = "<group>";
-		};
-		185B5DC820A1CC90001E47EC /* Setup(设置) */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "Setup(设置)";
 			sourceTree = "<group>";
 		};
 		185B5DC920A1CC90001E47EC /* OrderManager(订单管理) */ = {
@@ -257,6 +268,51 @@
 				185B5E0820A32BAF001E47EC /* VBOrderManagerTableViewCell.h */,
 				185B5E0A20A32BAF001E47EC /* VBOrderManagerTableViewCell.m */,
 				185B5E0920A32BAF001E47EC /* VBOrderManagerTableViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		380FFAD520B2F89800A926FD /* Setup(设置) */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Setup(设置)";
+			sourceTree = "<group>";
+		};
+		380FFAD620B2FA2500A926FD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				380FFAD720B2FA4300A926FD /* VBAlterView.h */,
+				380FFAD820B2FA4300A926FD /* VBAlterView.m */,
+				380FFADA20B2FA5500A926FD /* VBAlterView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		380FFADC20B3051400A926FD /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				380FFADD20B3051400A926FD /* VMLoginViewController.m */,
+				380FFADE20B3051400A926FD /* VMLoginViewController.h */,
+				380FFADF20B3051400A926FD /* VMLoginViewController.xib */,
+			);
+			path = "Login(登录)";
+			sourceTree = "<group>";
+		};
+		380FFAE220B306A900A926FD /* OrderDetail(订单详情) */ = {
+			isa = PBXGroup;
+			children = (
+				380FFAE820B3072100A926FD /* Cell */,
+				380FFAE320B306E300A926FD /* VBOrderDetailViewController.h */,
+				380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */,
+				380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */,
+			);
+			path = "OrderDetail(订单详情)";
+			sourceTree = "<group>";
+		};
+		380FFAE820B3072100A926FD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -342,10 +398,13 @@
 			files = (
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
+				380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */,
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
 				185B5DDA20A1D7B3001E47EC /* VBWaitDealTableViewCell.xib in Resources */,
+				380FFADB20B2FA5500A926FD /* VBAlterView.xib in Resources */,
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
+				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */,
@@ -454,9 +513,12 @@
 				185B5D92209EDFF7001E47EC /* VMTabBarView.m in Sources */,
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
+				380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
+				380FFAD920B2FA4300A926FD /* VBAlterView.m in Sources */,
+				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,7 +650,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
@@ -610,7 +675,10 @@
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
