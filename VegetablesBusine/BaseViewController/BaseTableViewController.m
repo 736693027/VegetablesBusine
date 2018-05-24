@@ -31,7 +31,11 @@
     [super viewDidLoad];
     
     _dataArray = [[NSMutableArray alloc] init];
-    _dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:UITableViewStylePlain];
+    
+}
+- (void)creatTableViewViewTableViewStyle:(UITableViewStyle)style{
+    
+    _dataTableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-64) style:style];
     [_dataTableView setTableFooterView:[UIView new]];
     _dataTableView.delegate = self;
     _dataTableView.dataSource = self;

@@ -9,6 +9,7 @@
 #import "VBWaitDealTableViewController.h"
 #import <Masonry/Masonry.h>
 #import "VBWaitDealTableViewCell.h"
+#import "VBOrderDetailViewController.h"
 
 @interface VBWaitDealTableViewController ()
 
@@ -18,6 +19,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self creatTableViewViewTableViewStyle:UITableViewStylePlain];
     [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(0);
         make.left.offset(0);
@@ -50,6 +52,8 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    VBOrderDetailViewController *detailVC = [[VBOrderDetailViewController alloc] init];
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -20,6 +20,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self creatTableViewViewTableViewStyle:UITableViewStylePlain];
     [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.offset(0);
         make.left.offset(0);

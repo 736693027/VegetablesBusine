@@ -22,4 +22,6 @@
 
 - (void)tableRegisterNibName:(NSString *)nibName cellReuseIdentifier:(NSString *)CellReuseIdentifier estimatedRowHeight:(CGFloat)height;
 
+- (void)creatTableViewViewTableViewStyle:(UITableViewStyle)style;
+
 @end
