@@ -18,5 +18,6 @@ pod 'ReactiveObjC'
 pod 'AMap3DMap'
 pod 'AMapLocation'
 pod 'AMapNavi'
+pod 'UITableView+FDTemplateLayoutCell', '~> 1.6'
 
 end

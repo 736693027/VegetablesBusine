@@ -81,7 +81,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
-            <point key="canvasLocation" x="-234" y="39"/>
+            <point key="canvasLocation" x="-62" y="30"/>
         </tableViewCell>
     </objects>
 </document>

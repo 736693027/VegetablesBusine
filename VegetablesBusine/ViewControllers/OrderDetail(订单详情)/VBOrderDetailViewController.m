@@ -12,7 +12,8 @@
 #import "VBOrderDetailOrderStateTableViewCell.h"
 #import "VBOrderDetailOrderOwnerTableViewCell.h"
 #import "VBOrderDetailInformationTableViewCell.h"
-
+#import <MJRefresh/MJRefresh.h>
+#import "VMSectionHeaderView.h"
 
 @interface VBOrderDetailViewController ()
 
@@ -24,16 +25,24 @@
     [super viewDidLoad];
     self.title = @"订单详情";
     [self creatTableViewViewTableViewStyle:UITableViewStyleGrouped];
+    self.dataTableView.mj_header = nil;
+    self.dataTableView.mj_footer = nil;
+    self.dataTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.0001)];
+    
     NSString *totalTableViewCell = NSStringFromClass([VMOrderTotalTableViewCell class]);
     NSString *orderDetailTableViewCell = NSStringFromClass([VMOrderDetailTableViewCell class]);
     NSString *orderStateTableViewCell = NSStringFromClass([VBOrderDetailOrderStateTableViewCell class]);
     NSString *orderOwnerTableViewCell = NSStringFromClass([VBOrderDetailOrderOwnerTableViewCell class]);
-    NSString *informationTableViewCell = NSStringFromClass([VBOrderDetailOrderOwnerTableViewCell class]);
-    [self tableRegisterNibName:totalTableViewCell cellReuseIdentifier:totalTableViewCell estimatedRowHeight:503];
-    [self tableRegisterNibName:orderDetailTableViewCell cellReuseIdentifier:orderDetailTableViewCell estimatedRowHeight:503];
-    [self tableRegisterNibName:orderStateTableViewCell cellReuseIdentifier:orderStateTableViewCell estimatedRowHeight:503];
-    [self tableRegisterNibName:orderOwnerTableViewCell cellReuseIdentifier:orderOwnerTableViewCell estimatedRowHeight:503];
-    [self tableRegisterNibName:informationTableViewCell cellReuseIdentifier:informationTableViewCell estimatedRowHeight:503];
+    NSString *informationTableViewCell = NSStringFromClass([VBOrderDetailInformationTableViewCell class]);
+    [self tableRegisterNibName:totalTableViewCell cellReuseIdentifier:totalTableViewCell estimatedRowHeight:165];
+    
+    [self tableRegisterNibName:orderDetailTableViewCell cellReuseIdentifier:orderDetailTableViewCell estimatedRowHeight:81];
+    
+    [self tableRegisterNibName:orderStateTableViewCell cellReuseIdentifier:orderStateTableViewCell estimatedRowHeight:108];
+    
+    [self tableRegisterNibName:orderOwnerTableViewCell cellReuseIdentifier:orderOwnerTableViewCell estimatedRowHeight:110];
+    
+    [self tableRegisterNibName:informationTableViewCell cellReuseIdentifier:informationTableViewCell estimatedRowHeight:185];
     
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
@@ -82,7 +91,24 @@
     }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0001f;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(section == 2){
+        return 60;
+    }
     return 10.f;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if(section == 2){
+        VMSectionHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"VMSectionHeaderView" owner:self options:nil] lastObject];
+        headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60);
+        return headerView;
+    }
+    return [UIView new];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
