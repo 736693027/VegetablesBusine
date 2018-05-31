@@ -38,7 +38,18 @@ CGFloat itemViewHeight = 110;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
         [[tap rac_gestureSignal] subscribeNext:^(__kindof UIGestureRecognizer * _Nullable x) {
             NSInteger index = x.view.tag;
-            NSLog(@"--------->>>%ld",index);
+            Class viewControClass = nil;
+            switch (index) {
+                case 0:{
+                    viewControClass = NSClassFromString(@"VBCommodityManagementViewController");
+                }
+                     break;
+                default:
+                    break;
+            }
+            UIViewController *vc = [[viewControClass alloc] init];
+            vc.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:vc animated:YES];
         }];
         [itemView addGestureRecognizer:tap];
     }
