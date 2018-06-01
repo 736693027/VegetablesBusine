@@ -32,7 +32,7 @@
     _currentItemIndex = 0;
     for(NSInteger i=0;i<_menuItemArray.count;i++){
         NSString *itemString = [_menuItemArray objectAtIndex:i];
-        VBMenuItemView *itemView = [[[NSBundle mainBundle] loadNibNamed:@"VBMenuItemView" owner:self options:nil] lastObject];
+        VBMenuItemView *itemView = [[VBMenuItemView alloc] initWithFrame:CGRectMake(0, i*60, self.menuScrollView.frame.size.width, 60)];
         itemView.titleLabel.text = itemString;
         itemView.tag = i+100;
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] init];
@@ -50,7 +50,6 @@
         }];
         [itemView addGestureRecognizer:tap];
         itemView.controlState = i==_currentItemIndex?UIControlStateSelected:UIControlStateNormal;
-        itemView.frame = CGRectMake(0, i*60, self.menuScrollView.frame.size.width, 60);
         [self.menuScrollView addSubview:itemView];
     }
     UIView *tableHeadView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];

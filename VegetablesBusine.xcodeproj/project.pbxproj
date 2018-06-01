@@ -46,7 +46,6 @@
 		1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */; };
 		1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */; };
 		1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */; };
-		1897EA7020C0118200ED3DEF /* VBMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA6F20C0118200ED3DEF /* VBMenuItemView.xib */; };
 		1897EA7520C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA7320C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m */; };
 		1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA7420C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib */; };
 		18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E120A6DB5D000905FF /* VBShoppingManagerViewController.m */; };
@@ -131,7 +130,6 @@
 		1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBCommodityManagementViewController.xib; sourceTree = "<group>"; };
 		1897EA6C20C0117000ED3DEF /* VBMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMenuItemView.h; sourceTree = "<group>"; };
 		1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMenuItemView.m; sourceTree = "<group>"; };
-		1897EA6F20C0118200ED3DEF /* VBMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMenuItemView.xib; sourceTree = "<group>"; };
 		1897EA7220C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBVBCommodityManagementTableViewCell.h; sourceTree = "<group>"; };
 		1897EA7320C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBVBCommodityManagementTableViewCell.m; sourceTree = "<group>"; };
 		1897EA7420C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBVBCommodityManagementTableViewCell.xib; sourceTree = "<group>"; };
@@ -345,7 +343,6 @@
 			children = (
 				1897EA6C20C0117000ED3DEF /* VBMenuItemView.h */,
 				1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */,
-				1897EA6F20C0118200ED3DEF /* VBMenuItemView.xib */,
 			);
 			path = MenuItemView;
 			sourceTree = "<group>";
@@ -514,7 +511,6 @@
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
 				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
-				1897EA7020C0118200ED3DEF /* VBMenuItemView.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,

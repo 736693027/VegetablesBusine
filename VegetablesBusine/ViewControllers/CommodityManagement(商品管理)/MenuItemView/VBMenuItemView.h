@@ -10,7 +10,7 @@
 
 @interface VBMenuItemView : UIView
 
-@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) UILabel *titleLabel;
 
 @property (nonatomic) UIControlState controlState;
 
