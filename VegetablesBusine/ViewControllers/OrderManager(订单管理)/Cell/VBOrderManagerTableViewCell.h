@@ -7,13 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "VBOrderManagerEnumHeaderFile.h"
 
 @interface VBOrderManagerTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *commodityListView;
-@property (weak, nonatomic) IBOutlet UIButton *refusedButton;
 @property (weak, nonatomic) IBOutlet UILabel *orderTotalAmountLabel;
-@property (weak, nonatomic) IBOutlet UIButton *orderButton;
 @property (weak, nonatomic) IBOutlet UIView *mainContentView;
 @property (weak, nonatomic) IBOutlet UILabel *orderTitleLabel;
+@property (nonatomic) VBOrderManagerTableViewStyle cellType;
 @end

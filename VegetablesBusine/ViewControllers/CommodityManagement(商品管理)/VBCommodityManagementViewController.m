@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.title = @"商品管理";
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBVBCommodityManagementTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBVBCommodityManagementTableViewCell"];
     _menuItemArray = @[@"新上架",@"食用油",@"限时打折\n促销商品"];
     _currentItemIndex = 0;

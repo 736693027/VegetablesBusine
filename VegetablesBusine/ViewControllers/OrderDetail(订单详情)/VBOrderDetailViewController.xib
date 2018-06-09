@@ -11,6 +11,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VBOrderDetailViewController">
             <connections>
+                <outlet property="acceptOrderButton" destination="vyE-qm-9ex" id="Lke-6Q-OjI"/>
+                <outlet property="cancleButton" destination="cMf-EU-2G7" id="LOA-Ev-eMG"/>
+                <outlet property="printButton" destination="sBS-Qk-KCp" id="jyj-RS-bKJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -26,27 +29,31 @@
                             <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="0.5" id="HVz-H6-rme"/>
+                                <constraint firstAttribute="height" constant="0.5" id="Vbh-j3-h0W"/>
                             </constraints>
                         </view>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-qm-9ex">
-                            <rect key="frame" x="97.5" y="10.5" width="180" height="47.5"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyE-qm-9ex">
+                            <rect key="frame" x="55" y="10.5" width="180" height="47.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.1450980392" green="0.79215686269999996" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="180" id="RLD-ah-jF1"/>
-                            </constraints>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="立即接单">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Qk-KCp">
-                            <rect key="frame" x="287.5" y="10.5" width="77.5" height="47.5"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Qk-KCp">
+                            <rect key="frame" x="245" y="10.5" width="35" height="47.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" image="printOrderBtnSmallx"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <state key="normal" image="printOrderBtnSmallx">
+                                <color key="titleColor" red="0.14509803921568626" green="0.792156862745098" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-EU-2G7">
-                            <rect key="frame" x="10" y="10.5" width="77.5" height="47.5"/>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-EU-2G7">
+                            <rect key="frame" x="10" y="10.5" width="35" height="47.5"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <state key="normal" title="拒绝">
@@ -56,30 +63,20 @@
                     </subviews>
                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
-                        <constraint firstItem="cMf-EU-2G7" firstAttribute="leading" secondItem="OF3-t6-JtP" secondAttribute="leading" constant="10" id="1XP-OJ-SDT"/>
-                        <constraint firstAttribute="bottom" secondItem="sBS-Qk-KCp" secondAttribute="bottom" constant="10" id="2c0-4m-H8v"/>
-                        <constraint firstAttribute="trailing" secondItem="ZUf-qs-f9C" secondAttribute="trailing" id="3KR-1c-Ybo"/>
-                        <constraint firstItem="ZUf-qs-f9C" firstAttribute="leading" secondItem="OF3-t6-JtP" secondAttribute="leading" id="4dy-zA-Ibl"/>
-                        <constraint firstAttribute="bottom" secondItem="cMf-EU-2G7" secondAttribute="bottom" constant="10" id="GmA-0q-6dU"/>
-                        <constraint firstItem="vyE-qm-9ex" firstAttribute="leading" secondItem="cMf-EU-2G7" secondAttribute="trailing" constant="10" id="PKi-0l-hJs"/>
-                        <constraint firstItem="cMf-EU-2G7" firstAttribute="top" secondItem="ZUf-qs-f9C" secondAttribute="bottom" constant="10" id="dNt-dE-cRg"/>
-                        <constraint firstItem="ZUf-qs-f9C" firstAttribute="top" secondItem="OF3-t6-JtP" secondAttribute="top" id="gQb-qQ-MOr"/>
-                        <constraint firstAttribute="bottom" secondItem="vyE-qm-9ex" secondAttribute="bottom" constant="10" id="ge6-Ko-WQD"/>
-                        <constraint firstItem="sBS-Qk-KCp" firstAttribute="width" secondItem="cMf-EU-2G7" secondAttribute="width" id="mb5-1M-qdt"/>
-                        <constraint firstAttribute="height" constant="68" id="nJs-Z7-572"/>
-                        <constraint firstItem="sBS-Qk-KCp" firstAttribute="top" secondItem="ZUf-qs-f9C" secondAttribute="bottom" constant="10" id="qlR-TC-uM8"/>
-                        <constraint firstItem="sBS-Qk-KCp" firstAttribute="leading" secondItem="vyE-qm-9ex" secondAttribute="trailing" constant="10" id="tO3-RG-f2A"/>
-                        <constraint firstAttribute="trailing" secondItem="sBS-Qk-KCp" secondAttribute="trailing" constant="10" id="teE-AO-GDs"/>
-                        <constraint firstItem="vyE-qm-9ex" firstAttribute="top" secondItem="ZUf-qs-f9C" secondAttribute="bottom" constant="10" id="tiG-SO-MAx"/>
+                        <constraint firstAttribute="trailing" secondItem="ZUf-qs-f9C" secondAttribute="trailing" id="Hl5-qf-4on"/>
+                        <constraint firstAttribute="height" constant="68" id="aIG-8j-CF9"/>
+                        <constraint firstItem="ZUf-qs-f9C" firstAttribute="leading" secondItem="OF3-t6-JtP" secondAttribute="leading" id="fCb-Sr-ePP"/>
+                        <constraint firstItem="ZUf-qs-f9C" firstAttribute="top" secondItem="OF3-t6-JtP" secondAttribute="top" id="rbC-Cx-UBm"/>
                     </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstAttribute="bottom" secondItem="OF3-t6-JtP" secondAttribute="bottom" id="Bbd-zU-cn4"/>
-                <constraint firstItem="OF3-t6-JtP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="q76-Mq-NN6"/>
-                <constraint firstAttribute="trailing" secondItem="OF3-t6-JtP" secondAttribute="trailing" id="qQf-EA-f9p"/>
+                <constraint firstItem="OF3-t6-JtP" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PYa-R1-vfY"/>
+                <constraint firstAttribute="bottom" secondItem="OF3-t6-JtP" secondAttribute="bottom" id="USM-PS-TdT"/>
+                <constraint firstAttribute="trailing" secondItem="OF3-t6-JtP" secondAttribute="trailing" id="YlP-5C-1bA"/>
             </constraints>
+            <point key="canvasLocation" x="-880" y="69"/>
         </view>
     </objects>
     <resources>

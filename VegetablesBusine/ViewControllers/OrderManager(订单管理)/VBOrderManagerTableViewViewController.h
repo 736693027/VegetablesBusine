@@ -7,7 +7,9 @@
 //
 
 #import "BaseTableViewController.h"
+#import "VBOrderManagerEnumHeaderFile.h"
 
 @interface VBOrderManagerTableViewViewController : BaseTableViewController
 
+@property (nonatomic) VBOrderManagerTableViewStyle viewStyle;
 @end

@@ -8,6 +8,8 @@
 
 #import "VBOrderManagerViewController.h"
 #import "VBOrderManagerTableViewViewController.h"
+#import "VBCalendarViewController.h"
+#import <ReactiveObjC/ReactiveObjC.h>
 
 @interface VBOrderManagerViewController ()<UIScrollViewDelegate>{
     NSInteger currentIndex;
@@ -20,18 +22,47 @@
 
 @implementation VBOrderManagerViewController
 
+#pragma mark 选择日期
+- (void)navLeftButtonClicked:(UIButton *)sender{
+    VBCalendarViewController *calendarVC = [[VBCalendarViewController alloc] init];
+    calendarVC.dateSubject = [RACSubject subject];
+    __weak typeof(navLeftBtn) weakButton = navLeftBtn;
+    [calendarVC.dateSubject subscribeNext:^(NSDate  *_Nullable date) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+        NSString *dateTime = [dateFormatter stringFromDate:date];
+        [weakButton setTitle:dateTime forState:UIControlStateNormal];
+    }];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:calendarVC];
+    [self presentViewController:nav animated:YES completion:nil];
+}
+#pragma mark 订单搜索
+- (void)navRightButtonClicked:(UIButton *)sender{
+    
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"dd.MM.yyyy"];
+    NSString *dateTime = [dateFormatter stringFromDate:[NSDate date]];
+    [navLeftBtn setTitle:dateTime forState:UIControlStateNormal];
+    [navLeftBtn setImage:[UIImage imageNamed:@"icon_selectDateDown"] forState:UIControlStateNormal];
+    navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -5, 0, 0);
+    navLeftBtn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
+    navLeftBtn.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
     self.title = @"订单管理";
+    
+    [navRrightBtn setImage:[UIImage imageNamed:@"orderSearch"] forState:UIControlStateNormal];
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
     for(NSInteger i=0;i<2;i++){
         VBOrderManagerTableViewViewController *orderManagerTable = [[VBOrderManagerTableViewViewController alloc] init];
         orderManagerTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
+        orderManagerTable.viewStyle = i==0?VBOrderManagerTableViewStyleloading:VBOrderManagerTableViewStyleFinished;
         [self addChildViewController:orderManagerTable];
         [_mainScrollview addSubview:orderManagerTable.view];
     }
 }
-
+#pragma mark 标签页切换
 - (IBAction)buttonClick:(UIButton *)sender {
     NSInteger index = sender.tag - 100;
     if(index!=currentIndex){

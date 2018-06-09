@@ -23,10 +23,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"已完成";
-    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
+    _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,_mainScrollview.frame.size.height);
     for(NSInteger i=0;i<2;i++){
         VBWaitDealTableViewController *waitDealTable = [[VBWaitDealTableViewController alloc] init];
-        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
+        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height);
         [self addChildViewController:waitDealTable];
         [_mainScrollview addSubview:waitDealTable.view];
     }

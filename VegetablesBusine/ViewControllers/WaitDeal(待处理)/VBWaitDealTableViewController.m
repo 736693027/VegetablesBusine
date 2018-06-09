@@ -54,6 +54,7 @@
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     VBOrderDetailViewController *detailVC = [[VBOrderDetailViewController alloc] init];
     detailVC.hidesBottomBarWhenPushed = YES;
+    detailVC.orderType = VBOrderDetailTypeNew;
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

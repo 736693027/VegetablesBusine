@@ -7,12 +7,20 @@
 //
 
 #import "VBVBCommodityManagementTableViewCell.h"
+#import "VBAlterView.h"
 
 @implementation VBVBCommodityManagementTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+- (IBAction)commodityShelvesAction:(UIButton *)sender {
+    VBAlterView *alertView = [VBAlterView alterView];
+    [alertView setTitle:@"您已确定下架此商品？" confirmButtonTitle:@"确定下架" cancleButtonTitle:@"取消"];
+    [alertView show];
+}
+- (IBAction)commodityDeleteAction:(UIButton *)sender {
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -53,12 +53,24 @@
 		18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */; };
 		18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */; };
 		2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */; };
-		380FFAD920B2FA4300A926FD /* VBAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAD820B2FA4300A926FD /* VBAlterView.m */; };
-		380FFADB20B2FA5500A926FD /* VBAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADA20B2FA5500A926FD /* VBAlterView.xib */; };
 		380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFADD20B3051400A926FD /* VMLoginViewController.m */; };
 		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
 		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
 		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
+		38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */; };
+		38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */; };
+		38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9920CB9E0700A21FEE /* JTCalendarMenuMonthView.m */; };
+		38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9A20CB9E0700A21FEE /* JTCalendarMonthView.m */; };
+		38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9C20CB9E0700A21FEE /* JTCalendarAppearance.m */; };
+		38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CA320CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m */; };
+		38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CA620CB9E0700A21FEE /* JTCalendar.m */; };
+		38FC7CB320CB9E0700A21FEE /* JTCalendarWeekView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CA720CB9E0700A21FEE /* JTCalendarWeekView.m */; };
+		38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CA820CB9E0700A21FEE /* JTCalendarDayView.m */; };
+		38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CAA20CB9E0700A21FEE /* JTCircleView.m */; };
+		38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CAC20CB9E0700A21FEE /* JTCalendarMenuView.m */; };
+		38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CAD20CB9E0700A21FEE /* JTCalendarContentView.m */; };
+		38FC7CBA20CB9EE300A21FEE /* VBCalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CB920CB9EE300A21FEE /* VBCalendarViewController.m */; };
+		38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7CBC20CB9FF300A21FEE /* UIView+YYAdd.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,15 +152,41 @@
 		18C519E520A6F47F000905FF /* VBShoppingManagerMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShoppingManagerMenuItemView.h; sourceTree = "<group>"; };
 		18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShoppingManagerMenuItemView.m; sourceTree = "<group>"; };
 		18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBShoppingManagerMenuItemView.xib; sourceTree = "<group>"; };
-		380FFAD720B2FA4300A926FD /* VBAlterView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAlterView.h; sourceTree = "<group>"; };
-		380FFAD820B2FA4300A926FD /* VBAlterView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAlterView.m; sourceTree = "<group>"; };
-		380FFADA20B2FA5500A926FD /* VBAlterView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBAlterView.xib; sourceTree = "<group>"; };
 		380FFADD20B3051400A926FD /* VMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
 		380FFADE20B3051400A926FD /* VMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
 		380FFADF20B3051400A926FD /* VMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
 		380FFAE320B306E300A926FD /* VBOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderDetailViewController.h; sourceTree = "<group>"; };
 		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
 		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
+		38214F6A20CBF65400E7D83F /* VBOrderManagerEnumHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerEnumHeaderFile.h; sourceTree = "<group>"; };
+		38FC7C9320CB9DFA00A21FEE /* VBAlterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAlterView.h; sourceTree = "<group>"; };
+		38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBAlterView.xib; sourceTree = "<group>"; };
+		38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAlterView.m; sourceTree = "<group>"; };
+		38FC7C9920CB9E0700A21FEE /* JTCalendarMenuMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuMonthView.m; sourceTree = "<group>"; };
+		38FC7C9A20CB9E0700A21FEE /* JTCalendarMonthView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthView.m; sourceTree = "<group>"; };
+		38FC7C9B20CB9E0700A21FEE /* JTCalendarViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarViewDataSource.h; sourceTree = "<group>"; };
+		38FC7C9C20CB9E0700A21FEE /* JTCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarAppearance.m; sourceTree = "<group>"; };
+		38FC7C9D20CB9E0700A21FEE /* JTCalendarDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarDayView.h; sourceTree = "<group>"; };
+		38FC7C9E20CB9E0700A21FEE /* JTCalendarWeekView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarWeekView.h; sourceTree = "<group>"; };
+		38FC7C9F20CB9E0700A21FEE /* JTCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendar.h; sourceTree = "<group>"; };
+		38FC7CA020CB9E0700A21FEE /* JTCircleView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCircleView.h; sourceTree = "<group>"; };
+		38FC7CA120CB9E0700A21FEE /* JTCalendarContentView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarContentView.h; sourceTree = "<group>"; };
+		38FC7CA220CB9E0700A21FEE /* JTCalendarMenuView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuView.h; sourceTree = "<group>"; };
+		38FC7CA320CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMonthWeekDaysView.m; sourceTree = "<group>"; };
+		38FC7CA420CB9E0700A21FEE /* JTCalendarMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthView.h; sourceTree = "<group>"; };
+		38FC7CA520CB9E0700A21FEE /* JTCalendarMenuMonthView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMenuMonthView.h; sourceTree = "<group>"; };
+		38FC7CA620CB9E0700A21FEE /* JTCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendar.m; sourceTree = "<group>"; };
+		38FC7CA720CB9E0700A21FEE /* JTCalendarWeekView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarWeekView.m; sourceTree = "<group>"; };
+		38FC7CA820CB9E0700A21FEE /* JTCalendarDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarDayView.m; sourceTree = "<group>"; };
+		38FC7CA920CB9E0700A21FEE /* JTCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarAppearance.h; sourceTree = "<group>"; };
+		38FC7CAA20CB9E0700A21FEE /* JTCircleView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCircleView.m; sourceTree = "<group>"; };
+		38FC7CAB20CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JTCalendarMonthWeekDaysView.h; sourceTree = "<group>"; };
+		38FC7CAC20CB9E0700A21FEE /* JTCalendarMenuView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarMenuView.m; sourceTree = "<group>"; };
+		38FC7CAD20CB9E0700A21FEE /* JTCalendarContentView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JTCalendarContentView.m; sourceTree = "<group>"; };
+		38FC7CB820CB9EE300A21FEE /* VBCalendarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBCalendarViewController.h; sourceTree = "<group>"; };
+		38FC7CB920CB9EE300A21FEE /* VBCalendarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBCalendarViewController.m; sourceTree = "<group>"; };
+		38FC7CBC20CB9FF300A21FEE /* UIView+YYAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+YYAdd.m"; sourceTree = "<group>"; };
+		38FC7CBD20CB9FF300A21FEE /* UIView+YYAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+YYAdd.h"; sourceTree = "<group>"; };
 		56DB9AF13505799CEE008E80 /* Pods-VegetablesBusine.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetablesBusine.release.xcconfig"; path = "Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine.release.xcconfig"; sourceTree = "<group>"; };
 		CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VegetablesBusine.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -293,12 +331,15 @@
 		185B5DC920A1CC90001E47EC /* OrderManager(订单管理) */ = {
 			isa = PBXGroup;
 			children = (
+				38214F6A20CBF65400E7D83F /* VBOrderManagerEnumHeaderFile.h */,
 				185B5E0720A32BAF001E47EC /* Cell */,
 				185B5DFF20A32A3C001E47EC /* VBOrderManagerViewController.h */,
 				185B5E0020A32A3C001E47EC /* VBOrderManagerViewController.m */,
 				185B5E0120A32A3C001E47EC /* VBOrderManagerViewController.xib */,
 				185B5E0420A32A6A001E47EC /* VBOrderManagerTableViewViewController.h */,
 				185B5E0520A32A6A001E47EC /* VBOrderManagerTableViewViewController.m */,
+				38FC7CB820CB9EE300A21FEE /* VBCalendarViewController.h */,
+				38FC7CB920CB9EE300A21FEE /* VBCalendarViewController.m */,
 			);
 			path = "OrderManager(订单管理)";
 			sourceTree = "<group>";
@@ -367,9 +408,9 @@
 		380FFAD620B2FA2500A926FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				380FFAD720B2FA4300A926FD /* VBAlterView.h */,
-				380FFAD820B2FA4300A926FD /* VBAlterView.m */,
-				380FFADA20B2FA5500A926FD /* VBAlterView.xib */,
+				38FC7CBB20CB9FF300A21FEE /* UIView+YYAdd */,
+				38FC7C9820CB9E0700A21FEE /* JTCalendar */,
+				38FC7C9220CB9DFA00A21FEE /* VBAlterView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -416,6 +457,53 @@
 				184E524520B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		38FC7C9220CB9DFA00A21FEE /* VBAlterView */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7C9320CB9DFA00A21FEE /* VBAlterView.h */,
+				38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */,
+				38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */,
+			);
+			path = VBAlterView;
+			sourceTree = "<group>";
+		};
+		38FC7C9820CB9E0700A21FEE /* JTCalendar */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7C9920CB9E0700A21FEE /* JTCalendarMenuMonthView.m */,
+				38FC7C9A20CB9E0700A21FEE /* JTCalendarMonthView.m */,
+				38FC7C9B20CB9E0700A21FEE /* JTCalendarViewDataSource.h */,
+				38FC7C9C20CB9E0700A21FEE /* JTCalendarAppearance.m */,
+				38FC7C9D20CB9E0700A21FEE /* JTCalendarDayView.h */,
+				38FC7C9E20CB9E0700A21FEE /* JTCalendarWeekView.h */,
+				38FC7C9F20CB9E0700A21FEE /* JTCalendar.h */,
+				38FC7CA020CB9E0700A21FEE /* JTCircleView.h */,
+				38FC7CA120CB9E0700A21FEE /* JTCalendarContentView.h */,
+				38FC7CA220CB9E0700A21FEE /* JTCalendarMenuView.h */,
+				38FC7CAC20CB9E0700A21FEE /* JTCalendarMenuView.m */,
+				38FC7CA320CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m */,
+				38FC7CA420CB9E0700A21FEE /* JTCalendarMonthView.h */,
+				38FC7CA520CB9E0700A21FEE /* JTCalendarMenuMonthView.h */,
+				38FC7CA620CB9E0700A21FEE /* JTCalendar.m */,
+				38FC7CA720CB9E0700A21FEE /* JTCalendarWeekView.m */,
+				38FC7CA820CB9E0700A21FEE /* JTCalendarDayView.m */,
+				38FC7CA920CB9E0700A21FEE /* JTCalendarAppearance.h */,
+				38FC7CAA20CB9E0700A21FEE /* JTCircleView.m */,
+				38FC7CAB20CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.h */,
+				38FC7CAD20CB9E0700A21FEE /* JTCalendarContentView.m */,
+			);
+			path = JTCalendar;
+			sourceTree = "<group>";
+		};
+		38FC7CBB20CB9FF300A21FEE /* UIView+YYAdd */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7CBC20CB9FF300A21FEE /* UIView+YYAdd.m */,
+				38FC7CBD20CB9FF300A21FEE /* UIView+YYAdd.h */,
+			);
+			path = "UIView+YYAdd";
 			sourceTree = "<group>";
 		};
 		515A8B9EF1250BAC931239E1 /* Frameworks */ = {
@@ -506,13 +594,13 @@
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
 				185B5DDA20A1D7B3001E47EC /* VBWaitDealTableViewCell.xib in Resources */,
-				380FFADB20B2FA5500A926FD /* VBAlterView.xib in Resources */,
 				184E523820B6D23C00DD3750 /* VMSectionHeaderView.xib in Resources */,
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
 				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
+				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
@@ -550,7 +638,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFDownloadRequestOperation/AFDownloadRequestOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -562,11 +649,11 @@
 				"${BUILT_PRODUCTS_DIR}/SVProgressHUD/SVProgressHUD.framework",
 				"${BUILT_PRODUCTS_DIR}/UITableView+FDTemplateLayoutCell/UITableView_FDTemplateLayoutCell.framework",
 				"${BUILT_PRODUCTS_DIR}/YTKNetwork/YTKNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/YYKit/YYKit.framework",
 				"${BUILT_PRODUCTS_DIR}/YYModel/YYModel.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDownloadRequestOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -578,6 +665,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SVProgressHUD.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UITableView_FDTemplateLayoutCell.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YTKNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYKit.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYModel.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,7 +699,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B5DD920A1D7B3001E47EC /* VBWaitDealTableViewCell.m in Sources */,
+				38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */,
 				185B5DD420A1CE74001E47EC /* VBWaitDealTableViewController.m in Sources */,
+				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
+				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
+				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
 				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
@@ -621,6 +713,8 @@
 				185B5E0220A32A3C001E47EC /* VBOrderManagerViewController.m in Sources */,
 				185B5E0C20A32BAF001E47EC /* VBOrderManagerTableViewCell.m in Sources */,
 				185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */,
+				38FC7CB320CB9E0700A21FEE /* JTCalendarWeekView.m in Sources */,
+				38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */,
 				185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */,
 				185B5D80209ED5C0001E47EC /* main.m in Sources */,
 				185B5D72209ED5BD001E47EC /* AppDelegate.m in Sources */,
@@ -631,16 +725,22 @@
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
+				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
+				38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
+				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
+				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
+				38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */,
 				380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */,
 				184E524120B6D54400DD3750 /* VMOrderTotalTableViewCell.m in Sources */,
+				38FC7CBA20CB9EE300A21FEE /* VBCalendarViewController.m in Sources */,
 				1897EA7520C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
-				380FFAD920B2FA4300A926FD /* VBAlterView.m in Sources */,
 				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
+				38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

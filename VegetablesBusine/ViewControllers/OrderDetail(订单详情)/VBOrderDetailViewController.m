@@ -14,8 +14,12 @@
 #import "VBOrderDetailInformationTableViewCell.h"
 #import <MJRefresh/MJRefresh.h>
 #import "VMSectionHeaderView.h"
+#import <Masonry/Masonry.h>
 
 @interface VBOrderDetailViewController ()
+@property (weak, nonatomic) IBOutlet UIButton *cancleButton;
+@property (weak, nonatomic) IBOutlet UIButton *printButton;
+@property (weak, nonatomic) IBOutlet UIButton *acceptOrderButton;
 
 @end
 
@@ -24,10 +28,23 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"订单详情";
+    self.cancleButton.layer.borderColor = [CommonTools changeColor:@"0x666666"].CGColor;
+    self.cancleButton.layer.borderWidth = 0.5f;
+    self.printButton.layer.borderColor = [CommonTools changeColor:@"0x25ca86"].CGColor;
+    self.printButton.layer.borderWidth = 0.5;
+    self.printButton.layer.cornerRadius = 3;
+    self.acceptOrderButton.layer.cornerRadius = 3;
+    self.cancleButton.layer.cornerRadius = 3;
+    
     [self creatTableViewViewTableViewStyle:UITableViewStyleGrouped];
     self.dataTableView.mj_header = nil;
     self.dataTableView.mj_footer = nil;
     self.dataTableView.tableHeaderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 0.0001)];
+    self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.left.right.offset(0);
+        make.bottom.offset(-68);
+    }];
     
     NSString *totalTableViewCell = NSStringFromClass([VMOrderTotalTableViewCell class]);
     NSString *orderDetailTableViewCell = NSStringFromClass([VMOrderDetailTableViewCell class]);
@@ -44,6 +61,45 @@
     
     [self tableRegisterNibName:informationTableViewCell cellReuseIdentifier:informationTableViewCell estimatedRowHeight:185];
     
+    [self setBottomButtonStyle];
+}
+- (void)setBottomButtonStyle{
+    switch (self.orderType) {
+        case 1:
+        {
+            __weak typeof(self) weakSelf = self;
+            [self.acceptOrderButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.centerX.equalTo(weakSelf.view.mas_centerX);
+                make.bottom.offset(-10);
+                make.top.offset(10);
+                make.width.offset(SCREEN_WIDTH*0.6);
+            }];
+            CGFloat buttonWidth = (SCREEN_WIDTH - 20 - 20 - SCREEN_WIDTH*0.6)/2;
+            [self.cancleButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.offset(10);
+                make.bottom.offset(-10);
+                make.width.offset(buttonWidth);
+            }];
+            [self.printButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.offset(10);
+                make.right.bottom.offset(-10);
+                make.width.offset(buttonWidth);
+            }];
+        }
+            break;
+        case 2:{
+            self.cancleButton.hidden = YES;
+            self.acceptOrderButton.hidden = YES;
+            [self.printButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.left.top.offset(10);
+                make.right.bottom.offset(-10);
+            }];
+            [self.printButton setTitle:@"打印订单" forState:UIControlStateNormal];
+        }
+            break;
+        default:
+            break;
+    }
 }
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 4;

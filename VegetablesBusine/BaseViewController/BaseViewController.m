@@ -25,13 +25,10 @@
     navLeftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     
     navLeftBtn.frame=CGRectMake(0, 20, 44, 44);
-    if ([CommonTools iPhone6plus]) {
-        navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -25, 0, 0);
-    }else{
-        navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
-    }
-    [navLeftBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
-    navLeftBtn.titleLabel.font = [UIFont systemFontOfSize:15];
+    navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    [navLeftBtn setImage:[UIImage imageNamed:@"icon_returnx"] forState:UIControlStateNormal];
+    navLeftBtn.titleLabel.font = [UIFont systemFontOfSize:14];
+    [navLeftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
     [navLeftBtn addTarget:self action:@selector(navLeftButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:navLeftBtn];
     

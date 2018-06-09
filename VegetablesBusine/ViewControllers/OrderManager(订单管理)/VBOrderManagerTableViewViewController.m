@@ -11,6 +11,7 @@
 #import "VBOrderManagerTableViewCell.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "VBAlterView.h"
+#import "VBOrderDetailViewController.h"
 
 @interface VBOrderManagerTableViewViewController ()
 
@@ -31,7 +32,7 @@
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataTableView.backgroundColor = [CommonTools changeColor:@"0xECECEC"];
     NSString *cellClassName = NSStringFromClass([VBOrderManagerTableViewCell class]);
-    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:503];
+    [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:415];
     
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
     tableFooterView.backgroundColor = [UIColor clearColor];
@@ -43,23 +44,20 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBOrderManagerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderManagerTableViewCell"];
-    [[cell.refusedButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        VBAlterView *alterView =[VBAlterView alterView];
-        [alterView show];
-    }];
-    [[cell.orderButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
-        VBAlterView *alterView =[VBAlterView alterView];
-        [alterView show];
-    }];
+    cell.cellType = self.viewStyle;
     return cell;
 }
 
 #pragma mark tableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 503;
+    return 415;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    VBOrderDetailViewController *detailVC = [[VBOrderDetailViewController alloc] init];
+    detailVC.hidesBottomBarWhenPushed = YES;
+    detailVC.orderType = VBOrderDetailTypeFinished;
+    [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

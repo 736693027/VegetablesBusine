@@ -53,6 +53,9 @@
                                 <state key="normal" title="下 架">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="commodityShelvesAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="n0q-3M-HFr"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zdd-W9-FNW">
                                 <rect key="frame" x="161" y="0.0" width="159" height="40"/>
@@ -61,6 +64,9 @@
                                 <state key="normal" title="删 除">
                                     <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="commodityDeleteAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="QaB-Jt-h4h"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -97,6 +103,12 @@
                     <constraint firstItem="Abo-bH-cFB" firstAttribute="leading" secondItem="1rn-me-Qra" secondAttribute="leading" id="zGM-Dq-f1n"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="commodityImagesView" destination="YZo-Qs-cU3" id="PcZ-VW-ZwT"/>
+                <outlet property="commodityNameLabel" destination="1rn-me-Qra" id="nF7-hU-dJt"/>
+                <outlet property="orderCount" destination="Abo-bH-cFB" id="ueS-xF-dgO"/>
+                <outlet property="priceLabel" destination="oMe-g6-Xai" id="fYF-jB-xpL"/>
+            </connections>
             <point key="canvasLocation" x="-78" y="36"/>
         </tableViewCell>
     </objects>
