@@ -43,6 +43,14 @@
 		185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5E0520A32A6A001E47EC /* VBOrderManagerTableViewViewController.m */; };
 		185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B5E0920A32BAF001E47EC /* VBOrderManagerTableViewCell.xib */; };
 		185B5E0C20A32BAF001E47EC /* VBOrderManagerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B5E0A20A32BAF001E47EC /* VBOrderManagerTableViewCell.m */; };
+		185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B609920CD123F006EF799 /* VBSetupViewController.m */; };
+		185B609C20CD123F006EF799 /* VBSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B609A20CD123F006EF799 /* VBSetupViewController.xib */; };
+		185B60A020CD165F006EF799 /* VBSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B609E20CD165F006EF799 /* VBSetupTableViewCell.m */; };
+		185B60A120CD165F006EF799 /* VBSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B609F20CD165F006EF799 /* VBSetupTableViewCell.xib */; };
+		185B60A620CD2E71006EF799 /* VBShopIntroductionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B60A420CD2E71006EF799 /* VBShopIntroductionViewController.m */; };
+		185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 185B60A520CD2E71006EF799 /* VBShopIntroductionViewController.xib */; };
+		185B60AE20CD2EFC006EF799 /* UITextView+Placeholder.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B60AC20CD2EFC006EF799 /* UITextView+Placeholder.m */; };
+		185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */ = {isa = PBXBuildFile; fileRef = 185B60B120CD31CD006EF799 /* UIButton+EnlargeEdge.m */; };
 		1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */; };
 		1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */; };
 		1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */; };
@@ -137,6 +145,19 @@
 		185B5E0820A32BAF001E47EC /* VBOrderManagerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerTableViewCell.h; sourceTree = "<group>"; };
 		185B5E0920A32BAF001E47EC /* VBOrderManagerTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBOrderManagerTableViewCell.xib; sourceTree = "<group>"; };
 		185B5E0A20A32BAF001E47EC /* VBOrderManagerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBOrderManagerTableViewCell.m; sourceTree = "<group>"; };
+		185B609820CD123F006EF799 /* VBSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSetupViewController.h; sourceTree = "<group>"; };
+		185B609920CD123F006EF799 /* VBSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSetupViewController.m; sourceTree = "<group>"; };
+		185B609A20CD123F006EF799 /* VBSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBSetupViewController.xib; sourceTree = "<group>"; };
+		185B609D20CD165F006EF799 /* VBSetupTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSetupTableViewCell.h; sourceTree = "<group>"; };
+		185B609E20CD165F006EF799 /* VBSetupTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSetupTableViewCell.m; sourceTree = "<group>"; };
+		185B609F20CD165F006EF799 /* VBSetupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBSetupTableViewCell.xib; sourceTree = "<group>"; };
+		185B60A320CD2E71006EF799 /* VBShopIntroductionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShopIntroductionViewController.h; sourceTree = "<group>"; };
+		185B60A420CD2E71006EF799 /* VBShopIntroductionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShopIntroductionViewController.m; sourceTree = "<group>"; };
+		185B60A520CD2E71006EF799 /* VBShopIntroductionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBShopIntroductionViewController.xib; sourceTree = "<group>"; };
+		185B60AC20CD2EFC006EF799 /* UITextView+Placeholder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITextView+Placeholder.m"; sourceTree = "<group>"; };
+		185B60AD20CD2EFC006EF799 /* UITextView+Placeholder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITextView+Placeholder.h"; sourceTree = "<group>"; };
+		185B60B020CD31CD006EF799 /* UIButton+EnlargeEdge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+EnlargeEdge.h"; sourceTree = "<group>"; };
+		185B60B120CD31CD006EF799 /* UIButton+EnlargeEdge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+EnlargeEdge.m"; sourceTree = "<group>"; };
 		1897EA6620C00F1D00ED3DEF /* VBCommodityManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBCommodityManagementViewController.h; sourceTree = "<group>"; };
 		1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBCommodityManagementViewController.m; sourceTree = "<group>"; };
 		1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBCommodityManagementViewController.xib; sourceTree = "<group>"; };
@@ -291,6 +312,7 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				185B60A220CD2E59006EF799 /* ShopIntroduction(店铺简介) */,
 				1897EA6520C00F0900ED3DEF /* CommodityManagement(商品管理) */,
 				380FFAE220B306A900A926FD /* OrderDetail(订单详情) */,
 				380FFADC20B3051400A926FD /* Login(登录) */,
@@ -367,6 +389,34 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		185B60A220CD2E59006EF799 /* ShopIntroduction(店铺简介) */ = {
+			isa = PBXGroup;
+			children = (
+				185B60A320CD2E71006EF799 /* VBShopIntroductionViewController.h */,
+				185B60A420CD2E71006EF799 /* VBShopIntroductionViewController.m */,
+				185B60A520CD2E71006EF799 /* VBShopIntroductionViewController.xib */,
+			);
+			path = "ShopIntroduction(店铺简介)";
+			sourceTree = "<group>";
+		};
+		185B60AB20CD2EFC006EF799 /* UITextView+Placeholder */ = {
+			isa = PBXGroup;
+			children = (
+				185B60AC20CD2EFC006EF799 /* UITextView+Placeholder.m */,
+				185B60AD20CD2EFC006EF799 /* UITextView+Placeholder.h */,
+			);
+			path = "UITextView+Placeholder";
+			sourceTree = "<group>";
+		};
+		185B60AF20CD31CD006EF799 /* UIButton+EnlargeEdge */ = {
+			isa = PBXGroup;
+			children = (
+				185B60B020CD31CD006EF799 /* UIButton+EnlargeEdge.h */,
+				185B60B120CD31CD006EF799 /* UIButton+EnlargeEdge.m */,
+			);
+			path = "UIButton+EnlargeEdge";
+			sourceTree = "<group>";
+		};
 		1897EA6520C00F0900ED3DEF /* CommodityManagement(商品管理) */ = {
 			isa = PBXGroup;
 			children = (
@@ -401,6 +451,12 @@
 		380FFAD520B2F89800A926FD /* Setup(设置) */ = {
 			isa = PBXGroup;
 			children = (
+				185B609820CD123F006EF799 /* VBSetupViewController.h */,
+				185B609920CD123F006EF799 /* VBSetupViewController.m */,
+				185B609A20CD123F006EF799 /* VBSetupViewController.xib */,
+				185B609D20CD165F006EF799 /* VBSetupTableViewCell.h */,
+				185B609E20CD165F006EF799 /* VBSetupTableViewCell.m */,
+				185B609F20CD165F006EF799 /* VBSetupTableViewCell.xib */,
 			);
 			path = "Setup(设置)";
 			sourceTree = "<group>";
@@ -408,6 +464,8 @@
 		380FFAD620B2FA2500A926FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				185B60AF20CD31CD006EF799 /* UIButton+EnlargeEdge */,
+				185B60AB20CD2EFC006EF799 /* UITextView+Placeholder */,
 				38FC7CBB20CB9FF300A21FEE /* UIView+YYAdd */,
 				38FC7C9820CB9E0700A21FEE /* JTCalendar */,
 				38FC7C9220CB9DFA00A21FEE /* VBAlterView */,
@@ -585,10 +643,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				185B609C20CD123F006EF799 /* VBSetupViewController.xib in Resources */,
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
 				184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */,
 				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
+				185B60A120CD165F006EF799 /* VBSetupTableViewCell.xib in Resources */,
 				380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */,
 				184E523D20B6D26000DD3750 /* VMOrderDetailTableViewCell.xib in Resources */,
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
@@ -598,6 +658,7 @@
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
 				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
+				185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
@@ -638,6 +699,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AFDownloadRequestOperation/AFDownloadRequestOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -654,6 +716,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDownloadRequestOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -701,6 +764,7 @@
 				185B5DD920A1D7B3001E47EC /* VBWaitDealTableViewCell.m in Sources */,
 				38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */,
 				185B5DD420A1CE74001E47EC /* VBWaitDealTableViewController.m in Sources */,
+				185B60A020CD165F006EF799 /* VBSetupTableViewCell.m in Sources */,
 				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
 				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
 				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
@@ -709,6 +773,7 @@
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
+				185B60A620CD2E71006EF799 /* VBShopIntroductionViewController.m in Sources */,
 				18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */,
 				185B5E0220A32A3C001E47EC /* VBOrderManagerViewController.m in Sources */,
 				185B5E0C20A32BAF001E47EC /* VBOrderManagerTableViewCell.m in Sources */,
@@ -726,6 +791,7 @@
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
 				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
+				185B60AE20CD2EFC006EF799 /* UITextView+Placeholder.m in Sources */,
 				38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
@@ -736,6 +802,8 @@
 				38FC7CBA20CB9EE300A21FEE /* VBCalendarViewController.m in Sources */,
 				1897EA7520C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
+				185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */,
+				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,

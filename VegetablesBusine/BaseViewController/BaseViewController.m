@@ -7,6 +7,7 @@
 //
 
 #import "BaseViewController.h"
+#import "UIButton+EnlargeEdge.h"
 
 @interface BaseViewController ()
 
@@ -24,8 +25,9 @@
 {
     navLeftBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     
-    navLeftBtn.frame=CGRectMake(0, 20, 44, 44);
-    navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 0);
+    navLeftBtn.frame=CGRectMake(0, 0, 44, 44);
+    [navLeftBtn setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
+    navLeftBtn.contentEdgeInsets = UIEdgeInsetsMake(0, -20, 0, 20);
     [navLeftBtn setImage:[UIImage imageNamed:@"icon_returnx"] forState:UIControlStateNormal];
     navLeftBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [navLeftBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -34,13 +36,12 @@
     
     navRrightBtn=[UIButton buttonWithType:UIButtonTypeCustom];
     navRrightBtn.frame=CGRectMake(0, 0, 42, 42);
+    [navRrightBtn setEnlargeEdgeWithTop:10 right:10 bottom:10 left:10];
     navRrightBtn.contentHorizontalAlignment=UIControlContentHorizontalAlignmentRight;
     navRrightBtn.titleLabel.font = [UIFont systemFontOfSize:17];
     [navRrightBtn addTarget:self action:@selector(navRightButtonClicked:) forControlEvents:UIControlEventTouchUpInside];
-    UIBarButtonItem *rigthButtonSapce = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFixedSpace target:nil action:nil];
-    rigthButtonSapce.width = -1;
     UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:navRrightBtn];
-    self.navigationItem.rightBarButtonItems = @[rigthButtonSapce,rightBarButtonItem];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 
 #pragma mark navigationItem BarButtonItem click

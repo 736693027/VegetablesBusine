@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="VBSetupTableViewCell" rowHeight="54" id="KGk-i7-Jjw" customClass="VBSetupTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="47"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="46.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="营业状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hgN-ry-LsG">
+                        <rect key="frame" x="12" y="15.5" width="60" height="17"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="jdB-BX-9P5"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_goto" translatesAutoresizingMaskIntoConstraints="NO" id="OTJ-fi-lrI">
+                        <rect key="frame" x="300" y="16" width="8" height="15"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="8" id="2zp-5e-6xF"/>
+                            <constraint firstAttribute="height" constant="15" id="f7R-YZ-6Tm"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A1v-rb-gO0">
+                        <rect key="frame" x="92" y="16" width="199" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hQy-WP-jDN">
+                        <rect key="frame" x="259" y="8" width="51" height="31"/>
+                    </switch>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hgN-ry-LsG" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="7og-8A-q1g"/>
+                    <constraint firstItem="hQy-WP-jDN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="A40-Ct-TRj"/>
+                    <constraint firstAttribute="trailing" secondItem="hQy-WP-jDN" secondAttribute="trailing" constant="12" id="CZ4-vV-W6P"/>
+                    <constraint firstItem="hgN-ry-LsG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="12" id="M8L-Vu-5DG"/>
+                    <constraint firstAttribute="trailing" secondItem="OTJ-fi-lrI" secondAttribute="trailing" constant="12" id="VAf-IS-0Bb"/>
+                    <constraint firstItem="OTJ-fi-lrI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lyR-v5-4Ex"/>
+                    <constraint firstItem="A1v-rb-gO0" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ulB-TX-k1D"/>
+                    <constraint firstItem="A1v-rb-gO0" firstAttribute="leading" relation="lessThanOrEqual" secondItem="hgN-ry-LsG" secondAttribute="trailing" constant="20" id="uxW-tp-spk"/>
+                    <constraint firstItem="OTJ-fi-lrI" firstAttribute="leading" secondItem="A1v-rb-gO0" secondAttribute="trailing" constant="9" id="xZp-og-c6d"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="detaiLabel" destination="A1v-rb-gO0" id="D3B-rE-rfF"/>
+                <outlet property="gotoImageView" destination="OTJ-fi-lrI" id="fe6-TK-LmU"/>
+                <outlet property="stateSwitch" destination="hQy-WP-jDN" id="1aQ-eg-XmC"/>
+                <outlet property="titleLabel" destination="hgN-ry-LsG" id="wiA-9C-IZi"/>
+            </connections>
+            <point key="canvasLocation" x="-312" y="-107"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_goto" width="8" height="15"/>
+    </resources>
+</document>

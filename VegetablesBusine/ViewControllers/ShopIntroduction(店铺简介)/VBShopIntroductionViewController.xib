@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VBShopIntroductionViewController">
+            <connections>
+                <outlet property="introductionTextView" destination="2ce-iK-IMy" id="zNq-E5-T1j"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1EI-8M-bGo">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                    <subviews>
+                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="2ce-iK-IMy">
+                            <rect key="frame" x="10" y="5" width="355" height="190"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        </textView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="2ce-iK-IMy" firstAttribute="top" secondItem="1EI-8M-bGo" secondAttribute="top" constant="5" id="aCt-r3-Ykz"/>
+                        <constraint firstAttribute="trailing" secondItem="2ce-iK-IMy" secondAttribute="trailing" constant="10" id="j87-07-ahZ"/>
+                        <constraint firstAttribute="height" constant="200" id="laL-j6-wio"/>
+                        <constraint firstItem="2ce-iK-IMy" firstAttribute="leading" secondItem="1EI-8M-bGo" secondAttribute="leading" constant="10" id="tUn-gF-gmF"/>
+                        <constraint firstAttribute="bottom" secondItem="2ce-iK-IMy" secondAttribute="bottom" constant="5" id="wAk-5S-nE5"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="1EI-8M-bGo" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="COg-AY-tzo"/>
+                <constraint firstItem="1EI-8M-bGo" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LMD-pp-mFT"/>
+                <constraint firstItem="1EI-8M-bGo" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailing" id="joG-a9-Ssb"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
