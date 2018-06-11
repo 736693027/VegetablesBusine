@@ -10,6 +10,7 @@
 #import "VBSetupTableViewCell.h"
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBShopIntroductionViewController.h"
 
 @interface VBSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -25,7 +26,7 @@
     self.title = @"商品名称";
     _titleArray = @[@[@"营业状态",@"配送信息",@"自动接单"],@[@"店铺类型",@"订餐电话"],@[@"店铺地址",@"店铺公告",@"店铺简介"]];
     _contentArray = [NSMutableArray arrayWithObjects:@[@"状态、预订、配送时间",@"起送价、制作送达时间",@""],@[@"酒类饮品、酒类饮品",@"15213886984"],@[@"北京市海淀区",@"欢迎光临",@"店铺简介内容"], nil];
-    _viewContronllers = @[@[@"营业状态",@"配送信息",@"自动接单"],@[@"店铺类型",@"订餐电话"],@[@"店铺地址",@"店铺公告",@"VBShopIntroductionViewController"]];
+    _viewContronllers = @[@[@"营业状态",@"VBDeliveryInformationViewController",@"自动接单"],@[@"店铺类型",@"订餐电话"],@[@"VBShopIntroductionViewController",@"VBShopIntroductionViewController",@"VBShopIntroductionViewController"]];
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 48)];
     tableFooterView.backgroundColor = [UIColor whiteColor];
     self.dataTableView.tableFooterView = tableFooterView;
@@ -81,10 +82,24 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSArray *sectionArray = _viewContronllers[indexPath.section];
+    NSArray *cellTitles = _titleArray[indexPath.section];
+    NSArray *contents = _contentArray[indexPath.section];
     NSString *className = sectionArray[indexPath.row];
     Class viewControllerClass = NSClassFromString(className);
     UIViewController *viewController = [[viewControllerClass alloc] init];
+    viewController.title = cellTitles[indexPath.row];
     viewController.hidesBottomBarWhenPushed = YES;
+    if(indexPath.section == 2){
+        VBShopIntroductionViewController *shopIntroductionsVC = (VBShopIntroductionViewController *)viewController;
+        shopIntroductionsVC.textViewSubject = [RACSubject subject];
+        shopIntroductionsVC.contentString = contents[indexPath.row];
+        @weakify(self)
+        [shopIntroductionsVC.textViewSubject subscribeNext:^(NSString * _Nullable text) {
+            @strongify(self);
+            VBSetupTableViewCell *cell = [self.dataTableView cellForRowAtIndexPath:indexPath];
+            cell.detaiLabel.text = text;
+        }];
+    }
     [self.navigationController pushViewController:viewController animated:YES];
 }
 - (void)didReceiveMemoryWarning {

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VBCommodityManagementViewController">
             <connections>
-                <outlet property="dataTableView" destination="Oes-yt-oUh" id="MMz-FV-4ta"/>
                 <outlet property="menuScrollView" destination="twM-fK-wuG" id="NVT-0U-2Mt"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -73,26 +72,14 @@
                         <constraint firstAttribute="width" constant="84" id="kQF-XR-rFR"/>
                     </constraints>
                 </scrollView>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Oes-yt-oUh">
-                    <rect key="frame" x="84" y="0.0" width="291" height="613"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <connections>
-                        <outlet property="dataSource" destination="-1" id="tnS-eH-SfH"/>
-                        <outlet property="delegate" destination="-1" id="J9b-XU-zVM"/>
-                    </connections>
-                </tableView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="twM-fK-wuG" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5nM-nc-Rck"/>
-                <constraint firstItem="Oes-yt-oUh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="8de-o4-Aqf"/>
                 <constraint firstItem="mGB-0G-9ff" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="NHI-bd-Lzo"/>
-                <constraint firstItem="mGB-0G-9ff" firstAttribute="top" secondItem="Oes-yt-oUh" secondAttribute="bottom" id="OnV-YZ-sjb"/>
-                <constraint firstItem="Oes-yt-oUh" firstAttribute="leading" secondItem="twM-fK-wuG" secondAttribute="trailing" id="Sut-H4-56l"/>
                 <constraint firstItem="mGB-0G-9ff" firstAttribute="top" secondItem="twM-fK-wuG" secondAttribute="bottom" id="XGs-a1-S1w"/>
                 <constraint firstAttribute="trailing" secondItem="mGB-0G-9ff" secondAttribute="trailing" id="XRJ-HO-5fc"/>
                 <constraint firstAttribute="bottom" secondItem="mGB-0G-9ff" secondAttribute="bottom" id="ZQ9-9A-24k"/>
-                <constraint firstAttribute="trailing" secondItem="Oes-yt-oUh" secondAttribute="trailing" id="t5j-TX-I9N"/>
                 <constraint firstItem="twM-fK-wuG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="x7f-Kl-89B"/>
             </constraints>
             <point key="canvasLocation" x="-74" y="52"/>

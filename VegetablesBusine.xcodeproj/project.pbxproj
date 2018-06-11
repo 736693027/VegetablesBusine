@@ -56,6 +56,10 @@
 		1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */; };
 		1897EA7520C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA7320C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m */; };
 		1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA7420C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib */; };
+		18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA795820CE201D002182B3 /* VBDeliveryInformationViewController.m */; };
+		18BA795B20CE201D002182B3 /* VBDeliveryInformationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BA795920CE201D002182B3 /* VBDeliveryInformationViewController.xib */; };
+		18BA795F20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 18BA795D20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m */; };
+		18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18BA795E20CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib */; };
 		18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E120A6DB5D000905FF /* VBShoppingManagerViewController.m */; };
 		18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E220A6DB5D000905FF /* VBShoppingManagerViewController.xib */; };
 		18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */; };
@@ -166,6 +170,12 @@
 		1897EA7220C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBVBCommodityManagementTableViewCell.h; sourceTree = "<group>"; };
 		1897EA7320C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBVBCommodityManagementTableViewCell.m; sourceTree = "<group>"; };
 		1897EA7420C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBVBCommodityManagementTableViewCell.xib; sourceTree = "<group>"; };
+		18BA795720CE201D002182B3 /* VBDeliveryInformationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBDeliveryInformationViewController.h; sourceTree = "<group>"; };
+		18BA795820CE201D002182B3 /* VBDeliveryInformationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDeliveryInformationViewController.m; sourceTree = "<group>"; };
+		18BA795920CE201D002182B3 /* VBDeliveryInformationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBDeliveryInformationViewController.xib; sourceTree = "<group>"; };
+		18BA795C20CE2428002182B3 /* VBDeliveryInformationTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBDeliveryInformationTableViewCell.h; sourceTree = "<group>"; };
+		18BA795D20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDeliveryInformationTableViewCell.m; sourceTree = "<group>"; };
+		18BA795E20CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBDeliveryInformationTableViewCell.xib; sourceTree = "<group>"; };
 		18C519DE20A6D414000905FF /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		18C519E020A6DB5D000905FF /* VBShoppingManagerViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShoppingManagerViewController.h; sourceTree = "<group>"; };
 		18C519E120A6DB5D000905FF /* VBShoppingManagerViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShoppingManagerViewController.m; sourceTree = "<group>"; };
@@ -312,6 +322,7 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18BA795620CE2007002182B3 /* DeliveryInformation(配送信息) */,
 				185B60A220CD2E59006EF799 /* ShopIntroduction(店铺简介) */,
 				1897EA6520C00F0900ED3DEF /* CommodityManagement(商品管理) */,
 				380FFAE220B306A900A926FD /* OrderDetail(订单详情) */,
@@ -446,6 +457,19 @@
 				1897EA7420C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		18BA795620CE2007002182B3 /* DeliveryInformation(配送信息) */ = {
+			isa = PBXGroup;
+			children = (
+				18BA795720CE201D002182B3 /* VBDeliveryInformationViewController.h */,
+				18BA795820CE201D002182B3 /* VBDeliveryInformationViewController.m */,
+				18BA795920CE201D002182B3 /* VBDeliveryInformationViewController.xib */,
+				18BA795C20CE2428002182B3 /* VBDeliveryInformationTableViewCell.h */,
+				18BA795D20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m */,
+				18BA795E20CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib */,
+			);
+			path = "DeliveryInformation(配送信息)";
 			sourceTree = "<group>";
 		};
 		380FFAD520B2F89800A926FD /* Setup(设置) */ = {
@@ -644,6 +668,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B609C20CD123F006EF799 /* VBSetupViewController.xib in Resources */,
+				18BA795B20CE201D002182B3 /* VBDeliveryInformationViewController.xib in Resources */,
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
 				184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */,
@@ -660,6 +685,7 @@
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
 				185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
+				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
@@ -787,6 +813,7 @@
 				184E523720B6D23C00DD3750 /* VMSectionHeaderView.m in Sources */,
 				1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */,
 				184E523C20B6D26000DD3750 /* VMOrderDetailTableViewCell.m in Sources */,
+				18BA795F20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m in Sources */,
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
@@ -796,6 +823,7 @@
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
+				18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */,
 				38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */,
 				380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */,
 				184E524120B6D54400DD3750 /* VMOrderTotalTableViewCell.m in Sources */,

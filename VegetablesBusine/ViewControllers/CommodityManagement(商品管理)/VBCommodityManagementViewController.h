@@ -6,8 +6,8 @@
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "BaseViewController.h"
+#import "BaseTableViewController.h"
 
-@interface VBCommodityManagementViewController : BaseViewController
+@interface VBCommodityManagementViewController : BaseTableViewController
 
 @end

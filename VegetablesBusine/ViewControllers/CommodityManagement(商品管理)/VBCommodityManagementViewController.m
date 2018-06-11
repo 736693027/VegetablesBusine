@@ -12,10 +12,8 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <Masonry/Masonry.h>
 
-@interface VBCommodityManagementViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface VBCommodityManagementViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *menuScrollView;
-@property (weak, nonatomic) IBOutlet UITableView *dataTableView;
-@property (strong, nonatomic) NSArray *dataArray;
 @property (strong, nonatomic) NSArray *menuItemArray;
 @property (assign, nonatomic) NSInteger currentItemIndex;
 @property (strong, nonatomic) UILabel *tableHeaderTitlaLabel;
@@ -27,7 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"商品管理";
-    [self.dataTableView registerNib:[UINib nibWithNibName:@"VBVBCommodityManagementTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBVBCommodityManagementTableViewCell"];
+    [self creatTableViewViewTableViewStyle:UITableViewStylePlain];
+    [self.dataTableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.left.offset(84);
+        make.bottom.offset(-54);
+        make.top.right.offset(0);
+    }];
+    [self tableRegisterNibName:@"VBVBCommodityManagementTableViewCell" cellReuseIdentifier:@"VBVBCommodityManagementTableViewCell" estimatedRowHeight:143];
     _menuItemArray = @[@"新上架",@"食用油",@"限时打折\n促销商品"];
     _currentItemIndex = 0;
     for(NSInteger i=0;i<_menuItemArray.count;i++){

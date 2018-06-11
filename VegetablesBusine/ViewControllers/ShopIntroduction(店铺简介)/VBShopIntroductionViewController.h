@@ -7,7 +7,12 @@
 //
 
 #import "BaseViewController.h"
+@class RACSubject;
 
 @interface VBShopIntroductionViewController : BaseViewController
+
+@property (copy, nonatomic) NSString *contentString;
+
+@property (strong, nonatomic) RACSubject *textViewSubject;
 
 @end
