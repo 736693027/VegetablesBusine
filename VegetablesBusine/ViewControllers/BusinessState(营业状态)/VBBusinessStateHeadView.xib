@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Xgv-67-vxg" customClass="VBBusinessStateHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="180"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C7u-cO-RuT">
+                    <rect key="frame" x="0.0" y="10" width="375" height="50"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GuZ-F2-F9S">
+                            <rect key="frame" x="0.0" y="49" width="375" height="1"/>
+                            <color key="backgroundColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="0Dj-B9-Rz8"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="店铺状态" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vNT-FC-iSm">
+                            <rect key="frame" x="20" y="16" width="61.5" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l6M-ze-tZk">
+                            <rect key="frame" x="97.5" y="15" width="75" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="b0u-GA-Etb"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="营业中" image="icon_resting">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="icon_opening">
+                                <color key="titleColor" red="0.0039215686274509803" green="0.80392156862745101" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8of-4D-qMa">
+                            <rect key="frame" x="190.5" y="15" width="75" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="75" id="Hsz-ko-qfO"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="休息中" image="icon_resting">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="icon_opening">
+                                <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="GuZ-F2-F9S" firstAttribute="leading" secondItem="C7u-cO-RuT" secondAttribute="leading" id="1Jt-dD-O56"/>
+                        <constraint firstAttribute="height" constant="50" id="JOe-ck-fhI"/>
+                        <constraint firstAttribute="bottom" secondItem="GuZ-F2-F9S" secondAttribute="bottom" id="MNN-8v-n88"/>
+                        <constraint firstItem="8of-4D-qMa" firstAttribute="centerY" secondItem="C7u-cO-RuT" secondAttribute="centerY" id="NLF-KW-amt"/>
+                        <constraint firstItem="8of-4D-qMa" firstAttribute="leading" secondItem="l6M-ze-tZk" secondAttribute="trailing" constant="18" id="NT2-6D-7s5"/>
+                        <constraint firstItem="vNT-FC-iSm" firstAttribute="leading" secondItem="C7u-cO-RuT" secondAttribute="leading" constant="20" id="PD1-BV-he4"/>
+                        <constraint firstItem="l6M-ze-tZk" firstAttribute="centerY" secondItem="C7u-cO-RuT" secondAttribute="centerY" id="Qm4-2n-XeX"/>
+                        <constraint firstItem="l6M-ze-tZk" firstAttribute="leading" secondItem="vNT-FC-iSm" secondAttribute="trailing" constant="16" id="iFd-0W-LcZ"/>
+                        <constraint firstItem="vNT-FC-iSm" firstAttribute="centerY" secondItem="C7u-cO-RuT" secondAttribute="centerY" id="kYk-xF-aLZ"/>
+                        <constraint firstAttribute="trailing" secondItem="GuZ-F2-F9S" secondAttribute="trailing" id="wKk-L5-U8A"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ReM-Jr-mtz">
+                    <rect key="frame" x="0.0" y="60" width="375" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="是否支持预订" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hjH-ym-dDS">
+                            <rect key="frame" x="20" y="16" width="92" height="18"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hh4-Zk-dzl">
+                            <rect key="frame" x="134" y="15" width="50" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="X7D-5q-QOj"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="是" image="icon_resting">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="icon_opening">
+                                <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-Or-gbN">
+                            <rect key="frame" x="202" y="15" width="50" height="20"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="L35-6a-VhF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                            <inset key="titleEdgeInsets" minX="8" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="8" maxY="0.0"/>
+                            <state key="normal" title="否" image="icon_resting">
+                                <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected" image="icon_opening">
+                                <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="tKe-Or-gbN" firstAttribute="centerY" secondItem="ReM-Jr-mtz" secondAttribute="centerY" id="A6A-CF-0DS"/>
+                        <constraint firstItem="hjH-ym-dDS" firstAttribute="centerY" secondItem="ReM-Jr-mtz" secondAttribute="centerY" id="NU3-Rb-iod"/>
+                        <constraint firstItem="hh4-Zk-dzl" firstAttribute="centerY" secondItem="ReM-Jr-mtz" secondAttribute="centerY" id="Qw2-Z4-owo"/>
+                        <constraint firstItem="tKe-Or-gbN" firstAttribute="leading" secondItem="hh4-Zk-dzl" secondAttribute="trailing" constant="18" id="ieD-v0-40x"/>
+                        <constraint firstItem="hjH-ym-dDS" firstAttribute="leading" secondItem="ReM-Jr-mtz" secondAttribute="leading" constant="20" id="ogy-Lr-Xtw"/>
+                        <constraint firstItem="hh4-Zk-dzl" firstAttribute="leading" secondItem="hjH-ym-dDS" secondAttribute="trailing" constant="22" id="phw-6M-ubp"/>
+                        <constraint firstAttribute="height" constant="50" id="yGf-C6-U60"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VBU-6b-tcz">
+                    <rect key="frame" x="0.0" y="111" width="375" height="60"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="注:支持预订打烊状态用户也可以下单，商家在配送时间内容完成配送" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oL0-wf-b8T">
+                            <rect key="frame" x="5" y="0.0" width="365" height="60"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="oL0-wf-b8T" firstAttribute="top" secondItem="VBU-6b-tcz" secondAttribute="top" id="6FY-p2-CMb"/>
+                        <constraint firstAttribute="height" constant="60" id="Azv-W3-gNT"/>
+                        <constraint firstAttribute="bottom" secondItem="oL0-wf-b8T" secondAttribute="bottom" id="OD1-Cm-sdJ"/>
+                        <constraint firstAttribute="trailing" secondItem="oL0-wf-b8T" secondAttribute="trailing" constant="5" id="QyZ-yh-XsY"/>
+                        <constraint firstItem="oL0-wf-b8T" firstAttribute="leading" secondItem="VBU-6b-tcz" secondAttribute="leading" constant="5" id="eBc-7B-frc"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="0.94117647058823528" green="0.94117647058823528" blue="0.94117647058823528" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="VBU-6b-tcz" secondAttribute="trailing" id="0Vn-Ie-Xjp"/>
+                <constraint firstItem="reR-Xy-GNg" firstAttribute="trailing" secondItem="C7u-cO-RuT" secondAttribute="trailing" id="0rN-bW-NRP"/>
+                <constraint firstItem="ReM-Jr-mtz" firstAttribute="leading" secondItem="reR-Xy-GNg" secondAttribute="leading" id="2ON-zI-vLu"/>
+                <constraint firstItem="ReM-Jr-mtz" firstAttribute="top" secondItem="C7u-cO-RuT" secondAttribute="bottom" id="7yh-e3-0ew"/>
+                <constraint firstItem="VBU-6b-tcz" firstAttribute="top" secondItem="ReM-Jr-mtz" secondAttribute="bottom" constant="1" id="KgG-Do-W6s"/>
+                <constraint firstItem="C7u-cO-RuT" firstAttribute="leading" secondItem="reR-Xy-GNg" secondAttribute="leading" id="T8H-dN-6WM"/>
+                <constraint firstItem="ReM-Jr-mtz" firstAttribute="trailing" secondItem="reR-Xy-GNg" secondAttribute="trailing" id="U2P-sH-1Jc"/>
+                <constraint firstItem="VBU-6b-tcz" firstAttribute="leading" secondItem="reR-Xy-GNg" secondAttribute="leading" id="VZU-9j-9e5"/>
+                <constraint firstItem="C7u-cO-RuT" firstAttribute="top" secondItem="reR-Xy-GNg" secondAttribute="top" constant="10" id="gfv-g3-3tb"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="reR-Xy-GNg"/>
+            <point key="canvasLocation" x="-18.5" y="64"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_opening" width="20" height="20"/>
+        <image name="icon_resting" width="20" height="20"/>
+    </resources>
+</document>
