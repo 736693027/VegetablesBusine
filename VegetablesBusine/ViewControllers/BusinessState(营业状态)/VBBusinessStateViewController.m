@@ -11,9 +11,12 @@
 #import "VBVBBusinessStateTextTableViewCell.h"
 #import "VBBusinessStateHeadView.h"
 #import <Masonry/Masonry.h>
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "LBDatePickerView.h"
 
 @interface VBBusinessStateViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
+@property (assign, nonatomic) NSInteger totalDateTimeRow;
 
 @end
 
@@ -25,12 +28,16 @@
     tableHeadView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 180);
     self.dataTableView.tableHeaderView = tableHeadView;
     self.dataTableView.tableFooterView = [UIView new];
+    self.totalDateTimeRow  = 1;
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
     return 2;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(section == 0){
+        return self.totalDateTimeRow;
+    }
     return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -39,6 +46,24 @@
         if(cell == nil){
             cell = [[[NSBundle mainBundle] loadNibNamed:@"VBBusinessStateTableViewCell" owner:self options:nil] lastObject];
         }
+        cell.selectStartDateTime = [RACSubject subject];
+        [cell.selectStartDateTime subscribeNext:^(id  _Nullable x) {
+            LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
+            lbDatePicker.resultSubject = [RACSubject subject];
+            [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
+                NSLog(@"-----%@",date);
+            }];
+            [lbDatePicker showPickView];
+        }];
+        cell.selectEndDateTime = [RACSubject subject];
+        [cell.selectEndDateTime subscribeNext:^(id  _Nullable x) {
+            LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
+            lbDatePicker.resultSubject = [RACSubject subject];
+            [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
+                NSLog(@"-----%@",date);
+            }];
+            [lbDatePicker showPickView];
+        }];
         return cell;
     }else{
         VBVBBusinessStateTextTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBVBBusinessStateTextTableViewCell"];
@@ -90,6 +115,19 @@
             make.centerY.equalTo(mainView.mas_centerY);
             make.height.offset(40);
             make.width.offset(217);
+        }];
+        @weakify(self);
+        [[addTimeButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+            @strongify(self)
+            if(self.totalDateTimeRow==3){
+                [SVProgressHUD showErrorWithStatus:@"最多能添加三组时间段"];
+                return ;
+            }
+            self.totalDateTimeRow++;
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.totalDateTimeRow-1 inSection:0];
+            [self.dataTableView beginUpdates];
+            [self.dataTableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+            [self.dataTableView endUpdates];
         }];
         return footerView;
     }else{

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830E72620D115CF001E042B /* LBDatePickerView.m */; };
+		1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830E72720D115CF001E042B /* LBDatePickerView.xib */; };
 		184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E522A20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m */; };
 		184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184E522B20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib */; };
 		184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 184E522F20B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m */; };
@@ -95,6 +97,9 @@
 
 /* Begin PBXFileReference section */
 		0E60496E89ADB590171D47AC /* Pods-VegetablesBusine.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VegetablesBusine.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine.debug.xcconfig"; sourceTree = "<group>"; };
+		1830E72620D115CF001E042B /* LBDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDatePickerView.m; sourceTree = "<group>"; };
+		1830E72720D115CF001E042B /* LBDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBDatePickerView.xib; sourceTree = "<group>"; };
+		1830E72820D115CF001E042B /* LBDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDatePickerView.h; sourceTree = "<group>"; };
 		184E522920B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderDetailOrderStateTableViewCell.h; sourceTree = "<group>"; };
 		184E522A20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailOrderStateTableViewCell.m; sourceTree = "<group>"; };
 		184E522B20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailOrderStateTableViewCell.xib; sourceTree = "<group>"; };
@@ -254,6 +259,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1830E72520D115CF001E042B /* DatePick */ = {
+			isa = PBXGroup;
+			children = (
+				1830E72620D115CF001E042B /* LBDatePickerView.m */,
+				1830E72820D115CF001E042B /* LBDatePickerView.h */,
+				1830E72720D115CF001E042B /* LBDatePickerView.xib */,
+			);
+			path = DatePick;
+			sourceTree = "<group>";
+		};
 		184E523320B6D23B00DD3750 /* SectionHeadView */ = {
 			isa = PBXGroup;
 			children = (
@@ -528,6 +543,7 @@
 		380FFAD620B2FA2500A926FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1830E72520D115CF001E042B /* DatePick */,
 				185B60AF20CD31CD006EF799 /* UIButton+EnlargeEdge */,
 				185B60AB20CD2EFC006EF799 /* UITextView+Placeholder */,
 				38FC7CBB20CB9FF300A21FEE /* UIView+YYAdd */,
@@ -735,6 +751,7 @@
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
+				1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */,
 				185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -849,6 +866,7 @@
 				18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */,
 				185B5E0220A32A3C001E47EC /* VBOrderManagerViewController.m in Sources */,
 				185B5E0C20A32BAF001E47EC /* VBOrderManagerTableViewCell.m in Sources */,
+				1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */,
 				185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */,
 				38FC7CB320CB9E0700A21FEE /* JTCalendarWeekView.m in Sources */,
 				38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */,
