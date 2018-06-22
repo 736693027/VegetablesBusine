@@ -74,6 +74,10 @@
 		18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E220A6DB5D000905FF /* VBShoppingManagerViewController.xib */; };
 		18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */; };
 		18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */; };
+		18D0B47B20DBCB8B0011555F /* VBSelectBusinessTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0B47920DBCB8B0011555F /* VBSelectBusinessTimeViewController.m */; };
+		18D0B47C20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D0B47A20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib */; };
+		18D0B47F20DBD9B00011555F /* BusinessTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0B47E20DBD9B00011555F /* BusinessTimeView.m */; };
+		18D0B48120DBD9C00011555F /* BusinessTimeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D0B48020DBD9C00011555F /* BusinessTimeView.xib */; };
 		2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */; };
 		380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFADD20B3051400A926FD /* VMLoginViewController.m */; };
 		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
@@ -208,6 +212,12 @@
 		18C519E520A6F47F000905FF /* VBShoppingManagerMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShoppingManagerMenuItemView.h; sourceTree = "<group>"; };
 		18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShoppingManagerMenuItemView.m; sourceTree = "<group>"; };
 		18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBShoppingManagerMenuItemView.xib; sourceTree = "<group>"; };
+		18D0B47820DBCB8B0011555F /* VBSelectBusinessTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSelectBusinessTimeViewController.h; sourceTree = "<group>"; };
+		18D0B47920DBCB8B0011555F /* VBSelectBusinessTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSelectBusinessTimeViewController.m; sourceTree = "<group>"; };
+		18D0B47A20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBSelectBusinessTimeViewController.xib; sourceTree = "<group>"; };
+		18D0B47D20DBD9B00011555F /* BusinessTimeView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BusinessTimeView.h; sourceTree = "<group>"; };
+		18D0B47E20DBD9B00011555F /* BusinessTimeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BusinessTimeView.m; sourceTree = "<group>"; };
+		18D0B48020DBD9C00011555F /* BusinessTimeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BusinessTimeView.xib; sourceTree = "<group>"; };
 		380FFADD20B3051400A926FD /* VMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
 		380FFADE20B3051400A926FD /* VMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
 		380FFADF20B3051400A926FD /* VMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
@@ -523,6 +533,12 @@
 				18BA797420CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.h */,
 				18BA797520CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.m */,
 				18BA797620CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.xib */,
+				18D0B47820DBCB8B0011555F /* VBSelectBusinessTimeViewController.h */,
+				18D0B47920DBCB8B0011555F /* VBSelectBusinessTimeViewController.m */,
+				18D0B47A20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib */,
+				18D0B47D20DBD9B00011555F /* BusinessTimeView.h */,
+				18D0B47E20DBD9B00011555F /* BusinessTimeView.m */,
+				18D0B48020DBD9C00011555F /* BusinessTimeView.xib */,
 			);
 			path = "BusinessState(营业状态)";
 			sourceTree = "<group>";
@@ -727,6 +743,7 @@
 				18BA795B20CE201D002182B3 /* VBDeliveryInformationViewController.xib in Resources */,
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
+				18D0B47C20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib in Resources */,
 				184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */,
 				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
 				18BA797220CFB4EE002182B3 /* VBBusinessStateTableViewCell.xib in Resources */,
@@ -749,6 +766,7 @@
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
+				18D0B48120DBD9C00011555F /* BusinessTimeView.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
 				1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */,
@@ -849,6 +867,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B5DD920A1D7B3001E47EC /* VBWaitDealTableViewCell.m in Sources */,
+				18D0B47B20DBCB8B0011555F /* VBSelectBusinessTimeViewController.m in Sources */,
+				18D0B47F20DBD9B00011555F /* BusinessTimeView.m in Sources */,
 				38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */,
 				18BA797720CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.m in Sources */,
 				185B5DD420A1CE74001E47EC /* VBWaitDealTableViewController.m in Sources */,

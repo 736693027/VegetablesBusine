@@ -13,6 +13,7 @@
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "LBDatePickerView.h"
+#import "VBSelectBusinessTimeViewController.h"
 
 @interface VBBusinessStateViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -149,6 +150,13 @@
         return 60.f;
     }else{
         return 50.f;
+    }
+}
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    if(indexPath.section == 1){
+        VBSelectBusinessTimeViewController *selectBusinessVC = [[VBSelectBusinessTimeViewController alloc] init];
+        [self.navigationController pushViewController:selectBusinessVC animated:YES];
     }
 }
 - (void)didReceiveMemoryWarning {
