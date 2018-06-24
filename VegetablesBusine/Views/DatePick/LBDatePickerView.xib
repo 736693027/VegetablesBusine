@@ -73,6 +73,7 @@
             </constraints>
             <connections>
                 <outlet property="mainView" destination="wgL-9W-bKi" id="Bew-wo-FeA"/>
+                <outlet property="pickerView" destination="9aJ-RP-K99" id="z3e-XS-lIE"/>
             </connections>
             <point key="canvasLocation" x="-747" y="-12"/>
         </view>

@@ -83,6 +83,30 @@
 		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
 		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
 		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
+		38D120B320DF335A007FEF4A /* VBStoreTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120B120DF335A007FEF4A /* VBStoreTypeViewController.m */; };
+		38D120B420DF335A007FEF4A /* VBStoreTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120B220DF335A007FEF4A /* VBStoreTypeViewController.xib */; };
+		38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120B620DF3371007FEF4A /* VBStoreTypeTableViewCell.m */; };
+		38D120B920DF3371007FEF4A /* VBStoreTypeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120B720DF3371007FEF4A /* VBStoreTypeTableViewCell.xib */; };
+		38D120BC20DF35DA007FEF4A /* VBStoreTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120BB20DF35DA007FEF4A /* VBStoreTypeModel.m */; };
+		38D120C120DF3C7C007FEF4A /* VBPrinterSetupViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120BF20DF3C7C007FEF4A /* VBPrinterSetupViewController.m */; };
+		38D120C220DF3C7C007FEF4A /* VBPrinterSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120C020DF3C7C007FEF4A /* VBPrinterSetupViewController.xib */; };
+		38D120C620DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120C420DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m */; };
+		38D120C720DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120C520DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib */; };
+		38E9167820DF4912006CB22A /* VBEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9167620DF4912006CB22A /* VBEvaluationViewController.m */; };
+		38E9167920DF4912006CB22A /* VBEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9167720DF4912006CB22A /* VBEvaluationViewController.xib */; };
+		38E9167D20DF61C1006CB22A /* VBEvaluationDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9167B20DF61C1006CB22A /* VBEvaluationDataViewController.m */; };
+		38E9167E20DF61C1006CB22A /* VBEvaluationDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9167C20DF61C1006CB22A /* VBEvaluationDataViewController.xib */; };
+		38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9168020DF639F006CB22A /* VBEvaluationDataTableViewCell.m */; };
+		38E9168320DF639F006CB22A /* VBEvaluationDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9168120DF639F006CB22A /* VBEvaluationDataTableViewCell.xib */; };
+		38E9168720DF6763006CB22A /* XHStarRateView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9168620DF6763006CB22A /* XHStarRateView.m */; };
+		38E9168C20DFB454006CB22A /* VBBusinessStatisticsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9168A20DFB454006CB22A /* VBBusinessStatisticsViewController.m */; };
+		38E9168D20DFB454006CB22A /* VBBusinessStatisticsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9168B20DFB454006CB22A /* VBBusinessStatisticsViewController.xib */; };
+		38E9169120DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9168F20DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.m */; };
+		38E9169220DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9169020DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib */; };
+		38E9169620DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9169420DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m */; };
+		38E9169720DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9169520DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib */; };
+		38E9169C20DFD083006CB22A /* VBFavourableOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9169A20DFD083006CB22A /* VBFavourableOrderViewController.m */; };
+		38E9169D20DFD083006CB22A /* VBFavourableOrderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9169B20DFD083006CB22A /* VBFavourableOrderViewController.xib */; };
 		38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */; };
 		38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */; };
 		38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7C9920CB9E0700A21FEE /* JTCalendarMenuMonthView.m */; };
@@ -225,6 +249,43 @@
 		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
 		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
 		38214F6A20CBF65400E7D83F /* VBOrderManagerEnumHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerEnumHeaderFile.h; sourceTree = "<group>"; };
+		38D120B020DF335A007FEF4A /* VBStoreTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBStoreTypeViewController.h; sourceTree = "<group>"; };
+		38D120B120DF335A007FEF4A /* VBStoreTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBStoreTypeViewController.m; sourceTree = "<group>"; };
+		38D120B220DF335A007FEF4A /* VBStoreTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBStoreTypeViewController.xib; sourceTree = "<group>"; };
+		38D120B520DF3371007FEF4A /* VBStoreTypeTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBStoreTypeTableViewCell.h; sourceTree = "<group>"; };
+		38D120B620DF3371007FEF4A /* VBStoreTypeTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBStoreTypeTableViewCell.m; sourceTree = "<group>"; };
+		38D120B720DF3371007FEF4A /* VBStoreTypeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBStoreTypeTableViewCell.xib; sourceTree = "<group>"; };
+		38D120BA20DF35DA007FEF4A /* VBStoreTypeModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBStoreTypeModel.h; sourceTree = "<group>"; };
+		38D120BB20DF35DA007FEF4A /* VBStoreTypeModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBStoreTypeModel.m; sourceTree = "<group>"; };
+		38D120BE20DF3C7C007FEF4A /* VBPrinterSetupViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBPrinterSetupViewController.h; sourceTree = "<group>"; };
+		38D120BF20DF3C7C007FEF4A /* VBPrinterSetupViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBPrinterSetupViewController.m; sourceTree = "<group>"; };
+		38D120C020DF3C7C007FEF4A /* VBPrinterSetupViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBPrinterSetupViewController.xib; sourceTree = "<group>"; };
+		38D120C320DF3C96007FEF4A /* VBPrinterSetupTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBPrinterSetupTableViewCell.h; sourceTree = "<group>"; };
+		38D120C420DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBPrinterSetupTableViewCell.m; sourceTree = "<group>"; };
+		38D120C520DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBPrinterSetupTableViewCell.xib; sourceTree = "<group>"; };
+		38E9167520DF4912006CB22A /* VBEvaluationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationViewController.h; sourceTree = "<group>"; };
+		38E9167620DF4912006CB22A /* VBEvaluationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationViewController.m; sourceTree = "<group>"; };
+		38E9167720DF4912006CB22A /* VBEvaluationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBEvaluationViewController.xib; sourceTree = "<group>"; };
+		38E9167A20DF61C1006CB22A /* VBEvaluationDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationDataViewController.h; sourceTree = "<group>"; };
+		38E9167B20DF61C1006CB22A /* VBEvaluationDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationDataViewController.m; sourceTree = "<group>"; };
+		38E9167C20DF61C1006CB22A /* VBEvaluationDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBEvaluationDataViewController.xib; sourceTree = "<group>"; };
+		38E9167F20DF639F006CB22A /* VBEvaluationDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationDataTableViewCell.h; sourceTree = "<group>"; };
+		38E9168020DF639F006CB22A /* VBEvaluationDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationDataTableViewCell.m; sourceTree = "<group>"; };
+		38E9168120DF639F006CB22A /* VBEvaluationDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBEvaluationDataTableViewCell.xib; sourceTree = "<group>"; };
+		38E9168520DF6763006CB22A /* XHStarRateView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XHStarRateView.h; sourceTree = "<group>"; };
+		38E9168620DF6763006CB22A /* XHStarRateView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XHStarRateView.m; sourceTree = "<group>"; };
+		38E9168920DFB454006CB22A /* VBBusinessStatisticsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBBusinessStatisticsViewController.h; sourceTree = "<group>"; };
+		38E9168A20DFB454006CB22A /* VBBusinessStatisticsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBBusinessStatisticsViewController.m; sourceTree = "<group>"; };
+		38E9168B20DFB454006CB22A /* VBBusinessStatisticsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBBusinessStatisticsViewController.xib; sourceTree = "<group>"; };
+		38E9168E20DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBBusinessStatisticsDataNormalViewController.h; sourceTree = "<group>"; };
+		38E9168F20DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBBusinessStatisticsDataNormalViewController.m; sourceTree = "<group>"; };
+		38E9169020DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBBusinessStatisticsDataNormalViewController.xib; sourceTree = "<group>"; };
+		38E9169320DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBBusinessStatisticsDataCustomViewController.h; sourceTree = "<group>"; };
+		38E9169420DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBBusinessStatisticsDataCustomViewController.m; sourceTree = "<group>"; };
+		38E9169520DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBBusinessStatisticsDataCustomViewController.xib; sourceTree = "<group>"; };
+		38E9169920DFD083006CB22A /* VBFavourableOrderViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFavourableOrderViewController.h; sourceTree = "<group>"; };
+		38E9169A20DFD083006CB22A /* VBFavourableOrderViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFavourableOrderViewController.m; sourceTree = "<group>"; };
+		38E9169B20DFD083006CB22A /* VBFavourableOrderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFavourableOrderViewController.xib; sourceTree = "<group>"; };
 		38FC7C9320CB9DFA00A21FEE /* VBAlterView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAlterView.h; sourceTree = "<group>"; };
 		38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBAlterView.xib; sourceTree = "<group>"; };
 		38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAlterView.m; sourceTree = "<group>"; };
@@ -272,8 +333,8 @@
 		1830E72520D115CF001E042B /* DatePick */ = {
 			isa = PBXGroup;
 			children = (
-				1830E72620D115CF001E042B /* LBDatePickerView.m */,
 				1830E72820D115CF001E042B /* LBDatePickerView.h */,
+				1830E72620D115CF001E042B /* LBDatePickerView.m */,
 				1830E72720D115CF001E042B /* LBDatePickerView.xib */,
 			);
 			path = DatePick;
@@ -367,6 +428,11 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38E9169820DFD075006CB22A /* FavourableOrder(闪惠订单) */,
+				38E9168820DFB42F006CB22A /* BusinessStatistics(营业统计) */,
+				38E9167420DF48FF006CB22A /* Evaluation(评价) */,
+				38D120BD20DF3C6B007FEF4A /* PrinterSetup(打印机设置) */,
+				38D120AF20DF334E007FEF4A /* StoreType(店铺类型) */,
 				18BA796220CF9DCB002182B3 /* BusinessState(营业状态) */,
 				18BA795620CE2007002182B3 /* DeliveryInformation(配送信息) */,
 				185B60A220CD2E59006EF799 /* ShopIntroduction(店铺简介) */,
@@ -559,6 +625,7 @@
 		380FFAD620B2FA2500A926FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				38E9168420DF6763006CB22A /* StarRateView */,
 				1830E72520D115CF001E042B /* DatePick */,
 				185B60AF20CD31CD006EF799 /* UIButton+EnlargeEdge */,
 				185B60AB20CD2EFC006EF799 /* UITextView+Placeholder */,
@@ -611,6 +678,85 @@
 				184E524520B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib */,
 			);
 			path = Cell;
+			sourceTree = "<group>";
+		};
+		38D120AF20DF334E007FEF4A /* StoreType(店铺类型) */ = {
+			isa = PBXGroup;
+			children = (
+				38D120B020DF335A007FEF4A /* VBStoreTypeViewController.h */,
+				38D120B120DF335A007FEF4A /* VBStoreTypeViewController.m */,
+				38D120B220DF335A007FEF4A /* VBStoreTypeViewController.xib */,
+				38D120B520DF3371007FEF4A /* VBStoreTypeTableViewCell.h */,
+				38D120B620DF3371007FEF4A /* VBStoreTypeTableViewCell.m */,
+				38D120B720DF3371007FEF4A /* VBStoreTypeTableViewCell.xib */,
+				38D120BA20DF35DA007FEF4A /* VBStoreTypeModel.h */,
+				38D120BB20DF35DA007FEF4A /* VBStoreTypeModel.m */,
+			);
+			path = "StoreType(店铺类型)";
+			sourceTree = "<group>";
+		};
+		38D120BD20DF3C6B007FEF4A /* PrinterSetup(打印机设置) */ = {
+			isa = PBXGroup;
+			children = (
+				38D120BE20DF3C7C007FEF4A /* VBPrinterSetupViewController.h */,
+				38D120BF20DF3C7C007FEF4A /* VBPrinterSetupViewController.m */,
+				38D120C020DF3C7C007FEF4A /* VBPrinterSetupViewController.xib */,
+				38D120C320DF3C96007FEF4A /* VBPrinterSetupTableViewCell.h */,
+				38D120C420DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m */,
+				38D120C520DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib */,
+			);
+			path = "PrinterSetup(打印机设置)";
+			sourceTree = "<group>";
+		};
+		38E9167420DF48FF006CB22A /* Evaluation(评价) */ = {
+			isa = PBXGroup;
+			children = (
+				38E9167520DF4912006CB22A /* VBEvaluationViewController.h */,
+				38E9167620DF4912006CB22A /* VBEvaluationViewController.m */,
+				38E9167720DF4912006CB22A /* VBEvaluationViewController.xib */,
+				38E9167A20DF61C1006CB22A /* VBEvaluationDataViewController.h */,
+				38E9167B20DF61C1006CB22A /* VBEvaluationDataViewController.m */,
+				38E9167C20DF61C1006CB22A /* VBEvaluationDataViewController.xib */,
+				38E9167F20DF639F006CB22A /* VBEvaluationDataTableViewCell.h */,
+				38E9168020DF639F006CB22A /* VBEvaluationDataTableViewCell.m */,
+				38E9168120DF639F006CB22A /* VBEvaluationDataTableViewCell.xib */,
+			);
+			path = "Evaluation(评价)";
+			sourceTree = "<group>";
+		};
+		38E9168420DF6763006CB22A /* StarRateView */ = {
+			isa = PBXGroup;
+			children = (
+				38E9168520DF6763006CB22A /* XHStarRateView.h */,
+				38E9168620DF6763006CB22A /* XHStarRateView.m */,
+			);
+			path = StarRateView;
+			sourceTree = "<group>";
+		};
+		38E9168820DFB42F006CB22A /* BusinessStatistics(营业统计) */ = {
+			isa = PBXGroup;
+			children = (
+				38E9168920DFB454006CB22A /* VBBusinessStatisticsViewController.h */,
+				38E9168A20DFB454006CB22A /* VBBusinessStatisticsViewController.m */,
+				38E9168B20DFB454006CB22A /* VBBusinessStatisticsViewController.xib */,
+				38E9168E20DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.h */,
+				38E9168F20DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.m */,
+				38E9169020DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib */,
+				38E9169320DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.h */,
+				38E9169420DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m */,
+				38E9169520DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib */,
+			);
+			path = "BusinessStatistics(营业统计)";
+			sourceTree = "<group>";
+		};
+		38E9169820DFD075006CB22A /* FavourableOrder(闪惠订单) */ = {
+			isa = PBXGroup;
+			children = (
+				38E9169920DFD083006CB22A /* VBFavourableOrderViewController.h */,
+				38E9169A20DFD083006CB22A /* VBFavourableOrderViewController.m */,
+				38E9169B20DFD083006CB22A /* VBFavourableOrderViewController.xib */,
+			);
+			path = "FavourableOrder(闪惠订单)";
 			sourceTree = "<group>";
 		};
 		38FC7C9220CB9DFA00A21FEE /* VBAlterView */ = {
@@ -740,15 +886,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B609C20CD123F006EF799 /* VBSetupViewController.xib in Resources */,
+				38E9169D20DFD083006CB22A /* VBFavourableOrderViewController.xib in Resources */,
 				18BA795B20CE201D002182B3 /* VBDeliveryInformationViewController.xib in Resources */,
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
+				38E9169720DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib in Resources */,
 				18D0B47C20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib in Resources */,
+				38E9168D20DFB454006CB22A /* VBBusinessStatisticsViewController.xib in Resources */,
 				184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */,
 				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
 				18BA797220CFB4EE002182B3 /* VBBusinessStateTableViewCell.xib in Resources */,
 				185B60A120CD165F006EF799 /* VBSetupTableViewCell.xib in Resources */,
 				18BA796C20CF9F14002182B3 /* VBBusinessStateHeadView.xib in Resources */,
+				38D120C220DF3C7C007FEF4A /* VBPrinterSetupViewController.xib in Resources */,
 				380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */,
 				18BA796720CF9DFA002182B3 /* VBBusinessStateViewController.xib in Resources */,
 				184E523D20B6D26000DD3750 /* VMOrderDetailTableViewCell.xib in Resources */,
@@ -756,8 +906,11 @@
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
 				185B5DDA20A1D7B3001E47EC /* VBWaitDealTableViewCell.xib in Resources */,
 				184E523820B6D23C00DD3750 /* VMSectionHeaderView.xib in Resources */,
+				38E9167920DF4912006CB22A /* VBEvaluationViewController.xib in Resources */,
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
 				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
+				38E9169220DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib in Resources */,
+				38D120C720DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
 				185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */,
 				18BA797820CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.xib in Resources */,
@@ -766,11 +919,15 @@
 				1897EA7620C0137B00ED3DEF /* VBVBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
+				38D120B420DF335A007FEF4A /* VBStoreTypeViewController.xib in Resources */,
 				18D0B48120DBD9C00011555F /* BusinessTimeView.xib in Resources */,
+				38E9168320DF639F006CB22A /* VBEvaluationDataTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
 				1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */,
 				185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */,
+				38E9167E20DF61C1006CB22A /* VBEvaluationDataViewController.xib in Resources */,
+				38D120B920DF3371007FEF4A /* VBStoreTypeTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -867,6 +1024,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				185B5DD920A1D7B3001E47EC /* VBWaitDealTableViewCell.m in Sources */,
+				38E9168C20DFB454006CB22A /* VBBusinessStatisticsViewController.m in Sources */,
+				38E9169120DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.m in Sources */,
 				18D0B47B20DBCB8B0011555F /* VBSelectBusinessTimeViewController.m in Sources */,
 				18D0B47F20DBD9B00011555F /* BusinessTimeView.m in Sources */,
 				38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */,
@@ -874,36 +1033,46 @@
 				185B5DD420A1CE74001E47EC /* VBWaitDealTableViewController.m in Sources */,
 				185B60A020CD165F006EF799 /* VBSetupTableViewCell.m in Sources */,
 				18BA797120CFB4EE002182B3 /* VBBusinessStateTableViewCell.m in Sources */,
+				38E9167D20DF61C1006CB22A /* VBEvaluationDataViewController.m in Sources */,
 				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
 				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
 				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
+				38E9168720DF6763006CB22A /* XHStarRateView.m in Sources */,
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
 				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
+				38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */,
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
 				185B60A620CD2E71006EF799 /* VBShopIntroductionViewController.m in Sources */,
 				18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */,
 				185B5E0220A32A3C001E47EC /* VBOrderManagerViewController.m in Sources */,
 				185B5E0C20A32BAF001E47EC /* VBOrderManagerTableViewCell.m in Sources */,
+				38D120C120DF3C7C007FEF4A /* VBPrinterSetupViewController.m in Sources */,
+				38E9167820DF4912006CB22A /* VBEvaluationViewController.m in Sources */,
 				1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */,
 				185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */,
 				38FC7CB320CB9E0700A21FEE /* JTCalendarWeekView.m in Sources */,
 				38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */,
 				185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */,
+				38D120C620DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m in Sources */,
 				185B5D80209ED5C0001E47EC /* main.m in Sources */,
+				38E9169C20DFD083006CB22A /* VBFavourableOrderViewController.m in Sources */,
 				185B5D72209ED5BD001E47EC /* AppDelegate.m in Sources */,
 				185B5D92209EDFF7001E47EC /* VMTabBarView.m in Sources */,
+				38D120B320DF335A007FEF4A /* VBStoreTypeViewController.m in Sources */,
 				184E523720B6D23C00DD3750 /* VMSectionHeaderView.m in Sources */,
 				1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */,
 				184E523C20B6D26000DD3750 /* VMOrderDetailTableViewCell.m in Sources */,
 				18BA795F20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m in Sources */,
+				38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */,
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
 				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
 				185B60AE20CD2EFC006EF799 /* UITextView+Placeholder.m in Sources */,
 				38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */,
+				38E9169620DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
@@ -921,6 +1090,7 @@
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
+				38D120BC20DF35DA007FEF4A /* VBStoreTypeModel.m in Sources */,
 				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
 				38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */,
 			);

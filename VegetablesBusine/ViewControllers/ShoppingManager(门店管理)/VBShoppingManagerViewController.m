@@ -21,6 +21,7 @@ CGFloat itemViewHeight = 110;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     NSArray *titlesArray = @[@"商品管理",@"商家结算",@"店铺统计",@"留言评价",@"打印机",@"促销管理",@"闪惠订单",@""];
     NSArray *imagesArray = @[@"productManagex",@"bigCalculatorx",@"productCountx",@"evaluatex",@"printSettingx",@"promotionx",@"shanhuiOrderx",@""];
     NSArray *detailsArray = @[@"支持商品一件发布",@"查询余额体现",@"插件店铺收益",@"查看最新留言",@"连接打印机",@"发布促销信息",@"闪惠订单管理",@""];
@@ -44,6 +45,21 @@ CGFloat itemViewHeight = 110;
                     viewControClass = NSClassFromString(@"VBCommodityManagementViewController");
                 }
                      break;
+                case 2:{
+                    viewControClass = NSClassFromString(@"VBBusinessStatisticsViewController");
+                }
+                    break;
+                case 3:{
+                    viewControClass = NSClassFromString(@"VBEvaluationViewController");
+                }
+                    break;
+                case 4:{
+                    viewControClass = NSClassFromString(@"VBPrinterSetupViewController");
+                }
+                case 6:{
+                    viewControClass = NSClassFromString(@"VBFavourableOrderViewController");
+                }
+                    break;
                 default:
                     break;
             }

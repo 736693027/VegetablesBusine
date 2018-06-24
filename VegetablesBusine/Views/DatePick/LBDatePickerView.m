@@ -30,6 +30,9 @@ LBDatePickerView *lbDatePickerView;
     [lbDatePickerView addGestureRecognizer:tap];
     return lbDatePickerView;
 }
+- (void)setDatePickModel:(UIDatePickerMode)pickModel{
+    [lbDatePickerView.pickerView setDatePickerMode:pickModel];
+}
 
 - (IBAction)cancelButtonClick:(UIButton *)sender {
     [self hiddenPickView];

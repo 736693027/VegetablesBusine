@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -36,7 +36,8 @@
             <constraints>
                 <constraint firstItem="BfE-0y-F6b" firstAttribute="top" secondItem="yOi-Nn-wTt" secondAttribute="bottom" constant="5" id="3N1-Xt-IRx"/>
                 <constraint firstItem="vML-4n-4R1" firstAttribute="centerX" secondItem="GCC-aw-ZLk" secondAttribute="centerX" id="6LM-ZZ-frI"/>
-                <constraint firstItem="yOi-Nn-wTt" firstAttribute="top" secondItem="vML-4n-4R1" secondAttribute="bottom" constant="15" id="bxP-M1-Pcr"/>
+                <constraint firstItem="BfE-0y-F6b" firstAttribute="bottom" secondItem="Ogf-g3-7q3" secondAttribute="bottom" id="IxU-aj-VzP"/>
+                <constraint firstItem="BfE-0y-F6b" firstAttribute="top" secondItem="yOi-Nn-wTt" secondAttribute="bottom" constant="5" id="e6a-oN-no1"/>
                 <constraint firstItem="vML-4n-4R1" firstAttribute="top" secondItem="Ogf-g3-7q3" secondAttribute="top" constant="36" id="eJl-N9-xRU"/>
                 <constraint firstItem="BfE-0y-F6b" firstAttribute="centerX" secondItem="GCC-aw-ZLk" secondAttribute="centerX" id="t9Z-0g-w3Z"/>
                 <constraint firstItem="yOi-Nn-wTt" firstAttribute="centerX" secondItem="GCC-aw-ZLk" secondAttribute="centerX" id="tyd-NA-jUQ"/>

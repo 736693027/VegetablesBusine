@@ -16,6 +16,8 @@
 
 + (instancetype)initPickView;
 
+- (void)setDatePickModel:(UIDatePickerMode)pickModel;
+
 - (void)showPickView;
 
 @end

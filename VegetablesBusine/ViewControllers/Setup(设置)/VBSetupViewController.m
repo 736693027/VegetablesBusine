@@ -26,7 +26,7 @@
     self.title = @"商品名称";
     _titleArray = @[@[@"营业状态",@"配送信息",@"自动接单"],@[@"店铺类型",@"订餐电话"],@[@"店铺地址",@"店铺公告",@"店铺简介"]];
     _contentArray = [NSMutableArray arrayWithObjects:@[@"状态、预订、配送时间",@"起送价、制作送达时间",@""],@[@"酒类饮品、酒类饮品",@"15213886984"],@[@"北京市海淀区",@"欢迎光临",@"店铺简介内容"], nil];
-    _viewContronllers = @[@[@"VBBusinessStateViewController",@"VBDeliveryInformationViewController",@"自动接单"],@[@"店铺类型",@"订餐电话"],@[@"VBShopIntroductionViewController",@"VBShopIntroductionViewController",@"VBShopIntroductionViewController"]];
+    _viewContronllers = @[@[@"VBBusinessStateViewController",@"VBDeliveryInformationViewController",@"自动接单"],@[@"VBStoreTypeViewController",@"VBShopIntroductionViewController"],@[@"VBShopIntroductionViewController",@"VBShopIntroductionViewController",@"VBShopIntroductionViewController"]];
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 48)];
     tableFooterView.backgroundColor = [UIColor whiteColor];
     self.dataTableView.tableFooterView = tableFooterView;
