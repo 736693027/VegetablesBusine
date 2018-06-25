@@ -91,11 +91,17 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="csB-5G-tb9">
+                        <rect key="frame" x="286.5" y="19" width="20" height="22"/>
+                        <state key="normal" image="contractmanager_delete_contractNumber"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstItem="XAM-hr-3lI" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="9bI-wC-NCx"/>
+                    <constraint firstItem="csB-5G-tb9" firstAttribute="leading" secondItem="WUd-7D-iBN" secondAttribute="trailing" constant="10" id="K3k-zU-agB"/>
                     <constraint firstItem="XAM-hr-3lI" firstAttribute="leading" secondItem="mQB-2q-7Et" secondAttribute="trailing" constant="14" id="MxD-Du-JoX"/>
                     <constraint firstItem="WUd-7D-iBN" firstAttribute="leading" secondItem="XAM-hr-3lI" secondAttribute="trailing" constant="14" id="NEl-kK-FBX"/>
+                    <constraint firstItem="csB-5G-tb9" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Oeg-iw-hkz"/>
                     <constraint firstItem="WUd-7D-iBN" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="PlI-wL-98Q"/>
                     <constraint firstItem="XAM-hr-3lI" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Uce-bU-k9Y"/>
                     <constraint firstItem="mQB-2q-7Et" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eGb-xF-U8w"/>
@@ -103,6 +109,7 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="deleteButton" destination="csB-5G-tb9" id="WyW-LU-5DL"/>
                 <outlet property="endDateTimeView" destination="WUd-7D-iBN" id="yun-jw-vkE"/>
                 <outlet property="endHourLabel" destination="91c-aq-LJr" id="ycp-cF-nDq"/>
                 <outlet property="endMinutesLabel" destination="a2s-Ib-8oQ" id="HP7-eJ-zZG"/>
@@ -110,7 +117,10 @@
                 <outlet property="startHourLabel" destination="Zge-XR-rLC" id="3pj-TF-Qt4"/>
                 <outlet property="startMinutesLabel" destination="zZe-Rn-NwW" id="a6K-OW-BuX"/>
             </connections>
-            <point key="canvasLocation" x="88" y="17"/>
+            <point key="canvasLocation" x="-117" y="-1"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="contractmanager_delete_contractNumber" width="20" height="20"/>
+    </resources>
 </document>

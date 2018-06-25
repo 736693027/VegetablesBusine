@@ -33,6 +33,14 @@
             [self.selectEndDateTime sendNext:@""];
         }
     }];
+    
+    [[self.deleteButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIButton * _Nullable sender) {
+        NSLog(@"------%ld",sender.tag-500);
+
+        if(self.deleteDateTime){
+            [self.deleteDateTime sendNext:@(sender.tag-500)];
+        }
+    }];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

@@ -48,6 +48,7 @@
             cell = [[[NSBundle mainBundle] loadNibNamed:@"VBBusinessStateTableViewCell" owner:self options:nil] lastObject];
         }
         cell.selectStartDateTime = [RACSubject subject];
+        @weakify(self)
         [cell.selectStartDateTime subscribeNext:^(id  _Nullable x) {
             LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
             lbDatePicker.resultSubject = [RACSubject subject];
@@ -64,6 +65,19 @@
                 NSLog(@"-----%@",date);
             }];
             [lbDatePicker showPickView];
+        }];
+        cell.deleteButton.hidden = indexPath.row==0;
+        cell.deleteButton.tag = indexPath.row+500;
+        cell.deleteDateTime = [RACSubject subject];
+        [cell.deleteDateTime subscribeNext:^(NSNumber * _Nullable index) {
+            @strongify(self)
+            NSIndexPath *newIndexPath = [NSIndexPath indexPathForRow:index.integerValue inSection:0];
+            self.totalDateTimeRow -= 1;
+            [self.dataTableView beginUpdates];
+            [self.dataTableView deleteRowsAtIndexPaths:@[newIndexPath] withRowAnimation:(UITableViewRowAnimationBottom)];
+            [self.dataTableView endUpdates];
+            [tableView reloadRowsAtIndexPaths:[tableView indexPathsForVisibleRows]
+                             withRowAnimation:UITableViewRowAnimationNone];
         }];
         return cell;
     }else{

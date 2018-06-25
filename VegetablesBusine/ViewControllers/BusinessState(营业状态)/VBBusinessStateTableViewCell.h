@@ -16,7 +16,9 @@
 @property (weak, nonatomic) IBOutlet UIView *endDateTimeView;
 @property (weak, nonatomic) IBOutlet UILabel *endHourLabel;
 @property (weak, nonatomic) IBOutlet UILabel *endMinutesLabel;
+@property (weak, nonatomic) IBOutlet UIButton *deleteButton;
 @property (strong, nonatomic) RACSubject *selectStartDateTime;
 @property (strong, nonatomic) RACSubject *selectEndDateTime;
+@property (strong, nonatomic) RACSubject *deleteDateTime;
 
 @end
