@@ -56,6 +56,11 @@ CGFloat itemViewHeight = 110;
                 case 4:{
                     viewControClass = NSClassFromString(@"VBPrinterSetupViewController");
                 }
+                    break;
+                case 5:{
+                    viewControClass = NSClassFromString(@"VBFavourableActivityViewController");
+                }
+                    break;
                 case 6:{
                     viewControClass = NSClassFromString(@"VBFavourableOrderViewController");
                 }
