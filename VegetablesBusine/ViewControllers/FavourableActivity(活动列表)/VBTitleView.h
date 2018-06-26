@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) RACSubject *selectIndexSubject;
 
+- (void)selectWithIndex:(NSInteger)index;
+
 @end

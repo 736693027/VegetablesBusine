@@ -10,37 +10,52 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <Masonry/Masonry.h>
 #import "VBTitleView.h"
+#import "VBCreatActivityViewController.h"
+#import "VBActivityListViewController.h"
 
-@interface VBFavourableActivityViewController ()
+@interface VBFavourableActivityViewController ()<UIScrollViewDelegate>{
+    VBTitleView *titleView;
+}
+@property (weak, nonatomic) IBOutlet UIScrollView *mainScrollView;
 
 @end
 
 @implementation VBFavourableActivityViewController
 
+- (void)viewDidLayoutSubviews{
+    [super viewDidLayoutSubviews];
+    VBCreatActivityViewController *activityVC = [[VBCreatActivityViewController alloc] init];
+    [self addChildViewController:activityVC];
+    [self.mainScrollView addSubview:activityVC.view];
+    activityVC.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, self.mainScrollView.frame.size.height);
+    activityVC.view.backgroundColor = [CommonTools changeColor:@"0xf0f0f0"];
+    
+    VBActivityListViewController *activityListVC = [[VBActivityListViewController alloc] init];
+    [self addChildViewController:activityListVC];
+    [self.mainScrollView addSubview:activityListVC.view];
+    activityListVC.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.frame.size.height);
+    [self.view layoutSubviews];
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-       
-    VBTitleView *titleView = [[VBTitleView alloc] initWithFrame:CGRectMake(0, 0, 200, 45)];
+    
+    self.mainScrollView.contentSize = CGSizeMake(SCREEN_WIDTH*2, self.mainScrollView.contentSize.height);
+    
+    titleView = [[VBTitleView alloc] initWithFrame:CGRectMake(0, 0, 200, 45)];
     titleView.selectIndexSubject = [RACSubject subject];
     [titleView.selectIndexSubject subscribeNext:^(NSNumber  *_Nullable index) {
-        
+        [self.mainScrollView setContentOffset:CGPointMake(index.integerValue*SCREEN_WIDTH, 0) animated:YES];
     }];
     self.navigationItem.titleView = titleView;
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSInteger index = scrollView.contentOffset.x/SCREEN_WIDTH;
+    [titleView selectWithIndex:index];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

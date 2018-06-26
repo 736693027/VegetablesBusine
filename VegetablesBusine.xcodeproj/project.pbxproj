@@ -90,6 +90,9 @@
 		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
 		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
 		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
+		3837469D20E27F8400310E77 /* VBActivityListDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */; };
+		383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */; };
+		383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */; };
 		38D120B320DF335A007FEF4A /* VBStoreTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120B120DF335A007FEF4A /* VBStoreTypeViewController.m */; };
 		38D120B420DF335A007FEF4A /* VBStoreTypeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120B220DF335A007FEF4A /* VBStoreTypeViewController.xib */; };
 		38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120B620DF3371007FEF4A /* VBStoreTypeTableViewCell.m */; };
@@ -267,6 +270,11 @@
 		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
 		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
 		38214F6A20CBF65400E7D83F /* VBOrderManagerEnumHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerEnumHeaderFile.h; sourceTree = "<group>"; };
+		3837469B20E27F8400310E77 /* VBActivityListDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataViewController.h; sourceTree = "<group>"; };
+		3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListDataViewController.m; sourceTree = "<group>"; };
+		3837469F20E2856B00310E77 /* VBActivityListDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataTableViewCell.h; sourceTree = "<group>"; };
+		383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListDataTableViewCell.m; sourceTree = "<group>"; };
+		383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBActivityListDataTableViewCell.xib; sourceTree = "<group>"; };
 		38D120B020DF335A007FEF4A /* VBStoreTypeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBStoreTypeViewController.h; sourceTree = "<group>"; };
 		38D120B120DF335A007FEF4A /* VBStoreTypeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBStoreTypeViewController.m; sourceTree = "<group>"; };
 		38D120B220DF335A007FEF4A /* VBStoreTypeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBStoreTypeViewController.xib; sourceTree = "<group>"; };
@@ -361,6 +369,7 @@
 		1846806D20E0BF9400099954 /* FavourableActivity(活动列表) */ = {
 			isa = PBXGroup;
 			children = (
+				3837469E20E2855700310E77 /* cell */,
 				1846806E20E0BFA900099954 /* VBFavourableActivityViewController.h */,
 				1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */,
 				1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */,
@@ -370,6 +379,8 @@
 				1846807C20E1CE7000099954 /* VBActivityListViewController.h */,
 				1846807D20E1CE7000099954 /* VBActivityListViewController.m */,
 				1846807E20E1CE7000099954 /* VBActivityListViewController.xib */,
+				3837469B20E27F8400310E77 /* VBActivityListDataViewController.h */,
+				3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */,
 				1846807320E1C93F00099954 /* VBTitleView.h */,
 				1846807420E1C93F00099954 /* VBTitleView.m */,
 			);
@@ -717,6 +728,16 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3837469E20E2855700310E77 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3837469F20E2856B00310E77 /* VBActivityListDataTableViewCell.h */,
+				383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */,
+				383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		38D120AF20DF334E007FEF4A /* StoreType(店铺类型) */ = {
 			isa = PBXGroup;
 			children = (
@@ -952,6 +973,7 @@
 				1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */,
 				185B5D7A209ED5C0001E47EC /* Assets.xcassets in Resources */,
 				185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */,
+				383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */,
 				18BA797820CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
@@ -1113,6 +1135,7 @@
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
 				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
 				185B60AE20CD2EFC006EF799 /* UITextView+Placeholder.m in Sources */,
+				3837469D20E27F8400310E77 /* VBActivityListDataViewController.m in Sources */,
 				38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */,
 				38E9169620DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
@@ -1136,6 +1159,7 @@
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
 				38D120BC20DF35DA007FEF4A /* VBStoreTypeModel.m in Sources */,
 				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
+				383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */,
 				38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
