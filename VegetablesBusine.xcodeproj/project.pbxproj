@@ -108,6 +108,12 @@
 		38DB4D0420E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4D0220E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.xib */; };
 		38DB4D0920E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4D0720E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib */; };
 		38DB4D0A20E3C3BE00F67BE7 /* VBAddCommodityClassificationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4D0820E3C3BE00F67BE7 /* VBAddCommodityClassificationView.m */; };
+		38DB4D0F20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4D0D20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m */; };
+		38DB4D1020E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4D0E20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib */; };
+		38DB4D1420E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4D1220E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m */; };
+		38DB4D1520E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4D1320E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.xib */; };
+		38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4D1820E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m */; };
+		38DB4D1B20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4D1920E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib */; };
 		38E9167820DF4912006CB22A /* VBEvaluationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9167620DF4912006CB22A /* VBEvaluationViewController.m */; };
 		38E9167920DF4912006CB22A /* VBEvaluationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38E9167720DF4912006CB22A /* VBEvaluationViewController.xib */; };
 		38E9167D20DF61C1006CB22A /* VBEvaluationDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38E9167B20DF61C1006CB22A /* VBEvaluationDataViewController.m */; };
@@ -304,6 +310,15 @@
 		38DB4D0620E3C3BE00F67BE7 /* VBAddCommodityClassificationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBAddCommodityClassificationView.h; sourceTree = "<group>"; };
 		38DB4D0720E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBAddCommodityClassificationView.xib; sourceTree = "<group>"; };
 		38DB4D0820E3C3BE00F67BE7 /* VBAddCommodityClassificationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBAddCommodityClassificationView.m; sourceTree = "<group>"; };
+		38DB4D0C20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMerchantSettlementViewController.h; sourceTree = "<group>"; };
+		38DB4D0D20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMerchantSettlementViewController.m; sourceTree = "<group>"; };
+		38DB4D0E20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMerchantSettlementViewController.xib; sourceTree = "<group>"; };
+		38DB4D1120E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMerchantSettlementDataViewController.h; sourceTree = "<group>"; };
+		38DB4D1220E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMerchantSettlementDataViewController.m; sourceTree = "<group>"; };
+		38DB4D1320E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMerchantSettlementDataViewController.xib; sourceTree = "<group>"; };
+		38DB4D1720E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMerchantSettlementDataTableViewCell.h; sourceTree = "<group>"; };
+		38DB4D1820E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMerchantSettlementDataTableViewCell.m; sourceTree = "<group>"; };
+		38DB4D1920E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMerchantSettlementDataTableViewCell.xib; sourceTree = "<group>"; };
 		38E9167520DF4912006CB22A /* VBEvaluationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationViewController.h; sourceTree = "<group>"; };
 		38E9167620DF4912006CB22A /* VBEvaluationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationViewController.m; sourceTree = "<group>"; };
 		38E9167720DF4912006CB22A /* VBEvaluationViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBEvaluationViewController.xib; sourceTree = "<group>"; };
@@ -490,6 +505,7 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38DB4D0B20E3CF6700F67BE7 /* MerchantSettlement(商家结算) */,
 				38DB4CF920E3BC2500F67BE7 /* ManageCommodityClassification(管理分类) */,
 				1846806D20E0BF9400099954 /* FavourableActivity(活动列表) */,
 				38E9169820DFD075006CB22A /* FavourableOrder(闪惠订单) */,
@@ -806,6 +822,30 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		38DB4D0B20E3CF6700F67BE7 /* MerchantSettlement(商家结算) */ = {
+			isa = PBXGroup;
+			children = (
+				38DB4D1620E3D75700F67BE7 /* cell */,
+				38DB4D0C20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.h */,
+				38DB4D0D20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m */,
+				38DB4D0E20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib */,
+				38DB4D1120E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.h */,
+				38DB4D1220E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m */,
+				38DB4D1320E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.xib */,
+			);
+			path = "MerchantSettlement(商家结算)";
+			sourceTree = "<group>";
+		};
+		38DB4D1620E3D75700F67BE7 /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				38DB4D1720E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.h */,
+				38DB4D1820E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m */,
+				38DB4D1920E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		38E9167420DF48FF006CB22A /* Evaluation(评价) */ = {
 			isa = PBXGroup;
 			children = (
@@ -986,6 +1026,7 @@
 				185B609C20CD123F006EF799 /* VBSetupViewController.xib in Resources */,
 				38E9169D20DFD083006CB22A /* VBFavourableOrderViewController.xib in Resources */,
 				18BA795B20CE201D002182B3 /* VBDeliveryInformationViewController.xib in Resources */,
+				38DB4D1520E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.xib in Resources */,
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
 				38E9169720DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib in Resources */,
@@ -1003,6 +1044,7 @@
 				184E523D20B6D26000DD3750 /* VMOrderDetailTableViewCell.xib in Resources */,
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
 				38DB4CFE20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib in Resources */,
+				38DB4D1B20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib in Resources */,
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
 				185B5DDA20A1D7B3001E47EC /* VBWaitDealTableViewCell.xib in Resources */,
 				184E523820B6D23C00DD3750 /* VMSectionHeaderView.xib in Resources */,
@@ -1020,6 +1062,7 @@
 				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
+				38DB4D1020E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib in Resources */,
 				1846807B20E1CE5700099954 /* VBCreatActivityViewController.xib in Resources */,
 				38DB4D0920E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
@@ -1148,6 +1191,7 @@
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
 				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
+				38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */,
 				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
 				38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */,
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
@@ -1173,6 +1217,7 @@
 				38D120B320DF335A007FEF4A /* VBStoreTypeViewController.m in Sources */,
 				184E523720B6D23C00DD3750 /* VMSectionHeaderView.m in Sources */,
 				1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */,
+				38DB4D0F20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m in Sources */,
 				184E523C20B6D26000DD3750 /* VMOrderDetailTableViewCell.m in Sources */,
 				18BA795F20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m in Sources */,
 				38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */,
@@ -1192,6 +1237,7 @@
 				1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
 				18BA796620CF9DFA002182B3 /* VBBusinessStateViewController.m in Sources */,
+				38DB4D1420E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m in Sources */,
 				380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */,
 				1846807F20E1CE7000099954 /* VBActivityListViewController.m in Sources */,
 				184E524120B6D54400DD3750 /* VMOrderTotalTableViewCell.m in Sources */,
