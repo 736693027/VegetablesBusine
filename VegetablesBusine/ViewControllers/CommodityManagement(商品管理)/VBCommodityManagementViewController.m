@@ -11,7 +11,7 @@
 #import "VBCommodityManagementTableViewCell.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <Masonry/Masonry.h>
-#import "VBManageCommodityClassificationViewController.h"
+#import "VBNewManageCommodityClassificationViewController.h"
 
 @interface VBCommodityManagementViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *menuScrollView;
@@ -80,7 +80,7 @@
     return cell;
 }
 - (IBAction)managerButtonClick:(id)sender {
-    VBManageCommodityClassificationViewController *managerVC = [[VBManageCommodityClassificationViewController alloc] init];
+    VBNewManageCommodityClassificationViewController *managerVC = [[VBNewManageCommodityClassificationViewController alloc] init];
     [self.navigationController pushViewController:managerVC animated:YES];
 }
 - (IBAction)addButtonClick:(id)sender {

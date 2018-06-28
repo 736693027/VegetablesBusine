@@ -102,6 +102,12 @@
 		38D120C220DF3C7C007FEF4A /* VBPrinterSetupViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120C020DF3C7C007FEF4A /* VBPrinterSetupViewController.xib */; };
 		38D120C620DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D120C420DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m */; };
 		38D120C720DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D120C520DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib */; };
+		38D4378D20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D4378A20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m */; };
+		38D4378E20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D4378B20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib */; };
+		38D4379220E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D4378F20E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.m */; };
+		38D4379320E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D4379120E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib */; };
+		38D4379820E52FDB002D8CB1 /* VBAddGoodsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38D4379620E52FDB002D8CB1 /* VBAddGoodsViewController.m */; };
+		38D4379920E52FDB002D8CB1 /* VBAddGoodsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38D4379720E52FDB002D8CB1 /* VBAddGoodsViewController.xib */; };
 		38DB4CFD20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4CFA20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.m */; };
 		38DB4CFE20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 38DB4CFB20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib */; };
 		38DB4D0320E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 38DB4D0120E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.m */; };
@@ -301,6 +307,15 @@
 		38D120C320DF3C96007FEF4A /* VBPrinterSetupTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBPrinterSetupTableViewCell.h; sourceTree = "<group>"; };
 		38D120C420DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBPrinterSetupTableViewCell.m; sourceTree = "<group>"; };
 		38D120C520DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBPrinterSetupTableViewCell.xib; sourceTree = "<group>"; };
+		38D4378A20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = VBNewManageCommodityClassificationViewController.m; path = "VegetablesBusine/ViewControllers/ManageCommodityClassification(管理分类)/VBNewManageCommodityClassificationViewController.m"; sourceTree = SOURCE_ROOT; };
+		38D4378B20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = VBNewManageCommodityClassificationViewController.xib; path = "VegetablesBusine/ViewControllers/ManageCommodityClassification(管理分类)/VBNewManageCommodityClassificationViewController.xib"; sourceTree = SOURCE_ROOT; };
+		38D4378C20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VBNewManageCommodityClassificationViewController.h; path = "VegetablesBusine/ViewControllers/ManageCommodityClassification(管理分类)/VBNewManageCommodityClassificationViewController.h"; sourceTree = SOURCE_ROOT; };
+		38D4378F20E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBNewManageCommodityClassificationTableViewCell.m; sourceTree = "<group>"; };
+		38D4379020E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBNewManageCommodityClassificationTableViewCell.h; sourceTree = "<group>"; };
+		38D4379120E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBNewManageCommodityClassificationTableViewCell.xib; sourceTree = "<group>"; };
+		38D4379520E52FDB002D8CB1 /* VBAddGoodsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAddGoodsViewController.h; sourceTree = "<group>"; };
+		38D4379620E52FDB002D8CB1 /* VBAddGoodsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAddGoodsViewController.m; sourceTree = "<group>"; };
+		38D4379720E52FDB002D8CB1 /* VBAddGoodsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBAddGoodsViewController.xib; sourceTree = "<group>"; };
 		38DB4CFA20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBManageCommodityClassificationViewController.m; sourceTree = "<group>"; };
 		38DB4CFB20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBManageCommodityClassificationViewController.xib; sourceTree = "<group>"; };
 		38DB4CFC20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBManageCommodityClassificationViewController.h; sourceTree = "<group>"; };
@@ -505,6 +520,7 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				38D4379420E52FC9002D8CB1 /* AddGoods(添加商品) */,
 				38DB4D0B20E3CF6700F67BE7 /* MerchantSettlement(商家结算) */,
 				38DB4CF920E3BC2500F67BE7 /* ManageCommodityClassification(管理分类) */,
 				1846806D20E0BF9400099954 /* FavourableActivity(活动列表) */,
@@ -798,6 +814,16 @@
 			path = "PrinterSetup(打印机设置)";
 			sourceTree = "<group>";
 		};
+		38D4379420E52FC9002D8CB1 /* AddGoods(添加商品) */ = {
+			isa = PBXGroup;
+			children = (
+				38D4379520E52FDB002D8CB1 /* VBAddGoodsViewController.h */,
+				38D4379620E52FDB002D8CB1 /* VBAddGoodsViewController.m */,
+				38D4379720E52FDB002D8CB1 /* VBAddGoodsViewController.xib */,
+			);
+			path = "AddGoods(添加商品)";
+			sourceTree = "<group>";
+		};
 		38DB4CF920E3BC2500F67BE7 /* ManageCommodityClassification(管理分类) */ = {
 			isa = PBXGroup;
 			children = (
@@ -805,6 +831,9 @@
 				38DB4CFC20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.h */,
 				38DB4CFA20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.m */,
 				38DB4CFB20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib */,
+				38D4378C20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.h */,
+				38D4378A20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m */,
+				38D4378B20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib */,
 				38DB4D0620E3C3BE00F67BE7 /* VBAddCommodityClassificationView.h */,
 				38DB4D0820E3C3BE00F67BE7 /* VBAddCommodityClassificationView.m */,
 				38DB4D0720E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib */,
@@ -815,6 +844,9 @@
 		38DB4CFF20E3BC7600F67BE7 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
+				38D4379020E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.h */,
+				38D4378F20E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.m */,
+				38D4379120E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib */,
 				38DB4D0020E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.h */,
 				38DB4D0120E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.m */,
 				38DB4D0220E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.xib */,
@@ -1043,6 +1075,7 @@
 				1846808020E1CE7000099954 /* VBActivityListViewController.xib in Resources */,
 				184E523D20B6D26000DD3750 /* VMOrderDetailTableViewCell.xib in Resources */,
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
+				38D4378E20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib in Resources */,
 				38DB4CFE20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib in Resources */,
 				38DB4D1B20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib in Resources */,
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
@@ -1063,6 +1096,7 @@
 				1897EA7620C0137B00ED3DEF /* VBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				38DB4D1020E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib in Resources */,
+				38D4379920E52FDB002D8CB1 /* VBAddGoodsViewController.xib in Resources */,
 				1846807B20E1CE5700099954 /* VBCreatActivityViewController.xib in Resources */,
 				38DB4D0920E3C3BE00F67BE7 /* VBAddCommodityClassificationView.xib in Resources */,
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
@@ -1072,6 +1106,7 @@
 				38E9168320DF639F006CB22A /* VBEvaluationDataTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
+				38D4379320E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib in Resources */,
 				1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */,
 				185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */,
 				38E9167E20DF61C1006CB22A /* VBEvaluationDataViewController.xib in Resources */,
@@ -1182,6 +1217,7 @@
 				185B5DD420A1CE74001E47EC /* VBWaitDealTableViewController.m in Sources */,
 				38DB4D0320E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.m in Sources */,
 				185B60A020CD165F006EF799 /* VBSetupTableViewCell.m in Sources */,
+				38D4379220E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.m in Sources */,
 				18BA797120CFB4EE002182B3 /* VBBusinessStateTableViewCell.m in Sources */,
 				38E9167D20DF61C1006CB22A /* VBEvaluationDataViewController.m in Sources */,
 				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
@@ -1230,6 +1266,7 @@
 				38FC7CB120CB9E0700A21FEE /* JTCalendarMonthWeekDaysView.m in Sources */,
 				38E9169620DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
+				38D4378D20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
 				18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */,
@@ -1253,6 +1290,7 @@
 				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
 				383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */,
 				38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */,
+				38D4379820E52FDB002D8CB1 /* VBAddGoodsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
