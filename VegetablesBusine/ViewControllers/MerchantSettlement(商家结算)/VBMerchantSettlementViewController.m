@@ -20,8 +20,19 @@
 
 @implementation VBMerchantSettlementViewController
 
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController.navigationBar setBarTintColor:[CommonTools changeColor:@"0x45525B"]];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor whiteColor]};
+}
+- (void)viewWillDisappear:(BOOL)animated{
+    [super viewWillDisappear:animated];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor whiteColor]];
+    self.navigationController.navigationBar.titleTextAttributes = @{NSForegroundColorAttributeName:[UIColor blackColor]};
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.title = @"商家结算";
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*3,self.mainScrollview.frame.size.height-64);
     for(NSInteger i=0;i<3;i++){
         VBMerchantSettlementDataViewController *orderManagerTable = [[VBMerchantSettlementDataViewController alloc] init];
