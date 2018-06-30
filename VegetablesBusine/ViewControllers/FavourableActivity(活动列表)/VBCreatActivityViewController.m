@@ -22,11 +22,12 @@
     UIView *touchView = sender.view;
     NSInteger index = touchView.tag;
     NSLog(@"-----%ld",(long)index);
+    Class ViewControllerClass = nil;
     switch (index-100) {
             //满减活动
         case 0:
         {
-            
+            ViewControllerClass = NSClassFromString(@"VBFullReductionActivityViewController");
         }
             break;
             //满赠活动
@@ -51,6 +52,8 @@
         default:
             break;
     }
+    UIViewController *vc = [[ViewControllerClass alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

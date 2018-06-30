@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="VBActivityDateTimeTableViewCell" rowHeight="50" id="KGk-i7-Jjw" customClass="VBActivityDateTimeTableViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="活动类型" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JdL-B3-6EQ">
+                        <rect key="frame" x="10" y="16" width="54" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6k-fW-JEu">
+                        <rect key="frame" x="94" y="16" width="50" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="无限制" image="icon_selectTimeOff">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" image="icon_selectTime"/>
+                        <connections>
+                            <action selector="typeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="2Pr-i0-lVh"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAo-14-No8">
+                        <rect key="frame" x="169" y="16" width="37" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="每周" image="icon_selectTimeOff">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" image="icon_selectTime"/>
+                        <connections>
+                            <action selector="typeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="88J-h2-Kj3"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eRQ-xq-b7s">
+                        <rect key="frame" x="231" y="17" width="50" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <state key="normal" title="自定义" image="icon_selectTimeOff">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <state key="selected" image="icon_selectTime"/>
+                        <connections>
+                            <action selector="typeButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Gk5-v9-N0d"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="QAo-14-No8" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="3vA-Ic-9iN"/>
+                    <constraint firstItem="JdL-B3-6EQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="B5V-ud-9Xu"/>
+                    <constraint firstItem="QAo-14-No8" firstAttribute="leading" secondItem="f6k-fW-JEu" secondAttribute="trailing" constant="25" id="DxS-Bz-fNO"/>
+                    <constraint firstItem="JdL-B3-6EQ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ldg-zQ-oeq"/>
+                    <constraint firstItem="eRQ-xq-b7s" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="SqB-dk-jIk"/>
+                    <constraint firstItem="f6k-fW-JEu" firstAttribute="leading" secondItem="JdL-B3-6EQ" secondAttribute="trailing" constant="30" id="e3J-27-i73"/>
+                    <constraint firstItem="eRQ-xq-b7s" firstAttribute="leading" secondItem="QAo-14-No8" secondAttribute="trailing" constant="25" id="oa2-Zm-ZR6"/>
+                    <constraint firstItem="f6k-fW-JEu" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="yPW-FM-ytM"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <point key="canvasLocation" x="-372" y="-44"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="icon_selectTime" width="10" height="10"/>
+        <image name="icon_selectTimeOff" width="10" height="10"/>
+    </resources>
+</document>
