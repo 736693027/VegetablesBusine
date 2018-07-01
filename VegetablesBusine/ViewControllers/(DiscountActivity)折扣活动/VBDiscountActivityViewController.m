@@ -1,29 +1,29 @@
 //
-//  VBFullReductionActivityViewController.m
+//  VBDiscountActivityViewController.m
 //  VegetablesBusine
 //
-//  Created by 刘少轩 on 2018/6/30.
+//  Created by 刘少轩 on 2018/7/1.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBFullReductionActivityViewController.h"
+#import "VBDiscountActivityViewController.h"
 #import "VBActivieBaseTableViewCell.h"
 #import "VBActivityDateTimeTableViewCell.h"
 #import "VBActivieSelectWeekTableViewCell.h"
 #import "VBActivieSelectDateTimeTableViewCell.h"
-#import "VBActivityRulesTableViewCell.h"
+#import "VBDiscountActivityTableViewCell.h"
 #import "VBActivityDateTimeEnumFile.h"
 #import "VBTableFooterView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 
-@interface VBFullReductionActivityViewController ()<UITableViewDataSource,UITableViewDelegate>
-@property (assign, nonatomic) NSInteger totalActivityRulesCount;
+@interface VBDiscountActivityViewController ()<UITableViewDataSource,UITableViewDelegate>
+
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
 @property (assign, nonatomic) VBActivityDateTimeType activityType;
 
 @end
 
-@implementation VBFullReductionActivityViewController
+@implementation VBDiscountActivityViewController
 
 - (void)navRightButtonClicked:(UIButton *)sender{
     UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"创建必读" message:@"1.同一类型活动只能创建一个(不包含已结算)\n2.活动开始时间是指当日00：00：00\n3.活动结束时间是指当日23：59：59" preferredStyle:(UIAlertControllerStyleAlert)];
@@ -35,16 +35,15 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
-    self.title = @"满减活动";
+    
+    self.title = @"折扣活动";
     [navRrightBtn setTitle:@"创建必读" forState:UIControlStateNormal];
     navRrightBtn.titleLabel.font = [UIFont systemFontOfSize:12];
     [navRrightBtn setTitleColor:[CommonTools changeColor:@"0xfe7316"] forState:UIControlStateNormal];
-    self.totalActivityRulesCount = 1;
     self.activityType = VBActivityDateTimeDefault;
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBActivieBaseTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBActivieBaseTableViewCell"];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBActivityDateTimeTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBActivityDateTimeTableViewCell"];
-    [self.dataTableView registerNib:[UINib nibWithNibName:@"VBActivityRulesTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBActivityRulesTableViewCell"];
+    [self.dataTableView registerNib:[UINib nibWithNibName:@"VBDiscountActivityTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBDiscountActivityTableViewCell"];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBActivieSelectWeekTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBActivieSelectWeekTableViewCell"];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBActivieSelectDateTimeTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBActivieSelectDateTimeTableViewCell"];
     
@@ -64,7 +63,7 @@
         else
             return 3;
     }
-    return self.totalActivityRulesCount;
+    return 2;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     @weakify(self);
@@ -104,13 +103,9 @@
             }
         }
     }else{
-        VBActivityRulesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityRulesTableViewCell"];
-        cell.rulesSubject = [RACSubject subject];
-        [cell.rulesSubject subscribeNext:^(id  _Nullable x) {
-            @strongify(self)
-            self.totalActivityRulesCount++;
-            [self.dataTableView reloadData];
-        }];
+        VBDiscountActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBDiscountActivityTableViewCell"];
+        cell.titleLabel.text = indexPath.row == 0?@"折扣条件":@"折扣力度";
+        cell.unitLabel.text = indexPath.row == 0?@"元":@"折";
         return cell;
     }
 }
@@ -129,6 +124,7 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
     return 0.0001;
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

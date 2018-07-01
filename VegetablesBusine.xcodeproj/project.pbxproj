@@ -90,6 +90,14 @@
 		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
 		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
 		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
+		3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D88820E8C23D00A62AFF /* VBDiscountActivityViewController.m */; };
+		3834D88B20E8C23D00A62AFF /* VBDiscountActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D88920E8C23D00A62AFF /* VBDiscountActivityViewController.xib */; };
+		3834D89020E8C28900A62AFF /* VBDiscountActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D88E20E8C28900A62AFF /* VBDiscountActivityTableViewCell.m */; };
+		3834D89120E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D88F20E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib */; };
+		3834D89620E8C64D00A62AFF /* VBGivingActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D89420E8C64D00A62AFF /* VBGivingActivityViewController.m */; };
+		3834D89720E8C64D00A62AFF /* VBGivingActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D89520E8C64D00A62AFF /* VBGivingActivityViewController.xib */; };
+		3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D89A20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m */; };
+		3834D89D20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D89B20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib */; };
 		3837469D20E27F8400310E77 /* VBActivityListDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */; };
 		383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */; };
 		383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */; };
@@ -306,6 +314,18 @@
 		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
 		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
 		38214F6A20CBF65400E7D83F /* VBOrderManagerEnumHeaderFile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerEnumHeaderFile.h; sourceTree = "<group>"; };
+		3834D88720E8C23D00A62AFF /* VBDiscountActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBDiscountActivityViewController.h; sourceTree = "<group>"; };
+		3834D88820E8C23D00A62AFF /* VBDiscountActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDiscountActivityViewController.m; sourceTree = "<group>"; };
+		3834D88920E8C23D00A62AFF /* VBDiscountActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBDiscountActivityViewController.xib; sourceTree = "<group>"; };
+		3834D88D20E8C28900A62AFF /* VBDiscountActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBDiscountActivityTableViewCell.h; sourceTree = "<group>"; };
+		3834D88E20E8C28900A62AFF /* VBDiscountActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDiscountActivityTableViewCell.m; sourceTree = "<group>"; };
+		3834D88F20E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBDiscountActivityTableViewCell.xib; sourceTree = "<group>"; };
+		3834D89320E8C64D00A62AFF /* VBGivingActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGivingActivityViewController.h; sourceTree = "<group>"; };
+		3834D89420E8C64D00A62AFF /* VBGivingActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGivingActivityViewController.m; sourceTree = "<group>"; };
+		3834D89520E8C64D00A62AFF /* VBGivingActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGivingActivityViewController.xib; sourceTree = "<group>"; };
+		3834D89920E8C66D00A62AFF /* VBGivingActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGivingActivityTableViewCell.h; sourceTree = "<group>"; };
+		3834D89A20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGivingActivityTableViewCell.m; sourceTree = "<group>"; };
+		3834D89B20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGivingActivityTableViewCell.xib; sourceTree = "<group>"; };
 		3837469B20E27F8400310E77 /* VBActivityListDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataViewController.h; sourceTree = "<group>"; };
 		3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListDataViewController.m; sourceTree = "<group>"; };
 		3837469F20E2856B00310E77 /* VBActivityListDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataTableViewCell.h; sourceTree = "<group>"; };
@@ -566,6 +586,8 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				3834D89220E8C62B00A62AFF /* (GivingActivity)赠送活动 */,
+				3834D88620E8C22B00A62AFF /* (DiscountActivity)折扣活动 */,
 				3847948320E72BAE000EDB3A /* FullReductionActivity(满减活动) */,
 				38D4379420E52FC9002D8CB1 /* AddGoods(添加商品) */,
 				38DB4D0B20E3CF6700F67BE7 /* MerchantSettlement(商家结算) */,
@@ -823,6 +845,48 @@
 			path = Cell;
 			sourceTree = "<group>";
 		};
+		3834D88620E8C22B00A62AFF /* (DiscountActivity)折扣活动 */ = {
+			isa = PBXGroup;
+			children = (
+				3834D88C20E8C27900A62AFF /* cell */,
+				3834D88720E8C23D00A62AFF /* VBDiscountActivityViewController.h */,
+				3834D88820E8C23D00A62AFF /* VBDiscountActivityViewController.m */,
+				3834D88920E8C23D00A62AFF /* VBDiscountActivityViewController.xib */,
+			);
+			path = "(DiscountActivity)折扣活动";
+			sourceTree = "<group>";
+		};
+		3834D88C20E8C27900A62AFF /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3834D88D20E8C28900A62AFF /* VBDiscountActivityTableViewCell.h */,
+				3834D88E20E8C28900A62AFF /* VBDiscountActivityTableViewCell.m */,
+				3834D88F20E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3834D89220E8C62B00A62AFF /* (GivingActivity)赠送活动 */ = {
+			isa = PBXGroup;
+			children = (
+				3834D89820E8C65C00A62AFF /* cell */,
+				3834D89320E8C64D00A62AFF /* VBGivingActivityViewController.h */,
+				3834D89420E8C64D00A62AFF /* VBGivingActivityViewController.m */,
+				3834D89520E8C64D00A62AFF /* VBGivingActivityViewController.xib */,
+			);
+			path = "(GivingActivity)赠送活动";
+			sourceTree = "<group>";
+		};
+		3834D89820E8C65C00A62AFF /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3834D89920E8C66D00A62AFF /* VBGivingActivityTableViewCell.h */,
+				3834D89A20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m */,
+				3834D89B20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		3837469E20E2855700310E77 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -836,8 +900,8 @@
 		3847948320E72BAE000EDB3A /* FullReductionActivity(满减活动) */ = {
 			isa = PBXGroup;
 			children = (
-				384794B120E73D41000EDB3A /* VBTableFooterView */,
 				384794B020E73AD5000EDB3A /* VBActivityDateTimeEnumFile.h */,
+				384794B120E73D41000EDB3A /* VBTableFooterView */,
 				3847948E20E72C59000EDB3A /* cell */,
 				3847948420E72BBE000EDB3A /* VBFullReductionActivityViewController.h */,
 				3847948520E72BBE000EDB3A /* VBFullReductionActivityViewController.m */,
@@ -1169,6 +1233,7 @@
 				185B5DFA20A30E85001E47EC /* VBCommodityListItemView.xib in Resources */,
 				3847948820E72BBE000EDB3A /* VBFullReductionActivityViewController.xib in Resources */,
 				1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */,
+				3834D88B20E8C23D00A62AFF /* VBDiscountActivityViewController.xib in Resources */,
 				384794AA20E730CD000EDB3A /* VBActivityRulesTableViewCell.xib in Resources */,
 				38E9169720DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.xib in Resources */,
 				18D0B47C20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib in Resources */,
@@ -1179,10 +1244,12 @@
 				185B60A120CD165F006EF799 /* VBSetupTableViewCell.xib in Resources */,
 				18BA796C20CF9F14002182B3 /* VBBusinessStateHeadView.xib in Resources */,
 				38D120C220DF3C7C007FEF4A /* VBPrinterSetupViewController.xib in Resources */,
+				3834D89D20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib in Resources */,
 				380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */,
 				18BA796720CF9DFA002182B3 /* VBBusinessStateViewController.xib in Resources */,
 				1846808020E1CE7000099954 /* VBActivityListViewController.xib in Resources */,
 				184E523D20B6D26000DD3750 /* VMOrderDetailTableViewCell.xib in Resources */,
+				3834D89720E8C64D00A62AFF /* VBGivingActivityViewController.xib in Resources */,
 				38D437A320E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.xib in Resources */,
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
 				38D4378E20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib in Resources */,
@@ -1202,6 +1269,7 @@
 				185B60A720CD2E71006EF799 /* VBShopIntroductionViewController.xib in Resources */,
 				383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */,
 				18BA797820CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.xib in Resources */,
+				3834D89120E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBCommodityManagementTableViewCell.xib in Resources */,
@@ -1347,6 +1415,7 @@
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				3847948720E72BBE000EDB3A /* VBFullReductionActivityViewController.m in Sources */,
 				384794A920E730CD000EDB3A /* VBActivityRulesTableViewCell.m in Sources */,
+				3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */,
 				38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */,
 				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
 				38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */,
@@ -1392,6 +1461,7 @@
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
 				18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */,
 				38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */,
+				3834D89020E8C28900A62AFF /* VBDiscountActivityTableViewCell.m in Sources */,
 				1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */,
 				3847949A20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
@@ -1403,9 +1473,11 @@
 				184E524120B6D54400DD3750 /* VMOrderTotalTableViewCell.m in Sources */,
 				38FC7CBA20CB9EE300A21FEE /* VBCalendarViewController.m in Sources */,
 				1897EA7520C0137B00ED3DEF /* VBCommodityManagementTableViewCell.m in Sources */,
+				3834D89620E8C64D00A62AFF /* VBGivingActivityViewController.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
 				185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */,
 				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
+				3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */,
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,

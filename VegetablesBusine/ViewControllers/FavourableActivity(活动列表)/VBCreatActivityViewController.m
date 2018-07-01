@@ -33,13 +33,13 @@
             //满赠活动
         case 1:
         {
-            
+            ViewControllerClass = NSClassFromString(@"VBGivingActivityViewController");
         }
             break;
             //折扣活动
         case 2:
         {
-            
+            ViewControllerClass = NSClassFromString(@"VBDiscountActivityViewController");
         }
             break;
             //免费配送
