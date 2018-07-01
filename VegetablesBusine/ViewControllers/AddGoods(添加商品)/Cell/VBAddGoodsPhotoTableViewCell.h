@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VBAddGoodsPhotoTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 
 @end

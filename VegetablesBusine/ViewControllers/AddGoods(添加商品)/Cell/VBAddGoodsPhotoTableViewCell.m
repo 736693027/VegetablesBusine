@@ -12,7 +12,14 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [self.nameTextField addTarget:self action:@selector(textFieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
+}
+- (void)textFieldDidChanged:(UITextField *)textField{
+    NSString *textString = textField.text;
+    if(textString.length>10){
+        textString = [textString substringToIndex:10];
+    }
+    textField.text = textString;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

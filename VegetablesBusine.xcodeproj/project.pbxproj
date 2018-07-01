@@ -98,6 +98,16 @@
 		3834D89720E8C64D00A62AFF /* VBGivingActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D89520E8C64D00A62AFF /* VBGivingActivityViewController.xib */; };
 		3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D89A20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m */; };
 		3834D89D20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D89B20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib */; };
+		3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D89F20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m */; };
+		3834D8A220E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8A020E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib */; };
+		3834D8A620E8CFFA00A62AFF /* VBTableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */; };
+		3834D8A820E8EADF00A62AFF /* VBTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */; };
+		3834D8AD20E8F33900A62AFF /* VBGoodsUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8AB20E8F33900A62AFF /* VBGoodsUnitViewController.m */; };
+		3834D8AE20E8F33900A62AFF /* VBGoodsUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8AC20E8F33900A62AFF /* VBGoodsUnitViewController.xib */; };
+		3834D8B320E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8B120E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m */; };
+		3834D8B420E8F38D00A62AFF /* VBGoodsUnitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8B220E8F38D00A62AFF /* VBGoodsUnitTableViewCell.xib */; };
+		3834D8B920E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8B720E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m */; };
+		3834D8BA20E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8B820E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib */; };
 		3837469D20E27F8400310E77 /* VBActivityListDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */; };
 		383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */; };
 		383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */; };
@@ -326,6 +336,21 @@
 		3834D89920E8C66D00A62AFF /* VBGivingActivityTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGivingActivityTableViewCell.h; sourceTree = "<group>"; };
 		3834D89A20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGivingActivityTableViewCell.m; sourceTree = "<group>"; };
 		3834D89B20E8C66D00A62AFF /* VBGivingActivityTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGivingActivityTableViewCell.xib; sourceTree = "<group>"; };
+		3834D89E20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAddGoodsUnitTableViewCell.h; sourceTree = "<group>"; };
+		3834D89F20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAddGoodsUnitTableViewCell.m; sourceTree = "<group>"; };
+		3834D8A020E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBAddGoodsUnitTableViewCell.xib; sourceTree = "<group>"; };
+		3834D8A420E8CFFA00A62AFF /* VBTableSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBTableSectionHeaderView.h; sourceTree = "<group>"; };
+		3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBTableSectionHeaderView.m; sourceTree = "<group>"; };
+		3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VBTableSectionHeaderView.xib; path = "/Users/liushaoxuan/Desktop/菜筐/VegetablesBusine/VegetablesBusine/ViewControllers/AddGoods(添加商品)/VBTableSectionHeaderView/VBTableSectionHeaderView.xib"; sourceTree = "<absolute>"; };
+		3834D8AA20E8F33900A62AFF /* VBGoodsUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGoodsUnitViewController.h; sourceTree = "<group>"; };
+		3834D8AB20E8F33900A62AFF /* VBGoodsUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGoodsUnitViewController.m; sourceTree = "<group>"; };
+		3834D8AC20E8F33900A62AFF /* VBGoodsUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGoodsUnitViewController.xib; sourceTree = "<group>"; };
+		3834D8B020E8F38D00A62AFF /* VBGoodsUnitTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGoodsUnitTableViewCell.h; sourceTree = "<group>"; };
+		3834D8B120E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGoodsUnitTableViewCell.m; sourceTree = "<group>"; };
+		3834D8B220E8F38D00A62AFF /* VBGoodsUnitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGoodsUnitTableViewCell.xib; sourceTree = "<group>"; };
+		3834D8B620E8F5D200A62AFF /* VBGoodsSpecificationsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGoodsSpecificationsViewController.h; sourceTree = "<group>"; };
+		3834D8B720E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGoodsSpecificationsViewController.m; sourceTree = "<group>"; };
+		3834D8B820E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGoodsSpecificationsViewController.xib; sourceTree = "<group>"; };
 		3837469B20E27F8400310E77 /* VBActivityListDataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataViewController.h; sourceTree = "<group>"; };
 		3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListDataViewController.m; sourceTree = "<group>"; };
 		3837469F20E2856B00310E77 /* VBActivityListDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataTableViewCell.h; sourceTree = "<group>"; };
@@ -887,6 +912,47 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		3834D8A320E8CFE900A62AFF /* VBTableSectionHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				3834D8A420E8CFFA00A62AFF /* VBTableSectionHeaderView.h */,
+				3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */,
+				3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */,
+			);
+			path = VBTableSectionHeaderView;
+			sourceTree = "<group>";
+		};
+		3834D8A920E8F30E00A62AFF /* GoodsUnit(计量单位) */ = {
+			isa = PBXGroup;
+			children = (
+				3834D8AF20E8F37A00A62AFF /* cell */,
+				3834D8AA20E8F33900A62AFF /* VBGoodsUnitViewController.h */,
+				3834D8AB20E8F33900A62AFF /* VBGoodsUnitViewController.m */,
+				3834D8AC20E8F33900A62AFF /* VBGoodsUnitViewController.xib */,
+			);
+			path = "GoodsUnit(计量单位)";
+			sourceTree = "<group>";
+		};
+		3834D8AF20E8F37A00A62AFF /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				3834D8B020E8F38D00A62AFF /* VBGoodsUnitTableViewCell.h */,
+				3834D8B120E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m */,
+				3834D8B220E8F38D00A62AFF /* VBGoodsUnitTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
+		3834D8B520E8F59900A62AFF /* GoodsSpecifications(商品规格) */ = {
+			isa = PBXGroup;
+			children = (
+				3834D8B620E8F5D200A62AFF /* VBGoodsSpecificationsViewController.h */,
+				3834D8B720E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m */,
+				3834D8B820E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib */,
+			);
+			path = "GoodsSpecifications(商品规格)";
+			sourceTree = "<group>";
+		};
 		3837469E20E2855700310E77 /* cell */ = {
 			isa = PBXGroup;
 			children = (
@@ -973,6 +1039,9 @@
 		38D4379420E52FC9002D8CB1 /* AddGoods(添加商品) */ = {
 			isa = PBXGroup;
 			children = (
+				3834D8B520E8F59900A62AFF /* GoodsSpecifications(商品规格) */,
+				3834D8A920E8F30E00A62AFF /* GoodsUnit(计量单位) */,
+				3834D8A320E8CFE900A62AFF /* VBTableSectionHeaderView */,
 				38D4379F20E53326002D8CB1 /* Cell */,
 				38D4379520E52FDB002D8CB1 /* VBAddGoodsViewController.h */,
 				38D4379620E52FDB002D8CB1 /* VBAddGoodsViewController.m */,
@@ -984,12 +1053,15 @@
 		38D4379F20E53326002D8CB1 /* Cell */ = {
 			isa = PBXGroup;
 			children = (
-				38D437A020E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.xib */,
 				38D437A120E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.h */,
 				38D437A220E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.m */,
+				38D437A020E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.xib */,
 				38D437A520E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.h */,
 				38D437A620E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.m */,
 				38D437A720E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.xib */,
+				3834D89E20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.h */,
+				3834D89F20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m */,
+				3834D8A020E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -1261,6 +1333,7 @@
 				184E523820B6D23C00DD3750 /* VMSectionHeaderView.xib in Resources */,
 				38E9167920DF4912006CB22A /* VBEvaluationViewController.xib in Resources */,
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
+				3834D8A220E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib in Resources */,
 				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				38E9169220DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib in Resources */,
 				38D120C720DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib in Resources */,
@@ -1270,10 +1343,12 @@
 				383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */,
 				18BA797820CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.xib in Resources */,
 				3834D89120E8C28900A62AFF /* VBDiscountActivityTableViewCell.xib in Resources */,
+				3834D8B420E8F38D00A62AFF /* VBGoodsUnitTableViewCell.xib in Resources */,
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBCommodityManagementTableViewCell.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
+				3834D8BA20E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib in Resources */,
 				38DB4D1020E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib in Resources */,
 				38D4379920E52FDB002D8CB1 /* VBAddGoodsViewController.xib in Resources */,
 				1846807B20E1CE5700099954 /* VBCreatActivityViewController.xib in Resources */,
@@ -1281,6 +1356,7 @@
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
 				38D120B420DF335A007FEF4A /* VBStoreTypeViewController.xib in Resources */,
 				18D0B48120DBD9C00011555F /* BusinessTimeView.xib in Resources */,
+				3834D8A820E8EADF00A62AFF /* VBTableSectionHeaderView.xib in Resources */,
 				38DB4D0420E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.xib in Resources */,
 				38E9168320DF639F006CB22A /* VBEvaluationDataTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
@@ -1288,6 +1364,7 @@
 				184E523220B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.xib in Resources */,
 				38D437A920E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.xib in Resources */,
 				38D4379320E52CAD002D8CB1 /* VBNewManageCommodityClassificationTableViewCell.xib in Resources */,
+				3834D8AE20E8F33900A62AFF /* VBGoodsUnitViewController.xib in Resources */,
 				3847949B20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.xib in Resources */,
 				1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */,
 				185B5E0B20A32BAF001E47EC /* VBOrderManagerTableViewCell.xib in Resources */,
@@ -1410,7 +1487,9 @@
 				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
 				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
 				38E9168720DF6763006CB22A /* XHStarRateView.m in Sources */,
+				3834D8B920E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m in Sources */,
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
+				3834D8AD20E8F33900A62AFF /* VBGoodsUnitViewController.m in Sources */,
 				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				3847948720E72BBE000EDB3A /* VBFullReductionActivityViewController.m in Sources */,
@@ -1458,11 +1537,13 @@
 				38D4378D20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m in Sources */,
 				384794B620E73D41000EDB3A /* VBTableFooterView.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
+				3834D8B320E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m in Sources */,
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
 				18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */,
 				38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */,
 				3834D89020E8C28900A62AFF /* VBDiscountActivityTableViewCell.m in Sources */,
 				1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */,
+				3834D8A620E8CFFA00A62AFF /* VBTableSectionHeaderView.m in Sources */,
 				3847949A20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
 				18BA796620CF9DFA002182B3 /* VBBusinessStateViewController.m in Sources */,
@@ -1476,6 +1557,7 @@
 				3834D89620E8C64D00A62AFF /* VBGivingActivityViewController.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
 				185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */,
+				3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */,
 				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
 				3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */,
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,

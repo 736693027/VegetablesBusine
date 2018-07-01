@@ -12,6 +12,7 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <Masonry/Masonry.h>
 #import "VBNewManageCommodityClassificationViewController.h"
+#import "VBAddGoodsViewController.h"
 
 @interface VBCommodityManagementViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *menuScrollView;
@@ -84,6 +85,8 @@
     [self.navigationController pushViewController:managerVC animated:YES];
 }
 - (IBAction)addButtonClick:(id)sender {
+    VBAddGoodsViewController *addGoodsVC = [[VBAddGoodsViewController alloc] init];
+    [self.navigationController pushViewController:addGoodsVC animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
