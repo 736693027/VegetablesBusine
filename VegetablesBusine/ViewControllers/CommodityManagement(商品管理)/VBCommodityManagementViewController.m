@@ -8,9 +8,11 @@
 
 #import "VBCommodityManagementViewController.h"
 #import "VBMenuItemView.h"
-#import "VBVBCommodityManagementTableViewCell.h"
+#import "VBCommodityManagementTableViewCell.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import <Masonry/Masonry.h>
+#import "VBNewManageCommodityClassificationViewController.h"
+#import "VBAddGoodsViewController.h"
 
 @interface VBCommodityManagementViewController ()
 @property (weak, nonatomic) IBOutlet UIScrollView *menuScrollView;
@@ -31,7 +33,7 @@
         make.bottom.offset(-54);
         make.top.right.offset(0);
     }];
-    [self tableRegisterNibName:@"VBVBCommodityManagementTableViewCell" cellReuseIdentifier:@"VBVBCommodityManagementTableViewCell" estimatedRowHeight:143];
+    [self tableRegisterNibName:@"VBCommodityManagementTableViewCell" cellReuseIdentifier:@"VBCommodityManagementTableViewCell" estimatedRowHeight:143];
     _menuItemArray = @[@"新上架",@"食用油",@"限时打折\n促销商品"];
     _currentItemIndex = 0;
     for(NSInteger i=0;i<_menuItemArray.count;i++){
@@ -69,15 +71,24 @@
 
 #pragma mark tableview datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 0;
+    return 10;
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 143;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VBVBCommodityManagementTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBVBCommodityManagementTableViewCell"];
+    VBCommodityManagementTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBCommodityManagementTableViewCell"];
     return cell;
 }
+- (IBAction)managerButtonClick:(id)sender {
+    VBNewManageCommodityClassificationViewController *managerVC = [[VBNewManageCommodityClassificationViewController alloc] init];
+    [self.navigationController pushViewController:managerVC animated:YES];
+}
+- (IBAction)addButtonClick:(id)sender {
+    VBAddGoodsViewController *addGoodsVC = [[VBAddGoodsViewController alloc] init];
+    [self.navigationController pushViewController:addGoodsVC animated:YES];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

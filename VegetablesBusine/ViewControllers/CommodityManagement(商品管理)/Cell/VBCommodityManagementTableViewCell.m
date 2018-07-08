@@ -1,15 +1,15 @@
 //
-//  VBVBCommodityManagementTableViewCell.m
+//  VBCommodityManagementTableViewCell.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/31.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBVBCommodityManagementTableViewCell.h"
+#import "VBCommodityManagementTableViewCell.h"
 #import "VBAlterView.h"
 
-@implementation VBVBCommodityManagementTableViewCell
+@implementation VBCommodityManagementTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

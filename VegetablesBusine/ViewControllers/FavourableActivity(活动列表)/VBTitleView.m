@@ -58,4 +58,23 @@
 - (void)setFrame:(CGRect)frame{
     [super setFrame:frame];
 }
+- (void)selectWithIndex:(NSInteger)index{
+    switch (index) {
+        case 0:
+            {
+                self.activityListButton.selected = NO;
+                self.creatActivityButton.selected = YES;
+            }
+            break;
+        case 1:
+        {
+            self.activityListButton.selected = YES;
+            self.creatActivityButton.selected = NO;
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
 @end

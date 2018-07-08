@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xP6-Vr-FyT" customClass="VBTableSectionHeaderView">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w6j-lh-wgd">
+                    <rect key="frame" x="225" y="10" width="130" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="130" id="meK-TP-y41"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <inset key="titleEdgeInsets" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                    <state key="normal" title="添加商品规格" image="icon_addFormat">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ggC-oT-ezU">
+                    <rect key="frame" x="10" y="4" width="66" height="32"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <state key="normal" title="批量设置">
+                        <color key="titleColor" red="0.0039215686274509803" green="0.80392156862745101" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstItem="ggC-oT-ezU" firstAttribute="centerY" secondItem="xP6-Vr-FyT" secondAttribute="centerY" id="5FJ-pJ-Kzp"/>
+                <constraint firstItem="w6j-lh-wgd" firstAttribute="centerY" secondItem="xP6-Vr-FyT" secondAttribute="centerY" id="EEQ-kQ-8W2"/>
+                <constraint firstAttribute="trailing" secondItem="w6j-lh-wgd" secondAttribute="trailing" constant="20" id="oBd-Ji-CuK"/>
+                <constraint firstItem="ggC-oT-ezU" firstAttribute="leading" secondItem="xP6-Vr-FyT" secondAttribute="leading" constant="10" id="qyh-aP-12J"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="addGoodsButton" destination="w6j-lh-wgd" id="ef3-fk-0li"/>
+                <outlet property="setupGoodsStyle" destination="ggC-oT-ezU" id="Jyj-XS-0wD"/>
+            </connections>
+            <point key="canvasLocation" x="-188" y="-289"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="icon_addFormat" width="20" height="20"/>
+    </resources>
+</document>

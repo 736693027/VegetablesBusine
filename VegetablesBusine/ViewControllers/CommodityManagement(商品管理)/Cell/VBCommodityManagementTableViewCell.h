@@ -1,5 +1,5 @@
 //
-//  VBVBCommodityManagementTableViewCell.h
+//  VBCommodityManagementTableViewCell.h
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/31.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VBVBCommodityManagementTableViewCell : UITableViewCell
+@interface VBCommodityManagementTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *commodityImagesView;
 @property (weak, nonatomic) IBOutlet UILabel *commodityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderCount;
