@@ -800,8 +800,8 @@
 			isa = PBXGroup;
 			children = (
 				38FC7C9320CB9DFA00A21FEE /* VBAlterView.h */,
-				38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */,
 				38FC7C9520CB9DFA00A21FEE /* VBAlterView.m */,
+				38FC7C9420CB9DFA00A21FEE /* VBAlterView.xib */,
 			);
 			path = VBAlterView;
 			sourceTree = "<group>";
