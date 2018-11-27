@@ -19,5 +19,9 @@
 
 #import "CommonTools.h"
 #import <SVProgressHUD/SVProgressHUD.h>
+#import "YYModel.h"
+#import "YYKit.h"
+#import <ReactiveObjC/ReactiveObjC.h>
+#import "DefineFile.h"
 
 #endif /* VegetableHeaderFile_pch */

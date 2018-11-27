@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "BaseViewController.h"
 #import "VMTabBarController.h"
+#import "YTKNetworkConfig.h"
+#import "IQKeyboardManager.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +20,12 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    YTKNetworkConfig *configer = [YTKNetworkConfig sharedConfig];
+    configer.baseUrl = @"http://139.224.221.134";
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

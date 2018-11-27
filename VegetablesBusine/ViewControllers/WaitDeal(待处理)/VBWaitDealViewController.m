@@ -26,7 +26,7 @@
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,_mainScrollview.frame.size.height);
     for(NSInteger i=0;i<2;i++){
         VBWaitDealTableViewController *waitDealTable = [[VBWaitDealTableViewController alloc] init];
-        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, _mainScrollview.frame.size.height);
+        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationBarAndStatusHeight-50-kTabbarHeight);
         [self addChildViewController:waitDealTable];
         [_mainScrollview addSubview:waitDealTable.view];
     }

@@ -7,7 +7,6 @@
 //
 
 #import "BaseTableViewController.h"
-#import "MJRefresh.h"
 
 @interface BaseTableViewController ()
 
@@ -29,9 +28,13 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.currentPage = 1;
     _dataArray = [[NSMutableArray alloc] init];
-    
+    if (@available(iOS 11.0, *)) {
+        self.dataTableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
+    } else {
+        self.automaticallyAdjustsScrollViewInsets = NO;
+    }
 }
 - (void)creatTableViewViewTableViewStyle:(UITableViewStyle)style{
     
@@ -44,6 +47,7 @@
     [self.view addSubview:self.dataTableView];
     _dataTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(tableHeadViewRefreshAction)];
     _dataTableView.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingTarget:self refreshingAction:@selector(tableFootViewRefreshAction)];
+    [self.dataTableView.mj_header beginRefreshing];
 }
 
 - (void)tableRegisterNibName:(NSString *)nibName cellReuseIdentifier:(NSString *)cellReuseIdentifier estimatedRowHeight:(CGFloat)height{
@@ -53,11 +57,13 @@
 }
 
 - (void)tableHeadViewRefreshAction{
-    [self.dataTableView.mj_header endRefreshing];
+    self.currentPage = 1;
+    [self requestListData];
 };
 
 - (void)tableFootViewRefreshAction{
-    [self.dataTableView.mj_footer endRefreshing];
+    self.currentPage++;
+    [self requestListData];
 };
 
 - (void)setIsClickEmptyImageLoading:(BOOL)isClickEmptyImageLoading
@@ -65,7 +71,6 @@
     if (self.isClickEmptyImageLoading == isClickEmptyImageLoading) {
         return;
     }
-    
     _isClickEmptyImageLoading = isClickEmptyImageLoading;
     
     [self.dataTableView reloadEmptyDataSet];
@@ -150,19 +155,19 @@
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapView:(UIView *)view
 {
-//    self.isClickEmptyImageLoading = YES;
-//    
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        self.isClickEmptyImageLoading = NO;
-//    });
+    self.isClickEmptyImageLoading = YES;
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.isClickEmptyImageLoading = NO;
+    });
 }
 
 - (void)emptyDataSet:(UIScrollView *)scrollView didTapButton:(UIButton *)button
 {
-//    self.isClickEmptyImageLoading = YES;
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        self.isClickEmptyImageLoading = NO;
-//    });
+    self.isClickEmptyImageLoading = YES;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(3 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.isClickEmptyImageLoading = NO;
+    });
 }
 
 - (void)didReceiveMemoryWarning {

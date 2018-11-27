@@ -10,6 +10,8 @@
 #import <Masonry/Masonry.h>
 #import "VBWaitDealTableViewCell.h"
 #import "VBOrderDetailViewController.h"
+#import "VBListDataRequest.h"
+#import "VBWaitDealListModel.h"
 
 @interface VBWaitDealTableViewController ()
 
@@ -24,7 +26,6 @@
         make.top.offset(0);
         make.left.offset(0);
         make.bottom.offset(0);
-//        make.bottom.mas_equalTo(self.view.mas_bottom);
         make.width.offset(SCREEN_WIDTH);
     }];
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -36,10 +37,26 @@
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }
-
+- (void)requestListData {
+    VBListDataRequest *dataRequest = [[VBListDataRequest alloc] initWithPage:1 rows:20];
+    [dataRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [self.dataTableView.mj_header endRefreshing];
+        [self.dataTableView.mj_footer endRefreshing];
+        if(self.currentPage == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemsModels = [responseDic objectForKey:@"rows"];
+        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBWaitDealListModel class] json:itemsModels]];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
+}
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBWaitDealTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBWaitDealTableViewCell"];

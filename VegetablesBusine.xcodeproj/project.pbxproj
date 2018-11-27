@@ -9,6 +9,13 @@
 /* Begin PBXBuildFile section */
 		1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830E72620D115CF001E042B /* LBDatePickerView.m */; };
 		1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830E72720D115CF001E042B /* LBDatePickerView.xib */; };
+		184260E221AB969500622800 /* VBTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184260E121AB969500622800 /* VBTableSectionHeaderView.xib */; };
+		184260E621AB9D8100622800 /* LBBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260E521AB9D8100622800 /* LBBaseRequest.m */; };
+		184260E921AB9DA200622800 /* LBResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260E721AB9DA200622800 /* LBResponseModel.m */; };
+		184260EC21AB9DF100622800 /* LBBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260EA21AB9DF100622800 /* LBBaseModel.m */; };
+		184260EF21ABC0C300622800 /* VBListDataRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260EE21ABC0C300622800 /* VBListDataRequest.m */; };
+		184260F621ABD3B400622800 /* VBWaitDealListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260F421ABD3B400622800 /* VBWaitDealListModel.m */; };
+		1842610321ABF85000622800 /* VBGetDetailByIDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1842610221ABF85000622800 /* VBGetDetailByIDRequest.m */; };
 		1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */; };
 		1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */; };
 		1846807520E1C93F00099954 /* VBTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846807420E1C93F00099954 /* VBTitleView.m */; };
@@ -101,7 +108,6 @@
 		3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D89F20E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m */; };
 		3834D8A220E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8A020E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib */; };
 		3834D8A620E8CFFA00A62AFF /* VBTableSectionHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */; };
-		3834D8A820E8EADF00A62AFF /* VBTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */; };
 		3834D8AD20E8F33900A62AFF /* VBGoodsUnitViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8AB20E8F33900A62AFF /* VBGoodsUnitViewController.m */; };
 		3834D8AE20E8F33900A62AFF /* VBGoodsUnitViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3834D8AC20E8F33900A62AFF /* VBGoodsUnitViewController.xib */; };
 		3834D8B320E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D8B120E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m */; };
@@ -192,6 +198,19 @@
 		1830E72620D115CF001E042B /* LBDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDatePickerView.m; sourceTree = "<group>"; };
 		1830E72720D115CF001E042B /* LBDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBDatePickerView.xib; sourceTree = "<group>"; };
 		1830E72820D115CF001E042B /* LBDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDatePickerView.h; sourceTree = "<group>"; };
+		184260E121AB969500622800 /* VBTableSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBTableSectionHeaderView.xib; sourceTree = "<group>"; };
+		184260E421AB9D8100622800 /* LBBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBBaseRequest.h; sourceTree = "<group>"; };
+		184260E521AB9D8100622800 /* LBBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBBaseRequest.m; sourceTree = "<group>"; };
+		184260E721AB9DA200622800 /* LBResponseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBResponseModel.m; sourceTree = "<group>"; };
+		184260E821AB9DA200622800 /* LBResponseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBResponseModel.h; sourceTree = "<group>"; };
+		184260EA21AB9DF100622800 /* LBBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBBaseModel.m; sourceTree = "<group>"; };
+		184260EB21AB9DF100622800 /* LBBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBBaseModel.h; sourceTree = "<group>"; };
+		184260ED21ABC0C300622800 /* VBListDataRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBListDataRequest.h; sourceTree = "<group>"; };
+		184260EE21ABC0C300622800 /* VBListDataRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBListDataRequest.m; sourceTree = "<group>"; };
+		184260F421ABD3B400622800 /* VBWaitDealListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBWaitDealListModel.m; sourceTree = "<group>"; };
+		184260F521ABD3B400622800 /* VBWaitDealListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBWaitDealListModel.h; sourceTree = "<group>"; };
+		1842610121ABF85000622800 /* VBGetDetailByIDRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGetDetailByIDRequest.h; sourceTree = "<group>"; };
+		1842610221ABF85000622800 /* VBGetDetailByIDRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGetDetailByIDRequest.m; sourceTree = "<group>"; };
 		1846806E20E0BFA900099954 /* VBFavourableActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFavourableActivityViewController.h; sourceTree = "<group>"; };
 		1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFavourableActivityViewController.m; sourceTree = "<group>"; };
 		1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFavourableActivityViewController.xib; sourceTree = "<group>"; };
@@ -341,7 +360,6 @@
 		3834D8A020E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBAddGoodsUnitTableViewCell.xib; sourceTree = "<group>"; };
 		3834D8A420E8CFFA00A62AFF /* VBTableSectionHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBTableSectionHeaderView.h; sourceTree = "<group>"; };
 		3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBTableSectionHeaderView.m; sourceTree = "<group>"; };
-		3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = VBTableSectionHeaderView.xib; path = "/Users/liushaoxuan/Desktop/菜筐/VegetablesBusine/VegetablesBusine/ViewControllers/AddGoods(添加商品)/VBTableSectionHeaderView/VBTableSectionHeaderView.xib"; sourceTree = "<absolute>"; };
 		3834D8AA20E8F33900A62AFF /* VBGoodsUnitViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGoodsUnitViewController.h; sourceTree = "<group>"; };
 		3834D8AB20E8F33900A62AFF /* VBGoodsUnitViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGoodsUnitViewController.m; sourceTree = "<group>"; };
 		3834D8AC20E8F33900A62AFF /* VBGoodsUnitViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBGoodsUnitViewController.xib; sourceTree = "<group>"; };
@@ -502,6 +520,32 @@
 			path = DatePick;
 			sourceTree = "<group>";
 		};
+		184260E321AB9D8100622800 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				184260EB21AB9DF100622800 /* LBBaseModel.h */,
+				184260EA21AB9DF100622800 /* LBBaseModel.m */,
+				184260E821AB9DA200622800 /* LBResponseModel.h */,
+				184260E721AB9DA200622800 /* LBResponseModel.m */,
+				184260E421AB9D8100622800 /* LBBaseRequest.h */,
+				184260E521AB9D8100622800 /* LBBaseRequest.m */,
+				184260ED21ABC0C300622800 /* VBListDataRequest.h */,
+				184260EE21ABC0C300622800 /* VBListDataRequest.m */,
+				1842610121ABF85000622800 /* VBGetDetailByIDRequest.h */,
+				1842610221ABF85000622800 /* VBGetDetailByIDRequest.m */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		184260F021ABD2C300622800 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				184260F521ABD3B400622800 /* VBWaitDealListModel.h */,
+				184260F421ABD3B400622800 /* VBWaitDealListModel.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		1846806D20E0BF9400099954 /* FavourableActivity(活动列表) */ = {
 			isa = PBXGroup;
 			children = (
@@ -554,6 +598,7 @@
 		185B5D6F209ED5BD001E47EC /* VegetablesBusine */ = {
 			isa = PBXGroup;
 			children = (
+				184260E321AB9D8100622800 /* API */,
 				380FFAD620B2FA2500A926FD /* Views */,
 				185B5DC520A1CC90001E47EC /* ViewControllers */,
 				185B5D9B209F02B0001E47EC /* BaseViewController */,
@@ -653,6 +698,7 @@
 		185B5DC720A1CC90001E47EC /* WaitDeal(待处理) */ = {
 			isa = PBXGroup;
 			children = (
+				184260F021ABD2C300622800 /* Model */,
 				185B5DD520A1D79B001E47EC /* Cell */,
 				185B5DCD20A1CD34001E47EC /* VBWaitDealViewController.h */,
 				185B5DCE20A1CD34001E47EC /* VBWaitDealViewController.m */,
@@ -915,9 +961,9 @@
 		3834D8A320E8CFE900A62AFF /* VBTableSectionHeaderView */ = {
 			isa = PBXGroup;
 			children = (
+				184260E121AB969500622800 /* VBTableSectionHeaderView.xib */,
 				3834D8A420E8CFFA00A62AFF /* VBTableSectionHeaderView.h */,
 				3834D8A520E8CFFA00A62AFF /* VBTableSectionHeaderView.m */,
-				3834D8A720E8D01900A62AFF /* VBTableSectionHeaderView.xib */,
 			);
 			path = VBTableSectionHeaderView;
 			sourceTree = "<group>";
@@ -1312,6 +1358,7 @@
 				38E9168D20DFB454006CB22A /* VBBusinessStatisticsViewController.xib in Resources */,
 				184E522D20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.xib in Resources */,
 				185B5D93209EDFF7001E47EC /* CustomerTabBarView.xib in Resources */,
+				184260E221AB969500622800 /* VBTableSectionHeaderView.xib in Resources */,
 				18BA797220CFB4EE002182B3 /* VBBusinessStateTableViewCell.xib in Resources */,
 				185B60A120CD165F006EF799 /* VBSetupTableViewCell.xib in Resources */,
 				18BA796C20CF9F14002182B3 /* VBBusinessStateHeadView.xib in Resources */,
@@ -1356,7 +1403,6 @@
 				184E524720B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.xib in Resources */,
 				38D120B420DF335A007FEF4A /* VBStoreTypeViewController.xib in Resources */,
 				18D0B48120DBD9C00011555F /* BusinessTimeView.xib in Resources */,
-				3834D8A820E8EADF00A62AFF /* VBTableSectionHeaderView.xib in Resources */,
 				38DB4D0420E3BC8900F67BE7 /* VBManageCommodityClassificationTableViewCell.xib in Resources */,
 				38E9168320DF639F006CB22A /* VBEvaluationDataTableViewCell.xib in Resources */,
 				18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */,
@@ -1404,7 +1450,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFDownloadRequestOperation/AFDownloadRequestOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -1421,7 +1466,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDownloadRequestOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -1472,6 +1516,7 @@
 				18D0B47B20DBCB8B0011555F /* VBSelectBusinessTimeViewController.m in Sources */,
 				38DB4D0A20E3C3BE00F67BE7 /* VBAddCommodityClassificationView.m in Sources */,
 				18D0B47F20DBD9B00011555F /* BusinessTimeView.m in Sources */,
+				1842610321ABF85000622800 /* VBGetDetailByIDRequest.m in Sources */,
 				3847949320E72C59000EDB3A /* VBActivieBaseTableViewCell.m in Sources */,
 				3847949F20E72EBD000EDB3A /* VBActivieSelectWeekTableViewCell.m in Sources */,
 				38D437A820E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.m in Sources */,
@@ -1486,6 +1531,7 @@
 				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
 				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
 				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
+				184260F621ABD3B400622800 /* VBWaitDealListModel.m in Sources */,
 				38E9168720DF6763006CB22A /* XHStarRateView.m in Sources */,
 				3834D8B920E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m in Sources */,
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
@@ -1497,6 +1543,7 @@
 				3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */,
 				38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */,
 				185B5DA3209F02B0001E47EC /* BaseViewController.m in Sources */,
+				184260E921AB9DA200622800 /* LBResponseModel.m in Sources */,
 				38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */,
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
 				1846807520E1C93F00099954 /* VBTitleView.m in Sources */,
@@ -1510,6 +1557,7 @@
 				1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */,
 				185B5D9A209F02A2001E47EC /* CommonTools.m in Sources */,
 				38FC7CB320CB9E0700A21FEE /* JTCalendarWeekView.m in Sources */,
+				184260E621AB9D8100622800 /* LBBaseRequest.m in Sources */,
 				38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */,
 				185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */,
 				1846807A20E1CE5700099954 /* VBCreatActivityViewController.m in Sources */,
@@ -1538,6 +1586,7 @@
 				384794B620E73D41000EDB3A /* VBTableFooterView.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
 				3834D8B320E8F38D00A62AFF /* VBGoodsUnitTableViewCell.m in Sources */,
+				184260EC21AB9DF100622800 /* LBBaseModel.m in Sources */,
 				38FC7CB420CB9E0700A21FEE /* JTCalendarDayView.m in Sources */,
 				18BA795A20CE201D002182B3 /* VBDeliveryInformationViewController.m in Sources */,
 				38FC7C9720CB9DFA00A21FEE /* VBAlterView.m in Sources */,
@@ -1556,6 +1605,7 @@
 				1897EA7520C0137B00ED3DEF /* VBCommodityManagementTableViewCell.m in Sources */,
 				3834D89620E8C64D00A62AFF /* VBGivingActivityViewController.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
+				184260EF21ABC0C300622800 /* VBListDataRequest.m in Sources */,
 				185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */,
 				3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */,
 				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
