@@ -10,4 +10,14 @@
 
 @implementation VBWaitDealListModel
 
++ (NSDictionary *)modelContainerPropertyGenericClass {
+    
+    return @{@"listData" : [VBCommodityItemModel class]};
+}
+
+@end
+
+@implementation VBCommodityItemModel
+
+
 @end

@@ -15,12 +15,17 @@
 #import <MJRefresh/MJRefresh.h>
 #import "VMSectionHeaderView.h"
 #import <Masonry/Masonry.h>
+#import "VBGetDetailByIDRequest.h"
+#import "VBProcessRefundRequest.h"
+#import "VBProcessOrderRequest.h"
+#import "VBWaitDealListModel.h"
+#import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface VBOrderDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancleButton;
 @property (weak, nonatomic) IBOutlet UIButton *printButton;
 @property (weak, nonatomic) IBOutlet UIButton *acceptOrderButton;
-
+@property (strong, nonatomic) VBWaitDealListModel *itemModel;
 @end
 
 @implementation VBOrderDetailViewController
@@ -62,7 +67,124 @@
     [self tableRegisterNibName:informationTableViewCell cellReuseIdentifier:informationTableViewCell estimatedRowHeight:185];
     
     [self setBottomButtonStyle];
+    
+    [self requestListData];
 }
+
+#pragma mark 网络请求
+
+- (void)requestListData {
+    @weakify(self)
+    VBGetDetailByIDRequest *requestData = [[VBGetDetailByIDRequest alloc] initWithIdString:self.orderIdString];
+    [requestData startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        @strongify(self)
+        self.itemModel = [VBWaitDealListModel yy_modelWithJSON:responseDic];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        
+    } fail:^(YTKBaseRequest *request) {
+        
+    }];
+}
+#pragma mark tableview datasource
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+    return 4;
+}
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    if(section == 0||section == 1||section == 3){
+        return 1;
+    }
+    return self.itemModel.listData.count+1;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    if(indexPath.section == 0){
+        VBOrderDetailOrderStateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailOrderStateTableViewCell"];
+        cell.itemModel = self.itemModel;
+        return cell;
+    }else if(indexPath.section == 1){
+        VBOrderDetailOrderOwnerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailOrderOwnerTableViewCell"];
+        cell.itemModel = self.itemModel;
+        cell.viewControl = self;
+        return cell;
+    }else if (indexPath.section == 2){
+        if(indexPath.row==5){
+            VMOrderTotalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMOrderTotalTableViewCell"];
+            cell.itemModel = self.itemModel;
+            return cell;
+        }else{
+            VMOrderDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMOrderDetailTableViewCell"];
+            cell.itemModel = self.itemModel.listData[indexPath.row];
+            return cell;
+        }
+    }else{
+        VBOrderDetailInformationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailInformationTableViewCell"];
+        cell.itemModel = self.itemModel;
+        return cell;
+    }
+}
+
+#pragma mark tableview delegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    @weakify(self)
+    if(indexPath.section == 0){
+        return [tableView fd_heightForCellWithIdentifier:@"VBOrderDetailOrderStateTableViewCell" configuration:^(VBOrderDetailOrderStateTableViewCell *cell) {
+            @strongify(self)
+            cell.itemModel = self.itemModel;
+        }];
+    }else if (indexPath.section == 1){
+        return [tableView fd_heightForCellWithIdentifier:@"VBOrderDetailOrderOwnerTableViewCell" configuration:^(VBOrderDetailOrderOwnerTableViewCell *cell) {
+            @strongify(self)
+            cell.itemModel = self.itemModel;
+        }];
+    }else if (indexPath.section == 2){
+        if(indexPath.row == 5){
+            return [tableView fd_heightForCellWithIdentifier:@"VMOrderTotalTableViewCell" configuration:^(VMOrderTotalTableViewCell *cell) {
+                @strongify(self)
+                cell.itemModel = self.itemModel;
+            }];
+        }else{
+            return [tableView fd_heightForCellWithIdentifier:@"VMOrderDetailTableViewCell" configuration:^(VMOrderDetailTableViewCell *cell) {
+                @strongify(self)
+                cell.itemModel = self.itemModel.listData[indexPath.row];
+            }];
+        }
+    }else{
+        return [tableView fd_heightForCellWithIdentifier:@"VBOrderDetailInformationTableViewCell" configuration:^(VBOrderDetailInformationTableViewCell *cell) {
+            @strongify(self)
+            cell.itemModel = self.itemModel;
+        }];
+    }
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
+    return 0.0001f;
+}
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
+    if(section == 2){
+        return 60;
+    }
+    return 10.f;
+}
+- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
+    return [UIView new];
+}
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
+    if(section == 2){
+        VMSectionHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"VMSectionHeaderView" owner:self options:nil] lastObject];
+        headerView.isCloseListData = self.itemModel.isCloselistData;
+        headerView.updataHeadViewSubject = [RACSubject subject];
+        @weakify(self)
+        [headerView.updataHeadViewSubject subscribeNext:^(id  _Nullable x) {
+            @strongify(self)
+           self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
+        }];
+        headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60);
+        return headerView;
+    }
+    return [UIView new];
+}
+
+#pragma mark 设置底部按钮
+
 - (void)setBottomButtonStyle{
     switch (self.orderType) {
         case 1:
@@ -88,6 +210,22 @@
         }
             break;
         case 2:{
+            self.printButton.hidden = YES;
+            CGFloat buttonWidth = (SCREEN_WIDTH - 30)/2;
+            [self.acceptOrderButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.bottom.right.offset(-10);
+                make.top.offset(10);
+                make.width.offset(buttonWidth);
+            }];
+            [self.cancleButton mas_makeConstraints:^(MASConstraintMaker *make) {
+                make.top.left.offset(10);
+                make.bottom.offset(-10);
+                make.width.offset(buttonWidth);
+            }];
+        }
+            break;
+            
+        case 3:{
             self.cancleButton.hidden = YES;
             self.acceptOrderButton.hidden = YES;
             [self.printButton mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -101,71 +239,101 @@
             break;
     }
 }
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
-    return 4;
-}
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    if(section == 0||section == 1||section == 3){
-        return 1;
-    }
-    return 6;
-}
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 0){
-        VBOrderDetailOrderStateTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailOrderStateTableViewCell"];
-        return cell;
-    }else if(indexPath.section == 1){
-        VBOrderDetailOrderOwnerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailOrderOwnerTableViewCell"];
-        return cell;
-    }else if (indexPath.section == 2){
-        if(indexPath.row==5){
-            VMOrderTotalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMOrderTotalTableViewCell"];
-            return cell;
-        }else{
-            VMOrderDetailTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMOrderDetailTableViewCell"];
-            return cell;
+- (IBAction)refuseButtonClick:(id)sender {
+    switch (self.orderType) {
+        case 1:
+        {
+            [SVProgressHUD show];
+            VBProcessOrderRequest *processOrderRequest = [[VBProcessOrderRequest alloc] initWithIdString:self.orderIdString type:2];
+            @weakify(self)
+            [processOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"拒绝成功"];
+                @strongify(self)
+                if(self.uploadDataSource){
+                    [self.uploadDataSource sendNext:@""];
+                }
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"拒绝失败"];
+            }];
         }
-    }else{
-        VBOrderDetailInformationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderDetailInformationTableViewCell"];
-        return cell;
+            break;
+        case 2:
+        {
+            [SVProgressHUD show];
+            VBProcessRefundRequest *processOrderRequest = [[VBProcessRefundRequest alloc] initWithIdString:self.orderIdString type:2];
+            @weakify(self)
+            [processOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"拒绝成功"];
+                @strongify(self)
+                if(self.uploadDataSource){
+                    [self.uploadDataSource sendNext:@""];
+                }
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"拒绝失败"];
+            }];
+        }
+            break;
+            
+        default:
+            break;
     }
+}
+- (IBAction)acceptButtonClick:(id)sender {
+    switch (self.orderType) {
+        case 1:
+        {
+            [SVProgressHUD show];
+            VBProcessOrderRequest *processOrderRequest = [[VBProcessOrderRequest alloc] initWithIdString:self.orderIdString type:1];
+            @weakify(self)
+            [processOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"抢单成功"];
+                @strongify(self)
+                if(self.uploadDataSource){
+                    [self.uploadDataSource sendNext:@""];
+                }
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"抢单失败"];
+            }];
+        }
+            break;
+        case 2:
+        {
+            [SVProgressHUD show];
+            VBProcessRefundRequest *processOrderRequest = [[VBProcessRefundRequest alloc] initWithIdString:self.orderIdString type:1];
+            @weakify(self)
+            [processOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"退款成功"];
+                @strongify(self)
+                if(self.uploadDataSource){
+                    [self.uploadDataSource sendNext:@""];
+                }
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"退款失败"];
+            }];
+        }
+            break;
+            
+        default:
+            break;
+    }
+}
+- (IBAction)printOrderButtonClick:(id)sender {
+    
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    if(indexPath.section == 0){
-        return 108.f;
-    }else if (indexPath.section == 1){
-        return 110.f;
-    }else if (indexPath.section == 2){
-        if(indexPath.row == 5){
-            return 165.f;
-        }else{
-            return 81.f;
-        }
-    }else{
-        return 185.f;
-    }
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section{
-    return 0.0001f;
-}
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
-    if(section == 2){
-        return 60;
-    }
-    return 10.f;
-}
-- (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section{
-    return [UIView new];
-}
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
-    if(section == 2){
-        VMSectionHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"VMSectionHeaderView" owner:self options:nil] lastObject];
-        headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60);
-        return headerView;
-    }
-    return [UIView new];
-}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
 }

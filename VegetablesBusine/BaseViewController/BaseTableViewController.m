@@ -59,11 +59,13 @@
 - (void)tableHeadViewRefreshAction{
     self.currentPage = 1;
     [self requestListData];
+    [self.dataTableView.mj_header endRefreshing];
 };
 
 - (void)tableFootViewRefreshAction{
     self.currentPage++;
     [self requestListData];
+    [self.dataTableView.mj_footer endRefreshing];
 };
 
 - (void)setIsClickEmptyImageLoading:(BOOL)isClickEmptyImageLoading
@@ -115,16 +117,17 @@
         return self.emptyImage;
     }
 }
-- (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView{
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform"];
-    animation.fromValue = [NSValue valueWithCATransform3D:CATransform3DIdentity];
-    animation.toValue = [NSValue valueWithCATransform3D: CATransform3DMakeRotation(M_PI_2, 0.0, 0.0, 1.0) ];
-    animation.duration = 0.25;
-    animation.cumulative = YES;
-    animation.repeatCount = MAXFLOAT;
-    
-    return animation;
-}
+//- (CAAnimation *)imageAnimationForEmptyDataSet:(UIScrollView *)scrollView{
+//    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//    //默认是顺时针效果，若将fromValue和toValue的值互换，则为逆时针效果
+//    animation.fromValue = [NSNumber numberWithFloat:0.f];
+//    animation.toValue = [NSNumber numberWithFloat:M_PI *2];
+//    animation.duration = 0.3;
+//    animation.autoreverses = NO;
+//    animation.fillMode = kCAFillModeForwards;
+//    animation.repeatCount = 1; //如果这里想设置成一直自旋转，可以设置为MAXFLOAT，否则设置具体的数值则代表执行多少次
+//    return animation;
+//}
 - (CGFloat)verticalOffsetForEmptyDataSet:(UIScrollView *)scrollView{
     return 10;
 }

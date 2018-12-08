@@ -1,17 +1,17 @@
 //
-//  VBWaitDealTableViewCell.m
+//  VBRefundTableViewCell.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBWaitDealTableViewCell.h"
+#import "VBRefundTableViewCell.h"
 #import "VBCommodityListItemView.h"
 #import "VBWaitDealListModel.h"
-#import "VBProcessOrderRequest.h"
+#import "VBProcessRefundRequest.h"
 
-@implementation VBWaitDealTableViewCell
+@implementation VBRefundTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -66,7 +66,6 @@
     self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     if(self.itemModel.isCloselistData){
-        self.commodityListViewHeight.constant = 0.f;
         sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
     }else{
         self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
@@ -85,9 +84,9 @@
         [self.uploadCellState sendNext:@""];
     }
 }
-- (IBAction)receivedOrderButtonClick:(UIButton *)sender {
+- (IBAction)rejectRefundButtonClick:(UIButton *)sender {
     [SVProgressHUD show];
-    VBProcessOrderRequest *refundRequest = [[VBProcessOrderRequest alloc] initWithIdString:self.itemModel.orderId type:1];
+    VBProcessRefundRequest *refundRequest = [[VBProcessRefundRequest alloc] initWithIdString:self.itemModel.orderId type:2];
     [refundRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD dismiss];
         if(self.uploadDataSource){
@@ -96,12 +95,12 @@
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {
-        [SVProgressHUD showErrorWithStatus:@"退款失败"];
+        [SVProgressHUD showErrorWithStatus:@"拒绝失败"];
     }];
 }
-- (IBAction)rejectOrderButtonCilck:(UIButton *)sender {
+- (IBAction)agreeRefundButtonClick:(UIButton *)sender {
     [SVProgressHUD show];
-    VBProcessOrderRequest *refundRequest = [[VBProcessOrderRequest alloc] initWithIdString:self.itemModel.orderId type:2];
+    VBProcessRefundRequest *refundRequest = [[VBProcessRefundRequest alloc] initWithIdString:self.itemModel.orderId type:1];
     [refundRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD dismiss];
         if(self.uploadDataSource){

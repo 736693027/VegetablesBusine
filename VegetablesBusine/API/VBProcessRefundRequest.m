@@ -1,21 +1,23 @@
 //
-//  VBGetDetailByIDRequest.m
+//  VBProcessRefundRequest.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/11/26.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBGetDetailByIDRequest.h"
+#import "VBProcessRefundRequest.h"
 
-@implementation VBGetDetailByIDRequest{
+@implementation VBProcessRefundRequest{
     NSString *_idString;
+    NSInteger _type;
 }
 
-- (instancetype)initWithIdString:(NSString *)idString{
+- (instancetype)initWithIdString:(NSString *)idString type:(NSInteger)type{
     self = [super init];
     if (self){
         _idString = idString;
+        _type = type;
     }
     return self;
 }
@@ -31,6 +33,7 @@
 - (id)requestArgument {
     return @{
              @"orderId":OBJC(_idString),
+             @"orderId":@(_type),
              };
 }
 @end

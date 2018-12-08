@@ -8,14 +8,31 @@
 
 #import "VMSectionHeaderView.h"
 
+@interface VMSectionHeaderView ()
+
+@property (weak, nonatomic) IBOutlet UIButton *shoppingListButton;
+
+@end
+
 @implementation VMSectionHeaderView
 
-/*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
+- (void)setIsCloseListData:(BOOL)isCloseListData {
+    _isCloseListData = isCloseListData;
+    if(isCloseListData){
+        [self.shoppingListButton setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
+    }else{
+        [self.shoppingListButton setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
+    }
 }
-*/
+- (IBAction)closeListButtonClick:(UIButton *)sender{
+    if(self.isCloseListData){
+        sender.transform = CGAffineTransformRotate(sender.transform, 0);
+    }else{
+        sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
+    }
+    if(self.updataHeadViewSubject){
+        [self.updataHeadViewSubject sendNext:@""];
+    }
+}
 
 @end

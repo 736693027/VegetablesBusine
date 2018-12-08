@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -40,6 +40,9 @@
                             <state key="normal" title="立即接单">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="acceptButtonClick:" destination="-1" eventType="touchUpInside" id="gmm-PJ-yJ1"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sBS-Qk-KCp">
                             <rect key="frame" x="245" y="10.5" width="35" height="47.5"/>
@@ -50,6 +53,9 @@
                             <state key="normal" image="printOrderBtnSmallx">
                                 <color key="titleColor" red="0.14509803921568626" green="0.792156862745098" blue="0.52549019607843139" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="printOrderButtonClick:" destination="-1" eventType="touchUpInside" id="M5l-PL-wQM"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-EU-2G7">
                             <rect key="frame" x="10" y="10.5" width="35" height="47.5"/>
@@ -59,6 +65,9 @@
                             <state key="normal" title="拒绝">
                                 <color key="titleColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </state>
+                            <connections>
+                                <action selector="refuseButtonClick:" destination="-1" eventType="touchUpInside" id="fyU-vs-3sV"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.93725490196078431" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -76,7 +85,7 @@
                 <constraint firstAttribute="bottom" secondItem="OF3-t6-JtP" secondAttribute="bottom" id="USM-PS-TdT"/>
                 <constraint firstAttribute="trailing" secondItem="OF3-t6-JtP" secondAttribute="trailing" id="YlP-5C-1bA"/>
             </constraints>
-            <point key="canvasLocation" x="-880" y="69"/>
+            <point key="canvasLocation" x="-76" y="136"/>
         </view>
     </objects>
     <resources>

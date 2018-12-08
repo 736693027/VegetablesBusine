@@ -1,24 +1,24 @@
 //
-//  VBWaitDealTableViewController.m
+//  VBRefundTableViewController.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "VBWaitDealTableViewController.h"
+#import "VBRefundTableViewController.h"
 #import <Masonry/Masonry.h>
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
-#import "VBWaitDealTableViewCell.h"
+#import "VBRefundTableViewCell.h"
 #import "VBOrderDetailViewController.h"
 #import "VBListDataRequest.h"
 #import "VBWaitDealListModel.h"
 
-@interface VBWaitDealTableViewController ()
+@interface VBRefundTableViewController ()
 
 @end
 
-@implementation VBWaitDealTableViewController
+@implementation VBRefundTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -31,7 +31,7 @@
     }];
     self.dataTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     self.dataTableView.backgroundColor = [CommonTools changeColor:@"0xECECEC"];
-    NSString *cellClassName = NSStringFromClass([VBWaitDealTableViewCell class]);
+    NSString *cellClassName = NSStringFromClass([VBRefundTableViewCell class]);
     [self tableRegisterNibName:cellClassName cellReuseIdentifier:cellClassName estimatedRowHeight:503];
     
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 15)];
@@ -57,7 +57,7 @@
 #pragma mark tableView datasource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     @weakify(self);
-    return [tableView fd_heightForCellWithIdentifier:@"VBWaitDealTableViewCell" configuration:^(VBWaitDealTableViewCell *cell) {
+    return [tableView fd_heightForCellWithIdentifier:@"VBRefundTableViewCell" configuration:^(VBRefundTableViewCell *cell) {
         @strongify(self);
         VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
         cell.itemModel = itemModel;
@@ -67,9 +67,20 @@
     return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    VBWaitDealTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBWaitDealTableViewCell"];
+    VBRefundTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBRefundTableViewCell"];
     VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.uploadCellState = [RACSubject subject];
+    @weakify(self)
+    [cell.uploadCellState subscribeNext:^(id  _Nullable x) {
+        [tableView beginUpdates];
+        [tableView endUpdates];
+    }];
+    cell.uploadDataSource = [RACSubject subject];
+    [cell.uploadDataSource subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self requestListData];
+    }];
     return cell;
 }
 #pragma mark tableview delegate

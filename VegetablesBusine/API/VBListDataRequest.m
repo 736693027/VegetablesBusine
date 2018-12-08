@@ -11,19 +11,29 @@
 @implementation VBListDataRequest{
     NSInteger _page;
     NSInteger _rows;
+    VBListDataRequestType _requestType;
+    NSInteger _tag;
 }
 
-- (instancetype)initWithPage:(NSInteger)page rows:(NSInteger)rows{
+- (instancetype)initWithPage:(NSInteger)page rows:(NSInteger)rows tag:(NSInteger)tag requestType:(VBListDataRequestType)requestType{
     self = [super init];
     if (self){
         _page = page;
         _rows = rows;
+        _tag = tag;
+        _requestType = requestType;
     }
     return self;
 }
 
 - (NSString *)requestUrl {
-    return @"/api/orders/list";
+    if(_requestType == VBListDataRequestWaitDealNewOrder){
+        return @"/api/orders/list";
+    }else if(_requestType == VBListDataRequestWaitDealRefund){
+        return @"/api/orders/list";
+    }else{
+        return @"/api/orders/list";
+    }
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -33,7 +43,8 @@
 - (id)requestArgument {
     return @{
              @"page":@(_page),
-             @"rows":@(_rows)
+             @"rows":@(_rows),
+             @"tab":@(_tag)
              };
 }
 

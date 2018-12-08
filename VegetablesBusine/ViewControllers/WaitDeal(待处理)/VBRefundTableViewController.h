@@ -1,5 +1,5 @@
 //
-//  VBWaitDealTableViewController.h
+//  VBRefundTableViewController.h
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
@@ -8,7 +8,7 @@
 
 #import "BaseTableViewController.h"
 
-@interface VBWaitDealTableViewController : BaseTableViewController
+@interface VBRefundTableViewController : BaseTableViewController
 
 @property (assign, nonatomic) NSInteger tableTag;
 

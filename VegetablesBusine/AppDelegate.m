@@ -11,6 +11,7 @@
 #import "VMTabBarController.h"
 #import "YTKNetworkConfig.h"
 #import "IQKeyboardManager.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,8 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AMapServices sharedServices].apiKey = @"b557356b6d396627c3d54f4e920836c1";
     
     YTKNetworkConfig *configer = [YTKNetworkConfig sharedConfig];
     configer.baseUrl = @"http://139.224.221.134";

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wyH-GS-GgM">
-                        <rect key="frame" x="10" y="0.0" width="300" height="110"/>
+                        <rect key="frame" x="10" y="0.0" width="300" height="109.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾客信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdv-lU-U4i">
                                 <rect key="frame" x="12.5" y="15" width="54" height="16"/>
@@ -47,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开鲁一中（东南门）门卫处" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3p-Jg-Em0">
-                                <rect key="frame" x="12" y="79" width="275.5" height="16"/>
+                                <rect key="frame" x="12.5" y="78.5" width="275" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -55,10 +55,16 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mia-Co-aw4">
                                 <rect key="frame" x="226" y="12.5" width="22" height="22"/>
                                 <state key="normal" image="shopOrderDetailCallx"/>
+                                <connections>
+                                    <action selector="callTelPhone:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Kvh-ms-iKv"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BpP-rS-u42">
                                 <rect key="frame" x="263" y="12.5" width="22" height="22"/>
                                 <state key="normal" image="shopOrderDetailMapx"/>
+                                <connections>
+                                    <action selector="showAddressButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="gRM-Os-DbB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -90,6 +96,12 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="addressLabel" destination="V3p-Jg-Em0" id="g9S-o0-F7H"/>
+                <outlet property="orderCountLabel" destination="Lhu-Mx-sfu" id="Das-mh-aCO"/>
+                <outlet property="orderOwnerLabel" destination="1e8-Gc-7YG" id="7sj-qz-gNT"/>
+                <outlet property="telLabel" destination="xeG-SZ-jgA" id="BW0-Eh-5LS"/>
+            </connections>
             <point key="canvasLocation" x="25" y="86"/>
         </tableViewCell>
     </objects>

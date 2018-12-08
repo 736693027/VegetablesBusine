@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBWaitDealListModel;
 
 @interface VBOrderDetailInformationTableViewCell : UITableViewCell
+
+@property (strong ,nonatomic) VBWaitDealListModel *itemModel;
 
 @end

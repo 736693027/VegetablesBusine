@@ -1,5 +1,5 @@
 //
-//  VBWaitDealTableViewCell.h
+//  VBRefundTableViewCell.h
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/5/8.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 @class VBWaitDealListModel,RACSubject;
 
-@interface VBWaitDealTableViewCell : UITableViewCell
+@interface VBRefundTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIView *commodityListView;
 @property (weak, nonatomic) IBOutlet UIButton *refusedButton;
@@ -30,7 +30,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *orderTotalProjectedRevenueLabel;
 
 @property (strong, nonatomic) RACSubject *uploadCellState; //展示和关闭商品清单
-@property (strong, nonatomic) RACSubject *uploadDataSource; //抢单、拒绝
+@property (strong, nonatomic) RACSubject *uploadDataSource; //展示和关闭商品清单
 
 
 @property (strong, nonatomic) VBWaitDealListModel *itemModel;

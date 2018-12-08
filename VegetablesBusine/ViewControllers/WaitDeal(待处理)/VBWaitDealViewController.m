@@ -8,6 +8,7 @@
 
 #import "VBWaitDealViewController.h"
 #import "VBWaitDealTableViewController.h"
+#import "VBRefundTableViewController.h"
 
 @interface VBWaitDealViewController ()<UIScrollViewDelegate>{
     NSInteger currentIndex;
@@ -24,12 +25,17 @@
     [super viewDidLoad];
     self.title = @"已完成";
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,_mainScrollview.frame.size.height);
-    for(NSInteger i=0;i<2;i++){
-        VBWaitDealTableViewController *waitDealTable = [[VBWaitDealTableViewController alloc] init];
-        waitDealTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationBarAndStatusHeight-50-kTabbarHeight);
-        [self addChildViewController:waitDealTable];
-        [_mainScrollview addSubview:waitDealTable.view];
-    }
+    VBWaitDealTableViewController *waitDealTable = [[VBWaitDealTableViewController alloc] init];
+    waitDealTable.view.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationBarAndStatusHeight-50-kTabbarHeight);
+    waitDealTable.tableTag = 1;
+    [self addChildViewController:waitDealTable];
+    [_mainScrollview addSubview:waitDealTable.view];
+    
+    VBRefundTableViewController *refundTable = [[VBRefundTableViewController alloc] init];
+    refundTable.view.frame = CGRectMake(SCREEN_WIDTH, 0, SCREEN_WIDTH, SCREEN_HEIGHT-kNavigationBarAndStatusHeight-50-kTabbarHeight);
+    refundTable.tableTag = 2;
+    [self addChildViewController:refundTable];
+    [_mainScrollview addSubview:refundTable.view];
 }
 - (IBAction)buttonClick:(UIButton *)sender {
     NSInteger index = sender.tag - 100;

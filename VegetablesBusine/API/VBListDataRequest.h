@@ -10,9 +10,14 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef NS_ENUM(NSInteger, VBListDataRequestType) {
+    VBListDataRequestWaitDealNewOrder = 1, //待处理新订单
+    VBListDataRequestWaitDealRefund ,//待处理退款
+};
+
 @interface VBListDataRequest : LBBaseRequest
 
-- (instancetype)initWithPage:(NSInteger)page rows:(NSInteger)rows;
+- (instancetype)initWithPage:(NSInteger)page rows:(NSInteger)rows tag:(NSInteger)tag requestType:(VBListDataRequestType)requestType;
 
 @end
 

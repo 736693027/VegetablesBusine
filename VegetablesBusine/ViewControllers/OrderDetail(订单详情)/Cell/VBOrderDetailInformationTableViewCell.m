@@ -7,12 +7,27 @@
 //
 
 #import "VBOrderDetailInformationTableViewCell.h"
+#import "VBWaitDealListModel.h"
+
+@interface VBOrderDetailInformationTableViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *orderNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *creatOrderLabel;
+@property (weak, nonatomic) IBOutlet UILabel *remarkLabel;
+
+@end
 
 @implementation VBOrderDetailInformationTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+- (void)setItemModel:(VBWaitDealListModel *)itemModel {
+    _itemModel = itemModel;
+    self.orderNumberLabel.text = itemModel.orderNumber;
+    self.creatOrderLabel.text = itemModel.orderCreateTimeInfo;
+    self.remarkLabel.text = itemModel.orderRemark;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
