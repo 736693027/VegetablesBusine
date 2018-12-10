@@ -66,7 +66,7 @@
     self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     if(self.itemModel.isCloselistData){
-        sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
+        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
     }else{
         self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
         for(VBCommodityItemModel *commodityModel in self.itemModel.listData){
@@ -78,7 +78,7 @@
             commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
             [self.commodityListView addSubview:commodityItemView];
         }
-        sender.transform = CGAffineTransformRotate(sender.transform, 0);
+        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
     }
     if(self.uploadCellState){
         [self.uploadCellState sendNext:@""];

@@ -24,12 +24,18 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾客信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pdv-lU-U4i">
                                 <rect key="frame" x="12.5" y="15" width="54" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="2js-uc-oSq"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="李四开鲁" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1e8-Gc-7YG">
                                 <rect key="frame" x="12.5" y="46" width="54" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="WBw-7a-fOR"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -47,7 +53,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="开鲁一中（东南门）门卫处" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3p-Jg-Em0">
-                                <rect key="frame" x="12.5" y="78.5" width="275" height="16"/>
+                                <rect key="frame" x="12.5" y="77" width="275" height="17.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -81,6 +87,7 @@
                             <constraint firstItem="Pdv-lU-U4i" firstAttribute="top" secondItem="wyH-GS-GgM" secondAttribute="top" constant="15" id="eH9-MP-ZYx"/>
                             <constraint firstItem="V3p-Jg-Em0" firstAttribute="leading" secondItem="wyH-GS-GgM" secondAttribute="leading" constant="12.5" id="ffc-MA-0bN"/>
                             <constraint firstItem="BpP-rS-u42" firstAttribute="leading" secondItem="mia-Co-aw4" secondAttribute="trailing" constant="15" id="kCP-e5-BAi"/>
+                            <constraint firstItem="V3p-Jg-Em0" firstAttribute="top" secondItem="1e8-Gc-7YG" secondAttribute="bottom" constant="15" id="p04-qa-KOc"/>
                             <constraint firstItem="1e8-Gc-7YG" firstAttribute="top" secondItem="Pdv-lU-U4i" secondAttribute="bottom" constant="15" id="uB3-Xd-Pf4"/>
                             <constraint firstItem="BpP-rS-u42" firstAttribute="top" secondItem="wyH-GS-GgM" secondAttribute="top" constant="12.5" id="xxo-AN-P5W"/>
                             <constraint firstAttribute="trailing" secondItem="BpP-rS-u42" secondAttribute="trailing" constant="15" id="zwl-9v-uVq"/>
@@ -102,7 +109,7 @@
                 <outlet property="orderOwnerLabel" destination="1e8-Gc-7YG" id="7sj-qz-gNT"/>
                 <outlet property="telLabel" destination="xeG-SZ-jgA" id="BW0-Eh-5LS"/>
             </connections>
-            <point key="canvasLocation" x="25" y="86"/>
+            <point key="canvasLocation" x="-53" y="79"/>
         </tableViewCell>
     </objects>
     <resources>

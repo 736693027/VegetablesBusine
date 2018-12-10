@@ -24,6 +24,9 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="订单总额" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ga-zp-MBl">
                                 <rect key="frame" x="12.5" y="12.5" width="57.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="gOh-fv-cYa"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -36,12 +39,18 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平台服务费" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rgd-uN-Pr3">
                                 <rect key="frame" x="12.5" y="49.5" width="71.5" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="5vI-SE-vhx"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="合计" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tde-t3-EOv">
                                 <rect key="frame" x="12.5" y="86.5" width="29" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="1Lc-wr-Tz7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -60,6 +69,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="本单预计收入" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t72-Rz-RO8">
                                 <rect key="frame" x="12.5" y="128.5" width="86" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="Zsc-qf-1YO"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -82,6 +94,7 @@
                             <constraint firstAttribute="trailing" secondItem="jAs-ku-lIq" secondAttribute="trailing" constant="15" id="EIV-Pl-evQ"/>
                             <constraint firstAttribute="trailing" secondItem="3Zi-aV-tJx" secondAttribute="trailing" constant="15" id="FiC-vV-aBv"/>
                             <constraint firstItem="Tde-t3-EOv" firstAttribute="top" secondItem="Rgd-uN-Pr3" secondAttribute="bottom" constant="20" id="SMX-Ve-CZD"/>
+                            <constraint firstAttribute="height" constant="164.5" id="Uhw-w6-Z8x"/>
                             <constraint firstAttribute="trailing" secondItem="fLf-HC-9Lk" secondAttribute="trailing" constant="15" id="Xdp-2g-ZFc"/>
                             <constraint firstItem="t72-Rz-RO8" firstAttribute="leading" secondItem="0rP-cg-CkD" secondAttribute="leading" constant="12.5" id="anP-Ca-Zc9"/>
                             <constraint firstAttribute="trailing" secondItem="Kvd-eh-mvw" secondAttribute="trailing" constant="15" id="cEq-y1-yZc"/>
@@ -108,7 +121,7 @@
                 <outlet property="servicePriceLabel" destination="jAs-ku-lIq" id="9q5-cM-3r8"/>
                 <outlet property="totalPriceLabel" destination="Kvd-eh-mvw" id="EPo-ZH-SI5"/>
             </connections>
-            <point key="canvasLocation" x="25" y="84"/>
+            <point key="canvasLocation" x="24" y="83.658170914542737"/>
         </tableViewCell>
     </objects>
 </document>

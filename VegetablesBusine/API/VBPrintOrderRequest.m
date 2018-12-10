@@ -1,14 +1,14 @@
 //
-//  VBGetDetailByIDRequest.m
+//  VBPrintOrderRequest.m
 //  VegetablesBusine
 //
-//  Created by Apple on 2018/11/26.
+//  Created by Apple on 2018/12/10.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBGetDetailByIDRequest.h"
+#import "VBPrintOrderRequest.h"
 
-@implementation VBGetDetailByIDRequest{
+@implementation VBPrintOrderRequest{
     NSString *_idString;
 }
 
@@ -21,14 +21,17 @@
 }
 
 - (NSString *)requestUrl {
-    return [NSString stringWithFormat:@"http://caibang.capsui.com/api/order/getOrder/%@",_idString];
+    return @"http://caibang.capsui.com/api/order/printorders";
 }
 
 - (YTKRequestMethod)requestMethod {
-    return YTKRequestMethodGET;
+    return YTKRequestMethodPOST;
 }
 
 - (id)requestArgument {
-    return @{};
+    return @{
+             @"orderId":OBJC(_idString),
+             @"sessionKey":OBJC(_idString)
+             };
 }
 @end

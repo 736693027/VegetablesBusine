@@ -41,12 +41,13 @@
 - (void)requestListData {
     [SVProgressHUD show];
     VBListDataRequest *dataRequest = [[VBListDataRequest alloc] initWithPage:1 rows:20 tag:self.tableTag requestType:(VBListDataRequestType)self.tableTag];
-    [dataRequest startRequestWithArraySuccess:^(NSArray *responseArray) {
+    [dataRequest startRequestWithDicSuccess:^(NSDictionary *responseDic){
         [SVProgressHUD dismiss];
         if(self.currentPage == 1){
             [self.dataArray removeAllObjects];
         }
-        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBWaitDealListModel class] json:responseArray]];
+        NSArray *itemsArray = [responseDic objectForKey:@"rows"];
+        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBWaitDealListModel class] json:itemsArray]];
         [self.dataTableView reloadData];
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
@@ -81,6 +82,12 @@
     detailVC.orderType = VBOrderDetailTypeNewOrder;
     VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     detailVC.orderIdString = itemModel.orderId;
+    detailVC.uploadDataSource = [RACSubject subject];
+    @weakify(self)
+    [detailVC.uploadDataSource subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.dataTableView.mj_header beginRefreshing];
+    }];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

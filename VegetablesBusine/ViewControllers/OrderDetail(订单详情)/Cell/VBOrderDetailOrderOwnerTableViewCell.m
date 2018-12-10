@@ -27,7 +27,7 @@
 - (void)setItemModel:(VBWaitDealListModel *)itemModel {
     _itemModel = itemModel;
     self.orderOwnerLabel.text = itemModel.orderOwer;
-    self.orderOwnerLabel.text = [NSString stringWithFormat:@"#第%@次下单",itemModel.orderCount];
+    self.orderCountLabel.text = [NSString stringWithFormat:@"#第%@次下单",itemModel.orderCount];
     self.telLabel.text = itemModel.orderTel;
     self.addressLabel.text = itemModel.address;
 }

@@ -28,7 +28,7 @@
 
 - (NSString *)requestUrl {
     if(_requestType == VBListDataRequestWaitDealNewOrder){
-        return @"/api/orders/list";
+        return @"http://caibang.capsui.com/api/order/listOrders";
     }else if(_requestType == VBListDataRequestWaitDealRefund){
         return @"/api/orders/list";
     }else{
@@ -44,7 +44,8 @@
     return @{
              @"page":@(_page),
              @"rows":@(_rows),
-             @"tab":@(_tag)
+             @"tab":@(_tag),
+             @"sessionKey":@(_tag)
              };
 }
 

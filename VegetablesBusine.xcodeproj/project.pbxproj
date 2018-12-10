@@ -93,6 +93,7 @@
 		18C519E420A6DB5D000905FF /* VBShoppingManagerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E220A6DB5D000905FF /* VBShoppingManagerViewController.xib */; };
 		18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */; };
 		18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */; };
+		18C9422321BE4E8F005132BA /* VBPrintOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18C9422221BE4E8F005132BA /* VBPrintOrderRequest.m */; };
 		18D0B47B20DBCB8B0011555F /* VBSelectBusinessTimeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0B47920DBCB8B0011555F /* VBSelectBusinessTimeViewController.m */; };
 		18D0B47C20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D0B47A20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib */; };
 		18D0B47F20DBD9B00011555F /* BusinessTimeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D0B47E20DBD9B00011555F /* BusinessTimeView.m */; };
@@ -346,6 +347,8 @@
 		18C519E520A6F47F000905FF /* VBShoppingManagerMenuItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBShoppingManagerMenuItemView.h; sourceTree = "<group>"; };
 		18C519E620A6F47F000905FF /* VBShoppingManagerMenuItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBShoppingManagerMenuItemView.m; sourceTree = "<group>"; };
 		18C519E820A6F48B000905FF /* VBShoppingManagerMenuItemView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBShoppingManagerMenuItemView.xib; sourceTree = "<group>"; };
+		18C9422121BE4E8F005132BA /* VBPrintOrderRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBPrintOrderRequest.h; sourceTree = "<group>"; };
+		18C9422221BE4E8F005132BA /* VBPrintOrderRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBPrintOrderRequest.m; sourceTree = "<group>"; };
 		18D0B47820DBCB8B0011555F /* VBSelectBusinessTimeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSelectBusinessTimeViewController.h; sourceTree = "<group>"; };
 		18D0B47920DBCB8B0011555F /* VBSelectBusinessTimeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSelectBusinessTimeViewController.m; sourceTree = "<group>"; };
 		18D0B47A20DBCB8B0011555F /* VBSelectBusinessTimeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBSelectBusinessTimeViewController.xib; sourceTree = "<group>"; };
@@ -556,6 +559,8 @@
 				1874C84E21BA60880088257B /* VBProcessOrderRequest.m */,
 				1874C84F21BA60880088257B /* VBProcessRefundRequest.h */,
 				1874C84C21BA60880088257B /* VBProcessRefundRequest.m */,
+				18C9422121BE4E8F005132BA /* VBPrintOrderRequest.h */,
+				18C9422221BE4E8F005132BA /* VBPrintOrderRequest.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1616,6 +1621,7 @@
 				38DB4D0F20E3CF8D00F67BE7 /* VBMerchantSettlementViewController.m in Sources */,
 				184E523C20B6D26000DD3750 /* VMOrderDetailTableViewCell.m in Sources */,
 				1874C85121BA60880088257B /* VBProcessOrderRequest.m in Sources */,
+				18C9422321BE4E8F005132BA /* VBPrintOrderRequest.m in Sources */,
 				18BA795F20CE2428002182B3 /* VBDeliveryInformationTableViewCell.m in Sources */,
 				38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */,
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
@@ -1801,7 +1807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
@@ -1828,7 +1834,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";

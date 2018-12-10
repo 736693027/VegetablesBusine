@@ -20,6 +20,7 @@
 #import "VBProcessOrderRequest.h"
 #import "VBWaitDealListModel.h"
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
+#import "VBPrintOrderRequest.h"
 
 @interface VBOrderDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancleButton;
@@ -75,15 +76,15 @@
 
 - (void)requestListData {
     @weakify(self)
-    VBGetDetailByIDRequest *requestData = [[VBGetDetailByIDRequest alloc] initWithIdString:self.orderIdString];
+    VBGetDetailByIDRequest *requestData = [[VBGetDetailByIDRequest alloc] initWithIdString:@"12"];
     [requestData startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         @strongify(self)
         self.itemModel = [VBWaitDealListModel yy_modelWithJSON:responseDic];
         [self.dataTableView reloadData];
     } failModel:^(LBResponseModel *errorModel) {
-        
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {
-        
+        [SVProgressHUD showErrorWithStatus:@"订单详情获取失败"];
     }];
 }
 #pragma mark tableview datasource
@@ -94,7 +95,11 @@
     if(section == 0||section == 1||section == 3){
         return 1;
     }
-    return self.itemModel.listData.count+1;
+    if(!self.itemModel.isCloselistData){
+        return self.itemModel.listData.count+1;
+    }else{
+        return 1;
+    }
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     if(indexPath.section == 0){
@@ -107,7 +112,7 @@
         cell.viewControl = self;
         return cell;
     }else if (indexPath.section == 2){
-        if(indexPath.row==5){
+        if(indexPath.row==self.itemModel.listData.count||self.itemModel.isCloselistData){
             VMOrderTotalTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VMOrderTotalTableViewCell"];
             cell.itemModel = self.itemModel;
             return cell;
@@ -137,7 +142,7 @@
             cell.itemModel = self.itemModel;
         }];
     }else if (indexPath.section == 2){
-        if(indexPath.row == 5){
+        if(indexPath.row == self.itemModel.listData.count||self.itemModel.isCloselistData){
             return [tableView fd_heightForCellWithIdentifier:@"VMOrderTotalTableViewCell" configuration:^(VMOrderTotalTableViewCell *cell) {
                 @strongify(self)
                 cell.itemModel = self.itemModel;
@@ -176,6 +181,7 @@
         [headerView.updataHeadViewSubject subscribeNext:^(id  _Nullable x) {
             @strongify(self)
            self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
+            [self.dataTableView reloadSection:2 withRowAnimation:(UITableViewRowAnimationNone)];
         }];
         headerView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 60);
         return headerView;
@@ -330,7 +336,18 @@
     }
 }
 - (IBAction)printOrderButtonClick:(id)sender {
-    
+    VBPrintOrderRequest *printOrderRequest = [[VBPrintOrderRequest alloc] initWithIdString:@"12"];
+    [printOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD showInfoWithStatus:@"打印成功"];
+        if(self.uploadDataSource){
+            [self.uploadDataSource sendNext:@""];
+        }
+        [self.navigationController popViewControllerAnimated:YES];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"订单生成失败"];
+    }];
 }
 
 

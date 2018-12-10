@@ -31,6 +31,9 @@
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="等待处理" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="puN-7h-zLw">
                                 <rect key="frame" x="68.5" y="25" width="70" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="69e-2k-Vg3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -43,6 +46,9 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="立即配送" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXZ-tI-OJx">
                                 <rect key="frame" x="68.5" y="61" width="69.5" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="pIn-C5-lO8"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -61,6 +67,7 @@
                             <constraint firstItem="YXZ-tI-OJx" firstAttribute="leading" secondItem="puN-7h-zLw" secondAttribute="leading" id="EfD-yH-fRI"/>
                             <constraint firstItem="puN-7h-zLw" firstAttribute="leading" secondItem="fjE-0v-WZ5" secondAttribute="trailing" constant="12.5" id="Ego-pA-cBr"/>
                             <constraint firstItem="a28-XO-pvY" firstAttribute="leading" secondItem="DJ6-6v-o94" secondAttribute="leading" id="J5r-5S-Ljf"/>
+                            <constraint firstAttribute="height" constant="107.5" id="Lqw-xx-qGj"/>
                             <constraint firstItem="a28-XO-pvY" firstAttribute="top" secondItem="DJ6-6v-o94" secondAttribute="top" id="Sqs-uO-a8v"/>
                             <constraint firstItem="puN-7h-zLw" firstAttribute="top" secondItem="DJ6-6v-o94" secondAttribute="top" constant="25" id="ZwZ-nq-eBf"/>
                             <constraint firstItem="YXZ-tI-OJx" firstAttribute="top" secondItem="puN-7h-zLw" secondAttribute="bottom" constant="15" id="dQP-Yu-USd"/>

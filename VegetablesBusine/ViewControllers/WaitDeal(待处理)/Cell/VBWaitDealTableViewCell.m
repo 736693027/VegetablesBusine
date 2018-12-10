@@ -26,8 +26,8 @@
 - (void)setItemModel:(VBWaitDealListModel *)itemModel {
     _itemModel = itemModel;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
-    for(VBCommodityItemModel *commodityModel in self.itemModel.listData){
+    self.commodityListViewHeight.constant = itemModel.listData.count*75;
+    for(VBCommodityItemModel *commodityModel in itemModel.listData){
         VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
         commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
         commodityItemView.commodityName.text = commodityModel.name;
@@ -45,7 +45,7 @@
     self.servicePriceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.serverPrice];
     self.orderTotalLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.priceTotal];
     self.orderTotalProjectedRevenueLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.orderExpectedIncome];
-    if(self.itemModel.isCloselistData){
+    if(itemModel.isCloselistData){
         [self.listCloseButton setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
     }else{
         [self.listCloseButton setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
@@ -63,11 +63,10 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telUrl]];
 }
 - (IBAction)setListViewStateButtonClick:(UIButton *)sender {
-    self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    if(self.itemModel.isCloselistData){
+    if(!self.itemModel.isCloselistData){
         self.commodityListViewHeight.constant = 0.f;
-        sender.transform = CGAffineTransformRotate(sender.transform, M_PI);
+        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
     }else{
         self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
         for(VBCommodityItemModel *commodityModel in self.itemModel.listData){
@@ -79,11 +78,12 @@
             commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
             [self.commodityListView addSubview:commodityItemView];
         }
-        sender.transform = CGAffineTransformRotate(sender.transform, 0);
+        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
     }
     if(self.uploadCellState){
         [self.uploadCellState sendNext:@""];
     }
+    self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
 }
 - (IBAction)receivedOrderButtonClick:(UIButton *)sender {
     [SVProgressHUD show];

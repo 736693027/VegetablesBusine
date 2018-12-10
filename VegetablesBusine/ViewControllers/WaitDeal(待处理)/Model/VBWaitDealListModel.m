@@ -14,10 +14,21 @@
     
     return @{@"listData" : [VBCommodityItemModel class]};
 }
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"listData" : @[@"listData",@"listGoods"]};
+}
 
 @end
 
 @implementation VBCommodityItemModel
 
+
+@end
+
+@implementation VBUserLocations
+
++ (NSDictionary *)modelCustomPropertyMapper {
+    return @{@"idString" : @"id"};
+}
 
 @end
