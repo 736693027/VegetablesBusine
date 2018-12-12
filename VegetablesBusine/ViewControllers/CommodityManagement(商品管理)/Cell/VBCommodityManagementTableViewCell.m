@@ -8,12 +8,20 @@
 
 #import "VBCommodityManagementTableViewCell.h"
 #import "VBAlterView.h"
+#import "VBCommodityManagementModel.h"
 
 @implementation VBCommodityManagementTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+- (void)setItemModel:(VBCommodityManagementItemModel *)itemModel{
+    _itemModel = itemModel;
+    [self.commodityImagesView sd_setImageWithURL:[NSURL URLWithString:itemModel.commodityImageUrl] placeholderImage:PlaceHolderImage];
+    self.commodityNameLabel.text = itemModel.commodityName;
+    self.orderCount.text = itemModel.commoditySubtitle;
+    self.priceLabel.text = [@"¥" stringByAppendingString:itemModel.commodityPrice];
 }
 - (IBAction)commodityShelvesAction:(UIButton *)sender {
     VBAlterView *alertView = [VBAlterView alterView];

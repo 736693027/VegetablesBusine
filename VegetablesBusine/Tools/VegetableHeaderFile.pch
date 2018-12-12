@@ -23,5 +23,6 @@
 #import "YYKit.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "DefineFile.h"
+#import <SDWebImage/UIImageView+WebCache.h>
 
 #endif /* VegetableHeaderFile_pch */

@@ -11,7 +11,7 @@
 
 @interface VBManageCommodityClassificationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
-
+@property (copy, nonatomic) NSArray *dataArray;
 @end
 
 @implementation VBManageCommodityClassificationViewController
@@ -19,8 +19,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"商品分类";
+    self.dataArray = [NSArray array];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBManageCommodityClassificationTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBManageCommodityClassificationTableViewCell"];
     self.dataTableView.tableFooterView = [UIView new];
+    
 }
 - (IBAction)addNewCommodityClassifcationAction:(UITapGestureRecognizer *)sender {
     VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
@@ -31,7 +33,7 @@
 
 #pragma mark tableview datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return 5;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBManageCommodityClassificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBManageCommodityClassificationTableViewCell"];

@@ -43,4 +43,6 @@
 
 #define OBJC(v) (([v isEqual:[NSNull null]] | [v isEqual:@"(null)"] | [v isEqual:@"<null>"] | v== nil) ? @"" : v)
 
+#define PlaceHolderImage [UIImage imageNamed:@""]
+
 #endif /* DefineFile_h */

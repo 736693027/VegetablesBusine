@@ -7,6 +7,14 @@
 //
 
 #import "VBNewManageCommodityClassificationTableViewCell.h"
+#import "VBManageCommodityClassificationModel.h"
+
+@interface VBNewManageCommodityClassificationTableViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *commodityNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *commodityCountLabel;
+
+@end
 
 @implementation VBNewManageCommodityClassificationTableViewCell
 
@@ -14,7 +22,15 @@
     [super awakeFromNib];
     // Initialization code
 }
-
+- (void)setItemModel:(VBManageCommodityClassificationModel *)itemModel{
+    _itemModel = itemModel;
+    self.commodityNameLabel.text = itemModel.classifyName;
+    self.commodityCountLabel.text = [NSString stringWithFormat:@"%@件商品",itemModel.classifyTotalCount];
+}
+- (IBAction)editingButtonClick:(id)sender {
+}
+- (IBAction)deleteButtonClick:(id)sender {
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 
