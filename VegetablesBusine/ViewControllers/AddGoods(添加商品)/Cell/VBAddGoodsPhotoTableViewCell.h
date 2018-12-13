@@ -7,8 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBAddGoodsInfoModel;
 
 @interface VBAddGoodsPhotoTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+
+@property (strong, nonatomic) VBAddGoodsInfoModel *itemModel;
 
 @end

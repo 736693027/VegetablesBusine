@@ -15,8 +15,19 @@
 - (instancetype)initWithClassificationId:(NSString *)classificationId {
     self = [super init];
     if(self){
-        _classificationId = classificationId
+        _classificationId = classificationId;
     }
     return self;
+}
+
+- (NSString *)requestUrl {
+    return @"/api/orders/getbyid";
+}
+
+- (id)requestArgument {
+    return @{
+             @"classifyID":OBJC(_classificationId),
+             @"sessionKey":OBJC(self.sessionKey),
+             };
 }
 @end

@@ -10,4 +10,7 @@
 
 @interface VBAddGoodsViewController : BaseViewController
 
+@property (copy ,nonatomic) NSString *commodityID;
+
 @end
+

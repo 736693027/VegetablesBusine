@@ -7,6 +7,7 @@
 //
 
 #import "VBAddCommodityClassificationView.h"
+#import "VBManageCommodityClassificationModel.h"
 
 typedef void (^ResultBlock)(NSString *, NSString *);
 static ResultBlock myResultBlock;
@@ -62,5 +63,10 @@ static VBAddCommodityClassificationView *alterView = nil;
     }
 }
 
+- (void)setItemModel:(VBManageCommodityClassificationModel *)itemModel {
+    _itemModel = itemModel;
+    self.nameTextField.text = itemModel.classifyName;
+    self.numberTextField.text = itemModel.classifyTotalCount;
+}
 
 @end

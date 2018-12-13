@@ -8,17 +8,53 @@
 
 #import "VMNavigationController.h"
 
-@interface VMNavigationController ()
-
+@interface VMNavigationController ()<UIGestureRecognizerDelegate>
+@property (weak, nonatomic) UIViewController * currentShowVC;
 @end
 
 @implementation VMNavigationController
+
+- (instancetype)initWithRootViewController:(UIViewController *)rootViewController{
+    VMNavigationController *nav = [super initWithRootViewController:rootViewController];
+    self.interactivePopGestureRecognizer.delegate = self;
+    nav.delegate = self;
+    return nav;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.navigationBar.barTintColor = [UIColor whiteColor];
     [self.navigationBar setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]}];
     self.navigationBar.translucent = NO;
+}
+
+- (void)navigationController:(UINavigationController *)navigationController didShowViewController:(UIViewController *)viewController animated:(BOOL)animated{
+    if(navigationController.viewControllers.count == 1){
+        self.currentShowVC = nil;
+    }else{
+        self.currentShowVC = viewController;
+    }
+}
+- (BOOL)gestureRecognizerShouldBegin:(UIGestureRecognizer *)gestureRecognizer{
+    if(gestureRecognizer == self.interactivePopGestureRecognizer){
+        if(self.currentShowVC == self.topViewController){
+            return YES;
+        }
+        return NO;
+    }
+    return YES;
+}
+- (UIScreenEdgePanGestureRecognizer *)screenEdgePanGestureRecognizer{
+    UIScreenEdgePanGestureRecognizer *screenEdgePanGestureRecognizer = nil;
+    if(self.view.gestureRecognizers.count > 0){
+        for(UIGestureRecognizer *recognizer in  self.view.gestureRecognizers){
+            if([recognizer isKindOfClass:[UIScreenEdgePanGestureRecognizer class]]){
+                screenEdgePanGestureRecognizer = (UIScreenEdgePanGestureRecognizer *)recognizer;
+                break;
+            }
+        }
+    }
+    return screenEdgePanGestureRecognizer;
 }
 
 - (void)didReceiveMemoryWarning {

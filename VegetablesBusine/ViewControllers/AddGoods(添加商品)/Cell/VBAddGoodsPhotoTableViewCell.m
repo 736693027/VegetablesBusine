@@ -7,12 +7,26 @@
 //
 
 #import "VBAddGoodsPhotoTableViewCell.h"
+#import "VBAddGoodsInfoModel.h"
+#import <SDWebImage/UIButton+WebCache.h>
+
+@interface VBAddGoodsPhotoTableViewCell()
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UIButton *headImageButton;
+@property (weak, nonatomic) IBOutlet UITextView *subTitleTextField;
+@end
 
 @implementation VBAddGoodsPhotoTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.nameTextField addTarget:self action:@selector(textFieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
+}
+- (void)setItemModel:(VBAddGoodsInfoModel *)itemModel{
+    _itemModel = itemModel;
+    [self.headImageButton sd_setImageWithURL:[NSURL URLWithString:itemModel.imageUrl] forState:UIControlStateNormal placeholderImage:PlaceHolderImage];
+    self.nameTextField.text = itemModel.name;
+    self.subTitleTextField.text = itemModel.subtitle;
 }
 - (void)textFieldDidChanged:(UITextField *)textField{
     NSString *textString = textField.text;

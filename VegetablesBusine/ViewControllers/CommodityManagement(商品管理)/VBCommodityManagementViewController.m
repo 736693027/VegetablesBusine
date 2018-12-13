@@ -61,6 +61,7 @@
             self.tableHeaderTitlaLabel.text = model.classificationName;
             self.dataArray = model.commodityInfo;
             [self.dataTableView reloadData];
+            self.menuScrollView.contentSize = CGSizeMake(self.menuScrollView.width, MAX(self.menuScrollView.height, self.menuItemArray.count*60));
             [self.menuItemArray enumerateObjectsUsingBlock:^(VBCommodityManagementModel *_Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
                 @strongify(self)
                 VBMenuItemView *itemView = [[VBMenuItemView alloc] initWithFrame:CGRectMake(0, idx*60, self.menuScrollView.frame.size.width, 60)];

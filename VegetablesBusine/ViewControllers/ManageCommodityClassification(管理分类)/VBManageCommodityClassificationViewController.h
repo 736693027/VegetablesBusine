@@ -6,7 +6,10 @@
 //
 
 #import "BaseViewController.h"
+@class RACSubject;
 
 @interface VBManageCommodityClassificationViewController : BaseViewController
+
+@property (strong, nonatomic) RACSubject *didSelectItemSubject;
 
 @end

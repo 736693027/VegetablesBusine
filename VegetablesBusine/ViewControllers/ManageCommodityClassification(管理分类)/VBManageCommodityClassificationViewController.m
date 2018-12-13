@@ -8,6 +8,9 @@
 #import "VBManageCommodityClassificationViewController.h"
 #import "VBManageCommodityClassificationTableViewCell.h"
 #import "VBAddCommodityClassificationView.h"
+#import "VBManageCommodityClassificationRequest.h"
+#import "VBManageCommodityClassificationModel.h"
+#import "VBManageCommodityAddNewClassificationRequest.h"
 
 @interface VBManageCommodityClassificationViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -22,11 +25,34 @@
     self.dataArray = [NSArray array];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBManageCommodityClassificationTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBManageCommodityClassificationTableViewCell"];
     self.dataTableView.tableFooterView = [UIView new];
-    
+    [self requestListData];
+}
+- (void)requestListData{
+    [SVProgressHUD show];
+    VBManageCommodityClassificationRequest *requset = [[VBManageCommodityClassificationRequest alloc] init];
+    [requset startRequestWithArraySuccess:^(NSArray *responseArray) {
+        self.dataArray = [NSArray yy_modelArrayWithClass:[VBManageCommodityClassificationModel class] json:responseArray];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"分类获取失败"];
+    }];
 }
 - (IBAction)addNewCommodityClassifcationAction:(UITapGestureRecognizer *)sender {
+    @weakify(self)
+    [SVProgressHUD show];
     VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
-        NSLog(@"-----%@-----%@",name,number);
+        VBManageCommodityAddNewClassificationRequest *request = [[VBManageCommodityAddNewClassificationRequest alloc] initWithClassificationId:@"" classificationName:name number:number];
+        [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            [SVProgressHUD dismiss];
+            [self requestListData];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"更新失败"];
+        }];
     }];
     [addView show];
 }
@@ -37,12 +63,22 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBManageCommodityClassificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBManageCommodityClassificationTableViewCell"];
+    VBManageCommodityClassificationModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     return cell;
 }
 
 #pragma mark tableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 39.f;
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    VBManageCommodityClassificationModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    if(self.didSelectItemSubject){
+        [self.didSelectItemSubject sendNext:itemModel];
+    }
+    [self.navigationController popViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -8,6 +8,7 @@
 
 #import "VBNewManageCommodityClassificationTableViewCell.h"
 #import "VBManageCommodityClassificationModel.h"
+#import "VBManageCommodityDeleteClassificationRequest.h"
 
 @interface VBNewManageCommodityClassificationTableViewCell()
 
@@ -28,8 +29,25 @@
     self.commodityCountLabel.text = [NSString stringWithFormat:@"%@件商品",itemModel.classifyTotalCount];
 }
 - (IBAction)editingButtonClick:(id)sender {
+    if(self.editingClassifySubject){
+        [self.editingClassifySubject sendNext:@""];
+    }
 }
 - (IBAction)deleteButtonClick:(id)sender {
+    [SVProgressHUD show];
+    VBManageCommodityDeleteClassificationRequest *deleteRequest = [[VBManageCommodityDeleteClassificationRequest alloc] initWithClassificationId:self.itemModel.classifyID];
+    @weakify(self)
+    [deleteRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
+        @strongify(self)
+        if(self.deleteClassifySubject){
+            [self.deleteClassifySubject sendNext:@""];
+        }
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"删除失败"];
+    }];
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

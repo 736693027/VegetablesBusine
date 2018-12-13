@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VMNavigationController : UINavigationController
+@interface VMNavigationController : UINavigationController<UINavigationControllerDelegate>
+
+- (UIScreenEdgePanGestureRecognizer *)screenEdgePanGestureRecognizer;
 
 @end

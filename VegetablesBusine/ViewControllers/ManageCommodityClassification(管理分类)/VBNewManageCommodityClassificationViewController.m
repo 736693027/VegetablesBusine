@@ -10,6 +10,7 @@
 #import "VBAddCommodityClassificationView.h"
 #import "VBManageCommodityClassificationRequest.h"
 #import "VBManageCommodityClassificationModel.h"
+#import "VBManageCommodityAddNewClassificationRequest.h"
 
 @interface VBNewManageCommodityClassificationViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,9 +27,14 @@
     self.dataArray = [NSArray array];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBNewManageCommodityClassificationTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBNewManageCommodityClassificationTableViewCell"];
     self.dataTableView.tableFooterView = [UIView new];
+    [self requestListData];
+    
+}
+- (void)requestListData{
     [SVProgressHUD show];
     VBManageCommodityClassificationRequest *requset = [[VBManageCommodityClassificationRequest alloc] init];
     [requset startRequestWithArraySuccess:^(NSArray *responseArray) {
+        [SVProgressHUD dismiss];
         self.dataArray = [NSArray yy_modelArrayWithClass:[VBManageCommodityClassificationModel class] json:responseArray];
         [self.dataTableView reloadData];
     } failModel:^(LBResponseModel *errorModel) {
@@ -38,8 +44,19 @@
     }];
 }
 - (IBAction)addNewCommodityClassifcationAction:(UITapGestureRecognizer *)sender {
+    @weakify(self)
+    [SVProgressHUD show];
     VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
-        NSLog(@"-----%@-----%@",name,number);
+        VBManageCommodityAddNewClassificationRequest *request = [[VBManageCommodityAddNewClassificationRequest alloc] initWithClassificationId:@"" classificationName:name number:number];
+        [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            [SVProgressHUD dismiss];
+            [self requestListData];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"更新失败"];
+        }];
     }];
     [addView show];
 }
@@ -52,6 +69,31 @@
     VBNewManageCommodityClassificationTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBNewManageCommodityClassificationTableViewCell"];
     VBManageCommodityClassificationModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.deleteClassifySubject = [RACSubject subject];
+    @weakify(self)
+    [cell.deleteClassifySubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self requestListData];
+    }];
+    cell.editingClassifySubject = [RACSubject subject];
+    [cell.editingClassifySubject subscribeNext:^(id  _Nullable x) {
+        VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
+            [SVProgressHUD show];
+            VBManageCommodityAddNewClassificationRequest *request = [[VBManageCommodityAddNewClassificationRequest alloc] initWithClassificationId:itemModel.classifyID classificationName:name number:number];
+            [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                @strongify(self)
+                [SVProgressHUD dismiss];
+                [self requestListData];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"更新失败"];
+            }];
+            NSLog(@"-----%@-----%@",name,number);
+        }];
+        addView.itemModel = itemModel;
+        [addView show];
+    }];
     return cell;
 }
 
