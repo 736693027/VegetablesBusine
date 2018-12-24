@@ -31,6 +31,8 @@
         return @"http://caibang.capsui.com/api/order/listOrders";
     }else if(_requestType == VBListDataRequestWaitDealRefund){
         return @"/api/orders/list";
+    }else if (_requestType == VBListDataRequestEvaluationList){
+        return @"/api/orderEvaluations/listview";
     }else{
         return @"/api/orders/list";
     }

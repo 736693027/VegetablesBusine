@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		18093A9721C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093A9621C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m */; };
 		18093A9B21C1FE5700EC1C75 /* VBAddGoodsInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18093A9A21C1FE5700EC1C75 /* VBAddGoodsInfoModel.m */; };
+		182D49AB21D0A50B00C089F7 /* VBEvaluationDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D49AA21D0A50B00C089F7 /* VBEvaluationDataModel.m */; };
+		182D49AE21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D49AD21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.m */; };
 		1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830E72620D115CF001E042B /* LBDatePickerView.m */; };
 		1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830E72720D115CF001E042B /* LBDatePickerView.xib */; };
 		184260E221AB969500622800 /* VBTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184260E121AB969500622800 /* VBTableSectionHeaderView.xib */; };
@@ -220,6 +222,10 @@
 		18093A9621C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGetGoodsInfoRequest.m; sourceTree = "<group>"; };
 		18093A9921C1FE5700EC1C75 /* VBAddGoodsInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAddGoodsInfoModel.h; sourceTree = "<group>"; };
 		18093A9A21C1FE5700EC1C75 /* VBAddGoodsInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAddGoodsInfoModel.m; sourceTree = "<group>"; };
+		182D49A921D0A50B00C089F7 /* VBEvaluationDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationDataModel.h; sourceTree = "<group>"; };
+		182D49AA21D0A50B00C089F7 /* VBEvaluationDataModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationDataModel.m; sourceTree = "<group>"; };
+		182D49AC21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEvaluationReplyRequestAPI.h; sourceTree = "<group>"; };
+		182D49AD21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEvaluationReplyRequestAPI.m; sourceTree = "<group>"; };
 		1830E72620D115CF001E042B /* LBDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDatePickerView.m; sourceTree = "<group>"; };
 		1830E72720D115CF001E042B /* LBDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBDatePickerView.xib; sourceTree = "<group>"; };
 		1830E72820D115CF001E042B /* LBDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDatePickerView.h; sourceTree = "<group>"; };
@@ -627,6 +633,8 @@
 				18E0AAE221C10E3E0025933C /* VBGetGoodsSpecificationsRequest.m */,
 				18093A9521C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.h */,
 				18093A9621C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m */,
+				182D49AC21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.h */,
+				182D49AD21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1319,6 +1327,8 @@
 				38E9167F20DF639F006CB22A /* VBEvaluationDataTableViewCell.h */,
 				38E9168020DF639F006CB22A /* VBEvaluationDataTableViewCell.m */,
 				38E9168120DF639F006CB22A /* VBEvaluationDataTableViewCell.xib */,
+				182D49A921D0A50B00C089F7 /* VBEvaluationDataModel.h */,
+				182D49AA21D0A50B00C089F7 /* VBEvaluationDataModel.m */,
 			);
 			path = "Evaluation(评价)";
 			sourceTree = "<group>";
@@ -1712,6 +1722,7 @@
 				18C9422921BFBA28005132BA /* VBCommodityManagementGetListAPI.m in Sources */,
 				38FC7CB620CB9E0700A21FEE /* JTCalendarMenuView.m in Sources */,
 				185B5D90209EDFF7001E47EC /* VMTabBarController.m in Sources */,
+				182D49AE21D0AEC500C089F7 /* VBEvaluationReplyRequestAPI.m in Sources */,
 				1846807A20E1CE5700099954 /* VBCreatActivityViewController.m in Sources */,
 				38D120C620DF3C96007FEF4A /* VBPrinterSetupTableViewCell.m in Sources */,
 				185B5D80209ED5C0001E47EC /* main.m in Sources */,
@@ -1755,6 +1766,7 @@
 				3834D8A620E8CFFA00A62AFF /* VBTableSectionHeaderView.m in Sources */,
 				3847949A20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.m in Sources */,
 				18C9423321C0B7B7005132BA /* VBManageCommodityClassificationRequest.m in Sources */,
+				182D49AB21D0A50B00C089F7 /* VBEvaluationDataModel.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
 				18BA796620CF9DFA002182B3 /* VBBusinessStateViewController.m in Sources */,
 				38DB4D1420E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m in Sources */,

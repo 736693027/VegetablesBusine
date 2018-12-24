@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 typedef NS_ENUM(NSInteger, VBListDataRequestType) {
     VBListDataRequestWaitDealNewOrder = 1, //待处理新订单
     VBListDataRequestWaitDealRefund ,//待处理退款
+    VBListDataRequestEvaluationList ,//评价列表
 };
 
 @interface VBListDataRequest : LBBaseRequest

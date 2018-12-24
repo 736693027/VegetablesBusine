@@ -7,8 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBEvaluationDataModel;
 
 @interface VBEvaluationDataTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIView *starRateView;
-
+@property (weak, nonatomic) UIViewController *viewController;
+@property (strong, nonatomic) VBEvaluationDataModel *itemModel;
+@property (strong, nonatomic) RACSubject *replySuccessSubject;
 @end
