@@ -26,6 +26,7 @@
 		1843E58D21D0C6BB00C20E97 /* VBGetAllStoresRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E58C21D0C6BB00C20E97 /* VBGetAllStoresRequest.m */; };
 		1843E59021D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E58F21D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m */; };
 		1843E59321D0D6C400C20E97 /* VBSetupStoreAddressRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */; };
+		1843E59721D1CE2E00C20E97 /* VBOrderManagerListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */; };
 		1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */; };
 		1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */; };
 		1846807520E1C93F00099954 /* VBTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846807420E1C93F00099954 /* VBTitleView.m */; };
@@ -260,6 +261,8 @@
 		1843E58F21D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSetupStoreTypeRequest.m; sourceTree = "<group>"; };
 		1843E59121D0D6C400C20E97 /* VBSetupStoreAddressRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBSetupStoreAddressRequest.h; sourceTree = "<group>"; };
 		1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSetupStoreAddressRequest.m; sourceTree = "<group>"; };
+		1843E59521D1CE2E00C20E97 /* VBOrderManagerListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerListRequest.h; sourceTree = "<group>"; };
+		1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderManagerListRequest.m; sourceTree = "<group>"; };
 		1846806E20E0BFA900099954 /* VBFavourableActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFavourableActivityViewController.h; sourceTree = "<group>"; };
 		1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFavourableActivityViewController.m; sourceTree = "<group>"; };
 		1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFavourableActivityViewController.xib; sourceTree = "<group>"; };
@@ -665,6 +668,8 @@
 				1843E58F21D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m */,
 				1843E59121D0D6C400C20E97 /* VBSetupStoreAddressRequest.h */,
 				1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */,
+				1843E59521D1CE2E00C20E97 /* VBOrderManagerListRequest.h */,
+				1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -1730,6 +1735,7 @@
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				18C9423A21C0D52A005132BA /* VBManageCommodityDeleteClassificationRequest.m in Sources */,
 				3847948720E72BBE000EDB3A /* VBFullReductionActivityViewController.m in Sources */,
+				1843E59721D1CE2E00C20E97 /* VBOrderManagerListRequest.m in Sources */,
 				384794A920E730CD000EDB3A /* VBActivityRulesTableViewCell.m in Sources */,
 				3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */,
 				38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */,

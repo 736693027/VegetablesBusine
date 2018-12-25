@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,7 +22,7 @@
                         <rect key="frame" x="10" y="10" width="300" height="404.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="256" text="#4 立即配送(待抢单)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="saL-2H-e65">
-                                <rect key="frame" x="71" y="15" width="159" height="21"/>
+                                <rect key="frame" x="70.5" y="15" width="159" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -40,19 +40,19 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="255" text="13899999999" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-KT-y8G">
-                                <rect key="frame" x="12" y="86.5" width="88" height="16"/>
+                                <rect key="frame" x="12.5" y="86.5" width="88" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="254" text="开鲁一中（东南门）门卫处" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dP7-tP-8dC">
-                                <rect key="frame" x="12" y="112.5" width="275.5" height="16"/>
+                                <rect key="frame" x="12.5" y="112.5" width="275" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o57-QI-gmY">
-                                <rect key="frame" x="261" y="56" width="24" height="24"/>
+                                <rect key="frame" x="261" y="57" width="24" height="24"/>
                                 <state key="normal" image="pendingNewCallx"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="商品清单" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caj-a5-GlJ">
@@ -73,19 +73,19 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="订单金额（已支付）" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sfr-3y-w7W">
-                                <rect key="frame" x="12" y="267" width="119.5" height="16"/>
+                                <rect key="frame" x="12.5" y="267" width="119.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="合计" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JD0-Px-2Fi">
-                                <rect key="frame" x="12" y="339" width="27" height="16"/>
+                                <rect key="frame" x="12.5" y="339" width="27" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="本单预计收入" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MZX-Ax-Ee4">
-                                <rect key="frame" x="12" y="375" width="80" height="16"/>
+                                <rect key="frame" x="12.5" y="375" width="80" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -115,7 +115,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="平台服务费" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sy8-EM-3V5">
-                                <rect key="frame" x="12" y="303" width="66.5" height="16"/>
+                                <rect key="frame" x="12.5" y="303" width="66.5" height="16"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -172,12 +172,22 @@
             </tableViewCellContentView>
             <color key="backgroundColor" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <connections>
+                <outlet property="addressLabel" destination="dP7-tP-8dC" id="VWZ-hq-oft"/>
                 <outlet property="commodityListView" destination="i1b-Ig-QPQ" id="ZXq-LY-Qch"/>
+                <outlet property="commodityListViewHeight" destination="EMI-h8-bxa" id="SBi-gB-Qut"/>
+                <outlet property="creatOrderLabel" destination="mrA-T0-f6i" id="Ws1-V0-kaT"/>
+                <outlet property="listCloseButton" destination="KN8-6Q-mXM" id="XEQ-ce-W8g"/>
                 <outlet property="mainContentView" destination="UQf-Gn-i4x" id="clA-36-CU4"/>
+                <outlet property="orderOwnerLabel" destination="OqW-6J-xfg" id="PsU-dj-Xk9"/>
                 <outlet property="orderTitleLabel" destination="saL-2H-e65" id="VWx-rs-g4v"/>
                 <outlet property="orderTotalAmountLabel" destination="sfr-3y-w7W" id="haa-YN-mju"/>
+                <outlet property="orderTotalLabel" destination="SQc-D4-R3o" id="gtA-6E-oIV"/>
+                <outlet property="orderTotalProjectedRevenueLabel" destination="PGk-Ox-JYr" id="0OK-hg-Ess"/>
+                <outlet property="servicePriceLabel" destination="gMe-sb-0xG" id="z0y-zX-FDW"/>
+                <outlet property="telLabel" destination="eFj-KT-y8G" id="kpP-E8-mig"/>
+                <outlet property="totalPriceLabel" destination="jnX-bT-X7n" id="L3E-IM-x2y"/>
             </connections>
-            <point key="canvasLocation" x="-7" y="1"/>
+            <point key="canvasLocation" x="176" y="-126.38680659670166"/>
         </tableViewCell>
     </objects>
     <resources>
