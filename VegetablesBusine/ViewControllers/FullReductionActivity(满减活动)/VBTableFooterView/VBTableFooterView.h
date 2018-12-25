@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VBTableFooterView : UIView
+@property (weak, nonatomic) IBOutlet UIButton *submitButton;
 
 @end

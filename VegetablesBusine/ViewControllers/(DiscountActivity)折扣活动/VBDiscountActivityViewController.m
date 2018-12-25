@@ -15,11 +15,13 @@
 #import "VBActivityDateTimeEnumFile.h"
 #import "VBTableFooterView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBAddNewActivetyRequest.h"
 
 @interface VBDiscountActivityViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
 @property (assign, nonatomic) VBActivityDateTimeType activityType;
+@property (strong, nonatomic) NSMutableDictionary *parameter;
 
 @end
 
@@ -35,7 +37,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+    self.parameter = [NSMutableDictionary dictionary];
+    [self.parameter setObject:@3 forKey:@"model"];
+    [self.parameter setObject:@"折扣活动" forKey:@"title"];
+    if(self.activityId){
+        [self.parameter setObject:self.activityId forKey:@"activeId"];
+    }else{
+        [self.parameter setObject:@"0" forKey:@"activeId"];
+    }
+    NSMutableDictionary *ruleDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"",@"amount",@"",@"text", nil];
+    NSMutableArray *rulesArray = [NSMutableArray arrayWithObject:ruleDict];
+    [self.parameter setObject:rulesArray forKey:@"ruler"];
     self.title = @"折扣活动";
     [navRrightBtn setTitle:@"创建必读" forState:UIControlStateNormal];
     navRrightBtn.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -49,6 +61,23 @@
     
     VBTableFooterView *tableFooterView = [[[NSBundle mainBundle] loadNibNamed:@"VBTableFooterView" owner:self options:nil] lastObject];
     tableFooterView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
+    @weakify(self)
+    [[tableFooterView.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.view endEditing:YES];
+            NSLog(@"-----%@",self.parameter);
+            VBAddNewActivetyRequest *addRequest = [[VBAddNewActivetyRequest alloc] initWithRuleParameter:[self.parameter modelToJSONString]];
+            [addRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"添加成功"];
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"添加失败"];
+            }];
+        });
+    }];
     self.dataTableView.tableFooterView = tableFooterView;
 }
 
@@ -70,13 +99,14 @@
     if(indexPath.section == 0){
         if(indexPath.row == 0){
             VBActivieBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieBaseTableViewCell"];
+            cell.activityTypeLabel.text = @"折扣活动";
             return cell;
         }else if(indexPath.row == 1){
             VBActivityDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityDateTimeTableViewCell"];
             cell.activityTypeSubject = [RACSubject subject];
-            
             [cell.activityTypeSubject subscribeNext:^(NSNumber * _Nullable index) {
                 @strongify(self)
+                [self.parameter setObject:@(index.integerValue+1) forKey:@"activeType"];
                 switch (index.integerValue) {
                     case 0:
                         self.activityType = VBActivityDateTimeDefault;
@@ -96,9 +126,26 @@
         }else{
             if(self.activityType == VBActivityDateTimeEveryWeek){
                 VBActivieSelectWeekTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectWeekTableViewCell"];
+                cell.selectWeekSubject = [RACSubject subject];
+                @weakify(self);
+                [cell.selectWeekSubject subscribeNext:^(NSString *  _Nullable weekString) {
+                    @strongify(self);
+                    [self.parameter setObject:weekString forKey:@"days"];
+                }];
                 return cell;
             }else{
                 VBActivieSelectDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectDateTimeTableViewCell"];
+                cell.startDateTimeSubject = [RACSubject subject];
+                @weakify(self);
+                [cell.startDateTimeSubject subscribeNext:^(NSString *  _Nullable startDateTime) {
+                    @strongify(self);
+                    [self.parameter setObject:startDateTime forKey:@"startDateTime"];
+                }];
+                cell.endDateTimeSubject = [RACSubject subject];
+                [cell.endDateTimeSubject subscribeNext:^(NSString *  _Nullable endDateTime) {
+                    @strongify(self);
+                    [self.parameter setObject:endDateTime forKey:@"endDateTime"];
+                }];
                 return cell;
             }
         }
@@ -106,6 +153,18 @@
         VBDiscountActivityTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBDiscountActivityTableViewCell"];
         cell.titleLabel.text = indexPath.row == 0?@"折扣条件":@"折扣力度";
         cell.unitLabel.text = indexPath.row == 0?@"元":@"折";
+        cell.inputResultSubject = [RACSubject subject];
+        @weakify(self)
+        [cell.inputResultSubject subscribeNext:^(NSString *  _Nullable result) {
+            @strongify(self)
+            NSMutableArray *rulesArray = [self.parameter objectForKey:@"ruler"];
+            NSMutableDictionary *dict = rulesArray[0];
+            if(indexPath.row==0){
+                [dict setObject:result forKey:@"amount"];
+            }else{
+                [dict setObject:result forKey:@"text"];
+            }
+        }];
         return cell;
     }
 }

@@ -10,4 +10,6 @@
 
 @interface VBDiscountActivityViewController : BaseViewController
 
+@property (copy ,nonatomic) NSString *activityId;
+
 @end

@@ -1,36 +1,34 @@
 //
-//  VBOrderManagerListRequest.m
+//  VBGetActivityListRequest.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/12/25.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBOrderManagerListRequest.h"
+#import "VBGetActivityListRequest.h"
 
-@implementation VBOrderManagerListRequest{
+@implementation VBGetActivityListRequest
+{
     NSInteger _currentPage;
-    NSString *_startDate;
     NSInteger _tab;
 }
-- (instancetype)initWithCurrentPage:(NSInteger)currentPage startDate:(NSString *)startDate tab:(NSInteger)tab{
+- (instancetype)initWithCurrentPage:(NSInteger)currentPage tab:(NSInteger)tab{
     self = [super init];
     if(self){
         _currentPage = currentPage;
-        _startDate = startDate;
         _tab = tab;
     }
     return self;
 }
 - (NSString *)requestUrl {
-    return @"/api/order/listOrders";
+    return @"/api/active/activeList";
 }
 
 - (id)requestArgument {
     return @{
              @"currentPage":@(_currentPage),
              @"pageSize":@(20),
-             @"startDate":OBJC(_startDate),
              @"tab":@(_tab),
              @"sessionKey":OBJC(self.sessionKey),
              };

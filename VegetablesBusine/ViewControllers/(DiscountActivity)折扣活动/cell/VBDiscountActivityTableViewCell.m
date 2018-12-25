@@ -12,7 +12,12 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    self.inputTextField.delegate = self;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(self.inputResultSubject){
+        [self.inputResultSubject sendNext:textField.text];
+    }
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

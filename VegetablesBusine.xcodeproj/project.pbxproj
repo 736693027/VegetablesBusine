@@ -27,6 +27,10 @@
 		1843E59021D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E58F21D0CBBA00C20E97 /* VBSetupStoreTypeRequest.m */; };
 		1843E59321D0D6C400C20E97 /* VBSetupStoreAddressRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */; };
 		1843E59721D1CE2E00C20E97 /* VBOrderManagerListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */; };
+		1843E59D21D2131100C20E97 /* VBAddNewActivetyRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E59C21D2131100C20E97 /* VBAddNewActivetyRequest.m */; };
+		1843E5A821D2450100C20E97 /* VBGetActivityListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5A721D2450100C20E97 /* VBGetActivityListRequest.m */; };
+		1843E5AB21D2468D00C20E97 /* VBActivityListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5AA21D2468D00C20E97 /* VBActivityListModel.m */; };
+		1843E5AF21D24A1300C20E97 /* VBDeleteActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5AE21D24A1300C20E97 /* VBDeleteActivityRequest.m */; };
 		1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */; };
 		1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */; };
 		1846807520E1C93F00099954 /* VBTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846807420E1C93F00099954 /* VBTitleView.m */; };
@@ -263,6 +267,14 @@
 		1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBSetupStoreAddressRequest.m; sourceTree = "<group>"; };
 		1843E59521D1CE2E00C20E97 /* VBOrderManagerListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderManagerListRequest.h; sourceTree = "<group>"; };
 		1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderManagerListRequest.m; sourceTree = "<group>"; };
+		1843E59B21D2131100C20E97 /* VBAddNewActivetyRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBAddNewActivetyRequest.h; sourceTree = "<group>"; };
+		1843E59C21D2131100C20E97 /* VBAddNewActivetyRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBAddNewActivetyRequest.m; sourceTree = "<group>"; };
+		1843E5A621D2450100C20E97 /* VBGetActivityListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGetActivityListRequest.h; sourceTree = "<group>"; };
+		1843E5A721D2450100C20E97 /* VBGetActivityListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGetActivityListRequest.m; sourceTree = "<group>"; };
+		1843E5A921D2468D00C20E97 /* VBActivityListModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListModel.h; sourceTree = "<group>"; };
+		1843E5AA21D2468D00C20E97 /* VBActivityListModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListModel.m; sourceTree = "<group>"; };
+		1843E5AD21D24A1300C20E97 /* VBDeleteActivityRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBDeleteActivityRequest.h; sourceTree = "<group>"; };
+		1843E5AE21D24A1300C20E97 /* VBDeleteActivityRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDeleteActivityRequest.m; sourceTree = "<group>"; };
 		1846806E20E0BFA900099954 /* VBFavourableActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFavourableActivityViewController.h; sourceTree = "<group>"; };
 		1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFavourableActivityViewController.m; sourceTree = "<group>"; };
 		1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFavourableActivityViewController.xib; sourceTree = "<group>"; };
@@ -670,6 +682,12 @@
 				1843E59221D0D6C400C20E97 /* VBSetupStoreAddressRequest.m */,
 				1843E59521D1CE2E00C20E97 /* VBOrderManagerListRequest.h */,
 				1843E59621D1CE2E00C20E97 /* VBOrderManagerListRequest.m */,
+				1843E59B21D2131100C20E97 /* VBAddNewActivetyRequest.h */,
+				1843E59C21D2131100C20E97 /* VBAddNewActivetyRequest.m */,
+				1843E5A621D2450100C20E97 /* VBGetActivityListRequest.h */,
+				1843E5A721D2450100C20E97 /* VBGetActivityListRequest.m */,
+				1843E5AD21D24A1300C20E97 /* VBDeleteActivityRequest.h */,
+				1843E5AE21D24A1300C20E97 /* VBDeleteActivityRequest.m */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -700,6 +718,8 @@
 				3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */,
 				1846807320E1C93F00099954 /* VBTitleView.h */,
 				1846807420E1C93F00099954 /* VBTitleView.m */,
+				1843E5A921D2468D00C20E97 /* VBActivityListModel.h */,
+				1843E5AA21D2468D00C20E97 /* VBActivityListModel.m */,
 			);
 			path = "FavourableActivity(活动列表)";
 			sourceTree = "<group>";
@@ -1732,6 +1752,7 @@
 				3834D8AD20E8F33900A62AFF /* VBGoodsUnitViewController.m in Sources */,
 				185B5D91209EDFF7001E47EC /* CustomerTabBarView.m in Sources */,
 				1874C84621BA598A0088257B /* VBRefundTableViewController.m in Sources */,
+				1843E5AB21D2468D00C20E97 /* VBActivityListModel.m in Sources */,
 				185B5E0620A32A6A001E47EC /* VBOrderManagerTableViewViewController.m in Sources */,
 				18C9423A21C0D52A005132BA /* VBManageCommodityDeleteClassificationRequest.m in Sources */,
 				3847948720E72BBE000EDB3A /* VBFullReductionActivityViewController.m in Sources */,
@@ -1784,6 +1805,7 @@
 				38D120B820DF3371007FEF4A /* VBStoreTypeTableViewCell.m in Sources */,
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
+				1843E5AF21D24A1300C20E97 /* VBDeleteActivityRequest.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
 				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
 				18ED190921BBA19000C2D380 /* VBMapViewController.m in Sources */,
@@ -1793,6 +1815,7 @@
 				38E9169620DFB5F0006CB22A /* VBBusinessStatisticsDataCustomViewController.m in Sources */,
 				18C519E320A6DB5D000905FF /* VBShoppingManagerViewController.m in Sources */,
 				38D4378D20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.m in Sources */,
+				1843E5A821D2450100C20E97 /* VBGetActivityListRequest.m in Sources */,
 				384794B620E73D41000EDB3A /* VBTableFooterView.m in Sources */,
 				38FC7CB720CB9E0700A21FEE /* JTCalendarContentView.m in Sources */,
 				18C9423721C0B805005132BA /* VBManageCommodityClassificationModel.m in Sources */,
@@ -1805,6 +1828,7 @@
 				18E0AADD21C0DA140025933C /* VBManageCommodityAddNewClassificationRequest.m in Sources */,
 				1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */,
 				3834D8A620E8CFFA00A62AFF /* VBTableSectionHeaderView.m in Sources */,
+				1843E59D21D2131100C20E97 /* VBAddNewActivetyRequest.m in Sources */,
 				3847949A20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.m in Sources */,
 				18C9423321C0B7B7005132BA /* VBManageCommodityClassificationRequest.m in Sources */,
 				182D49AB21D0A50B00C089F7 /* VBEvaluationDataModel.m in Sources */,

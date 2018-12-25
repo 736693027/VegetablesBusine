@@ -26,12 +26,17 @@
     LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
     lbDatePicker.resultSubject = [RACSubject subject];
     [lbDatePicker setDatePickModel:(UIDatePickerModeDate)];
+    @weakify(self)
     [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
+        @strongify(self)
         NSLog(@"-----%@",date);
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSString *dateTime = [dateFormatter stringFromDate:date];
         [sender setTitle:dateTime forState:UIControlStateNormal];
+        if(self.startDateTimeSubject){
+            [self.startDateTimeSubject sendNext:dateTime];
+        }
     }];
     [lbDatePicker showPickView];
 }
@@ -39,12 +44,17 @@
     LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
     lbDatePicker.resultSubject = [RACSubject subject];
     [lbDatePicker setDatePickModel:(UIDatePickerModeDate)];
+    @weakify(self)
     [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
+        @strongify(self)
         NSLog(@"-----%@",date);
         NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"yyyy-MM-dd"];
         NSString *dateTime = [dateFormatter stringFromDate:date];
         [sender setTitle:dateTime forState:UIControlStateNormal];
+        if(self.endDateTimeSubject){
+            [self.endDateTimeSubject sendNext:dateTime];
+        }
     }];
     [lbDatePicker showPickView];
 }

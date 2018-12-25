@@ -10,4 +10,7 @@
 
 @interface VBActivieSelectDateTimeTableViewCell : UITableViewCell
 
+@property (strong, nonatomic) RACSubject *startDateTimeSubject;
+@property (strong, nonatomic) RACSubject *endDateTimeSubject;
+
 @end
