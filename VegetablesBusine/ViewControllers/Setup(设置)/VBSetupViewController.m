@@ -39,6 +39,9 @@
         make.left.top.offset(0);
         make.right.bottom.offset(0);
     }];
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VBUploadStoreSetupInfoNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        
+    }];
 }
 #pragma mark tableView datasource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{

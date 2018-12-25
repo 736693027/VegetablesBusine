@@ -17,7 +17,7 @@
     self = [super init];
     if(self){
         _commentId = commentId;
-        _content = contnet;
+        _content = content;
     }
     return self;
 }

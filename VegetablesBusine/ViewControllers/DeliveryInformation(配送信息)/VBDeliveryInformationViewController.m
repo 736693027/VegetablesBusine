@@ -10,6 +10,7 @@
 #import "VBDeliveryInformationTableViewCell.h"
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBDeliverySetupRequest.h"
 
 @interface VBDeliveryInformationViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -42,7 +43,30 @@
     [[saveButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
         @strongify(self)
         [self.view endEditing:YES];
-        NSLog(@"----%@",self.dataArray);
+        NSString *price = self.dataArray[0];
+        NSString *cateringTime = self.dataArray[1];
+        NSString *deliveryTime = self.dataArray[2];
+        if(price.length == 0){
+            [SVProgressHUD showErrorWithStatus:@"请输入起送价格"];
+            return;
+        }else if(cateringTime.length == 0){
+            [SVProgressHUD showErrorWithStatus:@"请输入配送时间"];
+            return;
+        }else if(deliveryTime.length == 0){
+            [SVProgressHUD showErrorWithStatus:@"请输入送送时间"];
+            return;
+        }
+        [SVProgressHUD show];
+        VBDeliverySetupRequest *submit = [[VBDeliverySetupRequest alloc] initWithPrice:price cateringTime:cateringTime deliveryTime:deliveryTime];
+        [submit startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            [SVProgressHUD showInfoWithStatus:@"修改成功"];
+            [self.navigationController popViewControllerAnimated:YES];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"修改失败"];
+        }];
     }];
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -58,6 +82,19 @@
     }];
     cell.textField.text = self.dataArray[indexPath.row];
     cell.typeLabel.text = indexPath.row==0?@"元":@"分钟";
+    switch (indexPath.row) {
+        case 0:
+            cell.titleLabel.text = @"起送价格：";
+            break;
+        case 1:
+            cell.titleLabel.text = @"配餐时间：";
+            break;
+        case 2:
+            cell.titleLabel.text = @"送达时间：";
+            break;
+        default:
+            break;
+    }
     return cell;
 }
 - (void)didReceiveMemoryWarning {

@@ -14,6 +14,9 @@
 #define IS_IPHONE (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
 #define SCREEN_MAX_LENGTH (MAX(SCREEN_WIDTH, SCREEN_HEIGHT))
 
+//NSNotificationCenter
+#define VBUploadStoreSetupInfoNotification @"VBUploadStoreSetupInfoNotification"
+
 
 // status bar height.
 

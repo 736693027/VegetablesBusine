@@ -10,7 +10,8 @@
 
 @interface VBStoreTypeModel : NSObject
 
-@property (copy, nonatomic) NSString *typeName;
+@property (copy, nonatomic) NSString *shopName;
+@property (copy, nonatomic) NSString *shopId;
 @property (assign, nonatomic) BOOL isSelect;
 
 @end

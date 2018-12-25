@@ -9,6 +9,8 @@
 #import "VBStoreTypeViewController.h"
 #import "VBStoreTypeTableViewCell.h"
 #import "VBStoreTypeModel.h"
+#import "VBGetAllStoresRequest.h"
+#import "VBSetupStoreTypeRequest.h"
 
 @interface VBStoreTypeViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -21,16 +23,54 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"店铺类型";
-    NSArray *textArray = @[@"蔬菜",@"生鲜鱼肉",@"干调",@"米面粮油",@"酒类饮品",@"半成品冻货",@"合作社",@"生活服务",@"绿色食品加工",@"水果干果",@"麻辣烫",@"特价区"];
     self.dataArray = [NSMutableArray array];
-    for(NSString *text in textArray){
-        VBStoreTypeModel *model = [[VBStoreTypeModel alloc] init];
-        model.typeName = text;
-        [self.dataArray addObject:model];
-    }
     NSString *className = NSStringFromClass([VBStoreTypeTableViewCell class]);
     [self.dataTableView registerNib:[UINib nibWithNibName:className bundle:nil] forCellReuseIdentifier:className];
     self.dataTableView.tableFooterView = [UIView new];
+    [SVProgressHUD show];
+    VBGetAllStoresRequest *getListRequest = [[VBGetAllStoresRequest alloc] init];
+    [getListRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD dismiss];
+        NSArray *itemsArray = [responseDic objectForKey:@"rows"];
+        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBStoreTypeModel class] json:itemsArray]];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"店铺类型获取失败"];
+    }];
+    
+    UIButton *submitButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    [submitButton setTitle:@"确定" forState:UIControlStateNormal];
+    submitButton.titleLabel.font = [UIFont systemFontOfSize:14];
+    [submitButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [[submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        NSMutableArray *storeIdArray = [NSMutableArray array];
+        for(VBStoreTypeModel *itemModel in self.dataArray){
+            if(itemModel.isSelect){
+                [storeIdArray addObject:itemModel.shopId];
+            }
+        }
+        if(storeIdArray.count == 0){
+            [SVProgressHUD showErrorWithStatus:@"请选择店铺类型"];
+            return ;
+        }
+        NSString *storeTypeId = [storeIdArray componentsJoinedByString:@","];
+        [SVProgressHUD show];
+        VBSetupStoreTypeRequest *submitRequest = [[VBSetupStoreTypeRequest alloc] initWithShopId:@"" storeTypeId:storeTypeId];
+        [submitRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            [SVProgressHUD showInfoWithStatus:@"设置成功"];
+            [[NSNotificationCenter defaultCenter] postNotificationName:VBUploadStoreSetupInfoNotification object:nil];
+            [self.navigationController popViewControllerAnimated:YES];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"设置失败"];
+        }];
+        
+    }];
+    UIBarButtonItem *rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:submitButton];
+    self.navigationItem.rightBarButtonItem = rightBarButtonItem;
 }
 #pragma mark tableview datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -47,7 +87,11 @@
     VBStoreTypeModel *model = [self.dataArray objectAtIndex:indexPath.row];
     model.isSelect = !model.isSelect;
     VBStoreTypeTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    cell.model = model;
+    if(model.isSelect){
+        [cell.stateImageView setImage:[UIImage imageNamed:@"checkbox1_checked"]];
+    }else{
+        [cell.stateImageView setImage:[UIImage imageNamed:@"checkbox1_unchecked"]];
+    }
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50.f;
@@ -57,14 +101,5 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
