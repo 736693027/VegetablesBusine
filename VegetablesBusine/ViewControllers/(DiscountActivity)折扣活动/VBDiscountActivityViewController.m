@@ -16,12 +16,15 @@
 #import "VBTableFooterView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "VBAddNewActivetyRequest.h"
+#import "VBEditorActivityRequest.h"
+#import "VBEditiActivityModel.h"
 
 @interface VBDiscountActivityViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
 @property (assign, nonatomic) VBActivityDateTimeType activityType;
 @property (strong, nonatomic) NSMutableDictionary *parameter;
+@property (strong, nonatomic) VBEditiActivityModel *editorModel;
 
 @end
 
@@ -79,6 +82,29 @@
         });
     }];
     self.dataTableView.tableFooterView = tableFooterView;
+    if(self.activityId){
+        @weakify(self)
+        VBEditorActivityRequest *editorRequest = [[VBEditorActivityRequest alloc] initWithActivityId:self.activityId];
+        [editorRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            self.editorModel = [VBEditiActivityModel yy_modelWithJSON:responseDic];
+            self.activityType = self.editorModel.activeType.integerValue;
+            [self.parameter setObject:@(self.editorModel.activeType.integerValue) forKey:@"activeType"];
+            [self.parameter setObject:self.editorModel.days forKey:@"days"];
+            [self.parameter setObject:self.editorModel.startDateTime forKey:@"startDateTime"];
+            [self.parameter setObject:self.editorModel.endDateTime forKey:@"endDateTime"];
+            NSMutableArray *rulesArray = [NSMutableArray array];
+            NSMutableDictionary *ruleDict = [NSMutableDictionary dictionary];
+            [ruleDict setObject:self.editorModel.amount forKey:@"amount"];
+            [ruleDict setObject:self.editorModel.discount forKey:@"text"];
+            [rulesArray addObject:ruleDict];
+            [self.parameter setObject:rulesArray forKey:@"ruler"];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"满减活动获取失败"];
+        }];
+    }
 }
 
 #pragma mark tableview datasource
@@ -104,6 +130,7 @@
         }else if(indexPath.row == 1){
             VBActivityDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityDateTimeTableViewCell"];
             cell.activityTypeSubject = [RACSubject subject];
+            cell.selectIndex = self.editorModel.activeType.integerValue;
             [cell.activityTypeSubject subscribeNext:^(NSNumber * _Nullable index) {
                 @strongify(self)
                 [self.parameter setObject:@(index.integerValue+1) forKey:@"activeType"];
@@ -127,6 +154,7 @@
             if(self.activityType == VBActivityDateTimeEveryWeek){
                 VBActivieSelectWeekTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectWeekTableViewCell"];
                 cell.selectWeekSubject = [RACSubject subject];
+                cell.selectWeekResult = self.editorModel.days;
                 @weakify(self);
                 [cell.selectWeekSubject subscribeNext:^(NSString *  _Nullable weekString) {
                     @strongify(self);
@@ -136,11 +164,13 @@
             }else{
                 VBActivieSelectDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectDateTimeTableViewCell"];
                 cell.startDateTimeSubject = [RACSubject subject];
+                [cell.startDateTimeButton setTitle:self.editorModel.startDateTime forState:UIControlStateNormal];
                 @weakify(self);
                 [cell.startDateTimeSubject subscribeNext:^(NSString *  _Nullable startDateTime) {
                     @strongify(self);
                     [self.parameter setObject:startDateTime forKey:@"startDateTime"];
                 }];
+                [cell.endDateTimeButton setTitle:self.editorModel.endDateTime forState:UIControlStateNormal];
                 cell.endDateTimeSubject = [RACSubject subject];
                 [cell.endDateTimeSubject subscribeNext:^(NSString *  _Nullable endDateTime) {
                     @strongify(self);
@@ -154,6 +184,7 @@
         cell.titleLabel.text = indexPath.row == 0?@"折扣条件":@"折扣力度";
         cell.unitLabel.text = indexPath.row == 0?@"元":@"折";
         cell.inputResultSubject = [RACSubject subject];
+        cell.inputTextField.text = indexPath.row == 0?self.editorModel.amount:self.editorModel.discount;
         @weakify(self)
         [cell.inputResultSubject subscribeNext:^(NSString *  _Nullable result) {
             @strongify(self)

@@ -10,6 +10,8 @@
 
 @interface VBActivieSelectDateTimeTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIButton *startDateTimeButton;
+@property (weak, nonatomic) IBOutlet UIButton *endDateTimeButton;
 @property (strong, nonatomic) RACSubject *startDateTimeSubject;
 @property (strong, nonatomic) RACSubject *endDateTimeSubject;
 

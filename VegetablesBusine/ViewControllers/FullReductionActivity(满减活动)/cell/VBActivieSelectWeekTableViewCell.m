@@ -27,6 +27,17 @@
         [self.selectWeekSubject sendNext:[tagsArray componentsJoinedByString:@","]];
     }
 }
+- (void)setSelectWeekResult:(NSString *)selectWeekResult{
+    _selectWeekResult = selectWeekResult;
+    NSArray *tagsArray = [selectWeekResult componentsSeparatedByString:@","];
+    for(NSInteger tag = 0;tag<7;tag++){
+        NSString *tagString = [NSString stringWithFormat:@"%ld",tag+1];
+        if([tagsArray containsObject:tagString]){
+            UIButton *weekButton = (UIButton *)[self.contentView viewWithTag:tag+100];
+            weekButton.selected = YES;
+        }
+    }
+}
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

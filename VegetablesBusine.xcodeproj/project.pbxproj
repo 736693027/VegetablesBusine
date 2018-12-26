@@ -32,6 +32,7 @@
 		1843E5AB21D2468D00C20E97 /* VBActivityListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5AA21D2468D00C20E97 /* VBActivityListModel.m */; };
 		1843E5AF21D24A1300C20E97 /* VBDeleteActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5AE21D24A1300C20E97 /* VBDeleteActivityRequest.m */; };
 		1843E5B221D24C9800C20E97 /* VBEditorActivityRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5B121D24C9800C20E97 /* VBEditorActivityRequest.m */; };
+		1843E5B621D3203D00C20E97 /* VBEditiActivityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1843E5B521D3203D00C20E97 /* VBEditiActivityModel.m */; };
 		1846807120E0BFA900099954 /* VBFavourableActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */; };
 		1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */; };
 		1846807520E1C93F00099954 /* VBTitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1846807420E1C93F00099954 /* VBTitleView.m */; };
@@ -278,6 +279,8 @@
 		1843E5AE21D24A1300C20E97 /* VBDeleteActivityRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBDeleteActivityRequest.m; sourceTree = "<group>"; };
 		1843E5B021D24C9800C20E97 /* VBEditorActivityRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEditorActivityRequest.h; sourceTree = "<group>"; };
 		1843E5B121D24C9800C20E97 /* VBEditorActivityRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEditorActivityRequest.m; sourceTree = "<group>"; };
+		1843E5B421D3203D00C20E97 /* VBEditiActivityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBEditiActivityModel.h; sourceTree = "<group>"; };
+		1843E5B521D3203D00C20E97 /* VBEditiActivityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBEditiActivityModel.m; sourceTree = "<group>"; };
 		1846806E20E0BFA900099954 /* VBFavourableActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFavourableActivityViewController.h; sourceTree = "<group>"; };
 		1846806F20E0BFA900099954 /* VBFavourableActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFavourableActivityViewController.m; sourceTree = "<group>"; };
 		1846807020E0BFA900099954 /* VBFavourableActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFavourableActivityViewController.xib; sourceTree = "<group>"; };
@@ -1150,6 +1153,8 @@
 				3834D89320E8C64D00A62AFF /* VBGivingActivityViewController.h */,
 				3834D89420E8C64D00A62AFF /* VBGivingActivityViewController.m */,
 				3834D89520E8C64D00A62AFF /* VBGivingActivityViewController.xib */,
+				1843E5B421D3203D00C20E97 /* VBEditiActivityModel.h */,
+				1843E5B521D3203D00C20E97 /* VBEditiActivityModel.m */,
 			);
 			path = "(GivingActivity)赠送活动";
 			sourceTree = "<group>";
@@ -1837,6 +1842,7 @@
 				1843E59D21D2131100C20E97 /* VBAddNewActivetyRequest.m in Sources */,
 				3847949A20E72D2F000EDB3A /* VBActivityDateTimeTableViewCell.m in Sources */,
 				18C9423321C0B7B7005132BA /* VBManageCommodityClassificationRequest.m in Sources */,
+				1843E5B621D3203D00C20E97 /* VBEditiActivityModel.m in Sources */,
 				182D49AB21D0A50B00C089F7 /* VBEvaluationDataModel.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
 				18BA796620CF9DFA002182B3 /* VBBusinessStateViewController.m in Sources */,
