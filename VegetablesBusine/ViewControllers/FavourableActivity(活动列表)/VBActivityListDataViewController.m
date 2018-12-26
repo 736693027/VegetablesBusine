@@ -13,6 +13,9 @@
 #import "VBAlterView.h"
 #import "VBGetActivityListRequest.h"
 #import "VBActivityListModel.h"
+#import "VBGivingActivityViewController.h"
+#import "VBDiscountActivityViewController.h"
+#import "VBFullReductionActivityViewController.h"
 
 @interface VBActivityListDataViewController ()
 
@@ -78,7 +81,20 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    VBActivityListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    if([itemModel.title isEqualToString:@"满赠活动"]){
+        VBGivingActivityViewController *viewController = [[VBGivingActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([itemModel.title isEqualToString:@"折扣活动"]){
+        VBDiscountActivityViewController *viewController = [[VBDiscountActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([itemModel.title isEqualToString:@"满减活动"]){
+        VBFullReductionActivityViewController *viewController = [[VBFullReductionActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

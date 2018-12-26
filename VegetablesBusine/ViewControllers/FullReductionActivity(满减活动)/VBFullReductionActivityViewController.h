@@ -10,4 +10,6 @@
 
 @interface VBFullReductionActivityViewController : BaseViewController
 
+@property (copy ,nonatomic) NSString *activityId;
+
 @end

@@ -43,6 +43,11 @@
     NSMutableDictionary *ruleDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"",@"amount",@"",@"text", nil];
     NSMutableArray *rulesArray = [NSMutableArray arrayWithObject:ruleDict];
     [self.parameter setObject:rulesArray forKey:@"ruler"];
+    if(self.activityId){
+        [self.parameter setObject:self.activityId forKey:@"activeId"];
+    }else{
+        [self.parameter setObject:@"0" forKey:@"activeId"];
+    }
     self.title = @"满赠活动";
     [navRrightBtn setTitle:@"创建必读" forState:UIControlStateNormal];
     navRrightBtn.titleLabel.font = [UIFont systemFontOfSize:12];

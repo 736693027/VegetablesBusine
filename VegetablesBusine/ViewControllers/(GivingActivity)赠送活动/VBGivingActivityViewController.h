@@ -10,4 +10,6 @@
 
 @interface VBGivingActivityViewController : BaseTableViewController
 
+@property (copy ,nonatomic) NSString *activityId;
+
 @end
