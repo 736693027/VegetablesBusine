@@ -21,7 +21,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/order/printorders";
+    return @"/api/order/printorders";
 }
 
 - (YTKRequestMethod)requestMethod {

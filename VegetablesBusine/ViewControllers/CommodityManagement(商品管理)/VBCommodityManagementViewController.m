@@ -112,6 +112,13 @@
     cell.itemModel = itemModel;
     return cell;
 }
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    VBCommodityManagementItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    VBAddGoodsViewController *editingVC = [[VBAddGoodsViewController alloc] init];
+    editingVC.commodityID = itemModel.commodityId;
+    [self.navigationController pushViewController:editingVC animated:YES];
+}
 - (IBAction)managerButtonClick:(id)sender {
     VBNewManageCommodityClassificationViewController *managerVC = [[VBNewManageCommodityClassificationViewController alloc] init];
     [self.navigationController pushViewController:managerVC animated:YES];

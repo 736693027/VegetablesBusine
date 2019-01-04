@@ -21,6 +21,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy ,nonatomic) NSString *inventory;
 @property (copy ,nonatomic) NSString *foodContainerPrice;
 @property (copy ,nonatomic) NSString *uniti;
+@property (copy ,nonatomic) NSString *unitiID;
 @property (copy ,nonatomic) NSString *commodityID;
 @property (copy ,nonatomic) NSArray *standards;
 

@@ -20,6 +20,7 @@
 #import "VBGetGoodsInfoRequest.h"
 #import "VBGoodsSpecificationsModel.h"
 #import "VBAddGoodsInfoModel.h"
+#import "VBManageCommodityClassificationModel.h"
 
 @interface VBAddGoodsViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -170,7 +171,9 @@
             VBManageCommodityClassificationViewController *managerVC = [[VBManageCommodityClassificationViewController alloc] init];
             managerVC.didSelectItemSubject = [RACSubject subject];
             [managerVC.didSelectItemSubject subscribeNext:^(VBManageCommodityClassificationModel * _Nullable x) {
-                
+                self.dataItemModel.classify = x.classifyName;
+                self.dataItemModel.commodityID = x.classifyID;
+                [self.dataTableView reloadData];
             }];
             [self.navigationController pushViewController:managerVC animated:YES];
         }else if (indexPath.row == 1){

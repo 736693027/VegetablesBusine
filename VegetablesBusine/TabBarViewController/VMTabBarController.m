@@ -15,6 +15,9 @@
 #import "VBOrderManagerViewController.h"
 #import "VBShoppingManagerViewController.h"
 #import "VBSetupViewController.h"
+#import "VMLoginViewController.h"
+#import "VMLoginUserInfoModel.h"
+
 
 @interface VMTabBarController ()<CustomerTabBarViewDelegate>{
     VMCustomTabBar *tabBar;
@@ -24,6 +27,19 @@
 
 @implementation VMTabBarController
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    VMLoginUserInfoModel *loginModel = [VMLoginUserInfoModel loginUsrInfoModel];
+    if(!loginModel.sessionKey){
+        NSString *homePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+        NSString *loginPath = [homePath stringByAppendingPathComponent:@"login.data"];
+        VMLoginUserInfoModel *archiverLoginUserInfo = [NSKeyedUnarchiver unarchiveObjectWithFile:loginPath];
+        loginModel = [archiverLoginUserInfo copy];
+        if(!loginModel.sessionKey){
+            [self jumpToLoginViewController];
+        }
+    }
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -32,8 +48,18 @@
     [self setValue:tabBar forKey:@"tabBar"];
     
     [self addAllChildViewController];
+    
+    @weakify(self);
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VMLogoutNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
+        @strongify(self);
+        [self jumpToLoginViewController];
+    }];
 }
-
+#pragma mark 跳转到登录页面
+- (void)jumpToLoginViewController{
+    VMLoginViewController *loginVC = [[VMLoginViewController alloc] init];
+    [self presentViewController:loginVC animated:YES completion:nil];
+}
 - (void)addAllChildViewController{
     VBWaitDealViewController *waitDealVC = [[VBWaitDealViewController alloc] init];
     [self addChildViewController:waitDealVC navTitle:@"待处理"];

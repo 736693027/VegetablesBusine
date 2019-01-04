@@ -22,7 +22,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/commodityDetail";
+    return @"/api/store/commodityDetail";
 }
 
 - (id)requestArgument {

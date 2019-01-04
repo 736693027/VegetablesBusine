@@ -31,6 +31,7 @@
     [SVProgressHUD show];
     VBManageCommodityClassificationRequest *requset = [[VBManageCommodityClassificationRequest alloc] init];
     [requset startRequestWithArraySuccess:^(NSArray *responseArray) {
+        [SVProgressHUD dismiss];
         self.dataArray = [NSArray yy_modelArrayWithClass:[VBManageCommodityClassificationModel class] json:responseArray];
         [self.dataTableView reloadData];
     } failModel:^(LBResponseModel *errorModel) {
@@ -41,8 +42,8 @@
 }
 - (IBAction)addNewCommodityClassifcationAction:(UITapGestureRecognizer *)sender {
     @weakify(self)
-    [SVProgressHUD show];
     VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
+        [SVProgressHUD show];
         VBManageCommodityAddNewClassificationRequest *request = [[VBManageCommodityAddNewClassificationRequest alloc] initWithClassificationId:@"" classificationName:name number:number];
         [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             @strongify(self)

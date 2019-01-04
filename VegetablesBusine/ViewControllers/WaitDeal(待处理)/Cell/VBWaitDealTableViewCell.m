@@ -26,15 +26,19 @@
 - (void)setItemModel:(VBWaitDealListModel *)itemModel {
     _itemModel = itemModel;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    self.commodityListViewHeight.constant = itemModel.listData.count*75;
-    for(VBCommodityItemModel *commodityModel in itemModel.listData){
-        VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
-        commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
-        commodityItemView.commodityName.text = commodityModel.name;
-        commodityItemView.priceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.unitPrice];
-        commodityItemView.countLabel.text = [@"x" stringByAppendingFormat:@"%@",commodityModel.count];
-        commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
-        [self.commodityListView addSubview:commodityItemView];
+    if(!itemModel.isCloselistData){
+        self.commodityListViewHeight.constant = itemModel.listData.count*75;
+        for(VBCommodityItemModel *commodityModel in itemModel.listData){
+            VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
+            commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
+            commodityItemView.commodityName.text = commodityModel.name;
+            commodityItemView.priceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.unitPrice];
+            commodityItemView.countLabel.text = [@"x" stringByAppendingFormat:@"%@",commodityModel.count];
+            commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
+            [self.commodityListView addSubview:commodityItemView];
+        }
+    }else{
+        self.commodityListViewHeight.constant = 0;
     }
      self.orderTitleLabel.attributedText = [self setString:[NSString stringWithFormat:@"#%@ 立即配送",itemModel.orderCount] beginIndex:itemModel.orderCount.length+2 noHeightColor:[CommonTools changeColor:@"0x666666"]];
     self.orderOwnerLabel.text = itemModel.orderOwer;
@@ -63,27 +67,28 @@
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:telUrl]];
 }
 - (IBAction)setListViewStateButtonClick:(UIButton *)sender {
-    [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    if(!self.itemModel.isCloselistData){
-        self.commodityListViewHeight.constant = 0.f;
-        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
-    }else{
-        self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
-        for(VBCommodityItemModel *commodityModel in self.itemModel.listData){
-            VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
-            commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
-            commodityItemView.commodityName.text = commodityModel.name;
-            commodityItemView.priceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.unitPrice];
-            commodityItemView.countLabel.text = [@"x" stringByAppendingFormat:@"%@",commodityModel.count];
-            commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
-            [self.commodityListView addSubview:commodityItemView];
-        }
-        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
-    }
+//    [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
+//    if(!self.itemModel.isCloselistData){
+//        self.commodityListViewHeight.constant = 0.f;
+//        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx_down"] forState:UIControlStateNormal];
+//    }else{
+//        self.commodityListViewHeight.constant = self.itemModel.listData.count*75;
+//        for(VBCommodityItemModel *commodityModel in self.itemModel.listData){
+//            VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
+//            commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
+//            commodityItemView.commodityName.text = commodityModel.name;
+//            commodityItemView.priceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.unitPrice];
+//            commodityItemView.countLabel.text = [@"x" stringByAppendingFormat:@"%@",commodityModel.count];
+//            commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
+//            [self.commodityListView addSubview:commodityItemView];
+//        }
+//        [sender setImage:[UIImage imageNamed:@"pendingNewlaunchx"] forState:UIControlStateNormal];
+//    }
+    self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
     if(self.uploadCellState){
         [self.uploadCellState sendNext:@""];
     }
-    self.itemModel.isCloselistData = !self.itemModel.isCloselistData;
+    
 }
 - (IBAction)receivedOrderButtonClick:(UIButton *)sender {
     [SVProgressHUD show];

@@ -71,6 +71,18 @@
     VBWaitDealTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBWaitDealTableViewCell"];
     VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.uploadCellState = [RACSubject subject];
+    @weakify(self)
+    [cell.uploadCellState subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.dataTableView beginUpdates];
+        [self.dataTableView endUpdates];
+    }];
+    cell.uploadDataSource = [RACSubject subject];
+    [cell.uploadDataSource subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.dataTableView.mj_header beginRefreshing];
+    }];
     return cell;
 }
 #pragma mark tableview delegate

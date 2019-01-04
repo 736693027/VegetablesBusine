@@ -25,7 +25,7 @@
     [AMapServices sharedServices].apiKey = @"b557356b6d396627c3d54f4e920836c1";
     
     YTKNetworkConfig *configer = [YTKNetworkConfig sharedConfig];
-    configer.baseUrl = @"http://139.224.221.134";
+    configer.baseUrl = @"http://shangjiaduan.qsvc.caibangps.com";
     
     [IQKeyboardManager sharedManager].enable = YES;
     [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;

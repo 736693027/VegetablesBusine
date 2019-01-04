@@ -11,7 +11,7 @@
 @implementation VBCommodityManagementGetListAPI
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/commodities";
+    return @"/api/store/commodities";
 }
 
 @end

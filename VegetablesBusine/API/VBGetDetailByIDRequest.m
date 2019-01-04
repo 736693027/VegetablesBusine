@@ -21,7 +21,7 @@
 }
 
 - (NSString *)requestUrl {
-    return [NSString stringWithFormat:@"http://caibang.capsui.com/api/order/getOrder/%@",_idString];
+    return [NSString stringWithFormat:@"/api/order/getOrder/%@",_idString];
 }
 
 - (YTKRequestMethod)requestMethod {

@@ -25,7 +25,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/commodityTypesAdd";
+    return @"/api/store/commodityTypesAdd";
 }
 
 - (id)requestArgument {

@@ -11,6 +11,8 @@
 #import <Masonry/Masonry.h>
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "VBShopIntroductionViewController.h"
+#import "VMLoginUserInfoModel.h"
+#import "VMLogoutRequestAPI.h"
 
 @interface VBSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -38,6 +40,24 @@
     [logoutButton mas_makeConstraints:^(MASConstraintMaker *make) {
         make.left.top.offset(0);
         make.right.bottom.offset(0);
+    }];
+    @weakify(self)
+    [[logoutButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        [SVProgressHUD show];
+        VMLogoutRequestAPI *logoutRequest = [[VMLogoutRequestAPI alloc] init];
+        [logoutRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            [SVProgressHUD dismiss];
+            @strongify(self)
+            VMLoginUserInfoModel *loginUserModel = [VMLoginUserInfoModel loginUsrInfoModel];
+            [loginUserModel clear];
+            [self.navigationController popToRootViewControllerAnimated:YES];
+            [[NSNotificationCenter defaultCenter] postNotificationName:VMLogoutNotification object:nil];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"退出失败"];
+        }];
+        
     }];
     [[[NSNotificationCenter defaultCenter] rac_addObserverForName:VBUploadStoreSetupInfoNotification object:nil] subscribeNext:^(NSNotification * _Nullable x) {
         

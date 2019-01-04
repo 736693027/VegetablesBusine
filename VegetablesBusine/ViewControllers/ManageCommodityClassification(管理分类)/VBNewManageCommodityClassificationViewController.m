@@ -45,8 +45,8 @@
 }
 - (IBAction)addNewCommodityClassifcationAction:(UITapGestureRecognizer *)sender {
     @weakify(self)
-    [SVProgressHUD show];
     VBAddCommodityClassificationView *addView = [VBAddCommodityClassificationView alterViewWithResult:^(NSString *name, NSString *number) {
+        [SVProgressHUD show];
         VBManageCommodityAddNewClassificationRequest *request = [[VBManageCommodityAddNewClassificationRequest alloc] initWithClassificationId:@"" classificationName:name number:number];
         [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             @strongify(self)
@@ -93,6 +93,11 @@
         }];
         addView.itemModel = itemModel;
         [addView show];
+    }];
+    cell.deleteClassifySubject = [RACSubject subject];
+    [cell.deleteClassifySubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self requestListData];
     }];
     return cell;
 }

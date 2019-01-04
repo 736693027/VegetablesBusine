@@ -16,6 +16,7 @@
 
 //NSNotificationCenter
 #define VBUploadStoreSetupInfoNotification @"VBUploadStoreSetupInfoNotification"
+#define VMLogoutNotification @"VMLogoutNotification" //退出登录
 
 
 // status bar height.

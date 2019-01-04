@@ -11,7 +11,7 @@
 @implementation VBManageCommodityClassificationRequest
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/commoditiesTotalView";
+    return @"/api/store/commoditiesTotalView";
 }
 
 @end

@@ -11,6 +11,6 @@
 @implementation VBShoppingManangerDetailAPI
 
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/totalDetals";
+    return @"/api/store/totalDetals";
 }
 @end

@@ -128,9 +128,17 @@
 		18E0AAE721C10FD00025933C /* VBGoodsSpecificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0AAE621C10FD00025933C /* VBGoodsSpecificationsModel.m */; };
 		18ED190921BBA19000C2D380 /* VBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED190721BBA19000C2D380 /* VBMapViewController.m */; };
 		18ED190A21BBA19000C2D380 /* VBMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED190821BBA19000C2D380 /* VBMapViewController.xib */; };
+		18F9E45E21DC56300095F59B /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E45321DC56300095F59B /* VMLoginViewController.m */; };
+		18F9E45F21DC56300095F59B /* VMForgetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E45421DC56300095F59B /* VMForgetViewController.m */; };
+		18F9E46021DC56300095F59B /* VMLoginUserInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E45521DC56300095F59B /* VMLoginUserInfoModel.m */; };
+		18F9E46121DC56300095F59B /* VMRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E45621DC56300095F59B /* VMRegisterViewController.m */; };
+		18F9E46221DC56300095F59B /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9E45821DC56300095F59B /* VMLoginViewController.xib */; };
+		18F9E46321DC56300095F59B /* VMRegisterViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9E45921DC56300095F59B /* VMRegisterViewController.xib */; };
+		18F9E46421DC56300095F59B /* VMForgetViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18F9E45D21DC56300095F59B /* VMForgetViewController.xib */; };
+		18F9E46721DC576D0095F59B /* VMLoginRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E46521DC576C0095F59B /* VMLoginRequestAPI.m */; };
+		18F9E46A21DC58620095F59B /* VMForgetPasswordAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E46921DC58620095F59B /* VMForgetPasswordAPI.m */; };
+		18F9E46E21DC987C0095F59B /* VMLogoutRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E46C21DC987B0095F59B /* VMLogoutRequestAPI.m */; };
 		2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */; };
-		380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFADD20B3051400A926FD /* VMLoginViewController.m */; };
-		380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFADF20B3051400A926FD /* VMLoginViewController.xib */; };
 		380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */; };
 		380FFAE720B306E300A926FD /* VBOrderDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */; };
 		3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3834D88820E8C23D00A62AFF /* VBDiscountActivityViewController.m */; };
@@ -442,9 +450,23 @@
 		18ED190621BBA19000C2D380 /* VBMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMapViewController.h; sourceTree = "<group>"; };
 		18ED190721BBA19000C2D380 /* VBMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMapViewController.m; sourceTree = "<group>"; };
 		18ED190821BBA19000C2D380 /* VBMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMapViewController.xib; sourceTree = "<group>"; };
-		380FFADD20B3051400A926FD /* VMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
-		380FFADE20B3051400A926FD /* VMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
-		380FFADF20B3051400A926FD /* VMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
+		18F9E45321DC56300095F59B /* VMLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginViewController.m; sourceTree = "<group>"; };
+		18F9E45421DC56300095F59B /* VMForgetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMForgetViewController.m; sourceTree = "<group>"; };
+		18F9E45521DC56300095F59B /* VMLoginUserInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginUserInfoModel.m; sourceTree = "<group>"; };
+		18F9E45621DC56300095F59B /* VMRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMRegisterViewController.m; sourceTree = "<group>"; };
+		18F9E45721DC56300095F59B /* VMLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginViewController.h; sourceTree = "<group>"; };
+		18F9E45821DC56300095F59B /* VMLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMLoginViewController.xib; sourceTree = "<group>"; };
+		18F9E45921DC56300095F59B /* VMRegisterViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMRegisterViewController.xib; sourceTree = "<group>"; };
+		18F9E45A21DC56300095F59B /* VMForgetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMForgetViewController.h; sourceTree = "<group>"; };
+		18F9E45B21DC56300095F59B /* VMLoginUserInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginUserInfoModel.h; sourceTree = "<group>"; };
+		18F9E45C21DC56300095F59B /* VMRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMRegisterViewController.h; sourceTree = "<group>"; };
+		18F9E45D21DC56300095F59B /* VMForgetViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VMForgetViewController.xib; sourceTree = "<group>"; };
+		18F9E46521DC576C0095F59B /* VMLoginRequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLoginRequestAPI.m; sourceTree = "<group>"; };
+		18F9E46621DC576C0095F59B /* VMLoginRequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLoginRequestAPI.h; sourceTree = "<group>"; };
+		18F9E46821DC58610095F59B /* VMForgetPasswordAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMForgetPasswordAPI.h; sourceTree = "<group>"; };
+		18F9E46921DC58620095F59B /* VMForgetPasswordAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMForgetPasswordAPI.m; sourceTree = "<group>"; };
+		18F9E46C21DC987B0095F59B /* VMLogoutRequestAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VMLogoutRequestAPI.m; sourceTree = "<group>"; };
+		18F9E46D21DC987C0095F59B /* VMLogoutRequestAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VMLogoutRequestAPI.h; sourceTree = "<group>"; };
 		380FFAE320B306E300A926FD /* VBOrderDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBOrderDetailViewController.h; sourceTree = "<group>"; };
 		380FFAE420B306E300A926FD /* VBOrderDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBOrderDetailViewController.m; sourceTree = "<group>"; };
 		380FFAE520B306E300A926FD /* VBOrderDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBOrderDetailViewController.xib; sourceTree = "<group>"; };
@@ -638,6 +660,12 @@
 		184260E321AB9D8100622800 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				18F9E46D21DC987C0095F59B /* VMLogoutRequestAPI.h */,
+				18F9E46C21DC987B0095F59B /* VMLogoutRequestAPI.m */,
+				18F9E46821DC58610095F59B /* VMForgetPasswordAPI.h */,
+				18F9E46921DC58620095F59B /* VMForgetPasswordAPI.m */,
+				18F9E46621DC576C0095F59B /* VMLoginRequestAPI.h */,
+				18F9E46521DC576C0095F59B /* VMLoginRequestAPI.m */,
 				184260EB21AB9DF100622800 /* LBBaseModel.h */,
 				184260EA21AB9DF100622800 /* LBBaseModel.m */,
 				184260E821AB9DA200622800 /* LBResponseModel.h */,
@@ -821,6 +849,7 @@
 		185B5DC520A1CC90001E47EC /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				18F9E45221DC56300095F59B /* Login(登录) */,
 				18ED190521BBA15B00C2D380 /* VBMapViewController */,
 				3834D89220E8C62B00A62AFF /* (GivingActivity)赠送活动 */,
 				3834D88620E8C22B00A62AFF /* (DiscountActivity)折扣活动 */,
@@ -839,7 +868,6 @@
 				185B60A220CD2E59006EF799 /* ShopIntroduction(店铺简介) */,
 				1897EA6520C00F0900ED3DEF /* CommodityManagement(商品管理) */,
 				380FFAE220B306A900A926FD /* OrderDetail(订单详情) */,
-				380FFADC20B3051400A926FD /* Login(登录) */,
 				380FFAD520B2F89800A926FD /* Setup(设置) */,
 				185B5DC620A1CC90001E47EC /* ShoppingManager(门店管理) */,
 				185B5DC720A1CC90001E47EC /* WaitDeal(待处理) */,
@@ -1054,6 +1082,25 @@
 			path = VBMapViewController;
 			sourceTree = "<group>";
 		};
+		18F9E45221DC56300095F59B /* Login(登录) */ = {
+			isa = PBXGroup;
+			children = (
+				18F9E45721DC56300095F59B /* VMLoginViewController.h */,
+				18F9E45321DC56300095F59B /* VMLoginViewController.m */,
+				18F9E45821DC56300095F59B /* VMLoginViewController.xib */,
+				18F9E45B21DC56300095F59B /* VMLoginUserInfoModel.h */,
+				18F9E45521DC56300095F59B /* VMLoginUserInfoModel.m */,
+				18F9E45621DC56300095F59B /* VMRegisterViewController.m */,
+				18F9E45921DC56300095F59B /* VMRegisterViewController.xib */,
+				18F9E45A21DC56300095F59B /* VMForgetViewController.h */,
+				18F9E45C21DC56300095F59B /* VMRegisterViewController.h */,
+				18F9E45421DC56300095F59B /* VMForgetViewController.m */,
+				18F9E45D21DC56300095F59B /* VMForgetViewController.xib */,
+			);
+			name = "Login(登录)";
+			path = "../../../VegetableManagement/VegetableManagement/ViewControllers/Login(登录)";
+			sourceTree = "<group>";
+		};
 		380FFAD520B2F89800A926FD /* Setup(设置) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1079,16 +1126,6 @@
 				38FC7C9220CB9DFA00A21FEE /* VBAlterView */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		380FFADC20B3051400A926FD /* Login(登录) */ = {
-			isa = PBXGroup;
-			children = (
-				380FFADD20B3051400A926FD /* VMLoginViewController.m */,
-				380FFADE20B3051400A926FD /* VMLoginViewController.h */,
-				380FFADF20B3051400A926FD /* VMLoginViewController.xib */,
-			);
-			path = "Login(登录)";
 			sourceTree = "<group>";
 		};
 		380FFAE220B306A900A926FD /* OrderDetail(订单详情) */ = {
@@ -1589,15 +1626,16 @@
 				185B5DD120A1CD34001E47EC /* VBWaitDealViewController.xib in Resources */,
 				38D4378E20E52C83002D8CB1 /* VBNewManageCommodityClassificationViewController.xib in Resources */,
 				384794B520E73D41000EDB3A /* VBTableFooterView.xib in Resources */,
+				18F9E46321DC56300095F59B /* VMRegisterViewController.xib in Resources */,
 				38DB4CFE20E3BC4600F67BE7 /* VBManageCommodityClassificationViewController.xib in Resources */,
 				38DB4D1B20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.xib in Resources */,
 				18C519E920A6F48B000905FF /* VBShoppingManagerMenuItemView.xib in Resources */,
 				185B5DDA20A1D7B3001E47EC /* VBWaitDealTableViewCell.xib in Resources */,
+				18F9E46421DC56300095F59B /* VMForgetViewController.xib in Resources */,
 				184E523820B6D23C00DD3750 /* VMSectionHeaderView.xib in Resources */,
 				38E9167920DF4912006CB22A /* VBEvaluationViewController.xib in Resources */,
 				185B5E0320A32A3C001E47EC /* VBOrderManagerViewController.xib in Resources */,
 				3834D8A220E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.xib in Resources */,
-				380FFAE120B3051400A926FD /* VMLoginViewController.xib in Resources */,
 				38E9169220DFB5DB006CB22A /* VBBusinessStatisticsDataNormalViewController.xib in Resources */,
 				38D120C720DF3C96007FEF4A /* VBPrinterSetupTableViewCell.xib in Resources */,
 				1846807220E0BFA900099954 /* VBFavourableActivityViewController.xib in Resources */,
@@ -1610,6 +1648,7 @@
 				184E524220B6D54400DD3750 /* VMOrderTotalTableViewCell.xib in Resources */,
 				18BA796020CE2428002182B3 /* VBDeliveryInformationTableViewCell.xib in Resources */,
 				1897EA7620C0137B00ED3DEF /* VBCommodityManagementTableViewCell.xib in Resources */,
+				18F9E46221DC56300095F59B /* VMLoginViewController.xib in Resources */,
 				38FC7C9620CB9DFA00A21FEE /* VBAlterView.xib in Resources */,
 				3834D8BA20E8F5D200A62AFF /* VBGoodsSpecificationsViewController.xib in Resources */,
 				38DB4D1020E3CF8D00F67BE7 /* VBMerchantSettlementViewController.xib in Resources */,
@@ -1737,8 +1776,10 @@
 				1842610321ABF85000622800 /* VBGetDetailByIDRequest.m in Sources */,
 				18C9422C21BFBC7C005132BA /* VBSessionKeyBaseRequest.m in Sources */,
 				3847949320E72C59000EDB3A /* VBActivieBaseTableViewCell.m in Sources */,
+				18F9E46121DC56300095F59B /* VMRegisterViewController.m in Sources */,
 				3847949F20E72EBD000EDB3A /* VBActivieSelectWeekTableViewCell.m in Sources */,
 				38D437A820E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.m in Sources */,
+				18F9E46021DC56300095F59B /* VMLoginUserInfoModel.m in Sources */,
 				18C9422621BFB59A005132BA /* VBShoppingManangerDetailAPI.m in Sources */,
 				38FC7CAF20CB9E0700A21FEE /* JTCalendarMonthView.m in Sources */,
 				18BA797720CFD2C3002182B3 /* VBVBBusinessStateTextTableViewCell.m in Sources */,
@@ -1757,6 +1798,7 @@
 				18E0AAE721C10FD00025933C /* VBGoodsSpecificationsModel.m in Sources */,
 				38E9168720DF6763006CB22A /* XHStarRateView.m in Sources */,
 				1843E59321D0D6C400C20E97 /* VBSetupStoreAddressRequest.m in Sources */,
+				18F9E45E21DC56300095F59B /* VMLoginViewController.m in Sources */,
 				3834D8B920E8F5D200A62AFF /* VBGoodsSpecificationsViewController.m in Sources */,
 				184E523120B6D09E00DD3750 /* VBOrderDetailOrderOwnerTableViewCell.m in Sources */,
 				3834D8AD20E8F33900A62AFF /* VBGoodsUnitViewController.m in Sources */,
@@ -1775,6 +1817,7 @@
 				182D49B121D0B6AF00C089F7 /* VBSupportBookRequest.m in Sources */,
 				38E9168220DF639F006CB22A /* VBEvaluationDataTableViewCell.m in Sources */,
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
+				18F9E46A21DC58620095F59B /* VMForgetPasswordAPI.m in Sources */,
 				18093A9721C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m in Sources */,
 				1846807520E1C93F00099954 /* VBTitleView.m in Sources */,
 				185B60A620CD2E71006EF799 /* VBShopIntroductionViewController.m in Sources */,
@@ -1800,6 +1843,7 @@
 				1843E5B221D24C9800C20E97 /* VBEditorActivityRequest.m in Sources */,
 				38E9169C20DFD083006CB22A /* VBFavourableOrderViewController.m in Sources */,
 				185B5D72209ED5BD001E47EC /* AppDelegate.m in Sources */,
+				18F9E46E21DC987C0095F59B /* VMLogoutRequestAPI.m in Sources */,
 				185B5D92209EDFF7001E47EC /* VMTabBarView.m in Sources */,
 				38D120B320DF335A007FEF4A /* VBStoreTypeViewController.m in Sources */,
 				18C9423021C0A87F005132BA /* VBCommodityManagementModel.m in Sources */,
@@ -1817,6 +1861,7 @@
 				185B5DA2209F02B0001E47EC /* BaseTableViewController.m in Sources */,
 				1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */,
 				1843E5AF21D24A1300C20E97 /* VBDeleteActivityRequest.m in Sources */,
+				18F9E45F21DC56300095F59B /* VMForgetViewController.m in Sources */,
 				184E524620B6D9B600DD3750 /* VBOrderDetailInformationTableViewCell.m in Sources */,
 				38FC7CB520CB9E0700A21FEE /* JTCircleView.m in Sources */,
 				18ED190921BBA19000C2D380 /* VBMapViewController.m in Sources */,
@@ -1861,12 +1906,12 @@
 				3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */,
 				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
 				3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */,
+				18F9E46721DC576D0095F59B /* VMLoginRequestAPI.m in Sources */,
 				184E522C20B6CF4D00DD3750 /* VBOrderDetailOrderStateTableViewCell.m in Sources */,
 				185B5DA4209F02B0001E47EC /* VMNavigationController.m in Sources */,
 				185B5D94209EDFF7001E47EC /* VMCustomTabBar.m in Sources */,
 				384794A420E73033000EDB3A /* VBActivieSelectDateTimeTableViewCell.m in Sources */,
 				38D120BC20DF35DA007FEF4A /* VBStoreTypeModel.m in Sources */,
-				380FFAE020B3051400A926FD /* VMLoginViewController.m in Sources */,
 				383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */,
 				38FC7CB220CB9E0700A21FEE /* JTCalendar.m in Sources */,
 				38D4379820E52FDB002D8CB1 /* VBAddGoodsViewController.m in Sources */,

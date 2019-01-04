@@ -10,7 +10,7 @@
 
 @implementation VBGetGoodsSpecificationsRequest
 - (NSString *)requestUrl {
-    return @"http://caibang.capsui.com/api/store/commodityNormTypes";
+    return @"/api/store/commodityNormTypes";
 }
 
 @end

@@ -61,6 +61,7 @@ static VBAddCommodityClassificationView *alterView = nil;
     if(myResultBlock){
         myResultBlock(self.nameTextField.text,self.numberTextField.text);
     }
+    [self cancelButtonClick:nil];
 }
 
 - (void)setItemModel:(VBManageCommodityClassificationModel *)itemModel {

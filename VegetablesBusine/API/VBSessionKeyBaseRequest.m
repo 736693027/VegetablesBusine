@@ -7,13 +7,14 @@
 //
 
 #import "VBSessionKeyBaseRequest.h"
+#import "VMLoginUserInfoModel.h"
 
 @implementation VBSessionKeyBaseRequest
 
 - (instancetype)init{
     self = [super init];
     if (self){
-        _sessionKey = @"";
+        _sessionKey = [VMLoginUserInfoModel loginUsrInfoModel].sessionKey;
     }
     return self;
 }
