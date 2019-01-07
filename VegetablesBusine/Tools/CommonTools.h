@@ -64,4 +64,7 @@
  @return 对比结果
  */
 + (NSComparisonResult)compareDate:(NSString *)dateString withOtherDate:(NSString *)otherDateString;
+
++ (NSString *)fetchShopID;
+
 @end

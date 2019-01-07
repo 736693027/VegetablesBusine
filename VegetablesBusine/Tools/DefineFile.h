@@ -49,4 +49,6 @@
 
 #define PlaceHolderImage [UIImage imageNamed:@""]
 
+#define BaseImageAddress @"http://manage.qsvc.caibangps.com/uploads/"
+
 #endif /* DefineFile_h */

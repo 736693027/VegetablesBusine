@@ -12,13 +12,13 @@
 
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [self.infoTextField addTarget:self action:@selector(textFieldTextDidChange:) forControlEvents:UIControlEventEditingChanged];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)textFieldTextDidChange:(UITextField *)textChange{
+    if (self.inputBlock) {
+        _inputBlock(textChange.text);
+    }
 }
 
 @end

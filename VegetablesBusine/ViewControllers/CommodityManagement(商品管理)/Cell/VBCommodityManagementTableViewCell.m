@@ -19,7 +19,8 @@
 }
 - (void)setItemModel:(VBCommodityManagementItemModel *)itemModel{
     _itemModel = itemModel;
-    [self.commodityImagesView sd_setImageWithURL:[NSURL URLWithString:itemModel.commodityImageUrl] placeholderImage:PlaceHolderImage];
+    NSString *imgUrl = [NSString stringWithFormat:@"%@%@",BaseImageAddress,itemModel.commodityImgUrl];
+    [self.commodityImagesView sd_setImageWithURL:[NSURL URLWithString:imgUrl] placeholderImage:PlaceHolderImage];
     self.commodityNameLabel.text = itemModel.commodityName;
     self.orderCount.text = itemModel.commoditySubtitle;
     self.priceLabel.text = [@"¥" stringByAppendingString:itemModel.commodityPrice];
@@ -35,6 +36,7 @@
             if(self.uploadSubject){
                 [self.uploadSubject sendNext:@""];
             }
+            [SVProgressHUD showSuccessWithStatus:@"操作成功"];
         } failModel:^(LBResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.message];
         } fail:^(YTKBaseRequest *request) {
@@ -54,6 +56,7 @@
             if(self.uploadSubject){
                 [self.uploadSubject sendNext:@""];
             }
+            [SVProgressHUD showSuccessWithStatus:@"操作成功"];
         } failModel:^(LBResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.message];
         } fail:^(YTKBaseRequest *request) {

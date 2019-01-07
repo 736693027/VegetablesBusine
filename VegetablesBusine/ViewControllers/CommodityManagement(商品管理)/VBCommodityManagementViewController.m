@@ -21,7 +21,7 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *menuScrollView;
 
 @property (strong, nonatomic) NSArray *menuItemArray;
-@property (strong, nonatomic) NSArray *dataArray;
+@property (strong, nonatomic) NSMutableArray *dataArray;
 @property (assign, nonatomic) NSInteger currentItemIndex;
 @property (strong, nonatomic) UILabel *tableHeaderTitlaLabel;
 
@@ -47,7 +47,10 @@
         make.left.top.offset(10);
     }];
     self.dataTableView.tableHeaderView = tableHeadView;
-    
+    [self requestData];
+}
+
+- (void)requestData {
     [SVProgressHUD show];
     @weakify(self)
     VBCommodityManagementGetListAPI *getListAPI = [[VBCommodityManagementGetListAPI alloc] init];
@@ -59,9 +62,12 @@
             self.currentItemIndex = 0;
             VBCommodityManagementModel *model = [self.menuItemArray objectAtIndex:0];
             self.tableHeaderTitlaLabel.text = model.classificationName;
-            self.dataArray = model.commodityInfo;
+            self.dataArray = [NSMutableArray arrayWithArray:model.commodityInfo];
             [self.dataTableView reloadData];
+            [self.dataTableView setContentOffset:CGPointZero];
+            [self.menuScrollView removeAllSubviews];
             self.menuScrollView.contentSize = CGSizeMake(self.menuScrollView.width, MAX(self.menuScrollView.height, self.menuItemArray.count*60));
+            [self.menuScrollView setContentOffset:CGPointZero];
             [self.menuItemArray enumerateObjectsUsingBlock:^(VBCommodityManagementModel *_Nonnull model, NSUInteger idx, BOOL * _Nonnull stop) {
                 @strongify(self)
                 VBMenuItemView *itemView = [[VBMenuItemView alloc] initWithFrame:CGRectMake(0, idx*60, self.menuScrollView.frame.size.width, 60)];
@@ -78,7 +84,7 @@
                         self.currentItemIndex = itemView.tag-100;
                         VBCommodityManagementModel *model = [self.menuItemArray objectAtIndex:self.currentItemIndex];
                         self.tableHeaderTitlaLabel.text = model.classificationName;
-                        self.dataArray = model.commodityInfo;
+                        self.dataArray = [NSMutableArray arrayWithArray:model.commodityInfo];
                         [self.dataTableView reloadData];
                     }
                 }];
@@ -110,6 +116,11 @@
     VBCommodityManagementTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBCommodityManagementTableViewCell"];
     VBCommodityManagementItemModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
     cell.itemModel = itemModel;
+    cell.uploadSubject = [RACSubject subject];
+    [cell.uploadSubject subscribeNext:^(NSString *  _Nullable result) {
+        [self.dataArray removeObject:itemModel];
+        [self.dataTableView reloadData];
+    }];
     return cell;
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -121,10 +132,20 @@
 }
 - (IBAction)managerButtonClick:(id)sender {
     VBNewManageCommodityClassificationViewController *managerVC = [[VBNewManageCommodityClassificationViewController alloc] init];
+    @weakify(self)
+    [managerVC setFreshBlock:^{
+        @strongify(self)
+        [self requestData];
+    }];
     [self.navigationController pushViewController:managerVC animated:YES];
 }
 - (IBAction)addButtonClick:(id)sender {
     VBAddGoodsViewController *addGoodsVC = [[VBAddGoodsViewController alloc] init];
+    @weakify(self)
+    [addGoodsVC setFreshBlock:^{
+        @strongify(self)
+        [self requestData];
+    }];
     [self.navigationController pushViewController:addGoodsVC animated:YES];
 }
 

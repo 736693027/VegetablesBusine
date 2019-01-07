@@ -9,9 +9,8 @@
 #import <Foundation/Foundation.h>
 
 @interface VBStoreTypeModel : NSObject
-
-@property (copy, nonatomic) NSString *shopName;
-@property (copy, nonatomic) NSString *shopId;
+@property (copy, nonatomic) NSString *typeName;
+@property (copy, nonatomic) NSString *typeId;
+@property (copy, nonatomic) NSString *sort;
 @property (assign, nonatomic) BOOL isSelect;
-
 @end

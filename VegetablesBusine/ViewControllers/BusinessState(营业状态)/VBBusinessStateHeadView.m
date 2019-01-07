@@ -9,7 +9,12 @@
 #import "VBBusinessStateHeadView.h"
 #import "VBSupportBookRequest.h"
 #import "VBSetupBusinessStateRequest.h"
-
+@interface VBBusinessStateHeadView()
+@property (weak, nonatomic) IBOutlet UIButton *statuButton1;
+@property (weak, nonatomic) IBOutlet UIButton *statuButton2;
+@property (weak, nonatomic) IBOutlet UIButton *bookingButton1;
+@property (weak, nonatomic) IBOutlet UIButton *bookingButton2;
+@end
 @implementation VBBusinessStateHeadView
 
 - (IBAction)supportBookButtonClick:(id)sender {
@@ -29,6 +34,13 @@
     [SVProgressHUD show];
     [setupBusinessStateRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD showInfoWithStatus:@"设置成功"];
+        if (type == 0) {
+            self.statuButton1.selected = NO;
+            self.statuButton2.selected = YES;
+        } else {
+            self.statuButton1.selected = YES;
+            self.statuButton2.selected = NO;
+        }
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {
@@ -40,6 +52,13 @@
     [SVProgressHUD show];
     [supportRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD showInfoWithStatus:@"设置成功"];
+        if (type == 0) {
+            self.bookingButton1.selected = NO;
+            self.bookingButton2.selected = YES;
+        } else {
+            self.bookingButton1.selected = YES;
+            self.bookingButton2.selected = NO;
+        }
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {

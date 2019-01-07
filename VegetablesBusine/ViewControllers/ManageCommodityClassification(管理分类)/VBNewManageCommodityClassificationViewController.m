@@ -27,16 +27,21 @@
     self.dataArray = [NSArray array];
     [self.dataTableView registerNib:[UINib nibWithNibName:@"VBNewManageCommodityClassificationTableViewCell" bundle:nil] forCellReuseIdentifier:@"VBNewManageCommodityClassificationTableViewCell"];
     self.dataTableView.tableFooterView = [UIView new];
-    [self requestListData];
+    [self requestListData:NO];
     
 }
-- (void)requestListData{
+- (void)requestListData:(BOOL)isEdit {
     [SVProgressHUD show];
     VBManageCommodityClassificationRequest *requset = [[VBManageCommodityClassificationRequest alloc] init];
     [requset startRequestWithArraySuccess:^(NSArray *responseArray) {
         [SVProgressHUD dismiss];
         self.dataArray = [NSArray yy_modelArrayWithClass:[VBManageCommodityClassificationModel class] json:responseArray];
         [self.dataTableView reloadData];
+        if (isEdit) {
+            if (self.freshBlock) {
+                self.freshBlock();
+            }
+        }
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {
@@ -51,7 +56,7 @@
         [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             @strongify(self)
             [SVProgressHUD dismiss];
-            [self requestListData];
+            [self requestListData:YES];
         } failModel:^(LBResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.message];
         } fail:^(YTKBaseRequest *request) {
@@ -83,7 +88,7 @@
             [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
                 @strongify(self)
                 [SVProgressHUD dismiss];
-                [self requestListData];
+                [self requestListData:YES];
             } failModel:^(LBResponseModel *errorModel) {
                 [SVProgressHUD showErrorWithStatus:errorModel.message];
             } fail:^(YTKBaseRequest *request) {
@@ -97,7 +102,7 @@
     cell.deleteClassifySubject = [RACSubject subject];
     [cell.deleteClassifySubject subscribeNext:^(id  _Nullable x) {
         @strongify(self)
-        [self requestListData];
+        [self requestListData:YES];
     }];
     return cell;
 }

@@ -24,8 +24,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *commodityName;
 @property (copy, nonatomic) NSString *commoditySubtitle;
 @property (copy, nonatomic) NSString *commodityPrice;
-@property (copy, nonatomic) NSString *commodityImageUrl;
-
+@property (copy, nonatomic) NSString *commodityImgUrl;
 @end
 
 NS_ASSUME_NONNULL_END

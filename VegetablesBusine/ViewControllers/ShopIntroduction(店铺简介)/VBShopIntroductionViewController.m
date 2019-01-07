@@ -27,6 +27,9 @@
     VBSetupStoreAddressRequest *request = [[VBSetupStoreAddressRequest alloc] initWithRemark:self.introductionTextView.text type:1];
     [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         [SVProgressHUD showInfoWithStatus:@"保存成功"];
+        if(self.textViewSubject){
+            [self.textViewSubject sendNext:self.introductionTextView.text];
+        }
         [[NSNotificationCenter defaultCenter] postNotificationName:VBUploadStoreSetupInfoNotification object:nil];
         [self.navigationController popViewControllerAnimated:YES];
     } failModel:^(LBResponseModel *errorModel) {
@@ -50,9 +53,6 @@
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    if(self.textViewSubject){
-        [self.textViewSubject sendNext:textView.text];
-    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

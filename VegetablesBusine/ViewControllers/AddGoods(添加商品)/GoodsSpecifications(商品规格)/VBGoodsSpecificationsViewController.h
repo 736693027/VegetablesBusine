@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface VBGoodsSpecificationsViewController : BaseViewController
-
+@property (nonatomic,strong)NSMutableArray *selectArray;
+@property (nonatomic,copy)void(^callBackBlock)(NSArray *);
 @end

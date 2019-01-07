@@ -10,7 +10,7 @@
 #import "VBAddGoodsInfoModel.h"
 #import <SDWebImage/UIButton+WebCache.h>
 
-@interface VBAddGoodsPhotoTableViewCell()
+@interface VBAddGoodsPhotoTableViewCell()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameTextField;
 @property (weak, nonatomic) IBOutlet UIButton *headImageButton;
 @property (weak, nonatomic) IBOutlet UITextView *subTitleTextField;
@@ -21,6 +21,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.nameTextField addTarget:self action:@selector(textFieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
+    _subTitleTextField.delegate = self;
 }
 - (void)setItemModel:(VBAddGoodsInfoModel *)itemModel{
     _itemModel = itemModel;
@@ -28,18 +29,18 @@
     self.nameTextField.text = itemModel.name;
     self.subTitleTextField.text = itemModel.subtitle;
 }
+
 - (void)textFieldDidChanged:(UITextField *)textField{
     NSString *textString = textField.text;
     if(textString.length>10){
         textString = [textString substringToIndex:10];
     }
     textField.text = textString;
+    _itemModel.name = textString;
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)textViewDidChange:(UITextView *)textView {
+    _itemModel.subtitle = textView.text;
 }
 
 @end

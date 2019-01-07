@@ -18,7 +18,7 @@
 
 - (void)setModel:(VBStoreTypeModel *)model{
     _model = model;
-    self.typeNameLabel.text = model.shopName;
+    self.typeNameLabel.text = model.typeName;
     if(model.isSelect){
         [self.stateImageView setImage:[UIImage imageNamed:@"checkbox1_checked"]];
     }else{

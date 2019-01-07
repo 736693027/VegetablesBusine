@@ -15,13 +15,18 @@
 @interface VBDeliveryInformationViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
 @property (strong, nonatomic) NSMutableArray *dataArray;
+@property (nonatomic,copy) NSString *contentInfo;
 @end
 
 @implementation VBDeliveryInformationViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _dataArray = [NSMutableArray arrayWithObjects:@"0",@"0",@"24小时0", nil];
+    if (_selectArray) {
+        _dataArray = [NSMutableArray arrayWithArray:_selectArray];
+    } else {
+         _dataArray = [@[@"",@"",@""]mutableCopy];
+    }
     NSString *cellName = NSStringFromClass([VBDeliveryInformationTableViewCell class]);
     [self.dataTableView registerNib:[UINib nibWithNibName:cellName bundle:nil] forCellReuseIdentifier:cellName];
     UIView *tableFooterView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 55)];
@@ -56,10 +61,14 @@
             [SVProgressHUD showErrorWithStatus:@"请输入送送时间"];
             return;
         }
+        self.contentInfo = [NSString stringWithFormat:@"起送格%@元、配餐时间%@分钟、送达时间%@分钟",price,cateringTime,deliveryTime];
         [SVProgressHUD show];
         VBDeliverySetupRequest *submit = [[VBDeliverySetupRequest alloc] initWithPrice:price cateringTime:cateringTime deliveryTime:deliveryTime];
         [submit startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             @strongify(self)
+            if (self.callBack) {
+                self.callBack(self.contentInfo,self.dataArray);
+            }
             [SVProgressHUD showInfoWithStatus:@"修改成功"];
             [self.navigationController popViewControllerAnimated:YES];
         } failModel:^(LBResponseModel *errorModel) {

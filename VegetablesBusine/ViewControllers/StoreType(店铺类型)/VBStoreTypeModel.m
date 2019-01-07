@@ -11,3 +11,5 @@
 @implementation VBStoreTypeModel
 
 @end
+
+

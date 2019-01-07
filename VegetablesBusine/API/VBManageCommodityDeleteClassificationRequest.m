@@ -21,7 +21,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/orders/getbyid";
+    return @"/api/store/commodityTypesDelete";
 }
 
 - (id)requestArgument {

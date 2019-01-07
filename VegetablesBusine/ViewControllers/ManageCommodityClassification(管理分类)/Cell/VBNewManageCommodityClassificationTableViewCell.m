@@ -43,6 +43,7 @@
         if(self.deleteClassifySubject){
             [self.deleteClassifySubject sendNext:@""];
         }
+        [SVProgressHUD showSuccessWithStatus:@"操作成功"];
     } failModel:^(LBResponseModel *errorModel) {
         [SVProgressHUD showErrorWithStatus:errorModel.message];
     } fail:^(YTKBaseRequest *request) {

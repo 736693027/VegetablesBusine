@@ -9,6 +9,7 @@
 #import "CommonTools.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #include <netinet/in.h>
+#import "VMLoginUserInfoModel.h"
 #import <CommonCrypto/CommonDigest.h>
 
 @implementation CommonTools
@@ -272,4 +273,12 @@
     NSDate *otherDate = [dateFormatter dateFromString:otherDateString];
     return [date compare:otherDate];
 }
+
++ (NSString *)fetchShopID {
+    NSString *homePath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask, YES) objectAtIndex:0];
+    NSString *loginPath = [homePath stringByAppendingPathComponent:@"login.data"];
+    VMLoginUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:loginPath];
+    return model.shopID;
+}
+
 @end

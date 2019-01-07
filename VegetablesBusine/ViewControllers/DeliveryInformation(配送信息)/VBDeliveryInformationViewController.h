@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface VBDeliveryInformationViewController : BaseViewController
-
+@property (nonatomic,copy)void(^callBack)(NSString *, NSArray *);
+@property (nonatomic,strong)NSArray *selectArray;
 @end

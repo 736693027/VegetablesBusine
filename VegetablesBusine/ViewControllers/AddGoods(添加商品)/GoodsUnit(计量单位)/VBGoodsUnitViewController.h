@@ -9,5 +9,11 @@
 #import "BaseViewController.h"
 
 @interface VBGoodsUnitViewController : BaseViewController
+@property (nonatomic,copy)void(^selectItemBlock)(NSString *, NSString *);
+@end
 
+
+@interface VBGoodsUnitModel: NSObject
+@property (copy ,nonatomic) NSString *unitId;
+@property (copy ,nonatomic) NSString *unitName;
 @end

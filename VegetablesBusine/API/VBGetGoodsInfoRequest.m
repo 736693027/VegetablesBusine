@@ -27,7 +27,7 @@
 
 - (id)requestArgument {
     return @{
-             @"commodityId":OBJC(_commodityId),
+             @"commodityID":OBJC(_commodityId),
              @"sessionKey":OBJC(self.sessionKey),
              };
 }

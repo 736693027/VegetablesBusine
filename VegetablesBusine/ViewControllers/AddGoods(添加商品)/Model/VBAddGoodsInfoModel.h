@@ -17,11 +17,12 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy ,nonatomic) NSString *imageUrl;
 @property (copy ,nonatomic) NSString *name;
 @property (copy ,nonatomic) NSString *subtitle;
+@property (copy, nonatomic) NSString *standardName;
 @property (copy ,nonatomic) NSString *price;
 @property (copy ,nonatomic) NSString *inventory;
 @property (copy ,nonatomic) NSString *foodContainerPrice;
+@property (copy ,nonatomic) NSString *unitName;
 @property (copy ,nonatomic) NSString *uniti;
-@property (copy ,nonatomic) NSString *unitiID;
 @property (copy ,nonatomic) NSString *commodityID;
 @property (copy ,nonatomic) NSArray *standards;
 

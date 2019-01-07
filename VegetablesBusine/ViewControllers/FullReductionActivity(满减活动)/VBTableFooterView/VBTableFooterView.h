@@ -10,5 +10,6 @@
 
 @interface VBTableFooterView : UIView
 @property (weak, nonatomic) IBOutlet UIButton *submitButton;
+@property (copy, nonatomic) void(^btnClickBlock)(void);
 
 @end

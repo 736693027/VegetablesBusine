@@ -23,7 +23,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (copy, nonatomic) NSString *standardsID;
 @property (copy, nonatomic) NSString *inventory; //库存
 @property (copy, nonatomic) NSString *price; //价格
-
+@property (assign, nonatomic) BOOL isSelected;
 @end
 
 NS_ASSUME_NONNULL_END
