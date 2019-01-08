@@ -11,6 +11,7 @@
 #include <netinet/in.h>
 #import "VMLoginUserInfoModel.h"
 #import <CommonCrypto/CommonDigest.h>
+#import <AVFoundation/AVFoundation.h>
 
 @implementation CommonTools
 
@@ -279,6 +280,66 @@
     NSString *loginPath = [homePath stringByAppendingPathComponent:@"login.data"];
     VMLoginUserInfoModel *model = [NSKeyedUnarchiver unarchiveObjectWithFile:loginPath];
     return model.shopID;
+}
+//相机权限
++ (void)allowCameraStateBlock:(void (^)(BOOL result))stateBlock{
+    AVAuthorizationStatus status = [AVCaptureDevice authorizationStatusForMediaType:AVMediaTypeVideo];
+    switch (status) {
+        case AVAuthorizationStatusNotDetermined:{
+            // 许可对话没有出现，发起授权许可
+            
+            [AVCaptureDevice requestAccessForMediaType:AVMediaTypeVideo completionHandler:^(BOOL granted) {
+                dispatch_async(dispatch_get_main_queue(), ^{
+                    if (granted) {
+                        //第一次用户接受
+                        if(stateBlock){
+                            stateBlock(YES);
+                        }
+                    }else{
+                        //用户拒绝
+                        if(stateBlock){
+                            stateBlock(NO);
+                        }
+                    }
+                });
+            }];
+            break;
+        }
+        case AVAuthorizationStatusAuthorized:{
+            // 已经开启授权，可继续
+            if(stateBlock){
+                stateBlock(YES);
+            }
+            break;
+        }
+        case AVAuthorizationStatusDenied:
+        case AVAuthorizationStatusRestricted:
+            // 用户明确地拒绝授权，或者相机设备无法访问
+            if(stateBlock){
+                stateBlock(NO);
+            }
+            break;
+        default:
+            break;
+    }
+    
+}
++ (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont*)font text:(NSString*)text {
+    CGSize resultSize;
+    //    if (SYSTEM_VERSION_LESS_THAN(@"7.0")) {
+    //        resultSize = [text sizeWithFont:font
+    //                      constrainedToSize:size
+    //                          lineBreakMode:NSLineBreakByTruncatingTail];
+    //    } else {
+    NSDictionary *attrs = [NSDictionary dictionaryWithObjectsAndKeys:font, NSFontAttributeName, nil];
+    CGRect rect = [text boundingRectWithSize:size
+                                     options:(NSStringDrawingUsesLineFragmentOrigin|NSStringDrawingUsesFontLeading)
+                                  attributes:attrs
+                                     context:nil];
+    resultSize = rect.size;
+    resultSize = CGSizeMake(ceil(resultSize.width), ceil(resultSize.height));
+    //    }
+    return resultSize;
 }
 
 @end

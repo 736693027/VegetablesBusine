@@ -38,6 +38,7 @@
         [self requestListData];
         [weakSelf.dataTableView.mj_footer endRefreshing];
     }];
+    [self.dataTableView.mj_header beginRefreshing];
 }
 - (void)requestListData {
     [SVProgressHUD show];

@@ -29,6 +29,7 @@
 @property (strong, nonatomic) NSMutableArray *secondSecitonTitlesArray;
 @property (strong, nonatomic) NSMutableArray *secondSecitonPlaceHolderArray;
 @property (strong, nonatomic) VBAddGoodsInfoModel *dataItemModel;
+@property (strong, nonatomic) UIImage *uploadImage;
 @end
 
 @implementation VBAddGoodsViewController
@@ -94,6 +95,13 @@
     if(indexPath.section == 0){
         VBAddGoodsPhotoTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBAddGoodsPhotoTableViewCell"];
         cell.itemModel = self.dataItemModel;
+        cell.viewController = self;
+        @weakify(self)
+        cell.uploadNewImageSubject = [RACSubject subject];
+        [cell.uploadNewImageSubject subscribeNext:^(UIImage *  _Nullable uploadImage) {
+            @strongify(self)
+            self.uploadImage = uploadImage;
+        }];
         return cell;
     }else if (indexPath.section == 2){
         if(indexPath.row == 0){

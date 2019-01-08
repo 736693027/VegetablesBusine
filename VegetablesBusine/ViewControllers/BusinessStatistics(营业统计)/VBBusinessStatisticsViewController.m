@@ -34,6 +34,7 @@
             VBBusinessStatisticsDataNormalViewController *statisticsDataNormalVC = [[VBBusinessStatisticsDataNormalViewController alloc] init];
             [statisticsDataNormalVC didMoveToParentViewController:self];
             statisticsDataNormalVC.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height);
+            statisticsDataNormalVC.type = i+1;
             [self.mainScrollView addSubview:statisticsDataNormalVC.view];
             [self addChildViewController:statisticsDataNormalVC];
         }

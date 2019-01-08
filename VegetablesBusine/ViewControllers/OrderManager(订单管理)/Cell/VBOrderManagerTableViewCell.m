@@ -46,14 +46,16 @@
     _itemModel = itemModel;
     [self.commodityListView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
     self.commodityListViewHeight.constant = itemModel.listData.count*75;
+    NSInteger index = 0;
     for(VBCommodityItemModel *commodityModel in itemModel.listData){
         VBCommodityListItemView *commodityItemView = [[[NSBundle mainBundle] loadNibNamed:@"VBCommodityListItemView" owner:self options:nil] lastObject];
-        commodityItemView.frame = CGRectMake(0, 0, SCREEN_WIDTH-20, 75);
+        commodityItemView.frame = CGRectMake(0, index*75, SCREEN_WIDTH-20, 75);
         commodityItemView.commodityName.text = commodityModel.name;
         commodityItemView.priceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.unitPrice];
         commodityItemView.countLabel.text = [@"x" stringByAppendingFormat:@"%@",commodityModel.count];
         commodityItemView.totalPriceLabel.text = [@"¥" stringByAppendingFormat:@"%@",commodityModel.itemTotalPrice];
         [self.commodityListView addSubview:commodityItemView];
+        index++;
     }
     self.orderTitleLabel.attributedText = [self setString:[NSString stringWithFormat:@"#%@ 立即配送",itemModel.orderCount] beginIndex:itemModel.orderCount.length+2 noHeightColor:[CommonTools changeColor:@"0x666666"]];
     self.orderOwnerLabel.text = itemModel.orderOwer;

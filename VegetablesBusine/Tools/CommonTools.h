@@ -67,4 +67,8 @@
 
 + (NSString *)fetchShopID;
 
++ (void)allowCameraStateBlock:(void (^)(BOOL result))stateBlock;
+
++ (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont*)font text:(NSString*)text;
+
 @end

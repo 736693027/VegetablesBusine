@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -29,10 +29,10 @@
                     <rect key="frame" x="27.5" y="161.5" width="320" height="55"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入手机号" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZdU-pD-g92">
-                            <rect key="frame" x="-0.5" y="-0.5" width="320" height="54.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                            <textInputTraits key="textInputTraits"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KU8-7d-Vc6">
                             <rect key="frame" x="0.0" y="54.5" width="320" height="0.5"/>
@@ -58,13 +58,13 @@
                     <rect key="frame" x="27.5" y="216.5" width="320" height="55"/>
                     <subviews>
                         <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入登录密码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yKK-l5-03G">
-                            <rect key="frame" x="-0.5" y="-0.5" width="320" height="54.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="54.5"/>
                             <nil key="textColor"/>
                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                             <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                         </textField>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcX-JK-9e7">
-                            <rect key="frame" x="-0.5" y="54.5" width="320" height="0.5"/>
+                            <rect key="frame" x="0.0" y="54.5" width="320" height="0.5"/>
                             <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="0.5" id="gbw-ss-MVB"/>
@@ -113,7 +113,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="I1H-tw-CDA">
-                    <rect key="frame" x="289" y="384" width="58" height="29"/>
+                    <rect key="frame" x="289.5" y="384" width="58" height="29"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <state key="normal" title="忘记密码">
                         <color key="titleColor" red="0.1450980392" green="0.79215686269999996" blue="0.52549019610000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

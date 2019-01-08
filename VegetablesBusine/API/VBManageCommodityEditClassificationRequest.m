@@ -8,9 +8,12 @@
 
 #import "VBManageCommodityEditClassificationRequest.h"
 #import "VBAddGoodsInfoModel.h"
+#import "AFURLRequestSerialization.h"
+
 @implementation VBManageCommodityEditClassificationRequest
 {
     VBAddGoodsInfoModel *innerModel;
+    UIImage *uploadImage;
 }
 
 - (instancetype)initWithGoodsInfoModel:(VBAddGoodsInfoModel *)model{
@@ -24,6 +27,17 @@
     return @"/api/store/commodityEdit";
 }
 
+- (AFConstructingBlock)constructingBodyBlock{
+    @weakify(self)
+    return ^(id<AFMultipartFormData>formData){
+        @strongify(self)
+        NSData *imageData = UIImagePNGRepresentation(self->uploadImage);
+        [formData appendPartWithFileData:imageData
+                                    name:@"file"
+                                fileName:@"fileName"
+                                mimeType:@"image/png"];
+    };
+}
 - (id)requestArgument {
     NSString *standardsString = [innerModel.standards componentsJoinedByString:@","];
     NSDictionary *dic = @{

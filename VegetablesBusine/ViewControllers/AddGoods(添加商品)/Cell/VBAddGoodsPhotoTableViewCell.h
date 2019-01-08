@@ -13,4 +13,8 @@
 
 @property (strong, nonatomic) VBAddGoodsInfoModel *itemModel;
 
+@property (weak, nonatomic) UIViewController *viewController;
+
+@property (strong ,nonatomic) RACSubject *uploadNewImageSubject;
+
 @end
