@@ -146,6 +146,7 @@
                                  if(self.connectSuccessSubject){
                                      [self.connectSuccessSubject sendNext:@""];
                                  }
+                                 [self.navigationController popViewControllerAnimated:YES];
                              }
                              break;
                          }

@@ -1429,12 +1429,12 @@
 		18D21ED521E47AE300F5DA95 /* HLPrinter */ = {
 			isa = PBXGroup;
 			children = (
+				18D21EDB21E47AE300F5DA95 /* HLPrinter.h */,
 				18D21ED621E47AE300F5DA95 /* HLPrinter.m */,
+				18D21ED921E47AE300F5DA95 /* UIWebView+UIImage.h */,
 				18D21ED721E47AE300F5DA95 /* UIWebView+UIImage.m */,
 				18D21ED821E47AE300F5DA95 /* UIImage+Bitmap.h */,
-				18D21ED921E47AE300F5DA95 /* UIWebView+UIImage.h */,
 				18D21EDA21E47AE300F5DA95 /* UIImage+Bitmap.m */,
-				18D21EDB21E47AE300F5DA95 /* HLPrinter.h */,
 			);
 			name = HLPrinter;
 			path = "../../../Downloads/HLBluetoothDemo-master/HLBluetoothDemo/HLPrinter";
