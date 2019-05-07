@@ -10,4 +10,6 @@
 
 @interface VBPrinterSetupTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UILabel *stateLabel;
+
 @end

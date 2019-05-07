@@ -8,6 +8,7 @@
 
 #import "VBPrinterSetupViewController.h"
 #import "VBPrinterSetupTableViewCell.h"
+#import "VBBluetoothListViewController.h"
 
 @interface VBPrinterSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -35,7 +36,13 @@
 
 #pragma mark tableview delegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    
+    VBBluetoothListViewController *listVC = [[VBBluetoothListViewController alloc] init];
+    listVC.connectSuccessSubject = [RACSubject subject];
+    [listVC.connectSuccessSubject subscribeNext:^(id  _Nullable x) {
+        VBPrinterSetupTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+        cell.stateLabel.text = @"已连接";
+    }];
+    [self.navigationController pushViewController:listVC animated:YES];
 }
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 50.f;

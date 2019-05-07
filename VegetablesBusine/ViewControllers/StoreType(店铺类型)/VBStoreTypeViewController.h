@@ -9,5 +9,6 @@
 #import "BaseViewController.h"
 
 @interface VBStoreTypeViewController : BaseViewController
-
+@property (nonatomic,copy)void(^selectItemBlock)(NSString *);
+@property (nonatomic,copy)NSString *selectedTypeName;
 @end

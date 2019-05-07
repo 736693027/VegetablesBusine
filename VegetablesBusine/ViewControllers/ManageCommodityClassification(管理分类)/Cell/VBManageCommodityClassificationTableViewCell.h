@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBManageCommodityClassificationModel;
 
 @interface VBManageCommodityClassificationTableViewCell : UITableViewCell
+
+@property (strong ,nonatomic) VBManageCommodityClassificationModel *itemModel;
 
 @end

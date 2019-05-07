@@ -13,4 +13,6 @@
 
 @property (strong, nonatomic) RACSubject *activityTypeSubject;
 
+@property (assign, nonatomic) NSInteger selectIndex;
+
 @end

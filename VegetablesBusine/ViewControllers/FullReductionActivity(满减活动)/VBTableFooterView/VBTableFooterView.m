@@ -17,5 +17,10 @@
     // Drawing code
 }
 */
+- (IBAction)btnClickAction:(id)sender {
+    if (self.btnClickBlock) {
+        self.btnClickBlock();
+    }
+}
 
 @end

@@ -36,6 +36,7 @@
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*3,self.mainScrollview.frame.size.height-64);
     for(NSInteger i=0;i<3;i++){
         VBMerchantSettlementDataViewController *orderManagerTable = [[VBMerchantSettlementDataViewController alloc] init];
+        orderManagerTable.tabNumber = i+1;
         orderManagerTable.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollview.frame.size.height);
         [self addChildViewController:orderManagerTable];
         [_mainScrollview addSubview:orderManagerTable.view];

@@ -64,4 +64,11 @@
  @return 对比结果
  */
 + (NSComparisonResult)compareDate:(NSString *)dateString withOtherDate:(NSString *)otherDateString;
+
++ (NSString *)fetchShopID;
+
++ (void)allowCameraStateBlock:(void (^)(BOOL result))stateBlock;
+
++ (CGSize)boundingRectWithSize:(CGSize)size font:(UIFont*)font text:(NSString*)text;
+
 @end

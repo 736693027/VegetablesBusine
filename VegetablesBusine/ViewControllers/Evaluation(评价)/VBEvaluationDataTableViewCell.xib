@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,31 +35,40 @@
                                 </userDefinedRuntimeAttributes>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="测试" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FbZ-nL-LsW">
-                                <rect key="frame" x="38" y="14" width="22.5" height="13.5"/>
+                                <rect key="frame" x="38" y="13.5" width="22.5" height="13.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="13.5" id="4rd-3J-sTy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-09-09" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mc4-H3-OrL">
-                                <rect key="frame" x="68" y="15.5" width="60" height="12"/>
+                                <rect key="frame" x="68.5" y="15" width="60" height="12"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="12" id="qK9-WV-3Nz"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="商品：地瓜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-0W-Y8z">
-                                <rect key="frame" x="10" y="38" width="51.5" height="12"/>
+                                <rect key="frame" x="10" y="37.5" width="51.5" height="12.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="地瓜质量很好" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgH-fb-3xy">
-                                <rect key="frame" x="10" y="60" width="74" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="地瓜质量很好" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QgH-fb-3xy">
+                                <rect key="frame" x="10" y="60" width="295" height="14.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="14.5" id="zPe-bN-CI7"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fBF-GK-aQl">
-                                <rect key="frame" x="69.5" y="36.5" width="242.5" height="15"/>
+                                <rect key="frame" x="69.5" y="36" width="242.5" height="15"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="15" id="BgL-mF-tdq"/>
@@ -81,6 +90,9 @@
                                         <integer key="value" value="3"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="replyButtonClick:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Lji-uZ-4W0"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -92,6 +104,7 @@
                             <constraint firstItem="f2V-l1-abK" firstAttribute="top" secondItem="Vqg-iE-BWi" secondAttribute="top" constant="10" id="N1Z-ev-3FL"/>
                             <constraint firstItem="QgH-fb-3xy" firstAttribute="top" secondItem="Xdh-0W-Y8z" secondAttribute="bottom" constant="10" id="N5b-fI-YMW"/>
                             <constraint firstItem="mc4-H3-OrL" firstAttribute="leading" secondItem="FbZ-nL-LsW" secondAttribute="trailing" constant="8" id="PpK-2W-gVQ"/>
+                            <constraint firstAttribute="trailing" secondItem="QgH-fb-3xy" secondAttribute="trailing" constant="15" id="Q69-1b-yHJ"/>
                             <constraint firstItem="FbZ-nL-LsW" firstAttribute="leading" secondItem="f2V-l1-abK" secondAttribute="trailing" constant="8" id="Q7M-J0-YvQ"/>
                             <constraint firstAttribute="bottom" secondItem="QgH-fb-3xy" secondAttribute="bottom" constant="9" id="WmO-Q6-fbQ"/>
                             <constraint firstItem="FbZ-nL-LsW" firstAttribute="centerY" secondItem="f2V-l1-abK" secondAttribute="centerY" id="bNy-yD-X9Z"/>
@@ -114,9 +127,14 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
             <connections>
+                <outlet property="commodityNameLabel" destination="Xdh-0W-Y8z" id="Kbw-Tq-ecJ"/>
+                <outlet property="contentLabel" destination="QgH-fb-3xy" id="o8C-Pb-noB"/>
+                <outlet property="dateTimeLabel" destination="mc4-H3-OrL" id="Hea-4a-5S4"/>
+                <outlet property="headImageView" destination="f2V-l1-abK" id="CMh-K8-hLI"/>
+                <outlet property="senderNameLabel" destination="FbZ-nL-LsW" id="SVm-RZ-PIP"/>
                 <outlet property="starRateView" destination="fBF-GK-aQl" id="oXX-0u-fDF"/>
             </connections>
-            <point key="canvasLocation" x="-370" y="-105"/>
+            <point key="canvasLocation" x="-152" y="60"/>
         </tableViewCell>
     </objects>
 </document>

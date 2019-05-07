@@ -28,7 +28,10 @@
         [self.activityTypeSubject sendNext:index];
     }
 }
-
+- (void)setSelectIndex:(NSInteger)selectIndex{
+    UIButton *button = (UIButton *)[self.contentView viewWithTag:(selectIndex-1)+100];
+    button.selected = YES;
+}
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];
 

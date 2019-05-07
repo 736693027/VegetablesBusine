@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VBDiscountActivityTableViewCell : UITableViewCell
+@interface VBDiscountActivityTableViewCell : UITableViewCell<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UILabel *unitLabel;
-
+@property (weak, nonatomic) IBOutlet UITextField *inputTextField;
+@property (strong, nonatomic) RACSubject *inputResultSubject;
 @end

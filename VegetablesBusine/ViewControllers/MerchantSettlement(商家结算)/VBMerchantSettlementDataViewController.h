@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseTableViewController.h"
+@interface VBMerchantSettlementDataViewController : BaseTableViewController
 
-@interface VBMerchantSettlementDataViewController : UIViewController
+@property (nonatomic,assign)NSInteger tabNumber;
 
 @end

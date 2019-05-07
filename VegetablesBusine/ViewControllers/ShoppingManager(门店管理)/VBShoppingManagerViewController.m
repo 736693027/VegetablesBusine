@@ -9,11 +9,15 @@
 #import "VBShoppingManagerViewController.h"
 #import "VBShoppingManagerMenuItemView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBShoppingManangerDetailAPI.h"
 
 CGFloat itemViewHeight = 110;
 
 @interface VBShoppingManagerViewController ()
 @property (weak, nonatomic) IBOutlet UIView *itemContentView;
+@property (weak, nonatomic) IBOutlet UILabel *currentDayBusinessLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalCountLabel;
+@property (weak, nonatomic) IBOutlet UILabel *accountBalanceLabel;
 
 @end
 
@@ -21,6 +25,17 @@ CGFloat itemViewHeight = 110;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    VBShoppingManangerDetailAPI *requestAPI = [[VBShoppingManangerDetailAPI alloc] init];
+    [requestAPI startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        self.currentDayBusinessLabel.text = [responseDic objectForKey:@"currentDayBusiness"];
+        self.totalCountLabel.text = [responseDic objectForKey:@"totalCount"];
+        self.accountBalanceLabel.text = [responseDic objectForKey:@"accountBalance"];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"门店信息初始化失败"];
+    }];
 
     NSArray *titlesArray = @[@"商品管理",@"商家结算",@"店铺统计",@"留言评价",@"打印机",@"促销管理",@"闪惠订单",@""];
     NSArray *imagesArray = @[@"productManagex",@"bigCalculatorx",@"productCountx",@"evaluatex",@"printSettingx",@"promotionx",@"shanhuiOrderx",@""];

@@ -7,11 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-
+@class VBManageCommodityClassificationModel;
 
 @interface VBAddCommodityClassificationView : UIView
 
 @property (weak, nonatomic) IBOutlet UIView *contentView;
+@property (strong, nonatomic) VBManageCommodityClassificationModel *itemModel;
 
 + (instancetype)alterViewWithResult:(void(^)(NSString *name, NSString *number))resultBlock;
 

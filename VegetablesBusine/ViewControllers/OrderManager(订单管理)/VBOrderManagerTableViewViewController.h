@@ -12,4 +12,5 @@
 @interface VBOrderManagerTableViewViewController : BaseTableViewController
 
 @property (nonatomic) VBOrderManagerTableViewStyle viewStyle;
+@property (copy, nonatomic) NSString *searchDateTime;
 @end

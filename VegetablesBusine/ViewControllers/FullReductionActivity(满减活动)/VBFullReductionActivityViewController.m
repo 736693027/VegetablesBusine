@@ -15,12 +15,16 @@
 #import "VBActivityDateTimeEnumFile.h"
 #import "VBTableFooterView.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBAddNewActivetyRequest.h"
+#import "VBEditorActivityRequest.h"
+#import "VBEditiActivityModel.h"
 
 @interface VBFullReductionActivityViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property (assign, nonatomic) NSInteger totalActivityRulesCount;
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
 @property (assign, nonatomic) VBActivityDateTimeType activityType;
-
+@property (strong, nonatomic) NSMutableDictionary *parameter;
+@property (strong, nonatomic) VBEditiActivityModel *editorModel;
 @end
 
 @implementation VBFullReductionActivityViewController
@@ -35,7 +39,17 @@
 }
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    self.parameter = [NSMutableDictionary dictionary];
+    [self.parameter setObject:@1 forKey:@"model"];
+    [self.parameter setObject:@"满减活动" forKey:@"title"];
+    NSMutableDictionary *ruleDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"",@"amount",@"",@"text", nil];
+    NSMutableArray *rulesArray = [NSMutableArray arrayWithObject:ruleDict];
+    [self.parameter setObject:rulesArray forKey:@"ruler"];
+    if(self.activityId){
+        [self.parameter setObject:self.activityId forKey:@"activeId"];
+    }else{
+        [self.parameter setObject:@"0" forKey:@"activeId"];
+    }
     self.title = @"满减活动";
     [navRrightBtn setTitle:@"创建必读" forState:UIControlStateNormal];
     navRrightBtn.titleLabel.font = [UIFont systemFontOfSize:12];
@@ -50,7 +64,50 @@
     
     VBTableFooterView *tableFooterView = [[[NSBundle mainBundle] loadNibNamed:@"VBTableFooterView" owner:self options:nil] lastObject];
     tableFooterView.frame = CGRectMake(0, 0, SCREEN_WIDTH, 80);
+    @weakify(self)
+    [[tableFooterView.submitButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(__kindof UIControl * _Nullable x) {
+        @strongify(self);
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+            [self.view endEditing:YES];
+            VBAddNewActivetyRequest *addRequest = [[VBAddNewActivetyRequest alloc] initWithRuleParameter:[self.parameter modelToJSONString]];
+            [addRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+                [SVProgressHUD showInfoWithStatus:@"添加成功"];
+                [self.navigationController popViewControllerAnimated:YES];
+            } failModel:^(LBResponseModel *errorModel) {
+                [SVProgressHUD showErrorWithStatus:errorModel.message];
+            } fail:^(YTKBaseRequest *request) {
+                [SVProgressHUD showErrorWithStatus:@"添加失败"];
+            }];
+        });
+    }];
     self.dataTableView.tableFooterView = tableFooterView;
+    
+    if(self.activityId){
+        @weakify(self)
+        VBEditorActivityRequest *editorRequest = [[VBEditorActivityRequest alloc] initWithActivityId:self.activityId];
+        [editorRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            @strongify(self)
+            self.editorModel = [VBEditiActivityModel yy_modelWithJSON:responseDic];
+            self.activityType = self.editorModel.activeType.integerValue;
+             [self.parameter setObject:@(self.editorModel.activeType.integerValue) forKey:@"activeType"];
+            self.totalActivityRulesCount = self.editorModel.ruler.count;
+            [self.parameter setObject:self.editorModel.days forKey:@"days"];
+            [self.parameter setObject:self.editorModel.startDateTime forKey:@"startDateTime"];
+            [self.parameter setObject:self.editorModel.endDateTime forKey:@"endDateTime"];
+            NSMutableArray *rulesArray = [NSMutableArray array];
+            for(NSDictionary *dict in self.editorModel.ruler){
+                NSMutableDictionary *ruleDict = [NSMutableDictionary dictionary];
+                [ruleDict setObject:dict.allKeys.firstObject forKey:@"amount"];
+                [ruleDict setObject:dict.allValues.firstObject forKey:@"text"];
+                [rulesArray addObject:ruleDict];
+            }
+            [self.parameter setObject:rulesArray forKey:@"ruler"];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"满减活动获取失败"];
+        }];
+    }
 }
 
 #pragma mark tableview datasource
@@ -75,9 +132,10 @@
         }else if(indexPath.row == 1){
             VBActivityDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityDateTimeTableViewCell"];
             cell.activityTypeSubject = [RACSubject subject];
-            
+            cell.selectIndex = self.editorModel.activeType.integerValue;
             [cell.activityTypeSubject subscribeNext:^(NSNumber * _Nullable index) {
                 @strongify(self)
+                [self.parameter setObject:@(index.integerValue+1) forKey:@"activeType"];
                 switch (index.integerValue) {
                     case 0:
                         self.activityType = VBActivityDateTimeDefault;
@@ -97,19 +155,65 @@
         }else{
             if(self.activityType == VBActivityDateTimeEveryWeek){
                 VBActivieSelectWeekTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectWeekTableViewCell"];
+                cell.selectWeekSubject = [RACSubject subject];
+                cell.selectWeekResult = self.editorModel.days;
+                @weakify(self);
+                [cell.selectWeekSubject subscribeNext:^(NSString *  _Nullable weekString) {
+                    @strongify(self);
+                    [self.parameter setObject:weekString forKey:@"days"];
+                }];
                 return cell;
             }else{
                 VBActivieSelectDateTimeTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivieSelectDateTimeTableViewCell"];
+                cell.startDateTimeSubject = [RACSubject subject];
+                [cell.startDateTimeButton setTitle:self.editorModel.startDateTime forState:UIControlStateNormal];
+                @weakify(self);
+                [cell.startDateTimeSubject subscribeNext:^(NSString *  _Nullable startDateTime) {
+                    @strongify(self);
+                    [self.parameter setObject:startDateTime forKey:@"startDateTime"];
+                }];
+                cell.endDateTimeSubject = [RACSubject subject];
+                [cell.endDateTimeButton setTitle:self.editorModel.endDateTime forState:UIControlStateNormal];
+                [cell.endDateTimeSubject subscribeNext:^(NSString *  _Nullable endDateTime) {
+                    @strongify(self);
+                    [self.parameter setObject:endDateTime forKey:@"endDateTime"];
+                }];
                 return cell;
             }
         }
     }else{
         VBActivityRulesTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityRulesTableViewCell"];
         cell.rulesSubject = [RACSubject subject];
-        [cell.rulesSubject subscribeNext:^(id  _Nullable x) {
+        [cell.rulesSubject subscribeNext:^(NSIndexPath * _Nullable indexPath) {
             @strongify(self)
-            self.totalActivityRulesCount++;
+            if(indexPath.row==0){
+                if(self.totalActivityRulesCount == 4){
+                    [SVProgressHUD showInfoWithStatus:@"最多加4条满减优惠"];
+                    return ;
+                }
+                self.totalActivityRulesCount++;
+                NSMutableDictionary *ruleDict = [NSMutableDictionary dictionaryWithObjectsAndKeys:@"amount",@"",@"text",@"", nil];
+                NSMutableArray *rulesArray = [self.parameter objectForKey:@"ruler"];
+                [rulesArray addObject:ruleDict];
+                [self.parameter setObject:rulesArray forKey:@"ruler"];
+            }else{
+                NSMutableArray *rulesArray = [self.parameter objectForKey:@"ruler"];
+                [rulesArray removeObjectAtIndex:indexPath.row];
+                self.totalActivityRulesCount--;
+            }
             [self.dataTableView reloadData];
+        }];
+        cell.indexPath = indexPath;
+        cell.rulesDataSubject = [RACSubject subject];
+        if(indexPath.row<self.editorModel.ruler.count){
+            NSDictionary *dict = [self.editorModel.ruler objectAtIndex:indexPath.row];
+            cell.textField1.text = dict.allKeys.firstObject;
+            cell.textField2.text = dict.allKeys.firstObject;
+        }
+        [cell.rulesDataSubject subscribeNext:^(NSDictionary *  _Nullable dict) {
+            NSMutableArray *rulesArray = [self.parameter objectForKey:@"ruler"];
+            [rulesArray removeObjectAtIndex:indexPath.row];
+            [rulesArray addObject:dict];
         }];
         return cell;
     }

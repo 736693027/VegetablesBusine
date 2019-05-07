@@ -10,4 +10,6 @@
 
 @interface VBWaitDealTableViewController : BaseTableViewController
 
+@property (assign, nonatomic) NSInteger tableTag;
+
 @end

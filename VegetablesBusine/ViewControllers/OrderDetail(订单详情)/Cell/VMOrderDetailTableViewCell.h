@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBCommodityItemModel;
 
 @interface VMOrderDetailTableViewCell : UITableViewCell
+
+@property (strong ,nonatomic) VBCommodityItemModel *itemModel;
 
 @end

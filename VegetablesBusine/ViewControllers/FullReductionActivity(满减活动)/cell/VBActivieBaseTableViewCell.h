@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VBActivieBaseTableViewCell : UITableViewCell
+@property (weak, nonatomic) IBOutlet UILabel *activityTypeLabel;
 
 @end

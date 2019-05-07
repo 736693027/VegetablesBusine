@@ -9,8 +9,13 @@
 #import <UIKit/UIKit.h>
 @class RACSubject;
 
-@interface VBActivityRulesTableViewCell : UITableViewCell
+@interface VBActivityRulesTableViewCell : UITableViewCell<UITextFieldDelegate>
+@property (weak, nonatomic) IBOutlet UIButton *editingButton;
+@property (weak, nonatomic) IBOutlet UITextField *textField1;
+@property (weak, nonatomic) IBOutlet UITextField *textField2;
 
 @property (strong, nonatomic) RACSubject *rulesSubject;
+@property (strong, nonatomic) RACSubject *rulesDataSubject;
+@property (strong, nonatomic) NSIndexPath *indexPath;
 
 @end

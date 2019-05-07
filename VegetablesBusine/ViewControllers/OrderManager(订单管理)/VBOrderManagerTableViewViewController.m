@@ -12,6 +12,9 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "VBAlterView.h"
 #import "VBOrderDetailViewController.h"
+#import "VBOrderManagerListRequest.h"
+#import "VBWaitDealListModel.h"
+#import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 
 @interface VBOrderManagerTableViewViewController ()
 
@@ -38,25 +41,58 @@
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }
+- (void)requestListData{
+    [SVProgressHUD show];
+    VBOrderManagerListRequest *dataRequest = [[VBOrderManagerListRequest alloc] initWithCurrentPage:self.currentPage startDate:self.searchDateTime tab:(NSInteger)self.viewStyle];
+    [dataRequest startRequestWithDicSuccess:^(NSDictionary *responseDic){
+        [SVProgressHUD dismiss];
+        if(self.currentPage == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemsArray = [responseDic objectForKey:@"rows"];
+        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBWaitDealListModel class] json:itemsArray]];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
+}
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBOrderManagerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBOrderManagerTableViewCell"];
+    VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
     cell.cellType = self.viewStyle;
     return cell;
 }
 
 #pragma mark tableview delegate
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
-    return 415;
+    @weakify(self)
+    return [tableView fd_heightForCellWithIdentifier:@"VBOrderManagerTableViewCell" configuration:^(VBOrderManagerTableViewCell *cell) {
+        @strongify(self)
+        VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+        cell.itemModel = itemModel;
+        cell.cellType = self.viewStyle;
+    }];
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     VBOrderDetailViewController *detailVC = [[VBOrderDetailViewController alloc] init];
     detailVC.hidesBottomBarWhenPushed = YES;
-    detailVC.orderType = VBOrderDetailTypeFinished;
+    detailVC.orderType = VBOrderDetailTypeOrderManager;
+    VBWaitDealListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    detailVC.orderIdString = itemModel.orderId;
+    detailVC.uploadDataSource = [RACSubject subject];
+    @weakify(self)
+    [detailVC.uploadDataSource subscribeNext:^(id  _Nullable x) {
+        @strongify(self);
+        [self.dataTableView.mj_header beginRefreshing];
+    }];
     [self.navigationController pushViewController:detailVC animated:YES];
 }
 - (void)didReceiveMemoryWarning {

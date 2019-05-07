@@ -8,5 +8,5 @@
 #import "BaseViewController.h"
 
 @interface VBNewManageCommodityClassificationViewController : BaseViewController
-
+@property(nonatomic,copy)void(^freshBlock)(void);
 @end

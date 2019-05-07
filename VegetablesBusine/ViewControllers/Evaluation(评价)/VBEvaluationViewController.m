@@ -31,6 +31,7 @@
     for(NSInteger i=0;i<4;i++){
         VBEvaluationDataViewController *evaluationDataVC = [[VBEvaluationDataViewController alloc] init];
         evaluationDataVC.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.height);
+        evaluationDataVC.tabInterge = i+1;
         [self.mainScrollView addSubview:evaluationDataVC.view];
         [self addChildViewController:evaluationDataVC];
     }
@@ -64,14 +65,6 @@
         self.currentIndex = index;
     }
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

@@ -11,6 +11,11 @@
 #import "VBActivityListDataTableViewCell.h"
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "VBAlterView.h"
+#import "VBGetActivityListRequest.h"
+#import "VBActivityListModel.h"
+#import "VBGivingActivityViewController.h"
+#import "VBDiscountActivityViewController.h"
+#import "VBFullReductionActivityViewController.h"
 
 @interface VBActivityListDataViewController ()
 
@@ -36,12 +41,37 @@
     tableFooterView.backgroundColor = [UIColor clearColor];
     self.dataTableView.tableFooterView = tableFooterView;
 }
+- (void)requestListData {
+    [SVProgressHUD show];
+    VBGetActivityListRequest *dataRequest = [[VBGetActivityListRequest alloc] initWithCurrentPage:self.currentPage tab:self.listType];
+    [dataRequest startRequestWithDicSuccess:^(NSDictionary *responseDic){
+        [SVProgressHUD dismiss];
+        if(self.currentPage == 1){
+            [self.dataArray removeAllObjects];
+        }
+        NSArray *itemsArray = [responseDic objectForKey:@"rows"];
+        [self.dataArray addObjectsFromArray:[NSArray yy_modelArrayWithClass:[VBActivityListModel class] json:itemsArray]];
+        [self.dataTableView reloadData];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"获取失败"];
+    }];
+}
 #pragma mark tableView datasource
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return self.dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     VBActivityListDataTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"VBActivityListDataTableViewCell"];
+    VBActivityListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    cell.itemModel = itemModel;
+    cell.deleteSuccessSubject = [RACSubject subject];
+    @weakify(self)
+    [cell.deleteSuccessSubject subscribeNext:^(id  _Nullable x) {
+        @strongify(self)
+        [self.dataTableView.mj_header beginRefreshing];
+    }];
     return cell;
 }
 
@@ -51,11 +81,23 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    
+    VBActivityListModel *itemModel = [self.dataArray objectAtIndex:indexPath.row];
+    if([itemModel.title isEqualToString:@"满赠活动"]){
+        VBGivingActivityViewController *viewController = [[VBGivingActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([itemModel.title isEqualToString:@"折扣活动"]){
+        VBDiscountActivityViewController *viewController = [[VBDiscountActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }else if ([itemModel.title isEqualToString:@"满减活动"]){
+        VBFullReductionActivityViewController *viewController = [[VBFullReductionActivityViewController alloc] init];
+        viewController.activityId = itemModel.activeId;
+        [self.navigationController pushViewController:viewController animated:YES];
+    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end

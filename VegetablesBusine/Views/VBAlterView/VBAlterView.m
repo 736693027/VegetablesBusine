@@ -40,10 +40,28 @@ VBAlterView *alterView = nil;
     [keyWindons addSubview:alterView];
 }
 
-- (IBAction)buttonClick:(id)sender{
+- (IBAction)buttonClick:(UIButton *)sender{
+    switch (sender.tag) {
+        case 101:
+        {
+            if(self.cancleBlock){
+                self.cancleBlock();
+            }
+        }
+            break;
+        case 102:
+        {
+            if(self.makeSureBlock){
+                self.makeSureBlock();
+            }
+        }
+            break;
+            
+        default:
+            break;
+    }
     [alterView removeFromSuperview];
     [alterView.subviews makeObjectsPerformSelector:@selector(removeFromSuperview)];
-    
 }
 
 @end

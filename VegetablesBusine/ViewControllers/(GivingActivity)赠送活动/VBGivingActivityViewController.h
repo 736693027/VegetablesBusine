@@ -6,8 +6,10 @@
 //  Copyright © 2018年 Apple. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#import "BaseViewController.h"
 
-@interface VBGivingActivityViewController : BaseTableViewController
+@interface VBGivingActivityViewController : BaseViewController
+
+@property (copy ,nonatomic) NSString *activityId;
 
 @end

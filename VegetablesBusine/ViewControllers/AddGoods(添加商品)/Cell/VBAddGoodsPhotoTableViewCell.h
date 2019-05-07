@@ -7,8 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBAddGoodsInfoModel;
 
 @interface VBAddGoodsPhotoTableViewCell : UITableViewCell
-@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+
+@property (strong, nonatomic) VBAddGoodsInfoModel *itemModel;
+
+@property (weak, nonatomic) UIViewController *viewController;
+
+@property (strong ,nonatomic) RACSubject *uploadNewImageSubject;
 
 @end

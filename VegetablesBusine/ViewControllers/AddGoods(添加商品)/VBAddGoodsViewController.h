@@ -9,5 +9,7 @@
 #import "BaseViewController.h"
 
 @interface VBAddGoodsViewController : BaseViewController
-
+@property (copy ,nonatomic) NSString *commodityID;
+@property(nonatomic,copy)void(^freshBlock)(void);
 @end
+

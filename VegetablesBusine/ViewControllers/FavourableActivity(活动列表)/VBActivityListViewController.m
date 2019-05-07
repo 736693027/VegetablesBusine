@@ -24,6 +24,7 @@
         VBActivityListDataViewController *activityListDataVC = [[VBActivityListDataViewController alloc] init];
         [activityListDataVC didMoveToParentViewController:self];
         activityListDataVC.view.frame = CGRectMake(i*SCREEN_WIDTH, 0, SCREEN_WIDTH, self.mainScrollView.frame.size.height);
+        activityListDataVC.listType = i+1;
         [self.mainScrollView addSubview:activityListDataVC.view];
         [self addChildViewController:activityListDataVC];
     }

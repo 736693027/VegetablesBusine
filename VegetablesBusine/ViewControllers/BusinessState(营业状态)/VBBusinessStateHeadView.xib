@@ -46,6 +46,9 @@
                             <state key="selected" image="icon_opening">
                                 <color key="titleColor" red="0.0039215686274509803" green="0.80392156862745101" blue="0.53333333333333333" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="beginBusinessButtClick:" destination="Xgv-67-vxg" eventType="touchUpInside" id="O1S-b1-LbR"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8of-4D-qMa">
                             <rect key="frame" x="190.5" y="15" width="75" height="20"/>
@@ -61,6 +64,9 @@
                             <state key="selected" image="icon_opening">
                                 <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="stopBusinessClick:" destination="Xgv-67-vxg" eventType="touchUpInside" id="ssc-rS-ihc"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -100,6 +106,9 @@
                             <state key="selected" image="icon_opening">
                                 <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="supportBookButtonClick:" destination="Xgv-67-vxg" eventType="touchUpInside" id="ggW-IQ-q33"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tKe-Or-gbN">
                             <rect key="frame" x="202" y="15" width="50" height="20"/>
@@ -115,6 +124,9 @@
                             <state key="selected" image="icon_opening">
                                 <color key="titleColor" red="0.0039215686269999999" green="0.80392156859999997" blue="0.53333333329999999" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
+                            <connections>
+                                <action selector="noSupportBookButtonClick:" destination="Xgv-67-vxg" eventType="touchUpInside" id="xs1-DG-lCW"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -162,7 +174,13 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="reR-Xy-GNg"/>
-            <point key="canvasLocation" x="-18.5" y="64"/>
+            <connections>
+                <outlet property="bookingButton1" destination="hh4-Zk-dzl" id="hnd-dU-ZpT"/>
+                <outlet property="bookingButton2" destination="tKe-Or-gbN" id="dGJ-4w-Hqt"/>
+                <outlet property="statuButton1" destination="l6M-ze-tZk" id="rDu-wg-0BK"/>
+                <outlet property="statuButton2" destination="8of-4D-qMa" id="w8E-h2-GOp"/>
+            </connections>
+            <point key="canvasLocation" x="-382" y="69"/>
         </view>
     </objects>
     <resources>

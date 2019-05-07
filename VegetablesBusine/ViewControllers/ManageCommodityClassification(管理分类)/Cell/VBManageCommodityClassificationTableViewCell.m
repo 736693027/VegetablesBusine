@@ -7,12 +7,25 @@
 //
 
 #import "VBManageCommodityClassificationTableViewCell.h"
+#import "VBManageCommodityClassificationModel.h"
+
+@interface VBManageCommodityClassificationTableViewCell()
+
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UIImageView *chooseIconImageView;
+
+@end
 
 @implementation VBManageCommodityClassificationTableViewCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
+}
+
+- (void)setItemModel:(VBManageCommodityClassificationModel *)itemModel {
+    _itemModel = itemModel;
+    self.nameLabel.text = itemModel.classifyName;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

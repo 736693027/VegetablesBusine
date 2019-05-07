@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBManageCommodityClassificationModel,RACSubject;
 
 @interface VBNewManageCommodityClassificationTableViewCell : UITableViewCell
+
+@property (strong ,nonatomic) VBManageCommodityClassificationModel *itemModel;
+
+@property (strong, nonatomic) RACSubject *deleteClassifySubject;
+
+@property (strong, nonatomic) RACSubject *editingClassifySubject;
 
 @end

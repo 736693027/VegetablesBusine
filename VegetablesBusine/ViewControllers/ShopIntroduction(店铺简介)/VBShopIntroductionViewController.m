@@ -9,6 +9,7 @@
 #import "VBShopIntroductionViewController.h"
 #import "UITextView+Placeholder.h"
 #import <ReactiveObjC/ReactiveObjC.h>
+#import "VBSetupStoreAddressRequest.h"
 
 @interface VBShopIntroductionViewController ()<UITextViewDelegate>
 @property (weak, nonatomic) IBOutlet UITextView *introductionTextView;
@@ -18,8 +19,25 @@
 @implementation VBShopIntroductionViewController
 
 - (void)navRightButtonClicked:(UIButton *)sender{
-    [self.introductionTextView resignFirstResponder];
-    [self.navigationController popViewControllerAnimated:YES];
+    [self.introductionTextView endEditing:YES];
+    if(self.introductionTextView.text.length == 0){
+        [SVProgressHUD showErrorWithStatus:@"请输入相关内容"];
+        return;
+    }
+    VBSetupStoreAddressRequest *request = [[VBSetupStoreAddressRequest alloc] initWithRemark:self.introductionTextView.text type:1];
+    [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        [SVProgressHUD showInfoWithStatus:@"保存成功"];
+        if(self.textViewSubject){
+            [self.textViewSubject sendNext:self.introductionTextView.text];
+        }
+        [[NSNotificationCenter defaultCenter] postNotificationName:VBUploadStoreSetupInfoNotification object:nil];
+        [self.navigationController popViewControllerAnimated:YES];
+    } failModel:^(LBResponseModel *errorModel) {
+        [SVProgressHUD showErrorWithStatus:errorModel.message];
+
+    } fail:^(YTKBaseRequest *request) {
+        [SVProgressHUD showErrorWithStatus:@"保存失败"];
+    }];
 }
 
 - (void)viewDidLoad {
@@ -35,9 +53,6 @@
 }
 
 - (void)textViewDidEndEditing:(UITextView *)textView{
-    if(self.textViewSubject){
-        [self.textViewSubject sendNext:textView.text];
-    }
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

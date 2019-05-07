@@ -7,11 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+@class VBCommodityManagementItemModel;
 
 @interface VBCommodityManagementTableViewCell : UITableViewCell
 @property (weak, nonatomic) IBOutlet UIImageView *commodityImagesView;
 @property (weak, nonatomic) IBOutlet UILabel *commodityNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *orderCount;
 @property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (strong, nonatomic) VBCommodityManagementItemModel *itemModel;
+@property (strong, nonatomic) RACSubject *uploadSubject;
 
 @end

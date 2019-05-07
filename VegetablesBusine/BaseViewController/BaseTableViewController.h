@@ -8,6 +8,8 @@
 
 #import "BaseViewController.h"
 #import "UIScrollView+EmptyDataSet.h"
+#import "MJRefresh.h"
+
 
 @interface BaseTableViewController : BaseViewController<DZNEmptyDataSetSource,DZNEmptyDataSetDelegate,UITableViewDelegate,UITableViewDataSource>
 
@@ -16,6 +18,7 @@
 @property (nonatomic, strong) UITableView *dataTableView;
 @property (nonatomic, strong) UIImage *emptyImage;
 @property (nonatomic, copy) NSString *emptyPlaceHolderString;
+@property (nonatomic, assign) NSInteger currentPage; //从1开始
 
 - (void)tableHeadViewRefreshAction;
 - (void)tableFootViewRefreshAction;

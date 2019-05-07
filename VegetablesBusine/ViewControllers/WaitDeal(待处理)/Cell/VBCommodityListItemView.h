@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface VBCommodityListItemView : UIView
+@property (weak, nonatomic) IBOutlet UILabel *commodityName;
+@property (weak, nonatomic) IBOutlet UILabel *priceLabel;
+@property (weak, nonatomic) IBOutlet UILabel *countLabel;
+@property (weak, nonatomic) IBOutlet UILabel *totalPriceLabel;
 
 @end

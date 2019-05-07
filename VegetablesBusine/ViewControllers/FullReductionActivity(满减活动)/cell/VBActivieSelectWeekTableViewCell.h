@@ -9,5 +9,6 @@
 #import <UIKit/UIKit.h>
 
 @interface VBActivieSelectWeekTableViewCell : UITableViewCell
-
+@property (strong, nonatomic) RACSubject *selectWeekSubject;
+@property (copy, nonatomic) NSString *selectWeekResult;
 @end

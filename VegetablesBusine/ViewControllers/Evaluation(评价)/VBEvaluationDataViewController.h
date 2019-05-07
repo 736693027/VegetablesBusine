@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface VBEvaluationDataViewController : UIViewController
-
+@property (assign ,nonatomic) NSInteger tabInterge;
 @end

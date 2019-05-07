@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UIButton *cancleButton;
 @property (weak, nonatomic) IBOutlet UIButton *confirmButton;
+@property (copy, nonatomic) void(^makeSureBlock)(void);
+@property (copy, nonatomic) void(^cancleBlock)(void);
 
 + (instancetype)alterView;
 

@@ -13,6 +13,7 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     [self.textField addTarget:self action:@selector(textFieldDidChanged:) forControlEvents:UIControlEventEditingChanged];
+    self.textField.delegate = self;
 }
 
 - (void)textFieldDidChanged:(UITextField *)textField{
@@ -21,6 +22,11 @@
         text = [text substringToIndex:10];
     }
     textField.text = text;
+}
+- (void)textFieldDidEndEditing:(UITextField *)textField{
+    if(self.inputResultSubject){
+        [self.inputResultSubject sendNext:textField.text];
+    }
 }
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
     [super setSelected:selected animated:animated];

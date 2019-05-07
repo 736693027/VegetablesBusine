@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RACSubject;
 
 @interface VMSectionHeaderView : UIView
+
+@property (nonatomic) BOOL isCloseListData;
+
+@property (strong, nonatomic) RACSubject *updataHeadViewSubject;
 
 @end

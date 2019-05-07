@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "BaseViewController.h"
 #import "VMTabBarController.h"
+#import "YTKNetworkConfig.h"
+#import "IQKeyboardManager.h"
+#import <AMapFoundationKit/AMapFoundationKit.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +21,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    
+    [AMapServices sharedServices].apiKey = @"b557356b6d396627c3d54f4e920836c1";
+    
+    YTKNetworkConfig *configer = [YTKNetworkConfig sharedConfig];
+    configer.baseUrl = @"http://shangjiaduan.qsvc.caibangps.com";
+    
+    [IQKeyboardManager sharedManager].enable = YES;
+    [IQKeyboardManager sharedManager].shouldResignOnTouchOutside = YES;
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];

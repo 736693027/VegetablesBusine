@@ -10,4 +10,6 @@
 
 @interface VBBusinessStatisticsDataNormalViewController : UIViewController
 
+@property (assign ,nonatomic) NSInteger type;
+
 @end

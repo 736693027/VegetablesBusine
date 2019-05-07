@@ -52,7 +52,7 @@
     navLeftBtn.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
     self.title = @"订单管理";
     
-    [navRrightBtn setImage:[UIImage imageNamed:@"orderSearch"] forState:UIControlStateNormal];
+//    [navRrightBtn setImage:[UIImage imageNamed:@"orderSearch"] forState:UIControlStateNormal];
     _mainScrollview.contentSize = CGSizeMake(SCREEN_WIDTH*2,SCREEN_HEIGHT-STATUSBARHEIGHT-NAVIGATIONBARHEIGHT-50-TabBarHeight);
     for(NSInteger i=0;i<2;i++){
         VBOrderManagerTableViewViewController *orderManagerTable = [[VBOrderManagerTableViewViewController alloc] init];

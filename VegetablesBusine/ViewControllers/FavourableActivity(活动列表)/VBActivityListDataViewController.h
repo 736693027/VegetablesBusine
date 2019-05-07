@@ -10,4 +10,6 @@
 
 @interface VBActivityListDataViewController : BaseTableViewController
 
+@property (assign, nonatomic) NSInteger listType;
+
 @end

@@ -64,6 +64,13 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="aW0-zy-SZf"/>
+            <connections>
+                <outlet property="balanceString" destination="KUu-2m-8oo" id="QxB-JI-8ch"/>
+                <outlet property="dataLable" destination="xdT-au-fAp" id="i93-hr-ur9"/>
+                <outlet property="priceString" destination="bsx-HI-4GC" id="dUV-5L-w5q"/>
+                <outlet property="statusString" destination="fuh-au-bGt" id="QgD-zA-PwJ"/>
+                <outlet property="titleName" destination="q5a-hT-FI6" id="cKu-OH-zVH"/>
+            </connections>
             <point key="canvasLocation" x="-62" y="-172"/>
         </tableViewCell>
     </objects>

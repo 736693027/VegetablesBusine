@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface VBGivingActivityTableViewCell : UITableViewCell
+@interface VBGivingActivityTableViewCell : UITableViewCell<UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *textField;
-
+@property (strong, nonatomic) RACSubject *inputResultSubject;
 @end
