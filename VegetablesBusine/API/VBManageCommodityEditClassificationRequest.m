@@ -33,8 +33,8 @@
         @strongify(self)
         NSData *imageData = UIImagePNGRepresentation(self->uploadImage);
         [formData appendPartWithFileData:imageData
-                                    name:@"file"
-                                fileName:@"fileName"
+                                    name:@"imgs"
+                                fileName:@"imgs"
                                 mimeType:@"image/png"];
     };
 }

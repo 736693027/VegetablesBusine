@@ -2475,7 +2475,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
@@ -2502,7 +2502,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
