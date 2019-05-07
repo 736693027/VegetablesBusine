@@ -111,6 +111,7 @@
 		3837469D20E27F8400310E77 /* VBActivityListDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3837469C20E27F8400310E77 /* VBActivityListDataViewController.m */; };
 		383746A220E2856B00310E77 /* VBActivityListDataTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */; };
 		383746A320E2856B00310E77 /* VBActivityListDataTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */; };
+		383A70EC2196B1C40037511C /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 383A70EA2196B1620037511C /* libstdc++.6.0.9.tbd */; };
 		3847948720E72BBE000EDB3A /* VBFullReductionActivityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3847948520E72BBE000EDB3A /* VBFullReductionActivityViewController.m */; };
 		3847948820E72BBE000EDB3A /* VBFullReductionActivityViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3847948620E72BBE000EDB3A /* VBFullReductionActivityViewController.xib */; };
 		3847949220E72C59000EDB3A /* VBActivieBaseTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3847948F20E72C59000EDB3A /* VBActivieBaseTableViewCell.xib */; };
@@ -356,6 +357,7 @@
 		3837469F20E2856B00310E77 /* VBActivityListDataTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBActivityListDataTableViewCell.h; sourceTree = "<group>"; };
 		383746A020E2856B00310E77 /* VBActivityListDataTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBActivityListDataTableViewCell.m; sourceTree = "<group>"; };
 		383746A120E2856B00310E77 /* VBActivityListDataTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBActivityListDataTableViewCell.xib; sourceTree = "<group>"; };
+		383A70EA2196B1620037511C /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		3847948420E72BBE000EDB3A /* VBFullReductionActivityViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBFullReductionActivityViewController.h; sourceTree = "<group>"; };
 		3847948520E72BBE000EDB3A /* VBFullReductionActivityViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBFullReductionActivityViewController.m; sourceTree = "<group>"; };
 		3847948620E72BBE000EDB3A /* VBFullReductionActivityViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBFullReductionActivityViewController.xib; sourceTree = "<group>"; };
@@ -485,6 +487,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				383A70EC2196B1C40037511C /* libstdc++.6.0.9.tbd in Frameworks */,
 				2309B4B829645DCFC816178E /* Pods_VegetablesBusine.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1221,6 +1224,7 @@
 		515A8B9EF1250BAC931239E1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				383A70EA2196B1620037511C /* libstdc++.6.0.9.tbd */,
 				18C519DE20A6D414000905FF /* libz.tbd */,
 				CE29E56FC4C89E61FBB039A9 /* Pods_VegetablesBusine.framework */,
 			);
@@ -1404,7 +1408,6 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-VegetablesBusine/Pods-VegetablesBusine-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/AFDownloadRequestOperation/AFDownloadRequestOperation.framework",
 				"${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework",
 				"${BUILT_PRODUCTS_DIR}/DZNEmptyDataSet/DZNEmptyDataSet.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManager/IQKeyboardManager.framework",
@@ -1421,7 +1424,6 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFDownloadRequestOperation.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AFNetworking.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DZNEmptyDataSet.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManager.framework",
@@ -1691,8 +1693,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3VBM36K4M;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8M4UTM4W65;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VegetablesBusine/Tools",
@@ -1704,8 +1706,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.managementvegetable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = managementvegetable_dev_file;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -1716,8 +1719,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3VBM36K4M;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8M4UTM4W65;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VegetablesBusine/Tools",
@@ -1729,8 +1733,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubao.VegetablesBusine;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.managementvegetable;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = managementvegetable_dis_file;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
