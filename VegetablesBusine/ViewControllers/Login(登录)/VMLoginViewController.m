@@ -46,11 +46,11 @@
         } failModel:^(LBResponseModel *errorModel) {
             [SVProgressHUD showErrorWithStatus:errorModel.message];
         } fail:^(YTKBaseRequest *request) {
-            
+            [SVProgressHUD showErrorWithStatus:@"登录失败"];
         }];
-    }else if (self.passwordTextField.text.length>0){
+    }else if (self.passwordTextField.text.length==0){
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
-    }else if (self.phoneNumberTextField.text.length>0){
+    }else if (self.phoneNumberTextField.text.length==0){
         [SVProgressHUD showErrorWithStatus:@"请输入手机号"];
     }
 }
