@@ -100,6 +100,10 @@
 		1874C84B21BA5B050088257B /* VBRefundTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874C84921BA5B040088257B /* VBRefundTableViewCell.m */; };
 		1874C85021BA60880088257B /* VBProcessRefundRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874C84C21BA60880088257B /* VBProcessRefundRequest.m */; };
 		1874C85121BA60880088257B /* VBProcessOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874C84E21BA60880088257B /* VBProcessOrderRequest.m */; };
+		187AEA4922814FF700968019 /* HLPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA3F22814FF700968019 /* HLPrinter.m */; };
+		187AEA4A22814FF700968019 /* UIWebView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4022814FF700968019 /* UIWebView+UIImage.m */; };
+		187AEA4B22814FF700968019 /* UIImage+Bitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4322814FF700968019 /* UIImage+Bitmap.m */; };
+		187AEA4C22814FF700968019 /* HLBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4722814FF700968019 /* HLBLEManager.m */; };
 		1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */; };
 		1897EA6A20C00F1D00ED3DEF /* VBCommodityManagementViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */; };
 		1897EA6E20C0117000ED3DEF /* VBMenuItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6D20C0117000ED3DEF /* VBMenuItemView.m */; };
@@ -177,10 +181,6 @@
 		18D21ECA21E4413E00F5DA95 /* STAlbumManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21EC921E4413D00F5DA95 /* STAlbumManager.m */; };
 		18D21ECD21E4429B00F5DA95 /* LBGetCustomerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21ECB21E4429A00F5DA95 /* LBGetCustomerModel.m */; };
 		18D21ED021E453A600F5DA95 /* VMGetBusinessStatisticsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21ECF21E453A600F5DA95 /* VMGetBusinessStatisticsRequest.m */; };
-		18D21EDC21E47AE300F5DA95 /* HLBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21ED321E47AE200F5DA95 /* HLBLEManager.m */; };
-		18D21EDD21E47AE300F5DA95 /* HLPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21ED621E47AE300F5DA95 /* HLPrinter.m */; };
-		18D21EDE21E47AE300F5DA95 /* UIWebView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21ED721E47AE300F5DA95 /* UIWebView+UIImage.m */; };
-		18D21EDF21E47AE300F5DA95 /* UIImage+Bitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21EDA21E47AE300F5DA95 /* UIImage+Bitmap.m */; };
 		18D21EE121E47B1000F5DA95 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D21EE021E47B1000F5DA95 /* CoreBluetooth.framework */; };
 		18D21EE521E47B5800F5DA95 /* VBBluetoothListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D21EE321E47B5800F5DA95 /* VBBluetoothListViewController.m */; };
 		18D21EE621E47B5800F5DA95 /* VBBluetoothListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D21EE421E47B5800F5DA95 /* VBBluetoothListViewController.xib */; };
@@ -457,6 +457,15 @@
 		1874C84D21BA60880088257B /* VBProcessOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProcessOrderRequest.h; sourceTree = "<group>"; };
 		1874C84E21BA60880088257B /* VBProcessOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProcessOrderRequest.m; sourceTree = "<group>"; };
 		1874C84F21BA60880088257B /* VBProcessRefundRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProcessRefundRequest.h; sourceTree = "<group>"; };
+		187AEA3F22814FF700968019 /* HLPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPrinter.m; sourceTree = "<group>"; };
+		187AEA4022814FF700968019 /* UIWebView+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+UIImage.m"; sourceTree = "<group>"; };
+		187AEA4122814FF700968019 /* UIImage+Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Bitmap.h"; sourceTree = "<group>"; };
+		187AEA4222814FF700968019 /* UIWebView+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+UIImage.h"; sourceTree = "<group>"; };
+		187AEA4322814FF700968019 /* UIImage+Bitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Bitmap.m"; sourceTree = "<group>"; };
+		187AEA4422814FF700968019 /* HLPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrinter.h; sourceTree = "<group>"; };
+		187AEA4622814FF700968019 /* HLBLEConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEConst.h; sourceTree = "<group>"; };
+		187AEA4722814FF700968019 /* HLBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBLEManager.m; sourceTree = "<group>"; };
+		187AEA4822814FF700968019 /* HLBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEManager.h; sourceTree = "<group>"; };
 		1897EA6620C00F1D00ED3DEF /* VBCommodityManagementViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBCommodityManagementViewController.h; sourceTree = "<group>"; };
 		1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBCommodityManagementViewController.m; sourceTree = "<group>"; };
 		1897EA6820C00F1D00ED3DEF /* VBCommodityManagementViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBCommodityManagementViewController.xib; sourceTree = "<group>"; };
@@ -593,15 +602,6 @@
 		18D21ECC21E4429B00F5DA95 /* LBGetCustomerModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBGetCustomerModel.h; sourceTree = "<group>"; };
 		18D21ECE21E453A600F5DA95 /* VMGetBusinessStatisticsRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VMGetBusinessStatisticsRequest.h; sourceTree = "<group>"; };
 		18D21ECF21E453A600F5DA95 /* VMGetBusinessStatisticsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VMGetBusinessStatisticsRequest.m; sourceTree = "<group>"; };
-		18D21ED221E47AE200F5DA95 /* HLBLEConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEConst.h; sourceTree = "<group>"; };
-		18D21ED321E47AE200F5DA95 /* HLBLEManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLBLEManager.m; sourceTree = "<group>"; };
-		18D21ED421E47AE200F5DA95 /* HLBLEManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEManager.h; sourceTree = "<group>"; };
-		18D21ED621E47AE300F5DA95 /* HLPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPrinter.m; sourceTree = "<group>"; };
-		18D21ED721E47AE300F5DA95 /* UIWebView+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+UIImage.m"; sourceTree = "<group>"; };
-		18D21ED821E47AE300F5DA95 /* UIImage+Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Bitmap.h"; sourceTree = "<group>"; };
-		18D21ED921E47AE300F5DA95 /* UIWebView+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+UIImage.h"; sourceTree = "<group>"; };
-		18D21EDA21E47AE300F5DA95 /* UIImage+Bitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Bitmap.m"; sourceTree = "<group>"; };
-		18D21EDB21E47AE300F5DA95 /* HLPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrinter.h; sourceTree = "<group>"; };
 		18D21EE021E47B1000F5DA95 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 		18D21EE221E47B5800F5DA95 /* VBBluetoothListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBBluetoothListViewController.h; sourceTree = "<group>"; };
 		18D21EE321E47B5800F5DA95 /* VBBluetoothListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBBluetoothListViewController.m; sourceTree = "<group>"; };
@@ -1168,6 +1168,29 @@
 			path = "UIButton+EnlargeEdge";
 			sourceTree = "<group>";
 		};
+		187AEA3E22814FF700968019 /* HLPrinter */ = {
+			isa = PBXGroup;
+			children = (
+				187AEA3F22814FF700968019 /* HLPrinter.m */,
+				187AEA4022814FF700968019 /* UIWebView+UIImage.m */,
+				187AEA4122814FF700968019 /* UIImage+Bitmap.h */,
+				187AEA4222814FF700968019 /* UIWebView+UIImage.h */,
+				187AEA4322814FF700968019 /* UIImage+Bitmap.m */,
+				187AEA4422814FF700968019 /* HLPrinter.h */,
+			);
+			path = HLPrinter;
+			sourceTree = "<group>";
+		};
+		187AEA4522814FF700968019 /* HLBluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				187AEA4622814FF700968019 /* HLBLEConst.h */,
+				187AEA4722814FF700968019 /* HLBLEManager.m */,
+				187AEA4822814FF700968019 /* HLBLEManager.h */,
+			);
+			path = HLBluetooth;
+			sourceTree = "<group>";
+		};
 		1897EA6520C00F0900ED3DEF /* CommodityManagement(商品管理) */ = {
 			isa = PBXGroup;
 			children = (
@@ -1415,31 +1438,6 @@
 			path = SavePhoto;
 			sourceTree = "<group>";
 		};
-		18D21ED121E47AE200F5DA95 /* HLBluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				18D21ED221E47AE200F5DA95 /* HLBLEConst.h */,
-				18D21ED321E47AE200F5DA95 /* HLBLEManager.m */,
-				18D21ED421E47AE200F5DA95 /* HLBLEManager.h */,
-			);
-			name = HLBluetooth;
-			path = "../../../Downloads/HLBluetoothDemo-master/HLBluetoothDemo/HLBluetooth";
-			sourceTree = "<group>";
-		};
-		18D21ED521E47AE300F5DA95 /* HLPrinter */ = {
-			isa = PBXGroup;
-			children = (
-				18D21EDB21E47AE300F5DA95 /* HLPrinter.h */,
-				18D21ED621E47AE300F5DA95 /* HLPrinter.m */,
-				18D21ED921E47AE300F5DA95 /* UIWebView+UIImage.h */,
-				18D21ED721E47AE300F5DA95 /* UIWebView+UIImage.m */,
-				18D21ED821E47AE300F5DA95 /* UIImage+Bitmap.h */,
-				18D21EDA21E47AE300F5DA95 /* UIImage+Bitmap.m */,
-			);
-			name = HLPrinter;
-			path = "../../../Downloads/HLBluetoothDemo-master/HLBluetoothDemo/HLPrinter";
-			sourceTree = "<group>";
-		};
 		18E0AAE421C10FBA0025933C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -1475,8 +1473,8 @@
 		380FFAD620B2FA2500A926FD /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				18D21ED121E47AE200F5DA95 /* HLBluetooth */,
-				18D21ED521E47AE300F5DA95 /* HLPrinter */,
+				187AEA4522814FF700968019 /* HLBluetooth */,
+				187AEA3E22814FF700968019 /* HLPrinter */,
 				18D21EC721E4413D00F5DA95 /* SavePhoto */,
 				18D21EAF21E43A6000F5DA95 /* JCCustomAlert */,
 				18D21EA921E43A5400F5DA95 /* JCAlertView */,
@@ -2158,6 +2156,7 @@
 				1842610321ABF85000622800 /* VBGetDetailByIDRequest.m in Sources */,
 				18C9422C21BFBC7C005132BA /* VBSessionKeyBaseRequest.m in Sources */,
 				18D21E8B21E435E700F5DA95 /* MLSelectPhotoPickerBrowserPhoto.m in Sources */,
+				187AEA4C22814FF700968019 /* HLBLEManager.m in Sources */,
 				3847949320E72C59000EDB3A /* VBActivieBaseTableViewCell.m in Sources */,
 				3847949F20E72EBD000EDB3A /* VBActivieSelectWeekTableViewCell.m in Sources */,
 				38D437A820E533EB002D8CB1 /* VBAddGoodsInfoTextFieldTableViewCell.m in Sources */,
@@ -2200,8 +2199,8 @@
 				18D21E9821E435E700F5DA95 /* MLPhotoPickerImageView.m in Sources */,
 				1843E59721D1CE2E00C20E97 /* VBOrderManagerListRequest.m in Sources */,
 				18D21E8F21E435E700F5DA95 /* MLSelectPhotoPickerGroupViewController.m in Sources */,
+				187AEA4A22814FF700968019 /* UIWebView+UIImage.m in Sources */,
 				18D21EAE21E43A5400F5DA95 /* JCAlertView.m in Sources */,
-				18D21EDE21E47AE300F5DA95 /* UIWebView+UIImage.m in Sources */,
 				384794A920E730CD000EDB3A /* VBActivityRulesTableViewCell.m in Sources */,
 				3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */,
 				38DB4D1A20E3D76A00F67BE7 /* VBMerchantSettlementDataTableViewCell.m in Sources */,
@@ -2214,8 +2213,8 @@
 				185B5DD020A1CD34001E47EC /* VBWaitDealViewController.m in Sources */,
 				18F9E46A21DC58620095F59B /* VMForgetPasswordAPI.m in Sources */,
 				18093A9721C1FBBF00EC1C75 /* VBGetGoodsInfoRequest.m in Sources */,
+				187AEA4B22814FF700968019 /* UIImage+Bitmap.m in Sources */,
 				1846807520E1C93F00099954 /* VBTitleView.m in Sources */,
-				18D21EDF21E47AE300F5DA95 /* UIImage+Bitmap.m in Sources */,
 				185B60A620CD2E71006EF799 /* VBShopIntroductionViewController.m in Sources */,
 				18C519E720A6F47F000905FF /* VBShoppingManagerMenuItemView.m in Sources */,
 				185B5E0220A32A3C001E47EC /* VBOrderManagerViewController.m in Sources */,
@@ -2314,15 +2313,14 @@
 				38D437A420E53326002D8CB1 /* VBAddGoodsPhotoTableViewCell.m in Sources */,
 				184E524120B6D54400DD3750 /* VMOrderTotalTableViewCell.m in Sources */,
 				38FC7CBA20CB9EE300A21FEE /* VBCalendarViewController.m in Sources */,
+				187AEA4922814FF700968019 /* HLPrinter.m in Sources */,
 				1897EA7520C0137B00ED3DEF /* VBCommodityManagementTableViewCell.m in Sources */,
-				18D21EDD21E47AE300F5DA95 /* HLPrinter.m in Sources */,
 				133AA34F21E1E43D00A82C3E /* VBManageCommodityEditClassificationRequest.m in Sources */,
 				1843E58D21D0C6BB00C20E97 /* VBGetAllStoresRequest.m in Sources */,
 				3834D89620E8C64D00A62AFF /* VBGivingActivityViewController.m in Sources */,
 				185B5DF720A30E57001E47EC /* VBCommodityListItemView.m in Sources */,
 				184260EF21ABC0C300622800 /* VBListDataRequest.m in Sources */,
 				185B60B220CD31CD006EF799 /* UIButton+EnlargeEdge.m in Sources */,
-				18D21EDC21E47AE300F5DA95 /* HLBLEManager.m in Sources */,
 				3834D8A120E8CD5900A62AFF /* VBAddGoodsUnitTableViewCell.m in Sources */,
 				185B609B20CD123F006EF799 /* VBSetupViewController.m in Sources */,
 				3834D88A20E8C23D00A62AFF /* VBDiscountActivityViewController.m in Sources */,
