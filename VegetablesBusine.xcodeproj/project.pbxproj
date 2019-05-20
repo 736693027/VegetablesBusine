@@ -188,6 +188,7 @@
 		18E0AAE021C0E8D20025933C /* VBCommoditySetupRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0AADF21C0E8D20025933C /* VBCommoditySetupRequest.m */; };
 		18E0AAE321C10E3E0025933C /* VBGetGoodsSpecificationsRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0AAE221C10E3E0025933C /* VBGetGoodsSpecificationsRequest.m */; };
 		18E0AAE721C10FD00025933C /* VBGoodsSpecificationsModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 18E0AAE621C10FD00025933C /* VBGoodsSpecificationsModel.m */; };
+		18EB937B229283170018FF65 /* UIViewController+LBOperateAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 18EB9379229283160018FF65 /* UIViewController+LBOperateAction.m */; };
 		18ED190921BBA19000C2D380 /* VBMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18ED190721BBA19000C2D380 /* VBMapViewController.m */; };
 		18ED190A21BBA19000C2D380 /* VBMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18ED190821BBA19000C2D380 /* VBMapViewController.xib */; };
 		18F9E46721DC576D0095F59B /* VMLoginRequestAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 18F9E46521DC576C0095F59B /* VMLoginRequestAPI.m */; };
@@ -614,6 +615,8 @@
 		18E0AAE221C10E3E0025933C /* VBGetGoodsSpecificationsRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGetGoodsSpecificationsRequest.m; sourceTree = "<group>"; };
 		18E0AAE521C10FD00025933C /* VBGoodsSpecificationsModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBGoodsSpecificationsModel.h; sourceTree = "<group>"; };
 		18E0AAE621C10FD00025933C /* VBGoodsSpecificationsModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBGoodsSpecificationsModel.m; sourceTree = "<group>"; };
+		18EB9379229283160018FF65 /* UIViewController+LBOperateAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LBOperateAction.m"; sourceTree = "<group>"; };
+		18EB937A229283170018FF65 /* UIViewController+LBOperateAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LBOperateAction.h"; sourceTree = "<group>"; };
 		18ED190621BBA19000C2D380 /* VBMapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VBMapViewController.h; sourceTree = "<group>"; };
 		18ED190721BBA19000C2D380 /* VBMapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VBMapViewController.m; sourceTree = "<group>"; };
 		18ED190821BBA19000C2D380 /* VBMapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VBMapViewController.xib; sourceTree = "<group>"; };
@@ -1035,6 +1038,8 @@
 				185B5D9C209F02B0001E47EC /* BaseTableViewController.m */,
 				185B5DA0209F02B0001E47EC /* VMNavigationController.h */,
 				185B5D9E209F02B0001E47EC /* VMNavigationController.m */,
+				18EB937A229283170018FF65 /* UIViewController+LBOperateAction.h */,
+				18EB9379229283160018FF65 /* UIViewController+LBOperateAction.m */,
 			);
 			path = BaseViewController;
 			sourceTree = "<group>";
@@ -2176,6 +2181,7 @@
 				38FC7CB020CB9E0700A21FEE /* JTCalendarAppearance.m in Sources */,
 				38FC7CBE20CB9FF300A21FEE /* UIView+YYAdd.m in Sources */,
 				38FC7CAE20CB9E0700A21FEE /* JTCalendarMenuMonthView.m in Sources */,
+				18EB937B229283170018FF65 /* UIViewController+LBOperateAction.m in Sources */,
 				133AA34821E1BE3300A82C3E /* VBMerchantSettlementDataViewRequest.m in Sources */,
 				184260F621ABD3B400622800 /* VBWaitDealListModel.m in Sources */,
 				1874C85021BA60880088257B /* VBProcessRefundRequest.m in Sources */,

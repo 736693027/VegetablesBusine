@@ -9,5 +9,5 @@
 #import "VBSessionKeyBaseRequest.h"
 @class VBAddGoodsInfoModel;
 @interface VBManageCommodityEditClassificationRequest : VBSessionKeyBaseRequest
-- (instancetype)initWithGoodsInfoModel:(VBAddGoodsInfoModel *)model;
+- (instancetype)initWithGoodsInfoModel:(VBAddGoodsInfoModel *)model uploadImage:(UIImage *)uploadImage;
 @end

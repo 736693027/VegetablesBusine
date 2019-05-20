@@ -13,12 +13,13 @@
 @implementation VBManageCommodityEditClassificationRequest
 {
     VBAddGoodsInfoModel *innerModel;
-    UIImage *uploadImage;
+    UIImage *_uploadImage;
 }
 
-- (instancetype)initWithGoodsInfoModel:(VBAddGoodsInfoModel *)model{
+- (instancetype)initWithGoodsInfoModel:(VBAddGoodsInfoModel *)model uploadImage:(UIImage *)uploadImage{
     if (self = [super init]) {
         innerModel = model;
+        _uploadImage = uploadImage;
     }
     return self;
 }
@@ -28,14 +29,12 @@
 }
 
 - (AFConstructingBlock)constructingBodyBlock{
-    @weakify(self)
     return ^(id<AFMultipartFormData>formData){
-        @strongify(self)
-        NSData *imageData = UIImagePNGRepresentation(self->uploadImage);
+        NSData *imageData = UIImagePNGRepresentation(_uploadImage);
         [formData appendPartWithFileData:imageData
                                     name:@"imgs"
                                 fileName:@"imgs"
-                                mimeType:@"image/png"];
+                                mimeType:@"image/jpg"];
     };
 }
 - (id)requestArgument {

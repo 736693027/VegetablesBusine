@@ -252,14 +252,16 @@
 
 #pragma mark - 保存编辑
 - (void)saveAction {
-    if (!self.dataItemModel.name || !self.dataItemModel.subtitle || !self.dataItemModel.price || !self.dataItemModel.foodContainerPrice || !self.dataItemModel.uniti || !self.dataItemModel.classifyID || !self.dataItemModel.standards || !self.dataItemModel.inventory) {
+    if (!self.dataItemModel.name || !self.dataItemModel.subtitle || !self.dataItemModel.price || !self.dataItemModel.foodContainerPrice || !self.dataItemModel.uniti || !self.dataItemModel.classifyID || !self.dataItemModel.inventory) {
         [SVProgressHUD showErrorWithStatus:@"请填写完整商品信息"];
+        return;
+    }else if (!self.dataItemModel.standards&&self.commodityID.length>0){
+        [SVProgressHUD showErrorWithStatus:@"请填写商品规格"];
         return;
     }
     [SVProgressHUD show];
-    VBManageCommodityEditClassificationRequest *request = [[VBManageCommodityEditClassificationRequest alloc]initWithGoodsInfoModel:self.dataItemModel];
+    VBManageCommodityEditClassificationRequest *request = [[VBManageCommodityEditClassificationRequest alloc]initWithGoodsInfoModel:self.dataItemModel uploadImage:self.uploadImage];
     [request startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-         [SVProgressHUD dismiss];
          [SVProgressHUD showSuccessWithStatus:@"操作成功"];
         if (self.freshBlock) {
             self.freshBlock();
