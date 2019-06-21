@@ -42,16 +42,18 @@
     NSDictionary *dic = @{
                           @"name":OBJC(innerModel.name),
                           @"subtitle":OBJC(innerModel.subtitle),
-                          @"commodityID":OBJC(innerModel.commodityID),
+                          @"commodityID":@(innerModel.commodityID.integerValue),
                           @"price":OBJC(innerModel.price),
                           @"foodContainerPrice":OBJC(innerModel.foodContainerPrice),
                           @"uniti":OBJC(innerModel.uniti),
                           @"classifyID":OBJC(innerModel.classifyID),
-                          @"standards":OBJC(standardsString),
+                          @"standards":@(standardsString.integerValue),
                           @"inventory":OBJC(innerModel.inventory),
                           @"sessionKey":OBJC(self.sessionKey)
                           };
     return dic;
 }
-
+- (NSTimeInterval)requestTimeoutInterval{
+    return 60;
+}
 @end

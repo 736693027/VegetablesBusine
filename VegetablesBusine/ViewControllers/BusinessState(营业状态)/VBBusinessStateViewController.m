@@ -53,7 +53,15 @@
             LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
             lbDatePicker.resultSubject = [RACSubject subject];
             [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
-                NSLog(@"-----%@",date);
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+                [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+                NSString *dateString = [dateFormatter stringFromDate:date];
+                NSArray *dataArray = [dateString componentsSeparatedByString:@" "];
+                NSString *hoursString = [dataArray objectAtIndex:1];
+                NSArray *hoursArray = [hoursString componentsSeparatedByString:@":"];
+                cell.startHourLabel.text = [hoursArray objectAtIndex:0];
+                cell.startMinutesLabel.text = [hoursArray objectAtIndex:1];
             }];
             [lbDatePicker showPickView];
         }];
@@ -62,7 +70,15 @@
             LBDatePickerView *lbDatePicker = [LBDatePickerView initPickView];
             lbDatePicker.resultSubject = [RACSubject subject];
             [lbDatePicker.resultSubject subscribeNext:^(NSDate * _Nullable date) {
-                NSLog(@"-----%@",date);
+                NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+                dateFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+                [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm"];
+                NSString *dateString = [dateFormatter stringFromDate:date];
+                NSArray *dataArray = [dateString componentsSeparatedByString:@" "];
+                NSString *hoursString = [dataArray objectAtIndex:1];
+                NSArray *hoursArray = [hoursString componentsSeparatedByString:@":"];
+                cell.endHourLabel.text = [hoursArray objectAtIndex:0];
+                cell.endMinutesLabel.text = [hoursArray objectAtIndex:1];
             }];
             [lbDatePicker showPickView];
         }];

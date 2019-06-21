@@ -3,9 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要获取您的照片信息</string>
+	<string>需要开启相册功能，来上传商品图片</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleAllowMixedLocalizations</key>
+	<true/>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -29,8 +31,6 @@
 	</dict>
 	<key>NSCameraUsageDescription</key>
 	<string>需要开启相机功能，来拍摄商品图片</string>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要开启相册功能，来上传商品图片</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
