@@ -24,10 +24,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
 }
 - (IBAction)loginButtonClick:(UIButton *)sender {
-
+    
     if(self.passwordTextField.text.length>0&&self.phoneNumberTextField.text.length>0){
         [SVProgressHUD showWithStatus:@"加载中..."];
         VMLoginRequestAPI *loginAPI = [[VMLoginRequestAPI alloc] initWithUsername:self.phoneNumberTextField.text password:self.passwordTextField.text];
@@ -55,9 +55,9 @@
     }
 }
 - (IBAction)registerButtonClick:(id)sender {
-//    VMRegisterViewController *registVC = [[VMRegisterViewController alloc] init];
-//    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:registVC];
-//    [self presentViewController:nav animated:YES completion:nil];
+    //    VMRegisterViewController *registVC = [[VMRegisterViewController alloc] init];
+    //    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:registVC];
+    //    [self presentViewController:nav animated:YES completion:nil];
 }
 - (IBAction)forgetButtonClick:(id)sender {
     VMForgetViewController *forgerVC = [[VMForgetViewController alloc] init];

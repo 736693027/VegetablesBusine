@@ -31,7 +31,7 @@
 - (id)requestArgument {
     return @{
              @"orderId":OBJC(_idString),
-             @"sessionKey":OBJC(_idString)
+             @"sessionKey":OBJC(VMLoginUserInfoModel.loginUsrInfoModel.sessionKey)
              };
 }
 @end

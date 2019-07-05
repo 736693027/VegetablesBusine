@@ -24,5 +24,6 @@
 #import <ReactiveObjC/ReactiveObjC.h>
 #import "DefineFile.h"
 #import <SDWebImage/UIImageView+WebCache.h>
+#import "VMLoginUserInfoModel.h"
 
 #endif /* VegetableHeaderFile_pch */
