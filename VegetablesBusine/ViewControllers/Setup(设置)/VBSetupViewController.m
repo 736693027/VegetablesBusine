@@ -15,6 +15,7 @@
 #import "VMLoginUserInfoModel.h"
 #import "VMLogoutRequestAPI.h"
 #import "VBStoreTypeViewController.h"
+#import "VBUploadTextRequest.h"
 
 @interface VBSetupViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (weak, nonatomic) IBOutlet UITableView *dataTableView;
@@ -150,8 +151,26 @@
 - (void)setupSubTitle:(NSIndexPath *)indexPath content:(NSString *)title {
      NSMutableArray *contents = [_contentArray[indexPath.section] mutableCopy];
     [contents setObject:title atIndexedSubscript:indexPath.row];
+    NSInteger type = 1;
+    if(indexPath.section == 1 && indexPath.row == 1){
+        type = 4;
+    }else if (indexPath.section == 2 && indexPath.row == 0){
+        type = 3;
+    }else if (indexPath.section == 2 && indexPath.row == 1){
+        type = 2;
+    }else if (indexPath.section == 2 && indexPath.row == 2){
+        type = 1;
+    }
     [self.contentArray setObject:contents atIndexedSubscript:indexPath.section];
     [self.dataTableView reloadData];
+    VBUploadTextRequest *uploadText = [[VBUploadTextRequest alloc] initWithText:title type:type];
+    [uploadText startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+        
+    } failModel:^(LBResponseModel *errorModel) {
+        
+    } fail:^(YTKBaseRequest *request) {
+        
+    }];
 }
 
 - (NSString *)getSubTitle:(NSIndexPath *)indexPath {

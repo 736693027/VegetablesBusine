@@ -1,14 +1,14 @@
 //
-//  VBPrintOrderRequest.m
+//  VBManagerPrintOrderRequest.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/12/10.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBPrintOrderRequest.h"
+#import "VBManagerPrintOrderRequest.h"
 
-@implementation VBPrintOrderRequest{
+@implementation VBManagerPrintOrderRequest{
     NSString *_idString;
 }
 
@@ -21,7 +21,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/pendingOrder/operator";
+    return @"/api/orders/printorders";
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -31,7 +31,6 @@
 - (id)requestArgument {
     return @{
              @"orderId":OBJC(_idString),
-             @"tab":@(3),
              @"sessionKey":OBJC(VMLoginUserInfoModel.loginUsrInfoModel.sessionKey)
              };
 }

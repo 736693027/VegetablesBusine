@@ -27,10 +27,8 @@
 }
 
 - (NSString *)requestUrl {
-    if(_requestType == VBListDataRequestWaitDealNewOrder){
-        return @"/api/order/listOrders";
-    }else if(_requestType == VBListDataRequestWaitDealRefund){
-        return @"/api/orders/list";
+    if(_requestType == VBListDataRequestWaitDealNewOrder || _requestType == VBListDataRequestWaitDealRefund){
+        return @"/api/pendingOrder/orders";
     }else if (_requestType == VBListDataRequestEvaluationList){
         return @"/api/orderEvaluations/listview";
     }else{
@@ -44,8 +42,8 @@
 
 - (id)requestArgument {
     return @{
-             @"page":@(_page),
-             @"rows":@(_rows),
+             @"currentPage":@(_page),
+             @"pageSize":@(_rows),
              @"tab":@(_tag),
              @"sessionKey":OBJC([VMLoginUserInfoModel loginUsrInfoModel].sessionKey)
              };

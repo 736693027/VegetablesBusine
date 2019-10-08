@@ -46,7 +46,7 @@
 @property (nonatomic, copy) NSString * orderOwer; //订单归属人
 @property (nonatomic, copy) NSString * orderCount; //第几次下单
 @property (nonatomic, copy) NSString * orderTel; //联系电话
-@property (nonatomic, copy) NSString * address; //配送地址
+@property (nonatomic, copy) NSString * orderDestination; //配送地址
 @property (nonatomic, copy) NSString * orderRemark; //订单备注
 @property (nonatomic, copy) NSString * orderPaymentState; //订单支付状态
 @property (nonatomic, copy) NSString * shipmentState; //配送状态

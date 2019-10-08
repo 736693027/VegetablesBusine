@@ -1,27 +1,29 @@
 //
-//  VBGetDetailByIDRequest.m
+//  VBUploadTextRequest.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/11/26.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBGetDetailByIDRequest.h"
+#import "VBUploadTextRequest.h"
 
-@implementation VBGetDetailByIDRequest{
-    NSString *_idString;
+@implementation VBUploadTextRequest{
+    NSString *_text;
+    NSInteger _type;
 }
 
-- (instancetype)initWithIdString:(NSString *)idString{
+- (instancetype)initWithText:(NSString *)text type:(NSInteger)type{
     self = [super init];
     if (self){
-        _idString = idString;
+        _text = text;
+        _type = type;
     }
     return self;
 }
 
 - (NSString *)requestUrl {
-    return @"/api/pendingOrder/getOrder";
+    return @"/api/setting/storesAddress";
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -30,8 +32,10 @@
 
 - (id)requestArgument {
     return @{
-             @"orderId":OBJC(_idString),
+             @"remark":OBJC(_text),
+             @"type":@(_type),
              @"sessionKey":OBJC([VMLoginUserInfoModel loginUsrInfoModel].sessionKey)
              };
 }
+
 @end

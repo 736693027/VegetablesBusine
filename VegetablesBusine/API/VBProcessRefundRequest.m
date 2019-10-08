@@ -23,7 +23,7 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/orders/getbyid";
+    return @"/api/pendingOrder/refund";
 }
 
 - (YTKRequestMethod)requestMethod {
@@ -32,8 +32,9 @@
 
 - (id)requestArgument {
     return @{
+             @"sessionKey":OBJC([VMLoginUserInfoModel loginUsrInfoModel].sessionKey),
              @"orderId":OBJC(_idString),
-             @"orderId":@(_type),
+             @"tab":@(_type),
              };
 }
 @end

@@ -19,7 +19,6 @@
     self = [super init];
     if(self){
         _shopId = shopId;
-        _storeTypeId = storeTypeId;
     }
     return self;
 }
@@ -30,7 +29,6 @@
 - (id)requestArgument {
     return @{
              @"shopId":OBJC(_shopId),
-             @"storeTypeId":OBJC(_storeTypeId),
              @"sessionKey":OBJC(self.sessionKey),
              };
 }

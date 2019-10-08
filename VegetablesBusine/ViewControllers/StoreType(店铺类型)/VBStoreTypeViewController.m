@@ -66,7 +66,7 @@
         NSString *typeName = [typeNameArray componentsJoinedByString:@"、"];
         [SVProgressHUD show];
         NSString *shopID = [CommonTools fetchShopID];
-        VBSetupStoreTypeRequest *submitRequest = [[VBSetupStoreTypeRequest alloc] initWithShopId:shopID storeTypeId:storeTypeId];
+        VBSetupStoreTypeRequest *submitRequest = [[VBSetupStoreTypeRequest alloc] initWithShopId:storeTypeId storeTypeId:@""];
         [submitRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
             [SVProgressHUD showInfoWithStatus:@"设置成功"];
             [[NSNotificationCenter defaultCenter] postNotificationName:VBUploadStoreSetupInfoNotification object:nil];

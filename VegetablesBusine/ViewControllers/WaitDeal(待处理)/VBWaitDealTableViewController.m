@@ -40,7 +40,7 @@
 }
 - (void)requestListData {
     [SVProgressHUD show];
-    VBListDataRequest *dataRequest = [[VBListDataRequest alloc] initWithPage:1 rows:20 tag:self.tableTag requestType:(VBListDataRequestType)self.tableTag];
+    VBListDataRequest *dataRequest = [[VBListDataRequest alloc] initWithPage:self.currentPage rows:20 tag:self.tableTag requestType:(VBListDataRequestType)self.tableTag];
     [dataRequest startRequestWithDicSuccess:^(NSDictionary *responseDic){
         [SVProgressHUD dismiss];
         if(self.currentPage == 1){

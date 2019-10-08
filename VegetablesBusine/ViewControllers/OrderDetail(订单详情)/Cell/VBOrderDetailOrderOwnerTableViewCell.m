@@ -29,7 +29,7 @@
     self.orderOwnerLabel.text = itemModel.orderOwer;
     self.orderCountLabel.text = [NSString stringWithFormat:@"#第%@次下单",itemModel.orderCount];
     self.telLabel.text = itemModel.orderTel;
-    self.addressLabel.text = itemModel.address;
+    self.addressLabel.text = itemModel.orderDestination;
 }
 - (IBAction)callTelPhone:(id)sender {
     NSString *telString = [NSString stringWithFormat:@"tel:%@",self.itemModel.orderTel];

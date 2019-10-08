@@ -1,14 +1,14 @@
 //
-//  VBGetDetailByIDRequest.m
+//  VBGetManagerDetailByIDRequest.m
 //  VegetablesBusine
 //
 //  Created by Apple on 2018/11/26.
 //  Copyright © 2018 Apple. All rights reserved.
 //
 
-#import "VBGetDetailByIDRequest.h"
+#import "VBGetManagerDetailByIDRequest.h"
 
-@implementation VBGetDetailByIDRequest{
+@implementation VBGetManagerDetailByIDRequest{
     NSString *_idString;
 }
 
@@ -21,17 +21,12 @@
 }
 
 - (NSString *)requestUrl {
-    return @"/api/pendingOrder/getOrder";
+    NSString *urlPath = [NSString stringWithFormat:@"http://shangjiaduan.qsvc.caibangps.com/api/order/getOrder/{%@}/%@",_idString,[VMLoginUserInfoModel loginUsrInfoModel].sessionKey];
+    return urlPath;
 }
 
 - (YTKRequestMethod)requestMethod {
-    return YTKRequestMethodPOST;
+    return YTKRequestMethodGET;
 }
 
-- (id)requestArgument {
-    return @{
-             @"orderId":OBJC(_idString),
-             @"sessionKey":OBJC([VMLoginUserInfoModel loginUsrInfoModel].sessionKey)
-             };
-}
 @end

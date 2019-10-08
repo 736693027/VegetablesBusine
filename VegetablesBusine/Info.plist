@@ -2,12 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSPhotoLibraryUsageDescription</key>
-	<string>需要开启相册功能，来上传商品图片</string>
-	<key>CFBundleDevelopmentRegion</key>
-	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleAllowMixedLocalizations</key>
 	<true/>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -21,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.1.0</string>
 	<key>CFBundleVersion</key>
-	<string>4</string>
+	<string>6</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSAppTransportSecurity</key>
@@ -29,8 +27,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>需要开启蓝牙功能，来链接外设打印机</string>
 	<key>NSCameraUsageDescription</key>
 	<string>需要开启相机功能，来拍摄商品图片</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>需要开启定位功能，来确认送货距离和达到时间</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>需要开启定位功能，来确认送货距离和达到时间</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>需要开启相册功能，来上传商品图片</string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>

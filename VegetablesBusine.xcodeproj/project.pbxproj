@@ -26,6 +26,9 @@
 		182D49B421D0B81400C089F7 /* VBSetupBusinessStateRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 182D49B321D0B81400C089F7 /* VBSetupBusinessStateRequest.m */; };
 		1830E72920D115CF001E042B /* LBDatePickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1830E72620D115CF001E042B /* LBDatePickerView.m */; };
 		1830E72A20D115CF001E042B /* LBDatePickerView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1830E72720D115CF001E042B /* LBDatePickerView.xib */; };
+		183828472327A55500BF0936 /* VBGetManagerDetailByIDRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 183828452327A55500BF0936 /* VBGetManagerDetailByIDRequest.m */; };
+		1838284A2327A6FB00BF0936 /* VBManagerPrintOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 183828492327A6FB00BF0936 /* VBManagerPrintOrderRequest.m */; };
+		1838284D2327B54800BF0936 /* VBUploadTextRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1838284B2327B54700BF0936 /* VBUploadTextRequest.m */; };
 		184260E221AB969500622800 /* VBTableSectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 184260E121AB969500622800 /* VBTableSectionHeaderView.xib */; };
 		184260E621AB9D8100622800 /* LBBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260E521AB9D8100622800 /* LBBaseRequest.m */; };
 		184260E921AB9DA200622800 /* LBResponseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 184260E721AB9DA200622800 /* LBResponseModel.m */; };
@@ -101,7 +104,6 @@
 		1874C85021BA60880088257B /* VBProcessRefundRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874C84C21BA60880088257B /* VBProcessRefundRequest.m */; };
 		1874C85121BA60880088257B /* VBProcessOrderRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 1874C84E21BA60880088257B /* VBProcessOrderRequest.m */; };
 		187AEA4922814FF700968019 /* HLPrinter.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA3F22814FF700968019 /* HLPrinter.m */; };
-		187AEA4A22814FF700968019 /* UIWebView+UIImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4022814FF700968019 /* UIWebView+UIImage.m */; };
 		187AEA4B22814FF700968019 /* UIImage+Bitmap.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4322814FF700968019 /* UIImage+Bitmap.m */; };
 		187AEA4C22814FF700968019 /* HLBLEManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 187AEA4722814FF700968019 /* HLBLEManager.m */; };
 		1897EA6920C00F1D00ED3DEF /* VBCommodityManagementViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1897EA6720C00F1D00ED3DEF /* VBCommodityManagementViewController.m */; };
@@ -328,6 +330,12 @@
 		1830E72620D115CF001E042B /* LBDatePickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBDatePickerView.m; sourceTree = "<group>"; };
 		1830E72720D115CF001E042B /* LBDatePickerView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LBDatePickerView.xib; sourceTree = "<group>"; };
 		1830E72820D115CF001E042B /* LBDatePickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBDatePickerView.h; sourceTree = "<group>"; };
+		183828452327A55500BF0936 /* VBGetManagerDetailByIDRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBGetManagerDetailByIDRequest.m; sourceTree = "<group>"; };
+		183828462327A55500BF0936 /* VBGetManagerDetailByIDRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBGetManagerDetailByIDRequest.h; sourceTree = "<group>"; };
+		183828482327A6FA00BF0936 /* VBManagerPrintOrderRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBManagerPrintOrderRequest.h; sourceTree = "<group>"; };
+		183828492327A6FB00BF0936 /* VBManagerPrintOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBManagerPrintOrderRequest.m; sourceTree = "<group>"; };
+		1838284B2327B54700BF0936 /* VBUploadTextRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBUploadTextRequest.m; sourceTree = "<group>"; };
+		1838284C2327B54700BF0936 /* VBUploadTextRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBUploadTextRequest.h; sourceTree = "<group>"; };
 		184260E121AB969500622800 /* VBTableSectionHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VBTableSectionHeaderView.xib; sourceTree = "<group>"; };
 		184260E421AB9D8100622800 /* LBBaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LBBaseRequest.h; sourceTree = "<group>"; };
 		184260E521AB9D8100622800 /* LBBaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LBBaseRequest.m; sourceTree = "<group>"; };
@@ -459,9 +467,7 @@
 		1874C84E21BA60880088257B /* VBProcessOrderRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VBProcessOrderRequest.m; sourceTree = "<group>"; };
 		1874C84F21BA60880088257B /* VBProcessRefundRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VBProcessRefundRequest.h; sourceTree = "<group>"; };
 		187AEA3F22814FF700968019 /* HLPrinter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HLPrinter.m; sourceTree = "<group>"; };
-		187AEA4022814FF700968019 /* UIWebView+UIImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIWebView+UIImage.m"; sourceTree = "<group>"; };
 		187AEA4122814FF700968019 /* UIImage+Bitmap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Bitmap.h"; sourceTree = "<group>"; };
-		187AEA4222814FF700968019 /* UIWebView+UIImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIWebView+UIImage.h"; sourceTree = "<group>"; };
 		187AEA4322814FF700968019 /* UIImage+Bitmap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Bitmap.m"; sourceTree = "<group>"; };
 		187AEA4422814FF700968019 /* HLPrinter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLPrinter.h; sourceTree = "<group>"; };
 		187AEA4622814FF700968019 /* HLBLEConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HLBLEConst.h; sourceTree = "<group>"; };
@@ -846,6 +852,8 @@
 		184260E321AB9D8100622800 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				1838284C2327B54700BF0936 /* VBUploadTextRequest.h */,
+				1838284B2327B54700BF0936 /* VBUploadTextRequest.m */,
 				18F9E46D21DC987C0095F59B /* VMLogoutRequestAPI.h */,
 				18F9E46C21DC987B0095F59B /* VMLogoutRequestAPI.m */,
 				18F9E46821DC58610095F59B /* VMForgetPasswordAPI.h */,
@@ -864,12 +872,16 @@
 				184260EE21ABC0C300622800 /* VBListDataRequest.m */,
 				1842610121ABF85000622800 /* VBGetDetailByIDRequest.h */,
 				1842610221ABF85000622800 /* VBGetDetailByIDRequest.m */,
+				183828462327A55500BF0936 /* VBGetManagerDetailByIDRequest.h */,
+				183828452327A55500BF0936 /* VBGetManagerDetailByIDRequest.m */,
 				1874C84D21BA60880088257B /* VBProcessOrderRequest.h */,
 				1874C84E21BA60880088257B /* VBProcessOrderRequest.m */,
 				1874C84F21BA60880088257B /* VBProcessRefundRequest.h */,
 				1874C84C21BA60880088257B /* VBProcessRefundRequest.m */,
 				18C9422121BE4E8F005132BA /* VBPrintOrderRequest.h */,
 				18C9422221BE4E8F005132BA /* VBPrintOrderRequest.m */,
+				183828482327A6FA00BF0936 /* VBManagerPrintOrderRequest.h */,
+				183828492327A6FB00BF0936 /* VBManagerPrintOrderRequest.m */,
 				18C9422421BFB59A005132BA /* VBShoppingManangerDetailAPI.h */,
 				18C9422521BFB59A005132BA /* VBShoppingManangerDetailAPI.m */,
 				18C9422721BFBA28005132BA /* VBCommodityManagementGetListAPI.h */,
@@ -1177,9 +1189,7 @@
 			isa = PBXGroup;
 			children = (
 				187AEA3F22814FF700968019 /* HLPrinter.m */,
-				187AEA4022814FF700968019 /* UIWebView+UIImage.m */,
 				187AEA4122814FF700968019 /* UIImage+Bitmap.h */,
-				187AEA4222814FF700968019 /* UIWebView+UIImage.h */,
 				187AEA4322814FF700968019 /* UIImage+Bitmap.m */,
 				187AEA4422814FF700968019 /* HLPrinter.h */,
 			);
@@ -2186,6 +2196,7 @@
 				184260F621ABD3B400622800 /* VBWaitDealListModel.m in Sources */,
 				1874C85021BA60880088257B /* VBProcessRefundRequest.m in Sources */,
 				18D21EBE21E43A6000F5DA95 /* LBCustomAlertView.m in Sources */,
+				1838284A2327A6FB00BF0936 /* VBManagerPrintOrderRequest.m in Sources */,
 				133AA34521E08D0E00A82C3E /* VBCommodityUnitsRequest.m in Sources */,
 				18D21EE521E47B5800F5DA95 /* VBBluetoothListViewController.m in Sources */,
 				181F751821DF9BF400B9EFF7 /* VMForgetViewController.m in Sources */,
@@ -2205,7 +2216,6 @@
 				18D21E9821E435E700F5DA95 /* MLPhotoPickerImageView.m in Sources */,
 				1843E59721D1CE2E00C20E97 /* VBOrderManagerListRequest.m in Sources */,
 				18D21E8F21E435E700F5DA95 /* MLSelectPhotoPickerGroupViewController.m in Sources */,
-				187AEA4A22814FF700968019 /* UIWebView+UIImage.m in Sources */,
 				18D21EAE21E43A5400F5DA95 /* JCAlertView.m in Sources */,
 				384794A920E730CD000EDB3A /* VBActivityRulesTableViewCell.m in Sources */,
 				3834D89C20E8C66D00A62AFF /* VBGivingActivityTableViewCell.m in Sources */,
@@ -2308,11 +2318,13 @@
 				18D21E5421E435B900F5DA95 /* YXPImageBrowserLayout.m in Sources */,
 				18BA796A20CF9F06002182B3 /* VBBusinessStateHeadView.m in Sources */,
 				18BA796620CF9DFA002182B3 /* VBBusinessStateViewController.m in Sources */,
+				1838284D2327B54800BF0936 /* VBUploadTextRequest.m in Sources */,
 				38DB4D1420E3D5A800F67BE7 /* VBMerchantSettlementDataViewController.m in Sources */,
 				18D21EC321E43A6000F5DA95 /* LBMoreCustomerNameCell.m in Sources */,
 				380FFAE620B306E300A926FD /* VBOrderDetailViewController.m in Sources */,
 				18D21E9B21E435E700F5DA95 /* MLSelectPhotoPickerCollectionView.m in Sources */,
 				18D21EC521E43A6000F5DA95 /* JCAlertView+LBAddtion.m in Sources */,
+				183828472327A55500BF0936 /* VBGetManagerDetailByIDRequest.m in Sources */,
 				1846807F20E1CE7000099954 /* VBActivityListViewController.m in Sources */,
 				18D21E9721E435E700F5DA95 /* MLSelectPhotoPickerBrowserPhotoScrollView.m in Sources */,
 				181F751921DF9BF400B9EFF7 /* VMLoginUserInfoModel.m in Sources */,
@@ -2466,21 +2478,22 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3VBM36K4M;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8M4UTM4W65;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VegetablesBusine/Tools",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dev_file;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
 			};
@@ -2493,21 +2506,23 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = H3VBM36K4M;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = 8M4UTM4W65;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/VegetablesBusine/Tools",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/VegetablesBusine/Tools/VegetableHeaderFile.pch";
 				INFOPLIST_FILE = VegetablesBusine/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lubaocar.LBAssistant;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qianshou.QSMerchantManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = QSMerchantManager_dis_file;
 				TARGETED_DEVICE_FAMILY = 1;
 				WARNING_CFLAGS = "-Wno-ambiguous-macro";
 			};

@@ -61,7 +61,7 @@
     self.orderOwnerLabel.text = itemModel.orderOwer;
     self.creatOrderLabel.text = [NSString stringWithFormat:@"#第%@次下单",itemModel.orderCount];
     self.telLabel.text = itemModel.orderTel;
-    self.addressLabel.text = itemModel.address;
+    self.addressLabel.text = itemModel.orderDestination;
     self.totalPriceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.orderTotal];
     self.servicePriceLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.serverPrice];
     self.orderTotalLabel.text = [NSString stringWithFormat:@"¥%@",itemModel.priceTotal];

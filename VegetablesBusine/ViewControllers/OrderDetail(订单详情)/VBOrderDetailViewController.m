@@ -21,6 +21,7 @@
 #import "VBWaitDealListModel.h"
 #import <UITableView_FDTemplateLayoutCell/UITableView+FDTemplateLayoutCell.h>
 #import "VBPrintOrderRequest.h"
+#import "VBManagerPrintOrderRequest.h"
 
 @interface VBOrderDetailViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *cancleButton;
@@ -75,8 +76,9 @@
 #pragma mark 网络请求
 
 - (void)requestListData {
+    if(self)
     @weakify(self)
-    VBGetDetailByIDRequest *requestData = [[VBGetDetailByIDRequest alloc] initWithIdString:@"12"];
+    VBGetDetailByIDRequest *requestData = [[VBGetDetailByIDRequest alloc] initWithIdString:self.orderIdString];
     [requestData startRequestWithDicSuccess:^(NSDictionary *responseDic) {
         @strongify(self)
         self.itemModel = [VBWaitDealListModel yy_modelWithJSON:responseDic];
@@ -336,18 +338,33 @@
     }
 }
 - (IBAction)printOrderButtonClick:(id)sender {
-    VBPrintOrderRequest *printOrderRequest = [[VBPrintOrderRequest alloc] initWithIdString:@"12"];
-    [printOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
-        [SVProgressHUD showInfoWithStatus:@"打印成功"];
-        if(self.uploadDataSource){
-            [self.uploadDataSource sendNext:@""];
-        }
-        [self.navigationController popViewControllerAnimated:YES];
-    } failModel:^(LBResponseModel *errorModel) {
-        [SVProgressHUD showErrorWithStatus:errorModel.message];
-    } fail:^(YTKBaseRequest *request) {
-        [SVProgressHUD showErrorWithStatus:@"订单生成失败"];
-    }];
+    if(self.orderType == VBOrderDetailTypeOrderManager){
+        VBManagerPrintOrderRequest *printOrderRequest = [[VBManagerPrintOrderRequest alloc] initWithIdString:self.orderIdString];
+        [printOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            [SVProgressHUD showInfoWithStatus:@"打印成功"];
+            if(self.uploadDataSource){
+                [self.uploadDataSource sendNext:@""];
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"订单生成失败"];
+        }];
+    }else{
+        VBPrintOrderRequest *printOrderRequest = [[VBPrintOrderRequest alloc] initWithIdString:self.orderIdString];
+        [printOrderRequest startRequestWithDicSuccess:^(NSDictionary *responseDic) {
+            [SVProgressHUD showInfoWithStatus:@"打印成功"];
+            if(self.uploadDataSource){
+                [self.uploadDataSource sendNext:@""];
+            }
+            [self.navigationController popViewControllerAnimated:YES];
+        } failModel:^(LBResponseModel *errorModel) {
+            [SVProgressHUD showErrorWithStatus:errorModel.message];
+        } fail:^(YTKBaseRequest *request) {
+            [SVProgressHUD showErrorWithStatus:@"订单生成失败"];
+        }];
+    }
 }
 
 
